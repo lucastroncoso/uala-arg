@@ -1,9 +1,5 @@
-export default function App() {
-  return (
-    <main id="uala-main">
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-    </main>
-  );
+import MainPage from './components/pages/MainPage/MainPage';
+
+export default function App(): JSX.Element {
+  return <MainPage />;
 }
