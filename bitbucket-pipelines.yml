@@ -2,7 +2,7 @@ image: node:14
 
 definitions:
   caches:
-    - node
+    frontend-modules: node_modules
   steps:
     - step: &build
         name: Build
@@ -15,6 +15,9 @@ definitions:
           - dist/**
 
 pipelines:
+  pull-requests:
+    '**':
+      - step: *build
   branches:
     develop-test:
       - step: *build
