@@ -20,7 +20,7 @@ pipelines:
       - step: &build
   branches:
     develop-test:
-      - step: *build
+      - step: &build
           #image: node:14
       #    name: Build frontend
       #    caches:
