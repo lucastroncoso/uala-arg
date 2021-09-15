@@ -1,4 +1,6 @@
 #main {
+  font-family: "Public Sans", sans-serif;
+
   *,
   *::before,
   *::after {
@@ -26,6 +28,10 @@
     display: block;
     height: auto;
     width: 100%;
+  }
+
+  p {
+    font-size: 1.6rem;
   }
 
   input,
