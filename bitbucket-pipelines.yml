@@ -18,10 +18,10 @@ pipelines:
   pull-requests:
     '**':
       - step: &build
-  branches:
-    develop-test:
-      - step: &build
-          #image: node:14
+  custom:
+    deploy-development:
+      - step: *build
+      #image: node:14
       #    name: Build frontend
       #    caches:
       #      - node
