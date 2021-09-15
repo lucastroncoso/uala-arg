@@ -1,39 +1,42 @@
-image: node:12
+image: node:14
+
+definitions:
+  caches:
+    frontend-modules: node_modules
+  steps:
+    - step: &build
+        name: Build
+        caches:
+          - frontend-modules
+        script:
+          - yarn install --production=false --non-interactive --no-progress --frozen-lockfile
+          - yarn build
+        artifacts:
+          - dist/**
 
 pipelines:
-  default:
-    - step:
-        caches:
-          - node
-        script:
-          - yarn
-          - yarn check-types
-          - yarn lint
-          - yarn test -u
-# If the above pipelines start taking a considerable amount of time to finish
-# especially, if one the scripts is taking up most of the time. (likely `yarn check-types`)
-# It is recommended to switch to a parallel-step (see below) approach to speed up the process.
-#
-#     - parallel:
-#         - step:
-#             name: Type checking
-#             caches:
-#               - node
-#             script:
-#               - yarn
-#               - yarn check-types
-#         - step:
-#             name: Linting
-#             caches:
-#               - node
-#             script:
-#               - yarn
-#               - yarn lint
-#         - step:
-#             name: Tests
-#             caches:
-#               - node
-#             script:
-#               - yarn
-#               - yarn test -u
-
+  pull-requests:
+    '**':
+      - step: &build
+  branches:
+    develop-test:
+      - step: *build
+          #image: node:14
+      #    name: Build frontend
+      #    caches:
+      #      - node
+      #    script:
+      #      - yarn install --production=false --non-interactive --no-progress --frozen-lockfile --cwd source/frontend
+      #      - yarn --cwd source/frontend build
+      #    artifacts:
+      #      - source/frontend/build/**
+      #- step:
+      #    name: Deploy to Monkapps
+      #    script:
+      #      - pipe: atlassian/rsync-deploy:0.4.4
+      #        variables:
+      #          USER: 'uala-website-development'
+      #          SERVER: 'us.dev.monkapps.com'
+      #          LOCAL_PATH: 'source/frontend/build/build/'
+      #          EXTRA_ARGS: '-avPx'
+      #          REMOTE_PATH: '~/public/'
