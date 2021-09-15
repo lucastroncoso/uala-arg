@@ -15,9 +15,6 @@ definitions:
           - dist/**
 
 pipelines:
-  pull-requests:
-    '**':
-      - step: &build
   branches:
     develop-test:
       - step: *build
