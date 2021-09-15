@@ -17,7 +17,7 @@ definitions:
 pipelines:
   pull-requests:
     '**':
-      - step: *build
+      - step: &build
   branches:
     develop-test:
       - step: *build
