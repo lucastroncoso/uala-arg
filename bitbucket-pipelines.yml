@@ -10,9 +10,9 @@ pipelines:
           script:
             - yarn
             - yarn check-types
-            - yarn lint 
+            - yarn lint
   branches:
-    develop-test:
+    develop:
       - step:
           name: Build frontend
           caches:
@@ -22,13 +22,13 @@ pipelines:
             - yarn build
           artifacts:
             - build/**
-      #- step:
-      #    name: Deploy to Monkapps
-      #    script:
-      #      - pipe: atlassian/rsync-deploy:0.4.4
-      #        variables:
-      #          USER: 'uala-website-development'
-      #          SERVER: 'us.dev.monkapps.com'
-      #          LOCAL_PATH: 'source/frontend/build/build/'
-      #          EXTRA_ARGS: '-avPx'
-      #          REMOTE_PATH: '~/public/'
+      - step:
+          name: Deploy to Monkapps
+          script:
+            - pipe: atlassian/rsync-deploy:0.4.4
+              variables:
+                USER: 'uala-website-development'
+                SERVER: 'us.dev.monkapps.com'
+                LOCAL_PATH: 'build/'
+                EXTRA_ARGS: '-avPx'
+                REMOTE_PATH: '~/public/'
