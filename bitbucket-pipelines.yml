@@ -1,35 +1,27 @@
 image: node:14
 
-definitions:
-  caches:
-    frontend-modules: node_modules
-  steps:
-    - step: &build
-        name: Build
-        caches:
-          - frontend-modules
-        script:
-          - yarn install --production=false --non-interactive --no-progress --frozen-lockfile
-          - yarn build
-        artifacts:
-          - dist/**
-
 pipelines:
   pull-requests:
     '**':
-      - step: *build
+      - step:
+          name: Install and Build
+          caches:
+            - node
+          script:
+            - yarn
+            - yarn check-types
+            - yarn lint 
   branches:
     develop-test:
-      - step: *build
-          #image: node:14
-      #    name: Build frontend
-      #    caches:
-      #      - node
-      #    script:
-      #      - yarn install --production=false --non-interactive --no-progress --frozen-lockfile --cwd source/frontend
-      #      - yarn --cwd source/frontend build
-      #    artifacts:
-      #      - source/frontend/build/**
+      - step:
+          name: Build frontend
+          caches:
+            - node
+          script:
+            - yarn install --production=false --non-interactive --no-progress --frozen-lockfile
+            - yarn build
+          artifacts:
+            - build/**
       #- step:
       #    name: Deploy to Monkapps
       #    script:
