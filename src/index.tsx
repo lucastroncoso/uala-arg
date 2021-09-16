@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './style/index.scss';
+import theme from './theme/theme';
+import GlobalStyle from './GlobalStyle';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle />
+        <App />
+      </>
+    </ThemeProvider>
   </React.StrictMode>,
   // eslint-disable-next-line unicorn/prefer-query-selector
   document.getElementById('root'),
