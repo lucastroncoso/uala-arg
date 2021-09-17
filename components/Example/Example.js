@@ -1,4 +1,5 @@
 import styles from './Example.module.scss';
+import BlockWrapper from '../BlockWrapper/BlockWrapper';
 
 const ExampleComponent = () => {
   return (
