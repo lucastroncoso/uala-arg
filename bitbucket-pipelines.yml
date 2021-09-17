@@ -52,4 +52,4 @@ pipelines:
               variables:
                 SSH_USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                COMMAND: './stop.sh && cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build && forever start -a -l ~/log/uala.log --uid uala /usr/bin/yarn --cwd /var/projects/uala-website-development/public start'
+                COMMAND: 'cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build && forever restartall'
