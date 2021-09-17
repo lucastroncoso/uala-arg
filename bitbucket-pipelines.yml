@@ -36,7 +36,9 @@ pipelines:
               variables:
                 SSH_USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                COMMAND: 'cd ~/public/ && yarn && yarn build && forever start -a -l ~/log/uala.log --uid uala yarn start'
+                COMMAND:
+                  'cd ~/public/ && yarn && yarn build && forever start -a -l ~/log/uala.log --uid
+                  uala yarn start'
     develop-nextjs:
       - step:
           name: Deploy to Monkapps
@@ -52,4 +54,6 @@ pipelines:
               variables:
                 SSH_USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                COMMAND: 'cd ~/public/ && yarn && yarn build && forever start -a -l ~/log/uala.log --uid uala yarn start'
+                COMMAND:
+                  'cd ~/public/ && yarn && yarn build && forever start -a -l ~/log/uala.log --uid
+                  uala yarn start'
