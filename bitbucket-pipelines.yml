@@ -52,9 +52,4 @@ pipelines:
               variables:
                 SSH_USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                COMMAND: 'forever stopall && pkill -f nodejs'
-            - pipe: atlassian/ssh-run:0.3.0
-              variables:
-                SSH_USER: 'uala-website-development'
-                SERVER: 'us.dev.monkapps.com'
-                COMMAND: 'cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build && forever start -a -l ~/log/uala.log --uid uala /usr/bin/yarn --cwd /var/projects/uala-website-development/public start'
+                COMMAND: './stop.sh && cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build && forever start -a -l ~/log/uala.log --uid uala /usr/bin/yarn --cwd /var/projects/uala-website-development/public start'
