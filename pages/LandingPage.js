@@ -1,10 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/LandingPage.module.scss';
+import Hero from '../components/Hero/Hero';
 import ExampleComponent from '../components/Example/Example';
 import BlockWrapper from '../components/BlockWrapper/BlockWrapper';
+import classNames from 'classnames';
+import pageContent from '../data/SiteMXContent.json';
 
 export default function MainPageAr() {
+  const locale = process.env.locale;
+
+  console.log();
   return (
     <>
       <Head>
@@ -13,11 +19,8 @@ export default function MainPageAr() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <BlockWrapper customClass={[styles.customClass, styles.anotherClass]}>
-          <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Uala mainPageAr</a>
-          </h1>
-
+        <BlockWrapper>
+          <Hero content={pageContent[locale].hero} />
           <p className={styles.description}>
             Get started by editing <code className={styles.code}>pages/LandingPage.js</code>
           </p>

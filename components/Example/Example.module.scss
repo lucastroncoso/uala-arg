@@ -11,7 +11,7 @@
   margin-top: 3rem;
 
   @include respond-to(minWidth1024) {
-    background: #ffbb00;
+    background: #00bbff;
   }
 }
 
@@ -36,7 +36,7 @@
 
 .card h2 {
   margin: 0 0 1rem 0;
-  @include semibold-35;
+  @include bold-70;
 }
 
 .card p {

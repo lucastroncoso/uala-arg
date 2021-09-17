@@ -1,0 +1,16 @@
+{
+  "es": {
+    "hero": {
+      "title": "El lado bueno de tu dinero",
+      "paragraph": "Una tarjeta de débito Mastercard gratis y una app para manejar tu dinero mucho más fácil.",
+      "buttonCopy": "Descargar la app"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "The good side of your data",
+      "paragraph": "Paragraph but in english",
+      "buttonCopy": "Download the app"
+    }
+  }
+}
