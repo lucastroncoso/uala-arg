@@ -14,29 +14,20 @@ pipelines:
   branches:
     develop:
       - step:
-          name: Build frontend
-          caches:
-            - node
-          script:
-            - yarn install --production=false --non-interactive --no-progress --frozen-lockfile
-            - yarn build
-          artifacts:
-            - build/**
-      - step:
           name: Deploy to Monkapps
           script:
             - pipe: atlassian/rsync-deploy:0.4.4
               variables:
                 USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                LOCAL_PATH: 'build/'
+                LOCAL_PATH: './'
                 EXTRA_ARGS: '-avPx'
                 REMOTE_PATH: '~/public/'
             - pipe: atlassian/ssh-run:0.3.0
               variables:
                 SSH_USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                COMMAND: 'cd ~/public/ && yarn && yarn build && forever start -a -l ~/log/uala.log --uid uala yarn start'
+                COMMAND: 'cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build && forever restartall'
     develop-nextjs:
       - step:
           name: Deploy to Monkapps
