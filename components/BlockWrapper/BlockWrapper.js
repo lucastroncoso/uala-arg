@@ -10,7 +10,7 @@ const BlockWrapper = ({ children, customClass }) => {
   );
 };
 
-BlockWrapper.PropTypes = {
+BlockWrapper.propTypes = {
   children: PropTypes.node.isRequired,
   customClass: PropTypes.array,
 };
