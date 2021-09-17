@@ -52,7 +52,7 @@ pipelines:
               variables:
                 SSH_USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                COMMAND: 'pkill -f nodejs'
+                COMMAND: 'forever stopall && pkill -f nodejs'
             - pipe: atlassian/ssh-run:0.3.0
               variables:
                 SSH_USER: 'uala-website-development'
