@@ -45,7 +45,7 @@ pipelines:
               variables:
                 USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                LOCAL_PATH: '/'
+                LOCAL_PATH: './'
                 EXTRA_ARGS: '-avPx'
                 REMOTE_PATH: '~/public/'
             - pipe: atlassian/ssh-run:0.3.0
