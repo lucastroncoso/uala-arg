@@ -1,7 +1,9 @@
 @use '../mixins/respond-to' as *;
+@use '../variables/variables' as *;
 
 @mixin bold-70 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Public Sans", sans-serif;
+  color: $blue;
   font-size: 70px;
   font-weight: 700;
   line-height: 1.14;
@@ -27,6 +29,7 @@
 }
 
 @mixin bigParagraph {
+  color: $gray;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.55;
