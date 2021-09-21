@@ -1,16 +1,11 @@
-import { useEffect } from 'react';
 import Head from 'next/head';
 import Hero from '../components/Hero/Hero';
 import pageContent from '../data/SiteMXContent.json';
-import useGlobal from '../store';
+import { useAppContext } from '../store/context';
+import DownloadAppModal from '../components/Modal/DownloadAppModal/DownloadAppModal';
 
 export default function MainPageAr() {
-  const [{ locale }, { setLocale }] = useGlobal();
-
-  //Para rendear de nuevo la pagina cuando el estado global cambia desde un componente hijo tuve que agregar esto.
-  useEffect(() => {
-    setLocale(locale);
-  }, [locale]);
+  const { locale } = useAppContext();
 
   return (
     <>
@@ -27,6 +22,7 @@ export default function MainPageAr() {
       </Head>
       <main>
         <Hero content={pageContent[locale].hero} />
+        <DownloadAppModal content={pageContent[locale].downloadApp} />
       </main>
     </>
   );
