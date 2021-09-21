@@ -1,0 +1,60 @@
+@use '../../../styles/variables/variables' as *;
+@use '../../../styles/types/types' as *;
+
+.modalContentWrapper {
+  background: $white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  padding: 40px 52px 40px 32px;
+  max-width: 450px;
+  position: relative;
+
+  & div:first-child {
+    flex-shrink: 0;
+  }
+}
+
+.copyWrapper {
+  margin-left: 30px;
+}
+
+.title {
+  color: $blue;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  @include paragraph;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: $gray;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: $gray;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

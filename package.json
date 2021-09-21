@@ -13,7 +13,9 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@svgr/webpack": "^5.5.0",
     "classnames": "^2.3.1",
+    "gsap": "^3.7.1",
     "next": "^11.1.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
@@ -24,8 +26,7 @@
     "s": "^1.0.0",
     "sass": "^1.41.1",
     "slick-carousel": "^1.8.1",
-    "swiper": "^7.0.4",
-    "use-global-hook": "^0.3.0"
+    "swiper": "^7.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
