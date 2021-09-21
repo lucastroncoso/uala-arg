@@ -1,4 +1,4 @@
-image: atlassian/default-image:2
+image: node:14
 
 pipelines:
   pull-requests:
@@ -12,7 +12,7 @@ pipelines:
             - yarn check-types
             - yarn lint
   branches:
-    develop:
+    develop-to-qa: 
       - step:
           name: Deploying Files to Monkapps
           script:
