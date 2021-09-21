@@ -1,0 +1,43 @@
+@use '../../styles/variables/variables' as *;
+
+.button {
+  background: $blue;
+  border-radius: 30px;
+  color: $white;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 44px;
+  padding: 10px 44px;
+  position: relative;
+  overflow: hidden;
+
+  & span {
+    position: relative;
+    z-index: 1;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    transform: scaleY(0);
+    transition: transform 60ms linear 100ms, opacity 100ms ease 30ms;
+    opacity: 0;
+    transform-origin: 50% 100%;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &:before {
+        opacity: 1;
+        transform: scaleY(1);
+        transform-origin: 50% 0%;
+        transition: transform 120ms linear, opacity 80ms ease 60ms;
+      }
+    }
+  }
+}
