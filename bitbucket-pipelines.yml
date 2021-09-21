@@ -14,7 +14,7 @@ pipelines:
   branches:
     develop:
       - step:
-          name: Deploy to Monkapps
+          name: Deploying Files to Monkapps
           script:
             - pipe: atlassian/rsync-deploy:0.4.4
               variables:
@@ -23,14 +23,17 @@ pipelines:
                 LOCAL_PATH: './'
                 EXTRA_ARGS: '-avPx'
                 REMOTE_PATH: '~/public/'
+      - step:
+          name: Building and Starting
+          script:
             - pipe: atlassian/ssh-run:0.3.0
               variables:
                 SSH_USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                COMMAND: 'cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build && forever restartall'
+                COMMAND: 'cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build && forever start -a -l ~/log/uala.log --uid uala /usr/bin/yarn --cwd /var/projects/uala-website-development/public start'
     develop-nextjs:
       - step:
-          name: Deploy to Monkapps
+          name: Deploying Files to Monkapps
           script:
             - pipe: atlassian/rsync-deploy:0.4.4
               variables:
@@ -39,8 +42,11 @@ pipelines:
                 LOCAL_PATH: './'
                 EXTRA_ARGS: '-avPx'
                 REMOTE_PATH: '~/public/'
+      - step:
+          name: Building and Starting
+          script:
             - pipe: atlassian/ssh-run:0.3.0
               variables:
                 SSH_USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                COMMAND: 'cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build && forever restartall'
+                COMMAND: 'cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build && forever start -a -l ~/log/uala.log --uid uala /usr/bin/yarn --cwd /var/projects/uala-website-development/public start'
