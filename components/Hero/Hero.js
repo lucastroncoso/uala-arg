@@ -3,14 +3,11 @@ import styles from './Hero.module.scss';
 import PropTypes from 'prop-types';
 import HEROBG from '/public/hero_bkg.jpg';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
-import useGlobal from '../../store';
+import { useAppContext } from '../../store/context';
+import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
 
 const Hero = ({ content }) => {
-  const [{ locale }, { setLocale }] = useGlobal();
-
-  const onDownloadButtonClick = useCallback(() => {
-    setLocale('en');
-  }, [setLocale]);
+  const { setDownloadModalActiveState } = useAppContext();
 
   return (
     <section className={styles.hero}>
@@ -20,9 +17,7 @@ const Hero = ({ content }) => {
       <BlockWrapper>
         <h1 className={styles.title}>{content.title}</h1>
         <p className={styles.paragraph}>{content.paragraph}</p>
-        <button className={styles.button} onClick={onDownloadButtonClick}>
-          {content.buttonCopy}
-        </button>
+        <DownloadAppButton copy={content.buttonCopy} />
       </BlockWrapper>
     </section>
   );
