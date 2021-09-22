@@ -1,7 +1,6 @@
 .section {
   overflow: hidden;
   position: relative;
-  min-height: 75vh;
   margin-bottom: 200px;
 }
 
@@ -19,8 +18,4 @@
     left: 0;
     height: auto;
   }
-}
-
-.videoWrapper {
-  min-height: 330px;
 }
