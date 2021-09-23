@@ -1,30 +1,87 @@
 {
   "es": {
     "navbar": {
-      "items": {
-        "Funcionalidades": {
-          "Compras": "link1",
-          "Transferencias": "link2",
-          "Pagos y Recargas": "link3",
-          "Retiros": "link4"
+      "items": [
+        {
+          "title": "Funcionalidades",
+          "subMenu": [
+            {
+              "copy": "Compras",
+              "url": "link1"
+            },
+            {
+              "copy": "Transferencias",
+              "url": "link2"
+            },
+            {
+              "copy": "Pagos y Recargas",
+              "url": "link3"
+            },
+            {
+              "copy": "Retiros",
+              "url": "link4"
+            }
+          ]
         },
-        "Ayuda y seguridad": {
-          "Preguntas frecuentes": "link1",
-          "Métodos de contacto": "link2",
-          "Comunidad": "link3",
-          "Consejos de seguridad": "link4",
-          "Reporte por robo o pérdida": "link5"
+        {
+          "title": "Ayuda y seguridad",
+          "subMenu": [
+            {
+              "copy": "Preguntas frecuentes",
+              "url": "link1"
+            },
+            {
+              "copy": "Métodos de contacto",
+              "url": "link2"
+            },
+            {
+              "copy": "Comunidad",
+              "url": "link3"
+            },
+            {
+              "copy": "Consejos de seguridad",
+              "url": "link4"
+            },
+            {
+              "copy": "Reporte por robo o pérdida",
+              "url": "link5"
+            }
+          ]
         },
-        "Sobre Ualá": {
-          "Nosotros": "link1",
-          "Búsquedas laborales": "link2",
-          "Prensa": "link3",
-          "El blog de Ualá": "link4",
-          "Gaming": "link5"
+        {
+          "title": "Sobre Ualá",
+          "subMenu": [
+            {
+              "copy": "Nosotros",
+              "url": "link1"
+            },
+            {
+              "copy": "Búsquedas laborales",
+              "url": "link2"
+            },
+            {
+              "copy": "Prensa",
+              "url": "link3"
+            },
+            {
+              "copy": "El blog de Ualá",
+              "url": "link4"
+            },
+            {
+              "copy": "Gaming",
+              "url": "link5"
+            }
+          ]
         },
-        "Costos": "https://www.uala.com.ar/costos",
-        "Promociones": "https://www.uala.com.ar/promociones"
-      },
+        {
+          "title": "Costos",
+          "url": "https://www.uala.com.ar/costos"
+        },
+        {
+          "title": "Promociones",
+          "url": "https://www.uala.com.ar/promociones"
+        }
+      ],
       "languageButton": [
         "es",
         "en"
@@ -48,18 +105,87 @@
   },
   "en": {
     "navbar": {
-      "items": {
-        "Funtionalities": {
-          "Compras": "link1",
-          "Transferencias": "link2",
-          "Pagos y Recargas": "link3",
-          "Retiros": "link4"
+      "items": [
+        {
+          "title": "Funcionalities",
+          "subMenu": [
+            {
+              "copy": "Compras",
+              "url": "link1"
+            },
+            {
+              "copy": "Transferencias",
+              "url": "link2"
+            },
+            {
+              "copy": "Pagos y Recargas",
+              "url": "link3"
+            },
+            {
+              "copy": "Retiros",
+              "url": "link4"
+            }
+          ]
         },
-        "Help and Security": {},
-        "About Ualá": {},
-        "Prices": "d",
-        "Promos": "d"
-      },
+        {
+          "title": "Help and Security",
+          "subMenu": [
+            {
+              "copy": "Preguntas frecuentes",
+              "url": "link1"
+            },
+            {
+              "copy": "Métodos de contacto",
+              "url": "link2"
+            },
+            {
+              "copy": "Comunidad",
+              "url": "link3"
+            },
+            {
+              "copy": "Consejos de seguridad",
+              "url": "link4"
+            },
+            {
+              "copy": "Reporte por robo o pérdida",
+              "url": "link5"
+            }
+          ]
+        },
+        {
+          "title": "About Ualá",
+          "subMenu": [
+            {
+              "copy": "Nosotros",
+              "url": "link1"
+            },
+            {
+              "copy": "Búsquedas laborales",
+              "url": "link2"
+            },
+            {
+              "copy": "Prensa",
+              "url": "link3"
+            },
+            {
+              "copy": "El blog de Ualá",
+              "url": "link4"
+            },
+            {
+              "copy": "Gaming",
+              "url": "link5"
+            }
+          ]
+        },
+        {
+          "title": "Prices",
+          "url": "https://www.uala.com.ar/costos"
+        },
+        {
+          "title": "Promos",
+          "url": "https://www.uala.com.ar/promociones"
+        }
+      ],
       "languageButton": [
         "es",
         "en"

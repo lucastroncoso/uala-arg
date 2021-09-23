@@ -9,10 +9,10 @@ const MSubMenu = ({ content, isOpen }) => {
       styles.subMenu,
       { [styles.isOpen]: isOpen }
     )}>
-      {content && Object.keys(content).map((itemString, itemIndex) => {
+      {content && content.map((item, itemIndex) => {
         return (
           <li key={`subItem-${itemIndex}`} className={styles.item}>
-            <a href={content[itemString]}>{itemString}</a>
+            <a href={item.url}>{item.copy}</a>
           </li>
         )
       })}
