@@ -1,0 +1,275 @@
+@use '../../styles/variables/variables' as *;
+@use '../../styles/mixins/underline-hover' as *;
+@use '../../styles/types/types' as *;
+@use '../../styles/mixins/respond-to' as *;
+
+.C01Navigation {
+  @include semibold-20;
+  background-color: $white;
+  display: flex;
+  width: 100%;
+  color: $gray-2;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 0px 0px 15px rgba($blue, 0.25);
+}
+
+.blockWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100%;
+
+  @include respond-to(minWidth768) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.brandWrapper {
+  position: relative;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond-to(minWidth768) {
+    width: 179px;
+    height: 63px;
+    align-self: flex-start;
+    padding-top: 10px;
+  }
+}
+
+.logo {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  transition: $visibilityTransition;
+
+  &.isHidden {
+    @include makeInvisible;
+  }
+
+  &.isVisible {
+    @include makeVisible;
+  }
+
+  @include respond-to(minWidth768) {
+    width: 80px;
+    height: 40px;
+  }
+}
+
+.collapsibleWrapper {
+  position: relative;
+  display: block;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  height: 0;
+  @include makeInvisible;
+  overflow: hidden;
+  transition: opacity .75s, visibility .75s, height .75s;
+
+  &.isOpen {
+    background-attachment: fixed;
+    height: 100vh;
+    @include makeVisible;
+
+    @include respond-to(minWidth768) {
+      height: auto;
+    }
+  }
+
+  @include respond-to(minWidth768) {
+    display: flex;
+    height: auto;
+    @include makeVisible;
+  }
+}
+
+.mobileMenuButton {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  .barOne,
+  .barTwo,
+  .barThree {
+    width: 100%;
+    height: 3px;
+    background: $blue;
+    border-radius: 10px;
+    transition: all .3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+
+  .barOne {
+    transform: rotate(0);
+  }
+
+  .barTwo {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .barThree {
+    transform: rotate(0);
+  }
+
+  &.isOpen {
+    .barOne {
+      transform: rotate(45deg);
+    }
+
+    .barTwo {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    .barThree {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @include respond-to(minWidth768) {
+    display: none;
+  }
+}
+
+.listWrapper {
+  margin-top: 23px;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(minWidth768) {
+    margin-top: 0;
+    flex-direction: row;
+    @include semibold-17;
+  }
+}
+
+.listItem {
+  padding: 16px 0;
+
+  @include respond-to(minWidth768) {
+    padding: 29px 17px 26px;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+  }
+
+  .itemButton {
+    cursor: pointer;
+    padding-bottom: 2px;
+    transition: color .25s;
+    display: block;
+
+    &.hasUnderline {
+      @include underline-hover($gray-3);
+    }
+
+    &.isActive {
+      & {
+        color: $gray-3;
+      }
+
+      &::after {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @include respond-to(minWidth768) {
+      &:hover {
+        color: $gray-3;
+      }
+    }
+
+    .arrowIcon {
+      position: absolute;
+      right: 5px;
+      top: -3px;
+      width: 18px;
+      height: 9px;
+
+      & svg {
+        transition: transform .3s;
+      }
+
+      &.isOpen svg{
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.languageSelector {
+  padding-top: 40px;
+  transition: $visibilityTransition;
+
+  &.isHidden {
+    @include makeInvisible;
+  }
+
+  @include respond-to(minWidth768) {
+    padding: 0;
+    margin-left: auto;
+    @include semibold-17;
+  }
+
+  span {
+    transition: color .25s;
+    text-transform: uppercase;
+    padding: 0 5px;
+    cursor: pointer;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-left: solid 1px $gray-2;
+      padding-right: 0;
+    }
+
+    &:hover {
+      color: $gray-3;
+    }
+  }
+}
+
+.customClass.downloadButton {
+  @include semibold-18;
+  display: block;
+  width: 230px;
+  margin: 58px auto 0;
+
+  @include respond-to(minWidth768) {
+    position: absolute;
+    margin: 0;
+    right: 0;
+    top: 18px;
+    @include makeInvisible;
+    transition: $visibilityTransition;
+
+    &.isVisible {
+      @include makeVisible;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use '/styles/types/types' as *;
+@use '/styles/mixins/respond-to' as *;
+@use '/styles/variables/variables' as *;
+
+.subMenu {
+  max-height: 0;
+  opacity: 0;
+  visibility: collapse;
+  overflow: hidden;
+  transition: opacity .75s, visibility .75s, max-height .75s;
+
+  &.isOpen {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100vh;
+  }
+
+  @include respond-to(minWidth768) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.item {
+  @include regular-17;
+  padding: 15px 0;
+  
+  a {
+    transition: color .3s;
+    color: $gray;
+  
+    &:hover,
+    &:active {
+      color: $gray-3;
+    }
+  }
+
+
+  @include respond-to(minWidth768) {
+    padding: 5px 17px 40px;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
