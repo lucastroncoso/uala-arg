@@ -1,5 +1,36 @@
 {
   "es": {
+    "navbar": {
+      "items": {
+        "Funcionalidades": {
+          "Compras": "link1",
+          "Transferencias": "link2",
+          "Pagos y Recargas": "link3",
+          "Retiros": "link4"
+        },
+        "Ayuda y seguridad": {
+          "Preguntas frecuentes": "link1",
+          "Métodos de contacto": "link2",
+          "Comunidad": "link3",
+          "Consejos de seguridad": "link4",
+          "Reporte por robo o pérdida": "link5"
+        },
+        "Sobre Ualá": {
+          "Nosotros": "link1",
+          "Búsquedas laborales": "link2",
+          "Prensa": "link3",
+          "El blog de Ualá": "link4",
+          "Gaming": "link5"
+        },
+        "Costos": "https://www.uala.com.ar/costos",
+        "Promociones": "https://www.uala.com.ar/promociones"
+      },
+      "languageButton": [
+        "es",
+        "en"
+      ],
+      "downloadAppButtonCopy": "Descargar la app"
+    },
     "hero": {
       "title": "El lado bueno de tu dinero",
       "paragraph": "Una tarjeta de débito Mastercard gratis y una app para manejar tu dinero mucho más fácil.",
@@ -16,6 +47,25 @@
     }
   },
   "en": {
+    "navbar": {
+      "items": {
+        "Funtionalities": {
+          "Compras": "link1",
+          "Transferencias": "link2",
+          "Pagos y Recargas": "link3",
+          "Retiros": "link4"
+        },
+        "Help and Security": {},
+        "About Ualá": {},
+        "Prices": "d",
+        "Promos": "d"
+      },
+      "languageButton": [
+        "es",
+        "en"
+      ],
+      "downloadAppButtonCopy": "Download App"
+    },
     "hero": {
       "title": "The good side of your data",
       "paragraph": "Paragraph but in english",

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import C01Navigation from '../components/C01-Navigation/C01Navigation'
 import Hero from '../components/Hero/Hero';
 import pageContent from '../data/SiteMXContent.json';
 import { useAppContext } from '../store/context';
@@ -22,6 +23,7 @@ export default function MainPageAr() {
         />
       </Head>
       <main>
+        <C01Navigation content={pageContent[locale].navbar} />
         <Hero content={pageContent[locale].hero} />
         <VideoSection />
         <DownloadAppModal content={pageContent[locale].downloadApp} />

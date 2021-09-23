@@ -18,8 +18,28 @@
   }
 }
 
+@mixin regular-17 {
+  font-size: 17px;
+  font-weight: 200;
+}
+
 @mixin semibold-30 {
   font-size: 30px;
+  font-weight: 500;
+}
+
+@mixin semibold-17 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+@mixin semibold-18 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@mixin semibold-20 {
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -40,3 +60,14 @@
   font-weight: 400;
   line-height: 1.37;
 }
+
+@mixin makeInvisible {
+  opacity: 0;
+  visibility: hidden
+}
+
+@mixin makeVisible {
+  opacity: 1;
+  visibility: visible;
+}
+

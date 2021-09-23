@@ -7,7 +7,6 @@ import YoutubeVideo from '../../YoutubeVideoIframe/YoutubeVideoIframe';
 const YoutubeModal = () => {
   const { youtubeModalVideoId, setYoutubeModalVideoId } = useAppContext();
   const popupRef = useRef(null);
-  console.log(youtubeModalVideoId);
   const handleModalCloseClick = useCallback(() => {
     setYoutubeModalVideoId('');
   }, [setYoutubeModalVideoId]);
