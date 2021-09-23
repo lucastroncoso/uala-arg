@@ -9,10 +9,8 @@ pipelines:
             - node
           script:
             - yarn
-            - yarn check-types
-            - yarn lint
   branches:
-    develop-to-qa: 
+    develop-to-qa:
       - step:
           name: Deploying Files to Monkapps
           script:
@@ -30,4 +28,8 @@ pipelines:
               variables:
                 SSH_USER: 'uala-website-development'
                 SERVER: 'us.dev.monkapps.com'
-                COMMAND: 'cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build && forever stop uala && forever start -a -t -l ~/log/uala.log --uid uala /usr/bin/yarn --cwd /var/projects/uala-website-development/public start'
+                COMMAND:
+                  'cd ~/public/ && /usr/bin/yarn --cwd /var/projects/uala-website-development/public
+                  install && /usr/bin/yarn --cwd /var/projects/uala-website-development/public build
+                  && forever stop uala && forever start -a -t -l ~/log/uala.log --uid uala
+                  /usr/bin/yarn --cwd /var/projects/uala-website-development/public start'
