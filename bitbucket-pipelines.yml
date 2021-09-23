@@ -9,7 +9,6 @@ pipelines:
             - node
           script:
             - yarn
-            - yarn lint
   branches:
     develop-to-qa:
       - step:
