@@ -39,7 +39,7 @@ const C01Navigation = ({ content }) => {
   );
   const languageSelectorStyle = classNames(
     styles.languageSelector,
-    { [styles.isHidden]: isScrolled },
+    { [styles.isHidden]: !isMobile && isScrolled },
   );
 
   useEffect(() => {
