@@ -48,6 +48,12 @@
   font-weight: 500;
 }
 
+@mixin bold-18 {
+  color: $gray-4;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 @mixin bigParagraph {
   color: $gray;
   font-size: 20px;
@@ -63,11 +69,10 @@
 
 @mixin makeInvisible {
   opacity: 0;
-  visibility: hidden
+  visibility: hidden;
 }
 
 @mixin makeVisible {
   opacity: 1;
   visibility: visible;
 }
-
