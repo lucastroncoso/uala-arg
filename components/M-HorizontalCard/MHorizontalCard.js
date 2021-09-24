@@ -24,7 +24,7 @@ const MHorizontalCard = ({ content, isTitleColorBlue, customClass }) => {
 };
 
 MHorizontalCard.propTypes = {
-  content: PropTypes.object,
+  content: PropTypes.object.isRequired,
   isTitleColorblue: PropTypes.bool,
   customClass: PropTypes.array,
 }

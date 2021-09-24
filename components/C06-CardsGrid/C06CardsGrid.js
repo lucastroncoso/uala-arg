@@ -6,7 +6,7 @@ import MHorizontalCard from '../M-HorizontalCard/MHorizontalCard';
 
 const C06CardsGrid = ({ content }) => {
   return (
-    <section className={styles.cardsGrid}>
+    <section className={styles.cardsGridSection}>
       <BlockWrapper>
         <h2 className={styles.mainTitle}>{content.title}</h2>
         <div className={styles.cardsWrapper}>
@@ -21,7 +21,7 @@ const C06CardsGrid = ({ content }) => {
 };
 
 C06CardsGrid.propTypes = {
-  content: PropTypes.object,
+  content: PropTypes.object.isRequired,
 }
 
 export default C06CardsGrid;

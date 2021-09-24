@@ -2,8 +2,7 @@
 @use '../../styles/types/types' as *;
 @use '../../styles/mixins/respond-to' as *;
 
-.cardsGrid {
-  width: 100%;
+.cardsGridSection {
   background-color: $skyblue;
   padding-top: 60px;
 

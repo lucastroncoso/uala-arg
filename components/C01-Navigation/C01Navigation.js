@@ -171,7 +171,7 @@ const C01Navigation = ({ content }) => {
 };
 
 C01Navigation.propTypes = {
-  content: PropTypes.object,
+  content: PropTypes.object.isRequired,
 };
 
 export default C01Navigation;

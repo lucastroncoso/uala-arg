@@ -21,7 +21,7 @@ const MSubMenu = ({ content, isOpen }) => {
 };
 
 MSubMenu.propTypes = {
-  content: PropTypes.array,
+  content: PropTypes.array.isRequired,
   isOpen: PropTypes.bool,
 };
 
