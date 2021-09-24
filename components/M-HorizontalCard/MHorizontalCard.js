@@ -3,7 +3,7 @@ import styles from './MHorizontalCard.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-const MHorizontalCard = ({ content, isTitleColorblue, customClass }) => {
+const MHorizontalCard = ({ content, isTitleColorBlue, customClass }) => {
   return (
     <div className={classNames(styles.horizontalCard, customClass && [...customClass])}>
       <div className={styles.iconWrapper}>
@@ -11,7 +11,7 @@ const MHorizontalCard = ({ content, isTitleColorblue, customClass }) => {
       </div>
 
       <div className={styles.textWrapper}>
-        <h4 className={classNames(styles.cardTitle, { [styles.isBlue]: isTitleColorblue })}
+        <h4 className={classNames(styles.cardTitle, { [styles.isBlue]: isTitleColorBlue })}
         >
           {content.title}
         </h4>

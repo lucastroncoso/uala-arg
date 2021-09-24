@@ -10,9 +10,9 @@ const C06CardsGrid = ({ content }) => {
       <BlockWrapper customClass={[styles.customClass, styles.blockWrapper]}>
         <h2 className={styles.mainTitle}>{content.title}</h2>
         <div className={styles.cardsWrapper}>
-          {content.cards.map(card => {
-            return <MHorizontalCard content={card} isTitleColorblue={true}
-              customClass={[styles.customClass, styles.card]} />;
+          {content.cards.map((card, cardIndex) => {
+            return <MHorizontalCard content={card} isTitleColorBlue={true}
+              customClass={[styles.customClass, styles.card]} key={`card-${cardIndex}`} />;
           })}
         </div>
       </BlockWrapper>
