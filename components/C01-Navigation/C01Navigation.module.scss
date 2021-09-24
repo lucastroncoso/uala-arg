@@ -3,6 +3,11 @@
 @use '../../styles/types/types' as *;
 @use '../../styles/mixins/respond-to' as *;
 
+@mixin semibold-17 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
 .C01Navigation {
   @include semibold-20;
   background-color: $white;
@@ -73,7 +78,7 @@
   height: 0;
   @include makeInvisible;
   overflow: hidden;
-  transition: opacity .75s, visibility .75s, height .75s;
+  transition: opacity 0.75s, visibility 0.75s, height 0.75s;
 
   &.isOpen {
     background-attachment: fixed;
@@ -113,7 +118,7 @@
     height: 3px;
     background: $blue;
     border-radius: 10px;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
   }
@@ -177,11 +182,12 @@
   .itemButton {
     cursor: pointer;
     padding-bottom: 2px;
-    transition: color .25s;
+    transition: color 0.25s;
     display: block;
 
     &.hasUnderline {
       @include underline-hover($gray-3);
+      display: block;
     }
 
     &.isActive {
@@ -209,10 +215,10 @@
       height: 9px;
 
       & svg {
-        transition: transform .3s;
+        transition: transform 0.3s;
       }
 
-      &.isOpen svg{
+      &.isOpen svg {
         transform: rotate(180deg);
       }
     }
@@ -234,7 +240,7 @@
   }
 
   span {
-    transition: color .25s;
+    transition: color 0.25s;
     text-transform: uppercase;
     padding: 0 5px;
     cursor: pointer;

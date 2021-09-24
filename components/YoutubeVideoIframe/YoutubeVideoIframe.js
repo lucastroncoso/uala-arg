@@ -2,10 +2,10 @@ import React, { useMemo, useRef } from 'react';
 import styles from './YoutubeVideoIframe.module.scss';
 
 const YoutubeVideoIframe = ({ videoId, title = 'Youtube iframe' }) => {
-  const youtubePath = useMemo(
-    () => `https://www.youtube.com/embed/${videoId}?autoplay=1`,
-    [videoId],
-  );
+  const youtubePath = useMemo(() => {
+    if (!videoId) return '';
+    return `https://www.youtube.com/embed/${videoId}?autoplay=1` || '';
+  }, [videoId]);
   const iframeRef = useRef(null);
 
   return (
