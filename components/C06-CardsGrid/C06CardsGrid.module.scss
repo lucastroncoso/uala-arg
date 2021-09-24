@@ -5,10 +5,6 @@
 .cardsGrid {
   width: 100%;
   background-color: $skyblue;
-}
-
-.customClass.blockWrapper {
-  width: 100%;
   padding-top: 60px;
 
   @include respond-to(minWidth1024) {

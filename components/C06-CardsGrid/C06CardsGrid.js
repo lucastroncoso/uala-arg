@@ -7,7 +7,7 @@ import MHorizontalCard from '../M-HorizontalCard/MHorizontalCard';
 const C06CardsGrid = ({ content }) => {
   return (
     <section className={styles.cardsGrid}>
-      <BlockWrapper customClass={[styles.customClass, styles.blockWrapper]}>
+      <BlockWrapper>
         <h2 className={styles.mainTitle}>{content.title}</h2>
         <div className={styles.cardsWrapper}>
           {content.cards.map((card, cardIndex) => {
