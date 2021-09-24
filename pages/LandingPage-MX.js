@@ -14,7 +14,7 @@ export default function MainPageAr() {
   return (
     <>
       <Head>
-        <title>Uala Main Page AR</title>
+        <title>Uala Main Page MX</title>
         <meta name="description" content="Ualá" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
