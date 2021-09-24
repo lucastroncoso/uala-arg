@@ -1,14 +1,12 @@
 @use '/styles/mixins/respond-to' as *;
 
 @mixin underline-hover($color) {
-  & {
-    overflow: hidden;
-    position: relative;
-    display: block;
-  }
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -16,7 +14,7 @@
     height: 2px;
     background-color: $color;
     opacity: 0;
-    transition: opacity .3s, transform .3s;
+    transition: opacity 0.3s, transform 0.3s;
     transform: translate3d(-100%, 0, 0);
   }
 
