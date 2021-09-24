@@ -53,7 +53,7 @@ const FooterBanner = ({ content }) => {
 };
 
 FooterBanner.propTypes = {
-  content: PropTypes.object,
+  content: PropTypes.object.isRequired,
 };
 
 export default FooterBanner;

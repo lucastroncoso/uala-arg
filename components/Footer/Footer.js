@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import React from 'react';
 import styles from './Footer.module.scss';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
@@ -101,7 +101,7 @@ const Footer = ({ content }) => {
 };
 
 Footer.propTypes = {
-  content: PropTypes.object,
+  content: PropTypes.object.isRequired,
 };
 
 export default Footer;
