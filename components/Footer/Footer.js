@@ -3,7 +3,7 @@ import styles from './Footer.module.scss';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
-import UALA_ISO from '../../public/assets/images/isologotipo.png';
+import UALA_ISO from '../../public/assets/logos/uala-logo-wave.png';
 import APP_STORE from '../../public/assets/images/app_store.png';
 import GOOGLE_PLAY from '../../public/assets/images/google_play.png';
 import SocialIcons from '../../components/SocialIcons/SocialIcons';
