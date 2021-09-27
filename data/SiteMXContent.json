@@ -128,6 +128,10 @@
       ]
     },
     "footer": {
+      "footerBanner": {
+        "title": "Súmate al lado bueno de tu dinero",
+        "copy": "<strong>Descarga la app</strong> y empieza a manejar tus finanzas fácil, rápido y 100% online"
+      },
       "title": "El Lado Bueno de tu Dinero",
       "socialLinks": [
         {
