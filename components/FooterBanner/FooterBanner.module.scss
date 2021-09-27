@@ -2,15 +2,18 @@
 @use '../../styles/variables/variables' as *;
 @use '../../styles/mixins/respond-to' as *;
 @use '../../styles/types/types' as *;
+@use '../../styles/mixins/reset-styles' as *;
 
 .footerBanner {
+  @include reset-styles;
+
   --paddingBottom: 45px;
 
   background: $cornflowerBlue;
   padding-top: 85px;
   position: relative;
   padding-bottom: var(--paddingBottom);
-  color: white;
+  color: $white;
 
   &:before {
     position: absolute;
