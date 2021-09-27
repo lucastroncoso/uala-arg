@@ -3,6 +3,11 @@
 @use '../../styles/types/types' as *;
 @use '../../styles/mixins/respond-to' as *;
 
+@mixin semibold-17 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
 .C01Navigation {
   @include semibold-20;
   background-color: $white;
