@@ -7,19 +7,19 @@
           "subMenu": [
             {
               "copy": "Compras",
-              "url": "link1"
+              "url": "https://uala.com.mx/tarjeta"
             },
             {
               "copy": "Transferencias",
-              "url": "link2"
+              "url": "https://uala.com.mx/transferencias"
             },
             {
               "copy": "Pagos y Recargas",
-              "url": "link3"
+              "url": "https://uala.com.mx/pagos"
             },
             {
               "copy": "Retiros",
-              "url": "link4"
+              "url": "https://uala.com.mx/extracciones"
             }
           ]
         },
@@ -28,23 +28,23 @@
           "subMenu": [
             {
               "copy": "Preguntas frecuentes",
-              "url": "link1"
+              "url": "https://uala.com.mx/faqs"
             },
             {
               "copy": "Métodos de contacto",
-              "url": "link2"
+              "url": "https://uala.com.mx/contacto"
             },
             {
               "copy": "Comunidad",
-              "url": "link3"
+              "url": "https://comunidad.uala.com.mx/"
             },
             {
               "copy": "Consejos de seguridad",
-              "url": "link4"
+              "url": "https://uala.com.mx/seguridad"
             },
             {
               "copy": "Reporte por robo o pérdida",
-              "url": "link5"
+              "url": "https://uala.com.mx/tarjeta#reporte"
             }
           ]
         },
@@ -53,19 +53,19 @@
           "subMenu": [
             {
               "copy": "Nosotros",
-              "url": "link1"
+              "url": "https://uala.com.mx/nosotr@s"
             },
             {
               "copy": "Búsquedas laborales",
-              "url": "link2"
+              "url": "https://uala.com.mx/trabajar-en-uala"
             },
             {
               "copy": "Prensa",
-              "url": "link3"
+              "url": "https://uala.com.mx/prensa"
             },
             {
               "copy": "El blog de Ualá",
-              "url": "link4"
+              "url": "https://blog.uala.com.mx/"
             },
             {
               "copy": "Gaming",
@@ -75,11 +75,11 @@
         },
         {
           "title": "Costos",
-          "url": "https://www.uala.com.ar/costos"
+          "url": "https://uala.com.mx/Consulta-los-costos-y-las-comisiones-de-nuestros-productos"
         },
         {
           "title": "Promociones",
-          "url": "https://www.uala.com.ar/promociones"
+          "url": "https://uala.com.mx/promociones"
         }
       ],
       "languageButton": [
