@@ -6,7 +6,7 @@
 .footerBanner {
   --paddingBottom: 45px;
 
-  background: #668aff;
+  background: $cornflowerBlue;
   padding-top: 85px;
   position: relative;
   padding-bottom: var(--paddingBottom);
@@ -20,9 +20,6 @@
     right: 0;
     content: "";
     background: linear-gradient(90deg, rgba(62, 107, 253, 1) 0%, rgba(62, 107, 253, 0) 100%);
-  }
-
-  @include respond-to(minWidth768) {
   }
 }
 
@@ -85,7 +82,7 @@
 
     @include respond-to(minWidth768) {
       right: 5%;
-      top: 70px;
+      bottom: 0;
       transform: scale(1.2) rotate(-45deg);
       opacity: 0.7;
     }
