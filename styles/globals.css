@@ -1,15 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .bg-blue-wave {
-  background: url(/assets/images/bg/waveTopDesktopBlue.svg) top /100% auto, url(/assets/images/bg/waveBottomDesktopBlue.svg) bottom/100% auto, linear-gradient(#dee8ff, #f2f7ff) content-box;
+  background: url(/assets/images/bg/waveTopDesktopBlue.svg) top / 100% auto,
+    url(/assets/images/bg/waveBottomDesktopBlue.svg) bottom/100% auto,
+    linear-gradient(#dee8ff, #f2f7ff) content-box;
   background-repeat: no-repeat;
   padding-bottom: 3.2vw;
   padding-top: 4vw;
 }
 
 .bg-gray-wave-top {
-  background: url(/assets/images/waveTopDesktopGray.svg) top /100% auto, linear-gradient(#eeeeee, #eeeeee) content-box;
+  background: url(/assets/images/waveTopDesktopGray.svg) top / 100% auto,
+    linear-gradient(#eeeeee, #eeeeee) content-box;
   background-repeat: no-repeat;
   padding-top: 4vw;
 }
@@ -31,7 +35,7 @@
 }
 
 .list-dot li:before {
-  content: "\2022";
+  content: '\2022';
   color: #3e6afb;
   font-weight: bold;
   display: inline-block;
@@ -45,33 +49,33 @@
 }
 
 .title-1 {
-  @apply text-blue-600 text-4xl font-semibold leading-normal
+  @apply text-blue-600 text-4xl font-semibold leading-normal;
 }
 
 .title-2 {
-  @apply text-blue-500 text-4xl font-medium
+  @apply text-blue-500 text-4xl font-medium;
 }
 
 .title-3 {
-  @apply text-gray-700 text-4xl font-medium
+  @apply text-gray-700 text-4xl font-medium;
 }
 
 .text {
-  @apply text-gray-500 text-lg leading-9
+  @apply text-gray-500 text-lg leading-9;
 }
 
 .link {
-  @apply text-blue-600 underline
+  @apply text-blue-600 underline;
 }
 
 p {
-  @apply my-4
+  @apply my-4;
 }
 
 .menu-list {
-  @apply hidden
+  @apply hidden;
 }
 
 .menu-option:hover .menu-list {
-  @apply block
+  @apply block;
 }
