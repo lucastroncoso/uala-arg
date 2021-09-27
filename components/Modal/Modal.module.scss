@@ -1,8 +1,11 @@
 @use '../../styles/variables/variables' as *;
 @use '../../styles/mixins/respond-to' as *;
 @use '../../styles/types/types' as *;
+@use '../../styles/mixins/reset-styles' as *;
 
 .popupBackdrop {
+  @include reset-styles;
+
   overflow: auto;
   position: fixed;
   top: 0;

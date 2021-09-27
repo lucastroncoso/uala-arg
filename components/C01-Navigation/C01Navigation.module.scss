@@ -2,9 +2,12 @@
 @use '../../styles/mixins/underline-hover' as *;
 @use '../../styles/types/types' as *;
 @use '../../styles/mixins/respond-to' as *;
+@use '../../styles/mixins/reset-styles' as *;
 
 .C01Navigation {
+  @include reset-styles;
   @include semibold-20;
+
   background-color: $white;
   display: flex;
   width: 100%;

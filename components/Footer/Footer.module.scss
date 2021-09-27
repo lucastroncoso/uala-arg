@@ -2,8 +2,11 @@
 @use '../../styles/variables/variables' as *;
 @use '../../styles/mixins/respond-to' as *;
 @use '../../styles/types/types' as *;
+@use '../../styles/mixins/reset-styles' as *;
 
 .footer {
+  @include reset-styles;
+
   background: #f9f9f9;
   padding-top: 85px;
   position: relative;
@@ -94,7 +97,7 @@
   }
 }
 
-.list {
+ul.list {
   margin-bottom: 75px;
 
   li:not(:last-child) {
