@@ -208,9 +208,10 @@
     .arrowIcon {
       position: absolute;
       right: 5px;
-      top: -3px;
+      top: 50%;
       width: 18px;
       height: 9px;
+      transform: translateY(-50%);
 
       & svg {
         transition: transform 0.3s;
@@ -261,7 +262,6 @@
 .customClass.downloadButton {
   @include semibold-18;
   display: block;
-  width: 230px;
   margin: 58px auto 0;
 
   @include respond-to(minWidth768) {

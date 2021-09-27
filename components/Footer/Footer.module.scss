@@ -15,7 +15,7 @@
   .liTitle {
     @include paragraph;
 
-    color: #575757;
+    color: $gray-4;
     text-transform: uppercase;
     margin-bottom: 24px;
   }
@@ -34,6 +34,7 @@
 }
 
 .about {
+  color: $gray-2;
   position: relative;
   .link {
     margin-bottom: 20px;
@@ -71,6 +72,7 @@
   display: flex;
   margin-top: 30px;
   margin-bottom: 45px;
+  color: $gray-2;
 
   & * {
     width: 25px;
@@ -85,8 +87,6 @@
 .link {
   @include paragraph;
   @include underline-hover($gray-2);
-
-  color: $gray-2;
 }
 
 .legalWrapper {
@@ -99,6 +99,7 @@
 
 ul.list {
   margin-bottom: 75px;
+  color: $gray-2;
 
   li:not(:last-child) {
     margin-bottom: 24px;

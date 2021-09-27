@@ -1,7 +1,10 @@
 @use '../../styles/variables/variables' as *;
 @use '../../styles/mixins/respond-to' as *;
+@use '../../styles/mixins/reset-button' as *;
 
 .button {
+  @include reset-button;
+
   background: $white;
   border-radius: 37px;
   color: $white;

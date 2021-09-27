@@ -1,0 +1,8 @@
+@mixin reset-button {
+  button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+}
