@@ -16,8 +16,8 @@ const C01Navigation = ({ content }) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [isAnyMenuActive, setIsAnyMenuActive] = useState(false);
-  const [activeSubMenu, setActiveSubMenu] = useState('');
-  const [selectedItem, setSelectedItem] = useState(undefined);
+  const [activeSubMenu, setActiveSubMenu] = useState(-1);
+  const [selectedItem, setSelectedItem] = useState(0);
   const { _, setLocale } = useAppContext();
 
   const onLanguageButtonClick = useCallback((event) => {
@@ -91,10 +91,9 @@ const C01Navigation = ({ content }) => {
 
         <div className={itemsWrapperStyle}>
           <ul className={styles.listWrapper}>
-            {Object.keys(content.items).map((itemString, itemIndex) => {
-              const currentItem = content.items[itemString];
-              const hasSubMenu = typeof currentItem === 'object';
-              const isCurrentItemActive = itemString === activeSubMenu;
+            {content.items.map((item, itemIndex) => {
+              const hasSubMenu = Object.keys(item).includes("subMenu");
+              const isCurrentItemActive = itemIndex === activeSubMenu;
               const buttonStyle = classNames(
                 styles.itemButton,
                 { [styles.hasUnderline]: hasSubMenu },
@@ -116,12 +115,12 @@ const C01Navigation = ({ content }) => {
                         onClick: (event) => {
                           setIsSubMenuOpen(isSubMenuOpen => !isSubMenuOpen)
                           if (isSubMenuOpen && isCurrentItemActive) {
-                            setActiveSubMenu('');
+                            setActiveSubMenu(-1);
                           } else {
-                            setActiveSubMenu(itemString);
+                            setActiveSubMenu(itemIndex);
                           }
                           if (!isMobile) {
-                            setSelectedItem(itemString);
+                            setSelectedItem(itemIndex);
                             setTimeout(() => {
                               setIsAnyMenuActive(
                                 event.target.classList.contains(styles.isActive)
@@ -130,15 +129,15 @@ const C01Navigation = ({ content }) => {
                           }
                         }
                       }
-                      : { href: currentItem }
+                      : { href: item.url }
                     }
                   >
-                    {itemString}
+                    {item.title}
                     {isMobile && hasSubMenu && <ArrowIcon className={iconStyle} />}
                   </a>
 
                   { isMobile && hasSubMenu &&
-                    <MSubMenu content={currentItem} isOpen={isCurrentItemActive} />
+                    <MSubMenu content={item.subMenu} isOpen={isCurrentItemActive} />
                   }
                 </li>
               )
@@ -161,7 +160,7 @@ const C01Navigation = ({ content }) => {
 
           {!isMobile &&
             <MSubMenu
-              content={selectedItem && content.items[selectedItem]}
+              content={content.items[selectedItem].subMenu}
               isOpen={isAnyMenuActive}
             />
           }
@@ -172,7 +171,7 @@ const C01Navigation = ({ content }) => {
 };
 
 C01Navigation.propTypes = {
-  content: PropTypes.object,
+  content: PropTypes.object.isRequired,
 };
 
 export default C01Navigation;
