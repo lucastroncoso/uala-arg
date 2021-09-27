@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="51px" viewBox="0 0 1440 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle 2 Copy 4</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.870588 0 0 0 0 0.909804 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(0.000000, -1632.000000)" filter="url(#filter-1)">
+            <g transform="translate(-28.000000, 1104.000000)">
+                <path d="M285.754215,530.208585 C535.245682,541.594998 755.415947,571.037272 984.022104,571.037272 C1109.49645,571.037272 1278.15575,562.474247 1490,545.348197 L1485.52022,579 L4.97544262,579 C3.67485246,552.313309 3.67485246,537.955185 4.97544262,535.925629 C63.9401855,528.166694 152.691418,525.784344 285.754215,530.208585 Z" id="Rectangle-2-Copy-4" fill="#DEE8FF" transform="translate(747.000000, 553.500000) scale(-1, 1) rotate(180.000000) translate(-747.000000, -553.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

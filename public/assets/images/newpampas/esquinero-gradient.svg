@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360px" height="274px" viewBox="0 0 360 274" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Fill 1</title>
+    <defs>
+        <linearGradient x1="26.6247277%" y1="-0.171446044%" x2="63.897534%" y2="79.8285611%" id="linearGradient-1">
+            <stop stop-color="#FF6766" offset="0%"></stop>
+            <stop stop-color="#8EA8FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-1080.000000, -2871.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-3" transform="translate(1080.000000, 2871.000000)">
+                <path d="M247.773,0 C110.931,0 0,110.932 0,247.772 L0,247.772 C0,384.613 110.931,495.545 247.773,495.545 L247.773,495.545 C384.613,495.545 495.544,384.613 495.544,247.772 L495.544,247.772 C495.544,110.932 384.613,0 247.773,0 Z" id="Fill-1"></path>
+            </g>
+        </g>
+    </g>
+</svg>
