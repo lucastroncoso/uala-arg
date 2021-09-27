@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="605px" viewBox="0 0 1440 605" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <defs>
+        <linearGradient x1="127.227304%" y1="36.541206%" x2="-22.0733202%" y2="64.5769595%" id="linearGradient-1">
+            <stop stop-color="#FF6766" offset="0%"></stop>
+            <stop stop-color="#8EA8FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.3">
+        <g id="Desktop" transform="translate(0.000000, -1621.000000)" fill="url(#linearGradient-1)">
+            <rect id="Rectangle" x="0" y="1621" width="1440" height="605"></rect>
+        </g>
+    </g>
+</svg>

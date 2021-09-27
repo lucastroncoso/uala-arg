@@ -1,8 +1,11 @@
 @use '../../styles/variables/variables' as *;
 @use '../../styles/mixins/respond-to' as *;
 @use '../../styles/types/types' as *;
+@use '../../styles/mixins/reset-styles' as *;
 
 .hero {
+  @include reset-styles;
+
   padding-top: 140px;
   overflow: hidden;
   position: relative;
@@ -14,6 +17,7 @@
   top: 0;
   left: 50%;
   z-index: -1;
+  width: 100%;
 
   img {
     transform: translateX(-50%);
@@ -31,7 +35,7 @@
   }
 }
 
-.paragraph {
+p.paragraph {
   @include bigParagraph;
   margin-top: 30px;
   width: 100%;

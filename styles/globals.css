@@ -1,52 +1,81 @@
-html {
-  font-size: 62.5%;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-blue-wave {
+  background: url(/assets/images/bg/waveTopDesktopBlue.svg) top / 100% auto,
+    url(/assets/images/bg/waveBottomDesktopBlue.svg) bottom/100% auto,
+    linear-gradient(#dee8ff, #f2f7ff) content-box;
+  background-repeat: no-repeat;
+  padding-bottom: 3.2vw;
+  padding-top: 4vw;
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Public Sans', sans-serif;
+.bg-gray-wave-top {
+  background: url(/assets/images/waveTopDesktopGray.svg) top / 100% auto,
+    linear-gradient(#eeeeee, #eeeeee) content-box;
+  background-repeat: no-repeat;
+  padding-top: 4vw;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.footer {
+  background: red;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.bg-faqs {
+  background: linear-gradient(to top, #000000ad, #00000061), url(/assets/images/hero-image.jpeg);
+  background-size: 100%;
+  background-position: center;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+.bg-about {
+  background: linear-gradient(to top, #000000ad, #00000061), url(/assets/images/aboutBg.jpeg);
+  background-size: 100%;
+  background-position: center;
+}
+
+.list-dot li:before {
+  content: '\2022';
+  color: #3e6afb;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -20px;
+  position: absolute;
+}
+
+.list-dot {
+  margin-left: 25px;
+}
+
+.title-1 {
+  @apply text-blue-600 text-4xl font-semibold leading-normal;
+}
+
+.title-2 {
+  @apply text-blue-500 text-4xl font-medium;
+}
+
+.title-3 {
+  @apply text-gray-700 text-4xl font-medium;
+}
+
+.text {
+  @apply text-gray-500 text-lg leading-9;
+}
+
+.link {
+  @apply text-blue-600 underline;
+}
+
 p {
-  margin: 0;
-  font-weight: normal;
+  @apply my-4;
 }
 
-img {
-  display: block;
-  height: auto;
-  width: 100%;
+.menu-list {
+  @apply hidden;
 }
 
-ol,
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  padding: 0;
+.menu-option:hover .menu-list {
+  @apply block;
 }

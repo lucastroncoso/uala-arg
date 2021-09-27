@@ -1,0 +1,137 @@
+.body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+.bgImageDesk {
+    background-image: url(/assets/images/newpampas/background-desktop.jpg);
+    background-size: 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.bgImageMobile {
+    background-image: url(/assets/images/newpampas/background-mobile.png);
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.marginContainer {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0px 0px 0px 0px;
+}
+
+.hrBlueRed {
+    background: linear-gradient(to right, red, blue);
+    height: 2px;
+}
+
+.hrBlueX {
+    background: linear-gradient(to right, red, rgb(102, 138, 255));
+    height: 2px;
+}
+
+.hrBlue {
+    background: rgb(102, 138, 255);
+    height: 2px;
+}
+
+.hrBlueSm {
+    background: rgb(102, 138, 255);
+    height: 1px;
+    border: none
+}
+
+.hrWhite {
+    background: white;
+    height: 0px;
+}
+
+.colorPampa {
+    color: rgb(255, 102, 102);
+}
+
+.footer {
+    background-color: #1B1D21;
+}
+
+.footerP {
+    color: rgb(255, 178, 178);
+}
+
+.formShadow {
+    -webkit-box-shadow: -1px -8px 6px -8px #2212FF, -1px 8px 6px -8px #FF0D0D, 8px 15px 9px -17px rgba(1, 0, 255, 0.55), -10px -16px 9px -17px rgba(255, 78, 13, 0.40);
+    box-shadow: -1px -8px 6px -8px #2212FF, -1px 8px 6px -8px #FF0D0D, 8px 15px 9px -17px rgba(1, 0, 255, 0.55), -10px -16px 9px -17px rgba(255, 78, 13, 0.40);
+    border-left: 1px solid transparent;
+}
+
+.formButton {
+    background-color: rgb(102, 138, 255);
+    color: white;
+}
+
+.formButton:hover {
+    box-shadow: none;
+    color: white;
+}
+
+.formButton:disabled {
+    box-shadow: none;
+    color: white;
+}
+
+.focusNone {
+    outline: none;
+}
+
+.accordionButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+}
+
+.ualaBlue {
+    color: rgb(102, 138, 255)
+}
+
+.bgGradient {
+    background-image: url(/assets/images/newpampas/gradient-background.svg);
+    background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .bgGradient {
+        background-image: url(/assets/images/newpampas/gradient-background-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.select {
+    /* needed */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* SVG background image */
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' fill=' rgb(102, 138, 255)'><polygon points='0,0 200,0 100,100'/></svg>") no-repeat;
+    background-size: 12px;
+    background-position: calc(100% - 20px) center;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.select::selection {
+    background-color: #FF0D0D;
+}
