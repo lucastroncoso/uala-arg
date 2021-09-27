@@ -31,10 +31,10 @@ pipelines:
                 SERVER: 'us.dev.monkapps.com'
                 COMMAND:
                   'cd ~/public/ &&
-                  /usr/bin/yarn --cwd /var/projects/uala-website-development/public install &&
-                  /usr/bin/yarn --cwd /var/projects/uala-website-development/public build &&
+                  /usr/bin/yarn --cwd /var/projects/uala-website/public install &&
+                  /usr/bin/yarn --cwd /var/projects/uala-website/public build &&
                   forever stop uala &&
-                  forever start -a -t -l ~/log/uala.log --uid uala /usr/bin/yarn --cwd /var/projects/uala-website-development/public start'
+                  forever start -a -t -l ~/log/uala.log --uid uala /usr/bin/yarn --cwd /var/projects/uala-website/public start'
   branches:
     develop-to-qa:
       - step:
