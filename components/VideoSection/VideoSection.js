@@ -19,7 +19,7 @@ const VideoSection = () => {
 };
 
 VideoSection.propTypes = {
-  content: PropTypes.object,
+  content: PropTypes.object.isRequired,
 };
 
 export default VideoSection;

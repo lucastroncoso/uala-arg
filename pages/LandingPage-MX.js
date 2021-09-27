@@ -5,6 +5,7 @@ import pageContent from '../data/SiteMXContent.json';
 import { useAppContext } from '../store/context';
 import DownloadAppModal from '../components/Modal/DownloadAppModal/DownloadAppModal';
 import VideoSection from '../components/VideoSection/VideoSection';
+import C06CardsGrid from '../components/C06-CardsGrid/C06CardsGrid';
 import YoutubeModal from '../components/Modal/YoutubeModal/YoutubeModal';
 import Footer from '../components/Footer/Footer';
 
@@ -28,6 +29,7 @@ export default function MainPageAr() {
         <C01Navigation content={pageContent[locale].navbar} />
         <Hero content={pageContent[locale].hero} />
         <VideoSection />
+        <C06CardsGrid content={pageContent[locale].cardsGrid} />
         <Footer content={pageContent[locale].footer} />
         <DownloadAppModal content={pageContent[locale].downloadApp} />
         <YoutubeModal />

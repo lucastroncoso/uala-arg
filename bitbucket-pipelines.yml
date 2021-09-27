@@ -10,6 +10,31 @@ pipelines:
           script:
             - yarn
             - yarn build
+  tags:                         
+    dev-*:                  
+      - step:
+          name: Deploying Files to Monkapps
+          script:
+            - pipe: atlassian/rsync-deploy:0.4.4
+              variables:
+                USER: 'uala-website'
+                SERVER: 'us.dev.monkapps.com'
+                LOCAL_PATH: './'
+                EXTRA_ARGS: '-avPx'
+                REMOTE_PATH: '~/public/'
+      - step:
+          name: Building and Starting
+          script:
+            - pipe: atlassian/ssh-run:0.3.0
+              variables:
+                SSH_USER: 'uala-website'
+                SERVER: 'us.dev.monkapps.com'
+                COMMAND:
+                  'cd ~/public/ &&
+                  /usr/bin/yarn --cwd /var/projects/uala-website/public install &&
+                  /usr/bin/yarn --cwd /var/projects/uala-website/public build &&
+                  forever stop uala-website &&
+                  forever start -a -t -l ~/log/uala-website.log --uid uala-website /usr/bin/yarn --cwd /var/projects/uala-website/public start -p 3005'
   branches:
     develop-to-qa:
       - step:

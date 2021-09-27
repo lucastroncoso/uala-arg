@@ -24,7 +24,7 @@ const Hero = ({ content }) => {
 };
 
 Hero.propTypes = {
-  content: PropTypes.object,
+  content: PropTypes.object.isRequired,
 };
 
 export default Hero;

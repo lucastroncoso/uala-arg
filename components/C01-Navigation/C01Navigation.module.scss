@@ -4,6 +4,11 @@
 @use '../../styles/mixins/respond-to' as *;
 @use '../../styles/mixins/reset-styles' as *;
 
+@mixin semibold-17 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
 .C01Navigation {
   @include reset-styles;
   @include semibold-20;
