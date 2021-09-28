@@ -36,8 +36,8 @@ const PartnersSection = ({ content }) => {
         <div className={styles.buttonsWrapper}>
           {content.buttons.map((button) => (
             <a href={button.url} key={button.title} className={styles.buttonLink}>
-              <MHorizontalCard
-                content={{ title: button.title }}
+              <MHorizontalCard isHorizontalOnMobile={true}
+                content={{ title: button.title, icon: button.icon }}
                 customClass={[styles.partnersButtonsCard]}
               />
             </a>

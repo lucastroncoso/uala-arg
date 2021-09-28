@@ -82,7 +82,10 @@
           "url": "https://uala.com.mx/promociones"
         }
       ],
-      "languageButton": ["es", "en"],
+      "languageButton": [
+        "es",
+        "en"
+      ],
       "downloadAppButtonCopy": "Descargar la app"
     },
     "hero": {
@@ -99,26 +102,55 @@
       },
       "close": "cerrar modal"
     },
-    "cardsGrid": {
+    "cardsWithVideoSection": {
+      "title": "Mira todo lo que <br> puedes hacer con Ualá",
+      "cardsRow": [
+        {
+          "icon": "compras",
+          "title": "Compras",
+          "copy": "Vas a poder comprar todo lo que necesites con tu tarjeta Ualá Mastercard Internacional.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/tarjeta"
+        },
+        {
+          "icon": "transferencias",
+          "title": "Transferencias",
+          "copy": "Transfiere dinero a tus amig@s que tienen Ualá o a otras cuentas bancarias a través de SPEI desde tu app.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/transferencias"
+        },
+        {
+          "icon": "pagos-recargas",
+          "title": "Pagos y Recargas",
+          "copy": "Realiza tus pagos de servicios (luz, internet, agua, etc) y recarga tiempo aire a tu celular en cuestión de segundos.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/pagos"
+        }
+      ],
+      "video": {
+        "youtubeId": "tGtXlU1QE6k"
+      }
+    },
+    "cardsGridSection": {
       "title": "Todas tus finanzas desde un mismo lugar",
       "cards": [
         {
-          "icon": "icon1",
+          "icon": "sin-comisiones",
           "title": "Sin comisiones",
           "copy": "Puedes utilizar Ualá totalmente gratis. No se te cobrarán comisiones por ninguna operación."
         },
         {
-          "icon": "icon2",
+          "icon": "sin-letrachica",
           "title": "Sin letra chica",
           "copy": "Olvídate de las letras chiquitas. Puedes encontrar toda la información a la vista con un click."
         },
         {
-          "icon": "icon3",
+          "icon": "sin-costosocultos",
           "title": "Sin costos ocultos",
           "copy": "En Ualá no tenemos costos ocultos ni sorpresas en el manejo de tu cuenta. Conoce más <a href='https://www.uala.com.ar/'>aquí</a>"
         },
         {
-          "icon": "icon4",
+          "icon": "sin-sucursales",
           "title": "Sin sucursales",
           "copy": "Todo a través de la app 100% online. Ahorra tiempo y comunicate desde donde quieras."
         }
@@ -248,12 +280,32 @@
     "partnersSection": {
       "title": "Deposita dinero gratis",
       "buttons": [
-        { "title": "Depósito por transferencia bancaria (SPEI)", "url": "#", "icon": "transfers" },
-        { "title": "Depósito en efectivo", "url": "#", "icon": "deposit" }
+        {
+          "title": "Depósito por transferencia bancaria (SPEI)",
+          "url": "#",
+          "icon": "deposito-transferencias"
+        },
+        {
+          "title": "Depósito en efectivo",
+          "url": "#",
+          "icon": "deposito-efectivo"
+        }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
-      "viewMoreCTA": { "copy": "Ver tiendas afiliadas", "url": "#" }
+      "partnersLogos": [
+        "walmart",
+        "bodega-aurrera",
+        "7-eleven",
+        "superama",
+        "extra",
+        "farmacias-del-ahorro",
+        "farmacias-benavides",
+        "circle-k"
+      ],
+      "viewMoreCTA": {
+        "copy": "Ver tiendas afiliadas",
+        "url": "#"
+      }
     }
   },
   "en": {
@@ -339,7 +391,10 @@
           "url": "https://www.uala.com.ar/promociones"
         }
       ],
-      "languageButton": ["es", "en"],
+      "languageButton": [
+        "es",
+        "en"
+      ],
       "downloadAppButtonCopy": "Download App"
     },
     "hero": {
@@ -356,26 +411,55 @@
       },
       "close": "close modal"
     },
-    "cardsGrid": {
+    "cardsWithVideoSection": {
+      "title": "Look at everything <br> you can do with Ualá",
+      "cardsRow": [
+        {
+          "icon": "compras",
+          "title": "Shopping",
+          "copy": "Vas a poder comprar todo lo que necesites con tu tarjeta Ualá Mastercard Internacional.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/tarjeta"
+        },
+        {
+          "icon": "transferencias",
+          "title": "Transfers",
+          "copy": "Transfiere dinero a tus amig@s que tienen Ualá o a otras cuentas bancarias a través de SPEI desde tu app.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/transferencias"
+        },
+        {
+          "icon": "pagos-recargas",
+          "title": "Payments and Refills",
+          "copy": "Realiza tus pagos de servicios (luz, internet, agua, etc) y recarga tiempo aire a tu celular en cuestión de segundos.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/pagos"
+        }
+      ],
+      "video": {
+        "youtubeId": "tGtXlU1QE6k"
+      }
+    },
+    "cardsGridSection": {
       "title": "All your finances in the same place",
       "cards": [
         {
-          "icon": "icon1",
+          "icon": "sin-comisiones",
           "title": "No comisions",
           "copy": "Puedes utilizar Ualá totalmente gratis. No se te cobrarán comisiones por ninguna operación."
         },
         {
-          "icon": "icon2",
+          "icon": "sin-letrachica",
           "title": "No small letters",
           "copy": "Olvídate de las letras chiquitas. Puedes encontrar toda la información a la vista con un click."
         },
         {
-          "icon": "icon3",
+          "icon": "sin-costosocultos",
           "title": "No hidden costs",
           "copy": "En Ualá no tenemos costos ocultos ni sorpresas en el manejo de tu cuenta. Conoce más aquí."
         },
         {
-          "icon": "icon4",
+          "icon": "sin-sucursales",
           "title": "Without sucursales",
           "copy": "Todo a través de la app 100% online. Ahorra tiempo y comunicate desde donde quieras."
         }
@@ -501,12 +585,32 @@
     "partnersSection": {
       "title": "Deposita dinero gratis",
       "buttons": [
-        { "title": "Depósito por transferencia bancaria (SPEI)", "url": "#", "icon": "transfers" },
-        { "title": "Depósito en efectivo", "url": "#", "icon": "deposit" }
+        {
+          "title": "Depósito por transferencia bancaria (SPEI)",
+          "url": "#",
+          "icon": "deposito-transferencias"
+        },
+        {
+          "title": "Depósito en efectivo",
+          "url": "#",
+          "icon": "deposito-efectivo"
+        }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
-      "viewMoreCTA": { "copy": "Ver tiendas afiliadas", "url": "#" }
+      "partnersLogos": [
+        "walmart",
+        "bodega-aurrera",
+        "7-eleven",
+        "superama",
+        "extra",
+        "farmacias-del-ahorro",
+        "farmacias-benavides",
+        "circle-k"
+      ],
+      "viewMoreCTA": {
+        "copy": "Ver tiendas afiliadas",
+        "url": "#"
+      }
     }
   }
 }

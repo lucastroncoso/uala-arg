@@ -6,22 +6,29 @@
   @include cardStyles;
 }
 
-.iconWrapper{
-  @include respond-to(minWidth1024) {
-    display: flex;
-    align-items: center;
-  }
-  span {
-    width: 80px;
-    height: 80px;
-    background-color: $skyblue;
-    border-radius: 50%;
-    display: block;
+.horizontalOnMobile {
+  @include respond-to(maxWidth1023) {
+    border-radius: 11px;
 
-    @include respond-to(minWidth1024) {
-      width: 100px;
-      height: 100px;
+    .icon {
+      width: 49px;
+      height: 49px;
     }
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+
+  @include respond-to(minWidth1024) {
+    width: 100px;
+    height: 100px;
   }
 }
 

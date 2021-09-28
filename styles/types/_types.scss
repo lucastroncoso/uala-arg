@@ -22,11 +22,6 @@
   }
 }
 
-@mixin semibold-28 {
-  font-size: 28px;
-  font-weight: 500;
-}
-
 @mixin regular-16 {
   font-size: 16px;
   font-weight: 200;
@@ -48,6 +43,11 @@
 }
 
 @mixin semibold-20 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@mixin semibold-22 {
   font-size: 20px;
   font-weight: 500;
 }

@@ -58,7 +58,7 @@ const C01Navigation = ({ content }) => {
     if (isMobile & isMobileNavOpen)
       document.body.style.overflow = "hidden";
     else
-      document.body.style.overflow = "scroll";
+      document.body.style.overflow = "auto";
   }, [isMobileNavOpen]);
 
   return (
