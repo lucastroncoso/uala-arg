@@ -14,7 +14,7 @@
 }
 
 @mixin semibold-35 {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 500;
 
   @include respond-to(minWidth1024) {

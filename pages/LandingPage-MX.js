@@ -8,8 +8,9 @@ import VideoSection from '../components/VideoSection/VideoSection';
 import C06CardsGrid from '../components/C06-CardsGrid/C06CardsGrid';
 import YoutubeModal from '../components/Modal/YoutubeModal/YoutubeModal';
 import Footer from '../components/Footer/Footer';
+import PartnersSection from '../components/PartnersSection/PartnersSection';
 
-export default function MainPageAr() {
+export default function MainPageMX() {
   const { locale } = useAppContext();
 
   return (
@@ -29,6 +30,7 @@ export default function MainPageAr() {
         <C01Navigation content={pageContent[locale].navbar} />
         <Hero content={pageContent[locale].hero} />
         <VideoSection />
+        <PartnersSection content={pageContent[locale].partnersSection} />
         <C06CardsGrid content={pageContent[locale].cardsGrid} />
         <Footer content={pageContent[locale].footer} />
         <DownloadAppModal content={pageContent[locale].downloadApp} />
