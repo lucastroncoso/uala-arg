@@ -82,10 +82,7 @@
           "url": "https://uala.com.mx/promociones"
         }
       ],
-      "languageButton": [
-        "es",
-        "en"
-      ],
+      "languageButton": ["es", "en"],
       "downloadAppButtonCopy": "Descargar la app"
     },
     "hero": {
@@ -102,36 +99,28 @@
       },
       "close": "cerrar modal"
     },
-    "cardsWithVideoSection": {
-      "title": "Mira todo lo que <br> puedes hacer con Ualá",
-      "cardsRow": [
+    "stepsSection": {
+      "title": "Cómo ser parte de Ualá",
+      "stepsItems": [
         {
-          "icon": "compras",
-          "title": "Compras",
-          "copy": "Vas a poder comprar todo lo que necesites con tu tarjeta Ualá Mastercard Internacional.",
-          "ctaCopy": "Ver más",
-          "url": "https://uala.com.mx/tarjeta"
+          "copy": "Descarga la app desde Play Store o App Store en tu celular.",
+          "icon": "download"
         },
         {
-          "icon": "transferencias",
-          "title": "Transferencias",
-          "copy": "Transfiere dinero a tus amig@s que tienen Ualá o a otras cuentas bancarias a través de SPEI desde tu app.",
-          "ctaCopy": "Ver más",
-          "url": "https://uala.com.mx/transferencias"
+          "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
+          "icon": "register"
         },
         {
-          "icon": "pagos-recargas",
-          "title": "Pagos y Recargas",
-          "copy": "Realiza tus pagos de servicios (luz, internet, agua, etc) y recarga tiempo aire a tu celular en cuestión de segundos.",
-          "ctaCopy": "Ver más",
-          "url": "https://uala.com.mx/pagos"
+          "copy": "En 5 días hábiles recibirás tu tarjeta física inclonable sin costos de envío.",
+          "icon": "deliver"
+        },
+        {
+          "copy": "¡Activa tu tarjeta desde la app para hacer compras físicas!",
+          "icon": "activate"
         }
-      ],
-      "video": {
-        "youtubeId": "tGtXlU1QE6k"
-      }
+      ]
     },
-    "cardsGridSection": {
+    "cardsGrid": {
       "title": "Todas tus finanzas desde un mismo lugar",
       "cards": [
         {
@@ -292,16 +281,7 @@
         }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": [
-        "walmart",
-        "bodega-aurrera",
-        "7-eleven",
-        "superama",
-        "extra",
-        "farmacias-del-ahorro",
-        "farmacias-benavides",
-        "circle-k"
-      ],
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
       "viewMoreCTA": {
         "copy": "Ver tiendas afiliadas",
         "url": "#"
@@ -391,10 +371,7 @@
           "url": "https://www.uala.com.ar/promociones"
         }
       ],
-      "languageButton": [
-        "es",
-        "en"
-      ],
+      "languageButton": ["es", "en"],
       "downloadAppButtonCopy": "Download App"
     },
     "hero": {
@@ -597,16 +574,7 @@
         }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": [
-        "walmart",
-        "bodega-aurrera",
-        "7-eleven",
-        "superama",
-        "extra",
-        "farmacias-del-ahorro",
-        "farmacias-benavides",
-        "circle-k"
-      ],
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
       "viewMoreCTA": {
         "copy": "Ver tiendas afiliadas",
         "url": "#"
