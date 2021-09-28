@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 const svgContext = require.context('../../public/assets/svg/?inline', false, /\.svg/);
 
-const ACardIcon = ({ icoName, className }) => {
+const ACardIcon = ({ iconName, className }) => {
   return (
     <span className={className}>
-      {React.createElement(svgContext(`./${icoName}.svg`).default)}
+      {React.createElement(svgContext(`./${iconName}.svg`).default)}
     </span>
   );
 };

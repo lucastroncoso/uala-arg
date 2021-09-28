@@ -12,7 +12,7 @@ const MHorizontalCard = ({ content, isTitleColorBlue, customClass, isHorizontalO
       { [styles.horizontalOnMobile]: isHorizontalOnMobile }
     )}>
       <div className={styles.iconWrapper}>
-        <ACardIcon icoName={content.icon} className={styles.icon} />
+        <ACardIcon iconName={content.icon} className={styles.icon} />
       </div>
 
       <div className={styles.textWrapper}>

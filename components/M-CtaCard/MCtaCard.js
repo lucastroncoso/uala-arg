@@ -9,7 +9,7 @@ const MCtaCard = ({ content, customClass }) => {
     <a className={classNames(styles.card, customClass && [...customClass])}
       href={content.url}>
       <div className={styles.iconWrapper}>
-        <ACardIcon icoName={content.icon} className={styles.icon} />
+        <ACardIcon iconName={content.icon} className={styles.icon} />
       </div>
 
       <h4 className={styles.cardTitle}>{content.title}</h4>
