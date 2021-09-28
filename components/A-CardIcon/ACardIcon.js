@@ -12,7 +12,7 @@ const ACardIcon = ({ icoName, className }) => {
 };
 
 ACardIcon.propTypes = {
-  icoName: PropTypes.string.isRequired,
+  iconName: PropTypes.string.isRequired,
   className: PropTypes.string,
 };
 
