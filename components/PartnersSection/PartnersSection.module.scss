@@ -2,8 +2,11 @@
 @use '../../styles/types/types' as *;
 @use '../../styles/variables/variables' as *;
 @use '../../styles/mixins/underline-hover' as *;
+@use '../../styles/mixins/reset-styles' as *;
 
 .partnersSection {
+  @include reset-styles;
+
   padding-top: 140px;
   padding-bottom: 140px;
   overflow: hidden;
@@ -11,7 +14,7 @@
   text-align: center;
 }
 
-.title {
+h3.title {
   @include semibold-35;
 
   color: $gray-3;
@@ -20,39 +23,134 @@
 
 .buttonsWrapper {
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 35px;
   width: 100%;
+  flex-direction: column;
+
+  @include respond-to(minWidth768) {
+    flex-direction: row;
+    margin-bottom: 80px;
+  }
+}
+
+.sliderDots {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 20px;
+
+  button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $cornflowerBlue;
+    opacity: 0.3;
+
+    &.selected {
+      opacity: 1;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
 }
 
 .partnersButtonsCard {
   display: flex;
-  padding-left: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   text-align: left;
+
+  & div:nth-child(2) {
+    margin-left: 38px;
+  }
+  & span {
+    width: 48px;
+    height: 48px;
+  }
+  & h4 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  @include respond-to(minWidth768) {
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 35px;
+
+    & div:nth-child(2) {
+      margin-left: 43px;
+    }
+    & span {
+      width: 80px;
+      height: 80px;
+    }
+    & h4 {
+      font-size: 25px;
+    }
+  }
 }
 
 .buttonLink {
   width: 100%;
 
   &:first-child {
-    margin-right: 24px;
+    margin-bottom: 35px;
+  }
+
+  @include respond-to(minWidth768) {
+    &:first-child {
+      margin-bottom: 0;
+      margin-right: 24px;
+    }
   }
 }
 
 .partnersLogos {
   @include cardStyles;
+
+  padding-top: 40px;
+  padding-bottom: 32px;
 }
 
 .logoGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  column-gap: 80px;
-  row-gap: 60px;
+  padding: 40px 36px 0px;
 }
 
-.partnersCopy {
+.sliderContainer {
+  width: 216px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include respond-to(minWidth768) {
+    width: auto;
+    margin: initial;
+  }
+}
+
+.sliderInner {
+  display: flex;
+
+  @include respond-to(minWidth768) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    column-gap: 80px;
+    row-gap: 60px;
+  }
+}
+
+.carouselImage {
+  position: relative;
+  flex: 0 0 100%;
+}
+
+p.partnersCopy {
   @include bigParagraph;
 
   font-weight: 400;
@@ -60,7 +158,11 @@
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
-  width: 49%;
+  width: 80%;
+
+  @include respond-to(minWidth768) {
+    width: 49%;
+  }
 }
 
 .logoGrid {
@@ -71,5 +173,5 @@
   @include semibold-20;
   @include underline-hover($blue);
 
-  color: $blue;
+  color: $blue !important;
 }
