@@ -99,24 +99,78 @@
       },
       "close": "cerrar modal"
     },
+    "cardsWithVideoSection": {
+      "title": "Mira todo lo que<br> puedes hacer con Ualá",
+      "cardsRow": [
+        {
+          "icon": "compras",
+          "title": "Shopping",
+          "copy": "Vas a poder comprar todo lo que necesites con tu tarjeta Ualá Mastercard Internacional.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/tarjeta"
+        },
+        {
+          "icon": "transferencias",
+          "title": "Transfers",
+          "copy": "Transfiere dinero a tus amig@s que tienen Ualá o a otras cuentas bancarias a través de SPEI desde tu app.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/transferencias"
+        },
+        {
+          "icon": "pagos-recargas",
+          "title": "Payments and Refills",
+          "copy": "Realiza tus pagos de servicios (luz, internet, agua, etc) y recarga tiempo aire a tu celular en cuestión de segundos.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/pagos"
+        }
+      ],
+      "video": {
+        "youtubeId": "tGtXlU1QE6k"
+      }
+    },
+    "cardsGridSection": {
+      "title": "All your finances in the same place",
+      "cards": [
+        {
+          "icon": "sin-comisiones",
+          "title": "No comisions",
+          "copy": "Puedes utilizar Ualá totalmente gratis. No se te cobrarán comisiones por ninguna operación."
+        },
+        {
+          "icon": "sin-letrachica",
+          "title": "No small letters",
+          "copy": "Olvídate de las letras chiquitas. Puedes encontrar toda la información a la vista con un click."
+        },
+        {
+          "icon": "sin-costosocultos",
+          "title": "No hidden costs",
+          "copy": "En Ualá no tenemos costos ocultos ni sorpresas en el manejo de tu cuenta. Conoce más aquí."
+        },
+        {
+          "icon": "sin-sucursales",
+          "title": "Without sucursales",
+          "copy": "Todo a través de la app 100% online. Ahorra tiempo y comunicate desde donde quieras."
+        }
+      ]
+    },
     "stepsSection": {
       "title": "Cómo ser parte de Ualá",
       "stepsItems": [
         {
           "copy": "Descarga la app desde Play Store o App Store en tu celular.",
-          "icon": "download"
+          "icon": "pasos-envio-1"
         },
         {
           "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
-          "icon": "register"
+          "icon": "pasos-envio-2"
         },
         {
           "copy": "En 5 días hábiles recibirás tu tarjeta física inclonable sin costos de envío.",
-          "icon": "deliver"
+          "icon": "pasos-envio-3"
         },
         {
           "copy": "¡Activa tu tarjeta desde la app para hacer compras físicas!",
-          "icon": "activate"
+          "icon": "pasos-envio-4"
         }
       ]
     },
