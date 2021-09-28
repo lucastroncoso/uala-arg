@@ -4,8 +4,8 @@ import Hero from '../components/Hero/Hero';
 import pageContent from '../data/SiteMXContent.json';
 import { useAppContext } from '../store/context';
 import DownloadAppModal from '../components/Modal/DownloadAppModal/DownloadAppModal';
-import VideoSection from '../components/VideoSection/VideoSection';
-import C06CardsGrid from '../components/C06-CardsGrid/C06CardsGrid';
+import CardsWithVideoSection from '../components/CardsWithVideoSection/CardsWithVideoSection';
+import C06CardsGridSection from '../components/C06-CardsGridSection/C06CardsGridSection';
 import YoutubeModal from '../components/Modal/YoutubeModal/YoutubeModal';
 import Footer from '../components/Footer/Footer';
 import PartnersSection from '../components/PartnersSection/PartnersSection';
@@ -29,9 +29,9 @@ export default function MainPageMX() {
       <main>
         <C01Navigation content={pageContent[locale].navbar} />
         <Hero content={pageContent[locale].hero} />
-        <VideoSection />
+        <CardsWithVideoSection content={pageContent[locale].cardsWithVideoSection} />
         <PartnersSection content={pageContent[locale].partnersSection} />
-        <C06CardsGrid content={pageContent[locale].cardsGrid} />
+        <C06CardsGridSection content={pageContent[locale].cardsGridSection} />
         <Footer content={pageContent[locale].footer} />
         <DownloadAppModal content={pageContent[locale].downloadApp} />
         <YoutubeModal />

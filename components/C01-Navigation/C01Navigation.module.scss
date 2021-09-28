@@ -3,6 +3,8 @@
 @use '../../styles/types/types' as *;
 @use '../../styles/mixins/respond-to' as *;
 @use '../../styles/mixins/reset-styles' as *;
+@use '../../styles/mixins/reset-button' as *;
+
 
 @mixin semibold-17 {
   font-size: 17px;
@@ -101,6 +103,7 @@
 }
 
 .mobileMenuButton {
+  @include reset-button;
   margin-left: auto;
   display: flex;
   flex-direction: column;
@@ -194,9 +197,7 @@
     }
 
     &.isActive {
-      & {
-        color: $gray-3;
-      }
+      color: $gray-3;
 
       &::after {
         opacity: 1;
@@ -213,10 +214,10 @@
     .arrowIcon {
       position: absolute;
       right: 5px;
-      top: 50%;
+      top: 45%;
       width: 18px;
       height: 9px;
-      transform: translateY(-50%);
+      transform: translateY(-45%);
 
       & svg {
         transition: transform 0.3s;

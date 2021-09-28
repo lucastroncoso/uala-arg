@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './C06CardsGrid.module.scss';
+import styles from './C06CardsGridSection.module.scss';
 import PropTypes from 'prop-types';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
 import MHorizontalCard from '../M-HorizontalCard/MHorizontalCard';
 
-const C06CardsGrid = ({ content }) => {
+const C06CardsGridSection = ({ content }) => {
   return (
     <section className={styles.cardsGridSection}>
       <BlockWrapper>
@@ -12,7 +12,7 @@ const C06CardsGrid = ({ content }) => {
         <div className={styles.cardsWrapper}>
           {content.cards.map((card, cardIndex) => {
             return <MHorizontalCard content={card} isTitleColorBlue={true}
-              customClass={[styles.customClass, styles.card]} key={`card-${cardIndex}`} />;
+              customClass={[styles.card]} key={`card-${cardIndex}`} />;
           })}
         </div>
       </BlockWrapper>
@@ -20,8 +20,8 @@ const C06CardsGrid = ({ content }) => {
   )
 };
 
-C06CardsGrid.propTypes = {
+C06CardsGridSection.propTypes = {
   content: PropTypes.object.isRequired,
 }
 
-export default C06CardsGrid;
+export default C06CardsGridSection;

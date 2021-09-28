@@ -4,7 +4,6 @@ import Hero from '../components/Hero/Hero';
 import pageContent from '../data/SiteMXContent.json';
 import { useAppContext } from '../store/context';
 import DownloadAppModal from '../components/Modal/DownloadAppModal/DownloadAppModal';
-import VideoSection from '../components/VideoSection/VideoSection';
 import YoutubeModal from '../components/Modal/YoutubeModal/YoutubeModal';
 import Footer from '../components/Footer/Footer';
 
@@ -27,7 +26,6 @@ export default function MainPageAr() {
       <main>
         <C01Navigation content={pageContent[locale].navbar} />
         <Hero content={pageContent[locale].hero} />
-        <VideoSection />
         <Footer content={pageContent[locale].footer} />
         <DownloadAppModal content={pageContent[locale].downloadApp} />
         <YoutubeModal />

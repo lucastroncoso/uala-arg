@@ -1,8 +1,10 @@
 @use '../../styles/variables/variables' as *;
 @use '../../styles/types/types' as *;
 @use '../../styles/mixins/respond-to' as *;
+@use '../../styles/mixins/reset-styles' as *;
 
 .cardsGridSection {
+  @include reset-styles;
   background-color: $skyblue;
   padding-top: 60px;
 
@@ -15,11 +17,10 @@
 .mainTitle {
   color: $gray-3;
   text-align: center;
-  @include semibold-28;
+  @include semibold-35;
   padding-bottom: 5px;
 
   @include respond-to(minWidth1024) {
-    @include semibold-35;
     padding-bottom: 60px;
   }
 }
@@ -36,7 +37,7 @@
   }
 }
 
-.customClass.card{
+.card{
   display: flex;
   flex-direction: column;
   width: 100%;
