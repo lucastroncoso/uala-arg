@@ -37,10 +37,12 @@ a.card{
     padding: 51px 100px;
     margin-bottom: 76px;
     justify-content: space-between;
-
-    &:hover {
-      .backgroundImg {
-        transform: scale(1.1);
+    
+    @media (hover: hover) {
+      &:hover {
+        .backgroundImg {
+          transform: scale(1.1);
+        }
       }
     }
   }
