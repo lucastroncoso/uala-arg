@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styles from './FooterBanner.module.scss';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
@@ -8,7 +8,6 @@ import gsap from 'gsap';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
 
 const FooterBanner = ({ content }) => {
-  const backgroundRef = useRef(null);
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
 
   const desktopAnimation = (tl) => {
