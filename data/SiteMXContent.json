@@ -129,26 +129,26 @@
       }
     },
     "cardsGridSection": {
-      "title": "All your finances in the same place",
+      "title": "Todas tus finanzas desde un mismo lugar",
       "cards": [
         {
           "icon": "sin-comisiones",
-          "title": "No comisions",
+          "title": "Sin comisiones",
           "copy": "Puedes utilizar Ualá totalmente gratis. No se te cobrarán comisiones por ninguna operación."
         },
         {
           "icon": "sin-letrachica",
-          "title": "No small letters",
+          "title": "Sin letra chica",
           "copy": "Olvídate de las letras chiquitas. Puedes encontrar toda la información a la vista con un click."
         },
         {
           "icon": "sin-costosocultos",
-          "title": "No hidden costs",
+          "title": "Sin costos ocultos",
           "copy": "En Ualá no tenemos costos ocultos ni sorpresas en el manejo de tu cuenta. Conoce más aquí."
         },
         {
           "icon": "sin-sucursales",
-          "title": "Without sucursales",
+          "title": "Sin sucursales",
           "copy": "Todo a través de la app 100% online. Ahorra tiempo y comunicate desde donde quieras."
         }
       ]
