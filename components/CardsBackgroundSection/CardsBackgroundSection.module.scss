@@ -18,7 +18,7 @@
   flex-direction: column;
 }
 
-a.card{
+a.card {
   @include cardStyles;
   background-color: black;
   position: relative;
@@ -28,16 +28,21 @@ a.card{
   align-items: flex-start;
   height: 350px;
   padding: 31px 27px;
-  margin-bottom: 49px;
   overflow: hidden;
+
+  &:not(:last-child) {
+    margin-bottom: 49px;
+  }
 
   @include respond-to(minWidth768) {
     @include card-hover(40px, $blue, 0.4);
     height: 266px;
     padding: 51px 100px;
-    margin-bottom: 76px;
     justify-content: space-between;
-    
+
+    &:not(:last-child) {
+      margin-bottom: 76px;
+    }
     @media (hover: hover) {
       &:hover {
         .backgroundImg {
@@ -58,7 +63,7 @@ a.card{
   left: -5px;
   right: 0;
   bottom: 0;
-  
+
   @include respond-to(minWidth768) {
     transform-origin: center;
     transition: transform 0.6s ease 0s;

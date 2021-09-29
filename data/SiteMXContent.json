@@ -82,10 +82,7 @@
           "url": "https://uala.com.mx/promociones"
         }
       ],
-      "languageButton": [
-        "es",
-        "en"
-      ],
+      "languageButton": ["es", "en"],
       "downloadAppButtonCopy": "Descargar la app"
     },
     "hero": {
@@ -101,6 +98,27 @@
         "alt": "Scanea el QR con tu dispositivo"
       },
       "close": "cerrar modal"
+    },
+    "stepsSection": {
+      "title": "Cómo ser parte de Ualá",
+      "stepsItems": [
+        {
+          "copy": "Descarga la app desde Play Store o App Store en tu celular.",
+          "icon": "pasos-envio-1"
+        },
+        {
+          "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
+          "icon": "pasos-envio-2"
+        },
+        {
+          "copy": "En 5 días hábiles recibirás tu tarjeta física inclonable sin costos de envío.",
+          "icon": "pasos-envio-3"
+        },
+        {
+          "copy": "¡Activa tu tarjeta desde la app para hacer compras físicas!",
+          "icon": "pasos-envio-4"
+        }
+      ]
     },
     "cardsBackgroundSection": [
       {
@@ -306,16 +324,7 @@
         }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": [
-        "walmart",
-        "bodega-aurrera",
-        "7-eleven",
-        "superama",
-        "extra",
-        "farmacias-del-ahorro",
-        "farmacias-benavides",
-        "circle-k"
-      ],
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
       "viewMoreCTA": {
         "copy": "Ver tiendas afiliadas",
         "url": "#"
@@ -405,10 +414,7 @@
           "url": "https://www.uala.com.ar/promociones"
         }
       ],
-      "languageButton": [
-        "es",
-        "en"
-      ],
+      "languageButton": ["es", "en"],
       "downloadAppButtonCopy": "Download App"
     },
     "hero": {
@@ -424,6 +430,27 @@
         "alt": "Scan the QR with your Device"
       },
       "close": "close modal"
+    },
+    "stepsSection": {
+      "title": "Cómo ser parte de Ualá",
+      "stepsItems": [
+        {
+          "copy": "Descarga la app desde Play Store o App Store en tu celular.",
+          "icon": "pasos-envio-1"
+        },
+        {
+          "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
+          "icon": "pasos-envio-2"
+        },
+        {
+          "copy": "En 5 días hábiles recibirás tu tarjeta física inclonable sin costos de envío.",
+          "icon": "pasos-envio-3"
+        },
+        {
+          "copy": "¡Activa tu tarjeta desde la app para hacer compras físicas!",
+          "icon": "pasos-envio-4"
+        }
+      ]
     },
     "cardsBackgroundSection": [
       {
@@ -629,16 +656,7 @@
         }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": [
-        "walmart",
-        "bodega-aurrera",
-        "7-eleven",
-        "superama",
-        "extra",
-        "farmacias-del-ahorro",
-        "farmacias-benavides",
-        "circle-k"
-      ],
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
       "viewMoreCTA": {
         "copy": "Ver tiendas afiliadas",
         "url": "#"
