@@ -20,11 +20,11 @@ const Footer = ({ content }) => {
             <Image src={UALA_ISO} width={54} height={30} />
             <h5 className={styles.title}>{content.title}</h5>
             <div className={styles.appStoreWrapper}>
-              <a href={'https://uala.onelink.me/tTSW/7470090a?af_qr=true'}>
-                <Image src={APP_STORE} width={110} height={34} />
-              </a>
-              <a href={'https://uala.onelink.me/tTSW/7470090a?af_qr=true'}>
+              <a href={'https://uala.onelink.me/gqGz/30b751c4'}>
                 <Image src={GOOGLE_PLAY} width={110} height={34} />
+              </a>
+              <a href={'https://uala.onelink.me/gqGz/557eaed9'}>
+                <Image src={APP_STORE} width={110} height={34} />
               </a>
             </div>
             <div className={styles.socialLinksWrapper}>
@@ -39,33 +39,34 @@ const Footer = ({ content }) => {
                 </a>
               ))}
             </div>
-            <a className={styles.link} href={content.productContract.url}>
+            <a className={styles.link} target="_blank" href={content.productContract.url}>
               {content.productContract.copy}
             </a>
             <br />
-            <a className={styles.link} href={content.privacy.url}>
+            <a className={styles.link} target="_blank" href={content.privacy.url}>
               {content.privacy.copy}
             </a>
           </div>
           <div>
             <ul className={styles.list}>
-              <li className={styles.liTitle}>{content.functionabilities.title}</li>
-              {content.functionabilities.submenu.map((link) => (
-                <li key={link.copy}>
+              <li className={styles.listTitle}>{content.functionabilities.title}</li>
+              {content.functionabilities.submenu.map((link, index) => (
+                <li key={link.copy} className={link.isNew ? styles.new : null}>
                   <a className={styles.link} href={link.url}>
                     {link.copy}
                   </a>
+                  {link.isNew && <span>{link.isNew}</span>}
                 </li>
               ))}
             </ul>
             <div className={styles.legalWrapper}>
-              <a className={styles.liTitle} href={content.costs.url}>
+              <a className={styles.listTitle} href={content.costs.url}>
                 {content.costs.copy}
               </a>
-              <a className={styles.liTitle} href={content.legal.url}>
+              <a className={styles.listTitle} href={content.legal.url}>
                 {content.legal.copy}
               </a>
-              <a className={styles.liTitle} href={content.terms.url}>
+              <a className={styles.listTitle} href={content.terms.url}>
                 {content.terms.copy}
               </a>
             </div>
@@ -93,7 +94,10 @@ const Footer = ({ content }) => {
             </ul>
           </div>
           <img className={styles.partnerLogo} src={PARTNER_LOGO.src} />
-          <p className={styles.disclaimer}>{content.disclaimer}</p>
+          <p
+            className={styles.disclaimer}
+            dangerouslySetInnerHTML={{ __html: content.disclaimer }}
+          />
         </BlockWrapper>
       </footer>
     </>
