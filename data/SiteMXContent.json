@@ -496,6 +496,27 @@
         }
       ]
     },
+    "stepsSection": {
+      "title": "Cómo ser parte de Ualá",
+      "stepsItems": [
+        {
+          "copy": "Descarga la app desde Play Store o App Store en tu celular.",
+          "icon": "pasos-envio-1"
+        },
+        {
+          "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
+          "icon": "pasos-envio-2"
+        },
+        {
+          "copy": "En 5 días hábiles recibirás tu tarjeta física inclonable sin costos de envío.",
+          "icon": "pasos-envio-3"
+        },
+        {
+          "copy": "¡Activa tu tarjeta desde la app para hacer compras físicas!",
+          "icon": "pasos-envio-4"
+        }
+      ]
+    },
     "footer": {
       "title": "El Lado Bueno de tu Dinero",
       "socialLinks": [
