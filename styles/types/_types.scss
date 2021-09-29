@@ -22,6 +22,15 @@
   }
 }
 
+@mixin semibold-40 {
+  font-size: 28px;
+  font-weight: 500;
+
+  @include respond-to(minWidth1024) {
+    font-size: 40px;
+  }
+}
+
 @mixin regular-16 {
   font-size: 16px;
   font-weight: 200;

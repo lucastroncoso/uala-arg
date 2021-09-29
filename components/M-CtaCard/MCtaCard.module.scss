@@ -1,6 +1,7 @@
 @use '../../styles/variables/variables' as *;
 @use '../../styles/types/types' as *;
 @use '/styles/mixins/respond-to' as *;
+@use '../../styles/mixins/card-hover' as *;
 
 .card {
   @include cardStyles;
@@ -12,11 +13,9 @@
 
   @include respond-to(minWidth768) {
     padding: 26px 25px 36px 40px;
-    transition: box-shadow .4s ease-in-out;
+    @include card-hover(30px, $blue, 0.25);
 
     &:hover {
-      box-shadow: 0 0 35px rgba($blue, 0.3);
-
       .ctaCopy{
         max-height: 35px;
         margin-top: 25px;

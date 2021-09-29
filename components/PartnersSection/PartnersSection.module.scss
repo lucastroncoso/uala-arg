@@ -170,5 +170,7 @@ p.partnersCopy {
   @include semibold-20;
   @include underline-hover($blue);
 
+  border-bottom: 1px solid;
+  line-height: 1.1;
   color: $blue !important;
 }

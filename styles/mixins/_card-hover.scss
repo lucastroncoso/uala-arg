@@ -1,0 +1,7 @@
+@mixin card-hover($size, $color, $opacity) {
+  transition: box-shadow .4s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 $size rgba($color, $opacity);
+  }
+}
