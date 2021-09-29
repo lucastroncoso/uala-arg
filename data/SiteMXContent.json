@@ -99,20 +99,6 @@
       },
       "close": "cerrar modal"
     },
-    "cardsBackgroundSection": [
-      {
-        "title": "Aprovecha las promociones inigualables",
-        "ctaCopy": "Ver promociones",
-        "url": "https://uala.com.mx/promociones",
-        "image": "promociones"
-      },
-      {
-        "title": "Compra juegos online y alcanza el siguiente nivel",
-        "ctaCopy": "Conocer más",
-        "url": "https://uala.com.mx/gaming",
-        "image": "gaming"
-      }
-    ],
     "stepsSection": {
       "title": "Cómo ser parte de Ualá",
       "stepsItems": [
@@ -134,6 +120,20 @@
         }
       ]
     },
+    "cardsBackgroundSection": [
+      {
+        "title": "Aprovecha las promociones inigualables",
+        "ctaCopy": "Ver promociones",
+        "url": "https://uala.com.mx/promociones",
+        "image": "promociones"
+      },
+      {
+        "title": "Compra juegos online y alcanza el siguiente nivel",
+        "ctaCopy": "Conocer más",
+        "url": "https://uala.com.mx/gaming",
+        "image": "gaming"
+      }
+    ],
     "cardsWithVideoSection": {
       "title": "Mira todo lo que <br> puedes hacer con Ualá",
       "cardsRow": [
@@ -145,39 +145,44 @@
           "url": "https://uala.com.mx/tarjeta"
         },
         {
-          "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
-          "icon": "pasos-envio-2"
+          "icon": "transferencias",
+          "title": "Transferencias",
+          "copy": "Transfiere dinero a tus amig@s que tienen Ualá o a otras cuentas bancarias a través de SPEI desde tu app.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/transferencias"
         },
         {
-          "copy": "En 5 días hábiles recibirás tu tarjeta física inclonable sin costos de envío.",
-          "icon": "pasos-envio-3"
-        },
-        {
-          "copy": "¡Activa tu tarjeta desde la app para hacer compras físicas!",
-          "icon": "pasos-envio-4"
+          "icon": "pagos-recargas",
+          "title": "Pagos y Recargas",
+          "copy": "Realiza tus pagos de servicios (luz, internet, agua, etc) y recarga tiempo aire a tu celular en cuestión de segundos.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/pagos"
         }
-      ]
+      ],
+      "video": {
+        "youtubeId": "tGtXlU1QE6k"
+      }
     },
-    "cardsGrid": {
+    "cardsGridSection": {
       "title": "Todas tus finanzas desde un mismo lugar",
       "cards": [
         {
-          "icon": "icon1",
+          "icon": "sin-comisiones",
           "title": "Sin comisiones",
           "copy": "Puedes utilizar Ualá totalmente gratis. No se te cobrarán comisiones por ninguna operación."
         },
         {
-          "icon": "icon2",
+          "icon": "sin-letrachica",
           "title": "Sin letra chica",
           "copy": "Olvídate de las letras chiquitas. Puedes encontrar toda la información a la vista con un click."
         },
         {
-          "icon": "icon3",
+          "icon": "sin-costosocultos",
           "title": "Sin costos ocultos",
           "copy": "En Ualá no tenemos costos ocultos ni sorpresas en el manejo de tu cuenta. Conoce más <a href='https://www.uala.com.ar/'>aquí</a>"
         },
         {
-          "icon": "icon4",
+          "icon": "sin-sucursales",
           "title": "Sin sucursales",
           "copy": "Todo a través de la app 100% online. Ahorra tiempo y comunicate desde donde quieras."
         }
@@ -303,6 +308,27 @@
         ]
       },
       "disclaimer": "Belanea México S.A.P.I. de C.V. (en adelante Belanea) es responsable de la apertura, operación y administración de las cuentas denominadas comercialmente como cuentas Ualá, así como de la emisión y operación de las tarjetas asociadas a estas cuentas que se utilicen como medio de disposición, denominadas comercialmente como tarjetas Ualá. Belanea se encuentra en proceso de autorización para operar como institución de fondos de pago electrónico en cumplimiento de la disposición Octava transitoria de la Ley para Regular las Instituciones de Tecnología Financiera (en adelante la Ley), para que ésta pueda llevar a cabo operaciones y prestar los servicios relacionados con la emisión, administración, redención y transmisión de fondos de pago electrónico (actualmente no es una entidad supervisada por las autoridades financieras mexicanas). Adicionalmente se hace de su conocimiento que ni el Gobierno Federal, ni las Entidades de la Administración Pública Paraestatal podrán responsabilizarse o garantizar los recursos de los usuarios que sean utilizados en las operaciones celebradas con Belanea, ni asumirán responsabilidad alguna por las obligaciones contraídas por Belanea o por algún usuario frente a otro, respecto de las operaciones que realicen. Bancar Tecnología MX, S.A. de C.V. no ofrece los servicios de emisión, administración, redención y transmisión de fondos de pago electrónico, sino que funge como comisionista y prestador de servicios de Belanea, en apego a lo permitido por el artículo 54, primer párrafo de la Ley. Para más info aquí."
+    },
+    "partnersSection": {
+      "title": "Deposita dinero gratis",
+      "buttons": [
+        {
+          "title": "Depósito por transferencia bancaria (SPEI)",
+          "url": "#",
+          "icon": "deposito-transferencias"
+        },
+        {
+          "title": "Depósito en efectivo",
+          "url": "#",
+          "icon": "deposito-efectivo"
+        }
+      ],
+      "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
+      "viewMoreCTA": {
+        "copy": "Ver tiendas afiliadas",
+        "url": "#"
+      }
     }
   },
   "en": {
@@ -405,6 +431,27 @@
       },
       "close": "close modal"
     },
+    "stepsSection": {
+      "title": "Cómo ser parte de Ualá",
+      "stepsItems": [
+        {
+          "copy": "Descarga la app desde Play Store o App Store en tu celular.",
+          "icon": "pasos-envio-1"
+        },
+        {
+          "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
+          "icon": "pasos-envio-2"
+        },
+        {
+          "copy": "En 5 días hábiles recibirás tu tarjeta física inclonable sin costos de envío.",
+          "icon": "pasos-envio-3"
+        },
+        {
+          "copy": "¡Activa tu tarjeta desde la app para hacer compras físicas!",
+          "icon": "pasos-envio-4"
+        }
+      ]
+    },
     "cardsBackgroundSection": [
       {
         "title": "Take advantage of unmatched promos",
@@ -452,45 +499,24 @@
       "title": "All your finances in the same place",
       "cards": [
         {
-          "icon": "icon1",
+          "icon": "sin-comisiones",
           "title": "No comisions",
           "copy": "Puedes utilizar Ualá totalmente gratis. No se te cobrarán comisiones por ninguna operación."
         },
         {
-          "icon": "icon2",
+          "icon": "sin-letrachica",
           "title": "No small letters",
           "copy": "Olvídate de las letras chiquitas. Puedes encontrar toda la información a la vista con un click."
         },
         {
-          "icon": "icon3",
+          "icon": "sin-costosocultos",
           "title": "No hidden costs",
           "copy": "En Ualá no tenemos costos ocultos ni sorpresas en el manejo de tu cuenta. Conoce más aquí."
         },
         {
-          "icon": "icon4",
+          "icon": "sin-sucursales",
           "title": "Without sucursales",
           "copy": "Todo a través de la app 100% online. Ahorra tiempo y comunicate desde donde quieras."
-        }
-      ]
-    },
-    "stepsSection": {
-      "title": "Cómo ser parte de Ualá",
-      "stepsItems": [
-        {
-          "copy": "Descarga la app desde Play Store o App Store en tu celular.",
-          "icon": "pasos-envio-1"
-        },
-        {
-          "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
-          "icon": "pasos-envio-2"
-        },
-        {
-          "copy": "En 5 días hábiles recibirás tu tarjeta física inclonable sin costos de envío.",
-          "icon": "pasos-envio-3"
-        },
-        {
-          "copy": "¡Activa tu tarjeta desde la app para hacer compras físicas!",
-          "icon": "pasos-envio-4"
         }
       ]
     },
@@ -614,6 +640,27 @@
         ]
       },
       "disclaimer": "Belanea México S.A.P.I. de C.V. (en adelante Belanea) es responsable de la apertura, operación y administración de las cuentas denominadas comercialmente como cuentas Ualá, así como de la emisión y operación de las tarjetas asociadas a estas cuentas que se utilicen como medio de disposición, denominadas comercialmente como tarjetas Ualá. Belanea se encuentra en proceso de autorización para operar como institución de fondos de pago electrónico en cumplimiento de la disposición Octava transitoria de la Ley para Regular las Instituciones de Tecnología Financiera (en adelante la Ley), para que ésta pueda llevar a cabo operaciones y prestar los servicios relacionados con la emisión, administración, redención y transmisión de fondos de pago electrónico (actualmente no es una entidad supervisada por las autoridades financieras mexicanas). Adicionalmente se hace de su conocimiento que ni el Gobierno Federal, ni las Entidades de la Administración Pública Paraestatal podrán responsabilizarse o garantizar los recursos de los usuarios que sean utilizados en las operaciones celebradas con Belanea, ni asumirán responsabilidad alguna por las obligaciones contraídas por Belanea o por algún usuario frente a otro, respecto de las operaciones que realicen. Bancar Tecnología MX, S.A. de C.V. no ofrece los servicios de emisión, administración, redención y transmisión de fondos de pago electrónico, sino que funge como comisionista y prestador de servicios de Belanea, en apego a lo permitido por el artículo 54, primer párrafo de la Ley. Para más info aquí."
+    },
+    "partnersSection": {
+      "title": "Deposita dinero gratis",
+      "buttons": [
+        {
+          "title": "Depósito por transferencia bancaria (SPEI)",
+          "url": "#",
+          "icon": "deposito-transferencias"
+        },
+        {
+          "title": "Depósito en efectivo",
+          "url": "#",
+          "icon": "deposito-efectivo"
+        }
+      ],
+      "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
+      "viewMoreCTA": {
+        "copy": "Ver tiendas afiliadas",
+        "url": "#"
+      }
     }
   }
 }
