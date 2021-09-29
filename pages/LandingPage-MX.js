@@ -10,6 +10,7 @@ import YoutubeModal from '../components/Modal/YoutubeModal/YoutubeModal';
 import Footer from '../components/Footer/Footer';
 import PartnersSection from '../components/PartnersSection/PartnersSection';
 import StepsSection from '../components/StepsSection/StepsSection';
+import CardsBackgroundSection from '../components/CardsBackgroundSection/CardsBackgroundSection';
 
 export default function MainPageMX() {
   const { locale } = useAppContext();
@@ -31,6 +32,7 @@ export default function MainPageMX() {
         <C01Navigation content={pageContent[locale].navbar} />
         <Hero content={pageContent[locale].hero} />
         <CardsWithVideoSection content={pageContent[locale].cardsWithVideoSection} />
+        <CardsBackgroundSection content={pageContent[locale].cardsBackgroundSection} />
         <StepsSection content={pageContent[locale].stepsSection} />
         <PartnersSection content={pageContent[locale].partnersSection} />
         <C06CardsGridSection content={pageContent[locale].cardsGridSection} />

@@ -99,12 +99,50 @@
       },
       "close": "cerrar modal"
     },
+    "cardsBackgroundSection": [
+      {
+        "title": "Aprovecha las promociones inigualables",
+        "ctaCopy": "Ver promociones",
+        "url": "https://uala.com.mx/promociones",
+        "image": "promociones"
+      },
+      {
+        "title": "Compra juegos online y alcanza el siguiente nivel",
+        "ctaCopy": "Conocer más",
+        "url": "https://uala.com.mx/gaming",
+        "image": "gaming"
+      }
+    ],
     "stepsSection": {
       "title": "Cómo ser parte de Ualá",
       "stepsItems": [
         {
           "copy": "Descarga la app desde Play Store o App Store en tu celular.",
           "icon": "pasos-envio-1"
+        },
+        {
+          "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
+          "icon": "pasos-envio-2"
+        },
+        {
+          "copy": "En 5 días hábiles recibirás tu tarjeta física inclonable sin costos de envío.",
+          "icon": "pasos-envio-3"
+        },
+        {
+          "copy": "¡Activa tu tarjeta desde la app para hacer compras físicas!",
+          "icon": "pasos-envio-4"
+        }
+      ]
+    },
+    "cardsWithVideoSection": {
+      "title": "Mira todo lo que <br> puedes hacer con Ualá",
+      "cardsRow": [
+        {
+          "icon": "compras",
+          "title": "Compras",
+          "copy": "Vas a poder comprar todo lo que necesites con tu tarjeta Ualá Mastercard Internacional.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/tarjeta"
         },
         {
           "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
@@ -367,7 +405,50 @@
       },
       "close": "close modal"
     },
-    "cardsGrid": {
+    "cardsBackgroundSection": [
+      {
+        "title": "Take advantage of unmatched promos",
+        "ctaCopy": "Ver promociones",
+        "url": "https://uala.com.mx/promociones",
+        "image": "promociones"
+      },
+      {
+        "title": "Buy online games and reach the next level",
+        "ctaCopy": "Conocer más",
+        "url": "https://uala.com.mx/gaming",
+        "image": "gaming"
+      }
+    ],
+    "cardsWithVideoSection": {
+      "title": "Look at everything <br> you can do with Ualá",
+      "cardsRow": [
+        {
+          "icon": "compras",
+          "title": "Shopping",
+          "copy": "Vas a poder comprar todo lo que necesites con tu tarjeta Ualá Mastercard Internacional.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/tarjeta"
+        },
+        {
+          "icon": "transferencias",
+          "title": "Transfers",
+          "copy": "Transfiere dinero a tus amig@s que tienen Ualá o a otras cuentas bancarias a través de SPEI desde tu app.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/transferencias"
+        },
+        {
+          "icon": "pagos-recargas",
+          "title": "Payments and Refills",
+          "copy": "Realiza tus pagos de servicios (luz, internet, agua, etc) y recarga tiempo aire a tu celular en cuestión de segundos.",
+          "ctaCopy": "Ver más",
+          "url": "https://uala.com.mx/pagos"
+        }
+      ],
+      "video": {
+        "youtubeId": "tGtXlU1QE6k"
+      }
+    },
+    "cardsGridSection": {
       "title": "All your finances in the same place",
       "cards": [
         {
@@ -414,6 +495,10 @@
       ]
     },
     "footer": {
+      "footerBanner": {
+        "title": "Get to the good side of your money",
+        "copy": "<strong>Descarga la app</strong> y empieza a manejar tus finanzas fácil, rápido y 100% online"
+      },
       "title": "El Lado Bueno de tu Dinero",
       "socialLinks": [
         {
