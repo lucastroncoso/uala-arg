@@ -102,6 +102,20 @@
       },
       "close": "cerrar modal"
     },
+    "cardsBackgroundSection": [
+      {
+        "title": "Aprovecha las promociones inigualables",
+        "ctaCopy": "Ver promociones",
+        "url": "https://uala.com.mx/promociones",
+        "image": "promociones"
+      },
+      {
+        "title": "Compra juegos online y alcanza el siguiente nivel",
+        "ctaCopy": "Conocer más",
+        "url": "https://uala.com.mx/gaming",
+        "image": "gaming"
+      }
+    ],
     "cardsWithVideoSection": {
       "title": "Mira todo lo que <br> puedes hacer con Ualá",
       "cardsRow": [
@@ -411,6 +425,20 @@
       },
       "close": "close modal"
     },
+    "cardsBackgroundSection": [
+      {
+        "title": "Take advantage of unmatched promos",
+        "ctaCopy": "Ver promociones",
+        "url": "https://uala.com.mx/promociones",
+        "image": "promociones"
+      },
+      {
+        "title": "Buy online games and reach the next level",
+        "ctaCopy": "Conocer más",
+        "url": "https://uala.com.mx/gaming",
+        "image": "gaming"
+      }
+    ],
     "cardsWithVideoSection": {
       "title": "Look at everything <br> you can do with Ualá",
       "cardsRow": [
@@ -466,6 +494,10 @@
       ]
     },
     "footer": {
+      "footerBanner": {
+        "title": "Get to the good side of your money",
+        "copy": "<strong>Descarga la app</strong> y empieza a manejar tus finanzas fácil, rápido y 100% online"
+      },
       "title": "El Lado Bueno de tu Dinero",
       "socialLinks": [
         {
