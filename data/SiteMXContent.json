@@ -193,55 +193,60 @@
         "title": "Súmate al lado bueno de tu dinero",
         "copy": "<strong>Descarga la app</strong> y empieza a manejar tus finanzas fácil, rápido y 100% online"
       },
-      "title": "El Lado Bueno de tu Dinero",
+      "title": "El lado bueno de tu dinero",
       "socialLinks": [
         {
           "name": "facebook",
-          "url": "https://www.facebook.com/uala.arg"
-        },
-        {
-          "name": "twitter",
-          "url": "https://twitter.com/uala_mx"
+          "url": "https://www.facebook.com/uala.mx/?brand_redir=454685955446345"
         },
         {
           "name": "instagram",
           "url": "https://www.instagram.com/uala_mx/"
         },
         {
-          "name": "spotify",
-          "url": "https://open.spotify.com/user/slo7yjlzx9efh51xvsbctwtg0?si=22557d2b74a247fb"
+          "name": "youtube",
+          "url": "https://www.youtube.com/channel/UCGVDc5uFy4ZcrCafcnTGIng"
+        },
+        {
+          "name": "twitter",
+          "url": "https://twitter.com/uala_mx"
+        },
+        {
+          "name": "tiktok",
+          "url": "https://www.tiktok.com/@uala_mx?"
         }
       ],
       "productContract": {
         "copy": "Contrato de producto",
-        "url": "#"
+        "url": "https://statics.mx.ua.la/tyc/Contrato_producto_Ual%C3%A1.docx.pdf"
       },
       "privacy": {
-        "copy": "Aviso de privacidad",
-        "url": "#"
+        "copy": "Aviso de Privacidad",
+        "url": "https://statics.mx.ua.la/tyc/Ual%C3%A1_Aviso_de_Privacidad.pdf"
       },
       "functionabilities": {
         "title": "Funcionalidades",
         "submenu": [
           {
-            "copy": "La Tarjeta",
-            "url": "#"
+            "copy": "La tarjeta",
+            "url": "https://uala.com.mx/tarjeta"
           },
           {
-            "copy": "Pagos y Recargas",
-            "url": "#"
+            "copy": "Pagos y recargas",
+            "url": "https://uala.com.mx/pagos"
           },
           {
             "copy": "Transferencias",
-            "url": "#"
+            "url": "https://uala.com.mx/transferencias"
           },
           {
             "copy": "Retiros",
-            "url": "#"
+            "url": "https://uala.com.mx/extracciones"
           },
           {
             "copy": "Créditos",
-            "url": "#"
+            "url": "#",
+            "isNew": "NUEVO"
           },
           {
             "copy": "Promociones",
@@ -258,18 +263,18 @@
         "url": "#"
       },
       "terms": {
-        "copy": "Terminos y condiciones",
+        "copy": "Términos y condiciones",
         "url": "#"
       },
       "about": {
-        "title": "Sobre Ualá",
+        "title": "SOBRE UALÁ",
         "submenu": [
           {
             "copy": "Nosotr@s",
             "url": "#"
           },
           {
-            "copy": "Trabajá con nosotros",
+            "copy": "Trabajá con nosotr@s",
             "url": "#"
           },
           {
@@ -283,7 +288,7 @@
         ]
       },
       "help": {
-        "title": "Ayuda y Seguridad",
+        "title": "AYUDA Y SEGURIDAD",
         "submenu": [
           {
             "copy": "Métodos de contacto",
@@ -302,12 +307,12 @@
             "url": "#"
           },
           {
-            "copy": "Blog de educacion financiera",
+            "copy": "Blog de educación financiera",
             "url": "#"
           }
         ]
       },
-      "disclaimer": "Belanea México S.A.P.I. de C.V. (en adelante Belanea) es responsable de la apertura, operación y administración de las cuentas denominadas comercialmente como cuentas Ualá, así como de la emisión y operación de las tarjetas asociadas a estas cuentas que se utilicen como medio de disposición, denominadas comercialmente como tarjetas Ualá. Belanea se encuentra en proceso de autorización para operar como institución de fondos de pago electrónico en cumplimiento de la disposición Octava transitoria de la Ley para Regular las Instituciones de Tecnología Financiera (en adelante la Ley), para que ésta pueda llevar a cabo operaciones y prestar los servicios relacionados con la emisión, administración, redención y transmisión de fondos de pago electrónico (actualmente no es una entidad supervisada por las autoridades financieras mexicanas). Adicionalmente se hace de su conocimiento que ni el Gobierno Federal, ni las Entidades de la Administración Pública Paraestatal podrán responsabilizarse o garantizar los recursos de los usuarios que sean utilizados en las operaciones celebradas con Belanea, ni asumirán responsabilidad alguna por las obligaciones contraídas por Belanea o por algún usuario frente a otro, respecto de las operaciones que realicen. Bancar Tecnología MX, S.A. de C.V. no ofrece los servicios de emisión, administración, redención y transmisión de fondos de pago electrónico, sino que funge como comisionista y prestador de servicios de Belanea, en apego a lo permitido por el artículo 54, primer párrafo de la Ley. Para más info aquí."
+      "disclaimer": "Belanea México S.A.P.I. de C.V. (en adelante Belanea) es responsable de la apertura, operación y administración de las cuentas denominadas comercialmente como cuentas Ualá, así como de la emisión y operación de las tarjetas asociadas a estas cuentas que se utilicen como medio de disposición, denominadas comercialmente como tarjetas Ualá. Belanea se encuentra en proceso de autorización para operar como institución de fondos de pago electrónico en cumplimiento de la disposición Octava transitoria de la Ley para Regular las Instituciones de Tecnología Financiera (en adelante la Ley), para que ésta pueda llevar a cabo operaciones y prestar los servicios relacionados con la emisión, administración, redención y transmisión de fondos de pago electrónico (actualmente no es una entidad supervisada por las autoridades financieras mexicanas). Adicionalmente se hace de su conocimiento que ni el Gobierno Federal, ni las Entidades de la Administración Pública Paraestatal podrán responsabilizarse o garantizar los recursos de los usuarios que sean utilizados en las operaciones celebradas con Belanea, ni asumirán responsabilidad alguna por las obligaciones contraídas por Belanea o por algún usuario frente a otro, respecto de las operaciones que realicen. Bancar Tecnología MX, S.A. de C.V. no ofrece los servicios de emisión, administración, redención y transmisión de fondos de pago electrónico, sino que funge como comisionista y prestador de servicios de Belanea, en apego a lo permitido por el artículo 54, primer párrafo de la Ley. Para más info <a href='https://uala.com.mx/legales'>aquí</a>."
     },
     "partnersSection": {
       "title": "Deposita dinero gratis",
@@ -529,19 +534,23 @@
       "socialLinks": [
         {
           "name": "facebook",
-          "url": "https://www.facebook.com/uala.arg"
-        },
-        {
-          "name": "twitter",
-          "url": "https://twitter.com/uala_mx"
+          "url": "https://www.facebook.com/uala.mx/?brand_redir=454685955446345"
         },
         {
           "name": "instagram",
           "url": "https://www.instagram.com/uala_mx/"
         },
         {
-          "name": "spotify",
-          "url": "https://open.spotify.com/user/slo7yjlzx9efh51xvsbctwtg0?si=22557d2b74a247fb"
+          "name": "youtube",
+          "url": "https://www.youtube.com/channel/UCGVDc5uFy4ZcrCafcnTGIng"
+        },
+        {
+          "name": "twitter",
+          "url": "https://twitter.com/uala_mx"
+        },
+        {
+          "name": "tiktok",
+          "url": "https://www.tiktok.com/@uala_mx?"
         }
       ],
       "productContract": {
@@ -573,7 +582,8 @@
           },
           {
             "copy": "Créditos",
-            "url": "#"
+            "url": "#",
+            "isNew": "NEW"
           },
           {
             "copy": "Promociones",

@@ -7,17 +7,28 @@
 .footer {
   @include reset-styles;
 
-  background: #f9f9f9;
+  background: $almost-white-gray;
   padding-top: 85px;
   position: relative;
   padding-bottom: 24px;
 
-  .liTitle {
-    @include paragraph;
-
+  .listTitle {
+    font-size: 14px;
+    font-weight: 600;
     color: $gray-4;
     text-transform: uppercase;
     margin-bottom: 24px;
+  }
+
+  a.listTitle {
+    display: inline-block;
+    @include underline-hover($gray-4);
+
+    &:last-child {
+      @include respond-to(minWidth768) {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -26,18 +37,37 @@
     justify-self: end;
   }
 
-  @include respond-to(minWidth480) {
+  & div:nth-child(2) {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @include respond-to(minWidth768) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr max-content;
+    row-gap: 60px;
   }
 }
 
 .about {
   color: $gray-2;
   position: relative;
+
   .link {
     margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 62px;
+    }
+
+    @include respond-to(minWidth768) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 .title {
@@ -58,12 +88,14 @@
 .partnerLogo {
   width: 160px;
   margin-bottom: 45px;
+  margin-top: 45px;
 
-  @include respond-to(minWidth480) {
-    bottom: 90px;
+  @include respond-to(minWidth768) {
+    bottom: 0;
     grid-area: 1/1/2/2;
     left: 0;
     margin-bottom: 0;
+    margin-top: 0;
     position: absolute;
   }
 }
@@ -85,13 +117,17 @@
 }
 
 .link {
-  @include paragraph;
+  font-size: 14px;
+  font-weight: 400;
+
   @include underline-hover($gray-2);
 }
 
 .legalWrapper {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+
   a:not(:last-child) {
     margin-bottom: 45px;
   }
@@ -104,12 +140,36 @@ ul.list {
   li:not(:last-child) {
     margin-bottom: 24px;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.new {
+  display: flex;
+  align-items: center;
+
+  & span {
+    background: $blue;
+    border-radius: 12px;
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 20px;
+    padding: 0 7px;
+  }
 }
 
 .disclaimer {
-  @include paragraph;
-
   color: $gray-2;
+  font-size: 14px;
+  font-weight: 400;
   grid-area: 2/1/3/4;
   text-align: justify;
+
+  & a {
+    color: $blue;
+    text-decoration: underline;
+  }
 }
