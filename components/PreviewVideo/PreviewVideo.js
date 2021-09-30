@@ -36,6 +36,7 @@ const PreviewVideo = () => {
   return (
     <div className={styles.previewVideo}>
       <video
+        data-animation="video-element"
         ref={videoRef}
         src="assets/video/cash-hero-desktop.mp4"
         autoPlay

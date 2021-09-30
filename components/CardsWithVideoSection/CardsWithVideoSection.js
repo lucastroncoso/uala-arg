@@ -17,21 +17,29 @@ const CardsWithVideoSection = ({ content }) => {
   useEffect(() => {
     if (!sectionRef || !sectionRef.current) return;
 
-    const videoElement = childrenSelector('[data-animation="video-container"]');
+    const videoButton = childrenSelector('[data-animation="video-button"]');
+    const videoElement = childrenSelector('[data-animation="video-element"]');
     const cards = childrenSelector('[data-animation="cta-cards"]');
     const title = childrenSelector('[data-animation="title"]');
 
     const tl = createTL({ scrub: 1, onEnter: () => cardsTl.play(), start: '0% 60%' });
     const cardsTl = gsap.timeline({ paused: true });
 
-    cardsTl.fromTo(
-      [title, cards],
-      { scaleY: 0, transformOrigin: '0% 35%', opacity: 0 },
-      { duration: 0.55, scaleY: 1, stagger: 0.25, ease: 'back.out(1.25)', opacity: 1 },
+    cardsTl
+      .fromTo(title, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0 }, 0)
+      .fromTo(
+        cards,
+        { scale: 0, transformOrigin: '50% 20%', opacity: 0 },
+        { duration: 0.55, scale: 1, stagger: 0.15, ease: 'Power4.InOut', opacity: 1 },
+        '-=0.5',
+      );
+
+    tl.fromTo(videoElement, { scale: 1 }, { scale: 1.2 }, 0).fromTo(
+      videoButton,
+      { scale: 0.9 },
+      { scale: 1.1 },
       0,
     );
-
-    tl.fromTo(videoElement, { scaleX: '0.9' }, { scaleX: '1' });
   }, []);
 
   return (
@@ -62,9 +70,7 @@ const CardsWithVideoSection = ({ content }) => {
             })}
           </div>
         )}
-        <div className="videoContainer" data-animation="video-container">
-          <PlayVideoButton youtubeId={content.video.youtubeId} />
-        </div>
+        <PlayVideoButton youtubeId={content.video.youtubeId} />
       </BlockWrapper>
     </section>
   );
