@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import PropTypes from 'prop-types';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
@@ -27,33 +27,31 @@ const StepsSection = ({ content }) => {
   const isMobile = useIsMobile(768);
   const [emblaRef] = useEmblaCarousel();
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
-
   const desktopAnimation = (tl) => {
     tl.fromTo(
-      childrenSelector('[data-animation="title"]'),
-      { y: 0, autoAlpha: 0 },
-      { y: -20, autoAlpha: 1, duration: 0.5, ease: 'Power4.Out' },
+      childrenSelector('[data-animation="progress-line"]'),
+      { scaleX: 0, transformOrigin: '0% 50%' },
+      { scaleX: 1, duration: 2, ease: 'Power2.easeOut' },
       0,
     )
-      .addLabel('progress', '-=0.5')
-      .fromTo(
-        childrenSelector('[data-animation="progress-line"]'),
-        { scaleX: 0, transformOrigin: '0% 50%' },
-        { scaleX: 1, duration: 6.5, ease: 'None' },
-        'progress+=0.35',
-      )
       .fromTo(
         childrenSelector('[data-animation="list-item"]'),
-        { scale: 0, transformOrigin: '50% 50%', opacity: 1 },
-        { duration: 0.35, scale: 1, stagger: 1.1, ease: 'Power4.InOut', opacity: 1 },
-        'progress',
+        { scaleY: 0, transformOrigin: '0% 35%', opacity: 1 },
+        { duration: 0.75, scaleY: 1, stagger: 0.25, ease: 'back.out(1.25)', opacity: 1 },
+        0,
+      )
+      .fromTo(
+        childrenSelector('[data-animation="title"]'),
+        { scaleY: 0, transformOrigin: '0% 100%' },
+        { scaleY: 1, duration: 0.3, ease: 'Power4.Out' },
+        '-=1.5',
       );
   };
 
   const mobileAnimation = (tl) => {
     tl.fromTo(
       sectionRef.current,
-      { scaleX: 0, transformOrigin: '50% 0%' },
+      { scaleX: 0, transformOrigin: '0% 50%' },
       { scaleX: 1, duration: 2, ease: 'Power2.easeOut' },
       0,
     );
