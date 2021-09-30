@@ -23,7 +23,7 @@ const C01Navigation = ({ content }) => {
 
   /* 
     This is going to be unused until multilanguage support is added.
-    Remove comments to enable langueage selector
+    Remove comments to enable language selector
   */
   //const onLanguageButtonClick = useCallback((event) => {
   //  const selectedLanguage = event.target.innerText.toLowerCase();
@@ -44,7 +44,7 @@ const C01Navigation = ({ content }) => {
   );
   /* 
     This is going to be unused until multilanguage support is added.
-    Remove comments to enable langueage selector
+    Remove comments to enable language selector
   */
   //const languageSelectorStyle = classNames(
   //  styles.languageSelector,
@@ -156,7 +156,7 @@ const C01Navigation = ({ content }) => {
           {
             /* 
               This is going to be unused until multilanguage support is added.
-              Remove comments to enable langueage selector
+              Remove comments to enable language selector
             */
 
             /*<div className={languageSelectorStyle}>
