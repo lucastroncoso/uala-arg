@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import styles from './PlayVideoButton.module.scss';
 import PropTypes from 'prop-types';
 import { useAppContext } from '../../store/context';
@@ -13,7 +13,7 @@ const PlayVideoButton = ({ youtubeId }) => {
   }, [setYoutubeModalVideoId, youtubeId]);
 
   return (
-    <button className={styles.button} onClick={onPlayButtonClick}>
+    <button className={styles.button} onClick={onPlayButtonClick} data-animation="video-button">
       <PreviewVideo />
       <PlayIcon className={styles.playIcon} />
     </button>
