@@ -20,10 +20,15 @@ const C01Navigation = ({ content }) => {
   const [selectedItem, setSelectedItem] = useState(0);
   const { _, setLocale } = useAppContext();
 
-  const onLanguageButtonClick = useCallback((event) => {
-    const selectedLanguage = event.target.innerText.toLowerCase();
-    setLocale(selectedLanguage);
-  }, [setLocale]);
+
+  /* 
+    This is going to be unused until multilanguage support is added.
+    Remove comments to enable language selector
+  */
+  //const onLanguageButtonClick = useCallback((event) => {
+  //  const selectedLanguage = event.target.innerText.toLowerCase();
+  //  setLocale(selectedLanguage);
+  //}, [setLocale]);
 
   const isMobile = useIsMobile(768);
 
@@ -37,10 +42,14 @@ const C01Navigation = ({ content }) => {
     styles.downloadButton,
     { [styles.isVisible]: !isMobile && isScrolled }
   );
-  const languageSelectorStyle = classNames(
-    styles.languageSelector,
-    { [styles.isHidden]: !isMobile && isScrolled },
-  );
+  /* 
+    This is going to be unused until multilanguage support is added.
+    Remove comments to enable language selector
+  */
+  //const languageSelectorStyle = classNames(
+  //  styles.languageSelector,
+  //  { [styles.isHidden]: !isMobile && isScrolled },
+  //);
 
   useEffect(() => {
     const scrollPoint = isMobile ? 500 : 390;
@@ -144,15 +153,22 @@ const C01Navigation = ({ content }) => {
             })}
           </ul>
 
-          <div className={languageSelectorStyle}>
-            <span onClick={onLanguageButtonClick}>
-              {content.languageButton[0]}
-            </span>
+          {
+            /* 
+              This is going to be unused until multilanguage support is added.
+              Remove comments to enable language selector
+            */
 
-            <span onClick={onLanguageButtonClick}>
-              {content.languageButton[1]}
-            </span>
-          </div>
+            /*<div className={languageSelectorStyle}>
+              <span onClick={onLanguageButtonClick}>
+                {content.languageButton[0]}
+              </span>
+  
+              <span onClick={onLanguageButtonClick}>
+                {content.languageButton[1]}
+              </span>
+            </div>*/
+          }
 
           <DownloadAppButton
             copy={content.downloadAppButtonCopy}
