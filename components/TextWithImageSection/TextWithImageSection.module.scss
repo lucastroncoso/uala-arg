@@ -1,0 +1,112 @@
+@use '../../styles/variables/variables' as *;
+@use '../../styles/types/types' as *;
+@use '../../styles/mixins/respond-to' as *;
+@use '../../styles/mixins/reset-styles' as *;
+
+.textWithImageSection {
+  @include reset-styles;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  @include respond-to(minWidth768) {
+    padding-top: 100px;
+    padding-bottom: 200px;
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  display: none;
+  background-color: rgba($skyblue-2, 0.5);
+  border-radius: 50%;
+
+  @include respond-to(minWidth768) {
+    display: block;
+
+    &:nth-child(1){
+      width: 233px;
+      height: 233px;
+      top: -60px;
+      right: -120px;
+    }
+
+    &:nth-child(2){
+      width: 25px;
+      height: 25px;
+      top: 135px;
+      left: 47%;
+    }
+
+    &:nth-child(3){
+      width: 45px;
+      height: 45px;
+      top: 570px;
+      left: 42%;
+    }
+  }
+}
+
+.blockWrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(minWidth768) {
+    flex-direction: row;
+  }
+}
+
+.textWrapper {
+  @include respond-to(minWidth768) {
+    width: 50%;
+    padding-top: 85px;
+  }
+}
+
+.title {
+  @include bold-35;
+}
+
+.paragraphsWrapper {
+  @include paragraph;
+  color: $gray;
+  padding-top: 35px;
+
+  p:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  a {
+    color: $blue;
+    border-bottom: 1px solid $blue;
+  }
+
+  @include respond-to(minWidth768) {
+    max-width: 430px;
+  }
+}
+
+.imageWrapper {
+  @include respond-to(minWidth768) {
+    width: 50%;
+  }
+
+  img {
+    max-width: 330px;
+    margin: 70px auto 0;
+
+    @include respond-to(minWidth768) {
+      max-width: 464px;
+      margin: 0 auto;
+    }
+  }
+}
