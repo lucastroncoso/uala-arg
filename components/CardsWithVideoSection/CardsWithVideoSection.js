@@ -22,15 +22,19 @@ const CardsWithVideoSection = ({ content }) => {
     const cards = childrenSelector('[data-animation="cta-cards"]');
     const title = childrenSelector('[data-animation="title"]');
 
-    const tl = createTL({ scrub: 1, onEnter: () => cardsTl.play(), start: '0% 60%' });
+    const tl = createTL({
+      scrub: 1,
+      onEnter: () => cardsTl.play(),
+      start: '0% 60%',
+    });
     const cardsTl = gsap.timeline({ paused: true });
 
     cardsTl
       .fromTo(title, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0 }, 0)
       .fromTo(
         cards,
-        { scale: 0, transformOrigin: '50% 20%', opacity: 0 },
-        { duration: 0.55, scale: 1, stagger: 0.15, ease: 'Power4.InOut', opacity: 1 },
+        { y: 100, transformOrigin: '50% 20%', opacity: 0 },
+        { duration: 0.55, y: 0, stagger: 0.15, ease: 'Power4.InOut', opacity: 1 },
         '-=0.5',
       );
 
