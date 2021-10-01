@@ -86,7 +86,8 @@
         "es",
         "en"
       ],
-      "downloadAppButtonCopy": "Descargar la app"
+      "downloadAppButtonCopy": "Descargar la app",
+      "menuButtonCopy": "Menú"
     },
     "hero": {
       "title": "El lado bueno de tu dinero",
@@ -443,7 +444,8 @@
         "es",
         "en"
       ],
-      "downloadAppButtonCopy": "Download App"
+      "downloadAppButtonCopy": "Download App",
+      "menuButtonCopy": "Menu"
     },
     "hero": {
       "title": "The good side of your Money",

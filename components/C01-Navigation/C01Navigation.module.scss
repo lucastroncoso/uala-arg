@@ -6,18 +6,25 @@
 @use '../../styles/mixins/reset-button' as *;
 
 
-@mixin semibold-17 {
+@mixin bold-17 {
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+@mixin bold-20 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .C01Navigation {
   @include reset-styles;
-  @include semibold-20;
+  @include bold-20;
 
   background-color: $white;
   display: flex;
   width: 100%;
+  height: auto;
+  max-height: 100vh;
   color: $gray-2;
   top: 0;
   position: fixed;
@@ -47,17 +54,16 @@
   align-items: center;
 
   @include respond-to(minWidth768) {
-    width: 179px;
+    position: absolute;
+    width: 80px;
     height: 63px;
     align-self: flex-start;
-    padding-top: 10px;
+    padding-top: 5px;
   }
 }
 
 .logo {
   position: absolute;
-  width: 60px;
-  height: 30px;
   transition: $visibilityTransition;
 
   &.isHidden {
@@ -67,10 +73,28 @@
   &.isVisible {
     @include makeVisible;
   }
+}
+
+.logoText {
+  width: 60px;
+  height: 30px;
 
   @include respond-to(minWidth768) {
     width: 80px;
     height: 40px;
+  }
+}
+
+.logoWave {
+  width: 50px;
+  height: 28px;
+
+  @include respond-to(minWidth768) {
+    width: 64px;
+    height: 36px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -82,7 +106,7 @@
   flex-wrap: wrap;
   height: 0;
   @include makeInvisible;
-  overflow: hidden;
+  overflow-y: auto;
   transition: opacity 0.75s, visibility 0.75s, height 0.75s;
 
   &.isOpen {
@@ -96,9 +120,17 @@
   }
 
   @include respond-to(minWidth768) {
+    overflow: hidden;
     display: flex;
     height: auto;
+    padding: 26px 0;
+    transition: padding .3s;
+    margin-left: 160px;
     @include makeVisible;
+
+    &.scrolledNav {
+      padding: 16px 0;
+    }
   }
 }
 
@@ -107,53 +139,49 @@
   margin-left: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 25px;
-  height: 25px;
+  justify-content: center;
+  align-items: flex-end;
+  height: 40px;
+  width: 40px;
   background: transparent;
   padding: 0;
+  position: relative;
+  font-weight: 400;
+  color: $blue;
 
   &:focus {
     outline: none;
   }
 
-  .barOne,
-  .barTwo,
-  .barThree {
-    width: 100%;
-    height: 3px;
-    background: $blue;
-    border-radius: 10px;
+  .buttonCopy {
+    position: absolute;
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 34px;
+    top: 6px;
     transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-  }
-
-  .barOne {
-    transform: rotate(0);
-  }
-
-  .barTwo {
     opacity: 1;
     transform: translateX(0);
   }
 
-  .barThree {
-    transform: rotate(0);
+  .crossIcon {
+    position: absolute;
+    font-size: 24px;
+    top: 3px;
+    transform: translateX(20px);
+    opacity: 0;
+    transition: all 0.3s linear;
   }
 
   &.isOpen {
-    .barOne {
-      transform: rotate(45deg);
-    }
-
-    .barTwo {
+    .buttonCopy {
       opacity: 0;
       transform: translateX(20px);
     }
 
-    .barThree {
-      transform: rotate(-45deg);
+    .crossIcon {
+      opacity: 1;
+      transform: translateX(-7px);
     }
   }
 
@@ -170,7 +198,7 @@
   @include respond-to(minWidth768) {
     margin-top: 0;
     flex-direction: row;
-    @include semibold-17;
+    @include bold-17;
   }
 }
 
@@ -178,7 +206,7 @@
   padding: 16px 0;
 
   @include respond-to(minWidth768) {
-    padding: 29px 17px 26px;
+    padding: 0 17px;
 
     &:first-of-type {
       padding-left: 0;
@@ -201,7 +229,8 @@
 
       &::after {
         opacity: 1;
-        transform: translate3d(0, 0, 0);
+        transform: scaleX(1);
+        transform-origin: 0% 50%;
       }
     }
 
@@ -241,7 +270,7 @@
   @include respond-to(minWidth768) {
     padding: 0;
     margin-left: auto;
-    @include semibold-17;
+    @include bold-17;
   }
 
   span {
@@ -266,15 +295,15 @@
 }
 
 .customClass.downloadButton {
-  @include semibold-18;
   display: block;
-  margin: 58px auto 0;
+  margin: 58px auto 25px;
 
   @include respond-to(minWidth768) {
+    font-size: 15px;
     position: absolute;
     margin: 0;
     right: 0;
-    top: 18px;
+    top: 9px;
     @include makeInvisible;
     transition: $visibilityTransition;
 

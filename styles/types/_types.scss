@@ -1,6 +1,11 @@
 @use '../mixins/respond-to' as *;
 @use '../variables/variables' as *;
 
+@mixin bold-18 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 @mixin bold-70 {
   color: $blue;
   font-size: 70px;

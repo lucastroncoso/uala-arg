@@ -15,27 +15,31 @@ const C01Navigation = ({ content }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const [isAnyMenuActive, setIsAnyMenuActive] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState(-1);
   const [selectedItem, setSelectedItem] = useState(0);
-  const { _, setLocale } = useAppContext();
-
-
   /* 
     This is going to be unused until multilanguage support is added.
     Remove comments to enable language selector
   */
+  //const { _, setLocale } = useAppContext();
+
   //const onLanguageButtonClick = useCallback((event) => {
   //  const selectedLanguage = event.target.innerText.toLowerCase();
   //  setLocale(selectedLanguage);
   //}, [setLocale]);
+
+  const closeSubMenu = () => {
+    setIsSubMenuOpen(false)
+    setActiveSubMenu(-1)
+  }
 
   const isMobile = useIsMobile(768);
 
   const menuButtonStyle = classNames(styles.mobileMenuButton, { [styles.isOpen]: isMobileNavOpen });
   const itemsWrapperStyle = classNames(
     styles.collapsibleWrapper,
-    { [styles.isOpen]: isMobile && isMobileNavOpen }
+    { [styles.isOpen]: isMobile && isMobileNavOpen },
+    { [styles.scrolledNav]: !isMobile && isScrolled }
   );
   const downloadButtonStyle = classNames(
     styles.customClass,
@@ -56,7 +60,7 @@ const C01Navigation = ({ content }) => {
     setIsScrolled(window.pageYOffset > scrollPoint);
 
     const handleScroll = () => {
-      setIsScrolled(window.pageYOffset >= scrollPoint)
+      setIsScrolled(window.pageYOffset >= scrollPoint);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -71,20 +75,23 @@ const C01Navigation = ({ content }) => {
   }, [isMobileNavOpen]);
 
   return (
-    <nav className={styles.C01Navigation}>
+    <nav
+      className={styles.C01Navigation}
+      onMouseLeave={closeSubMenu}
+    >
       <BlockWrapper customClass={[styles.blockWrapper]}>
         <div className={styles.brandWrapper}>
           <img src={LOGO_TEXT.src}
             className={classNames(
               styles.logo, { [styles.isHidden]: isScrolled },
-              styles.logo, { [styles.isVisible]: !isScrolled }
+              styles.logoText, { [styles.isVisible]: !isScrolled }
             )}
             alt="logo-text" />
 
           <img src={LOGO_WAVE.src}
             className={classNames(
               styles.logo, { [styles.isHidden]: !isScrolled },
-              styles.logo, { [styles.isVisible]: isScrolled }
+              styles.logoWave, { [styles.isVisible]: isScrolled }
             )}
             alt="logo-wave" />
 
@@ -92,9 +99,8 @@ const C01Navigation = ({ content }) => {
             className={menuButtonStyle}
             onClick={() => { setIsMobileNavOpen(mobileNavOpen => !mobileNavOpen); }}
           >
-            <div className={styles.barOne} />
-            <div className={styles.barTwo} />
-            <div className={styles.barThree} />
+            <span className={styles.buttonCopy}>{content.menuButtonCopy}</span>
+            <span className={styles.crossIcon}>x</span>
           </button>
         </div>
 
@@ -120,31 +126,31 @@ const C01Navigation = ({ content }) => {
                 >
                   <a className={buttonStyle}
                     {...hasSubMenu ?
-                      {
-                        onClick: (event) => {
+                      isMobile ? {
+                        onClick: () => {
                           setIsSubMenuOpen(isSubMenuOpen => !isSubMenuOpen)
                           if (isSubMenuOpen && isCurrentItemActive) {
                             setActiveSubMenu(-1);
                           } else {
                             setActiveSubMenu(itemIndex);
                           }
-                          if (!isMobile) {
-                            setSelectedItem(itemIndex);
-                            setTimeout(() => {
-                              setIsAnyMenuActive(
-                                event.target.classList.contains(styles.isActive)
-                              );
-                            }, 0);
-                          }
                         }
+                      } : {
+                        onMouseEnter: () => {
+                          setIsSubMenuOpen(true)
+                          setActiveSubMenu(itemIndex);
+                          setSelectedItem(itemIndex);
+                        },
                       }
-                      : { href: item.url }
+                      : {
+                        href: item.url,
+                        onMouseEnter: closeSubMenu
+                      }
                     }
                   >
                     {item.title}
                     {isMobile && hasSubMenu && <ArrowIcon className={iconStyle} />}
                   </a>
-
                   { isMobile && hasSubMenu &&
                     <MSubMenu content={item.subMenu} isOpen={isCurrentItemActive} />
                   }
@@ -177,7 +183,7 @@ const C01Navigation = ({ content }) => {
           {!isMobile &&
             <MSubMenu
               content={content.items[selectedItem].subMenu}
-              isOpen={isAnyMenuActive}
+              isOpen={isSubMenuOpen}
             />
           }
         </div>
