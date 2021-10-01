@@ -1,8 +1,17 @@
-@use '../../styles/mixins/underline-hover' as *;
 @use '../../styles/variables/variables' as *;
 @use '../../styles/mixins/respond-to' as *;
 @use '../../styles/types/types' as *;
 @use '../../styles/mixins/reset-styles' as *;
+
+@mixin link-hover {
+  transition: color .3s;
+    
+    @media (hover: hover) {
+      &:hover {
+        color: $gray-3;
+      }
+    }
+}
 
 .footer {
   @include reset-styles;
@@ -22,7 +31,7 @@
 
   a.listTitle {
     display: inline-block;
-    @include underline-hover($gray-4);
+    @include link-hover;
 
     &:last-child {
       @include respond-to(minWidth768) {
@@ -119,8 +128,8 @@
 .link {
   font-size: 14px;
   font-weight: 400;
-
-  @include underline-hover($gray-2);
+  
+  @include link-hover;
 }
 
 .legalWrapper {

@@ -6,11 +6,9 @@
   font-weight: 600;
 }
 
-@mixin bold-70 {
-  color: $blue;
-  font-size: 70px;
-  font-weight: 700;
-  line-height: 1.14;
+@mixin bold-25 {
+  font-size: 25px;
+  font-weight: 600;
 }
 
 @mixin bold-35 {
@@ -23,6 +21,13 @@
     font-size: 35px;
     line-height: 45px;
   }
+}
+
+@mixin bold-70 {
+  color: $blue;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.14;
 }
 
 @mixin semibold-25 {

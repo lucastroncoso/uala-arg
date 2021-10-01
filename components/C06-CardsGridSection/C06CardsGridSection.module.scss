@@ -14,10 +14,9 @@
   }
 }
 
-.mainTitle {
-  color: $gray-3;
+h2.mainTitle {
+  @include bold-35;
   text-align: center;
-  @include semibold-35;
   padding-bottom: 5px;
 
   @include respond-to(minWidth1024) {

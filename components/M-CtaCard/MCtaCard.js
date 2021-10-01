@@ -6,8 +6,11 @@ import ACardIcon from '../A-CardIcon/ACardIcon';
 
 const MCtaCard = ({ content, customClass }) => {
   return (
-    <a className={classNames(styles.card, customClass && [...customClass])}
-      href={content.url}>
+    <a
+      data-animation="cta-cards"
+      className={classNames(styles.card, customClass && [...customClass])}
+      href={content.url}
+    >
       <div className={styles.iconWrapper}>
         <ACardIcon iconName={content.icon} className={styles.icon} />
       </div>
@@ -18,12 +21,12 @@ const MCtaCard = ({ content, customClass }) => {
 
       <span className={styles.ctaCopy}>{content.ctaCopy}</span>
     </a>
-  )
+  );
 };
 
 MCtaCard.propTypes = {
   content: PropTypes.object.isRequired,
   customClass: PropTypes.array,
-}
+};
 
 export default MCtaCard;
