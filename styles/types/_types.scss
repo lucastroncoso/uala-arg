@@ -8,6 +8,18 @@
   line-height: 1.14;
 }
 
+@mixin bold-35 {
+  color: $gray-3;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 35px;
+
+  @include respond-to(minWidth1024) {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+
 @mixin semibold-25 {
   font-size: 25px;
   font-weight: 500;
@@ -82,7 +94,7 @@
 @mixin paragraph {
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.37;
+  line-height: 22px;
 }
 
 @mixin makeInvisible {
