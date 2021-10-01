@@ -21,13 +21,13 @@ const CardsWithVideoSection = ({ content }) => {
     const videoElement = childrenSelector('[data-animation="video-element"]');
     const cards = childrenSelector('[data-animation="cta-cards"]');
     const title = childrenSelector('[data-animation="title"]');
+    const cardsTl = gsap.timeline({ paused: true });
 
     const tl = createTL({
       scrub: 1,
       onEnter: () => cardsTl.play(),
       start: '0% 60%',
     });
-    const cardsTl = gsap.timeline({ paused: true });
 
     cardsTl
       .fromTo(title, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0 }, 0)
