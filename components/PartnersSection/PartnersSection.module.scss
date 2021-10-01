@@ -7,8 +7,8 @@
 .partnersSection {
   @include reset-styles;
 
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 100px;
+  padding-bottom: 60px;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -17,8 +17,14 @@
 h3.title {
   @include semibold-35;
 
+  text-align: left;
   color: $gray-3;
+  font-weight: 600;
   margin-bottom: 48px;
+
+  @include respond-to(minWidth768) {
+    text-align: center;
+  }
 }
 
 .buttonsWrapper {
@@ -71,7 +77,8 @@ h3.title {
 
   & h4 {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
+    color: $gray-3;
   }
 
   @include respond-to(minWidth768) {
@@ -113,6 +120,10 @@ h3.title {
 
   padding-top: 40px;
   padding-bottom: 32px;
+}
+
+.logoPaynet {
+  opacity: 60%;
 }
 
 .logoGrid {
@@ -166,11 +177,10 @@ p.partnersCopy {
   margin-bottom: 50px;
 }
 
-.viewMore {
+a.viewMore {
   @include semibold-20;
-  @include underline-hover($blue);
 
-  border-bottom: 1px solid;
-  line-height: 1.1;
   color: $blue !important;
+
+  text-decoration: underline;
 }
