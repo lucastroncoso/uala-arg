@@ -7,7 +7,7 @@
   opacity: 0;
   visibility: collapse;
   overflow: hidden;
-  transition: opacity .75s, visibility .75s, max-height .75s;
+  transition: opacity .75s, visibility .75s, max-height .75s, padding .75s;
 
   &.isOpen {
     opacity: 1;
@@ -38,7 +38,7 @@
 
 
   @include respond-to(minWidth768) {
-    padding: 5px 17px 40px;
+    padding: 25px 17px 10px;
 
     &:first-of-type {
       padding-left: 0;
