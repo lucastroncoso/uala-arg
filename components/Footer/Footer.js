@@ -50,7 +50,7 @@ const Footer = ({ content }) => {
           <div>
             <ul className={styles.list}>
               <li className={styles.listTitle}>{content.functionabilities.title}</li>
-              {content.functionabilities.submenu.map((link, index) => (
+              {content.functionabilities.submenu.map((link) => (
                 <li key={link.copy} className={link.isNew ? styles.new : null}>
                   <a className={styles.link} href={link.url}>
                     {link.copy}
@@ -73,7 +73,7 @@ const Footer = ({ content }) => {
           </div>
           <div>
             <ul className={styles.list}>
-              <li className={styles.liTitle}>{content.about.title}</li>
+              <li className={styles.listTitle}>{content.about.title}</li>
               {content.about.submenu.map((link) => (
                 <li key={link.copy}>
                   <a className={styles.link} href={link.url}>
@@ -83,7 +83,7 @@ const Footer = ({ content }) => {
               ))}
             </ul>
             <ul className={styles.list}>
-              <li className={styles.liTitle}>{content.help.title}</li>
+              <li className={styles.listTitle}>{content.help.title}</li>
               {content.help.submenu.map((link) => (
                 <li key={link.copy}>
                   <a className={styles.link} href={link.url}>

@@ -1,8 +1,8 @@
-@use '../../styles/mixins/underline-hover' as *;
-@use '../../styles/variables/variables' as *;
-@use '../../styles/mixins/respond-to' as *;
-@use '../../styles/types/types' as *;
-@use '../../styles/mixins/reset-styles' as *;
+@use "../../styles/mixins/underline-hover" as *;
+@use "../../styles/variables/variables" as *;
+@use "../../styles/mixins/respond-to" as *;
+@use "../../styles/types/types" as *;
+@use "../../styles/mixins/reset-styles" as *;
 
 .footerBanner {
   @include reset-styles;
@@ -11,9 +11,10 @@
 
   background: $cornflowerBlue;
   padding-top: var(--padding);
-  padding-bottom: var(--padding);
+  padding-bottom: 0;
   position: relative;
   color: $white;
+  width: 100%;
 
   &:before {
     position: absolute;
@@ -23,6 +24,10 @@
     right: 0;
     content: "";
     background: linear-gradient(90deg, rgba(62, 107, 253, 1) 0%, rgba(62, 107, 253, 0) 100%);
+  }
+
+  @include respond-to(minWidth768) {
+    padding-bottom: var(--padding);
   }
 }
 
