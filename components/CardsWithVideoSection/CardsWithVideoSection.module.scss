@@ -1,0 +1,78 @@
+@use '/styles/variables/variables' as *;
+@use '/styles/types/types' as *;
+@use '/styles/mixins/respond-to' as *;
+@use '../../styles/mixins/reset-styles' as *;
+
+.cardsWithVideosection {
+  @include reset-styles;
+  overflow: hidden;
+  position: relative;
+}
+
+.blockWrapper {
+  padding-top: 20px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .gradient {
+    width: 100%;
+    height: 750px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient($skyblue 70%, $white 100%);
+  }
+
+  svg {
+    width: 150%;
+    position: absolute;
+    bottom: 0;
+    left: -35%;
+    height: auto;
+
+    @include respond-to(minWidth768) {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.title {
+  color: $gray-3;
+  @include semibold-35;
+}
+
+.cardsRowWrapper {
+  padding: 40px 0;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include respond-to(minWidth768) {
+    display: flex;
+    height: 430px;
+    padding-bottom: 0;
+  }
+
+  @include respond-to(minWidth1280) {
+    height: 400px;
+  }
+
+  .card {
+    margin-right: 14px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include respond-to(minWidth768) {
+      width: 31%;
+      margin: 0;
+    }
+  }
+}

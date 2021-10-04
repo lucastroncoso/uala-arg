@@ -1,0 +1,43 @@
+@use '../../../styles/variables/variables' as *;
+@use '../../../styles/mixins/respond-to' as *;
+
+.youtubeModalContentWrapper {
+  display: flex;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: -40px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+
+  @include respond-to(minWidth768) {
+    right: -40px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: $white;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: $white;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

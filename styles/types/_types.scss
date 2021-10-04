@@ -1,0 +1,114 @@
+@use '../mixins/respond-to' as *;
+@use '../variables/variables' as *;
+
+@mixin bold-70 {
+  color: $blue;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.14;
+}
+
+@mixin bold-35 {
+  color: $gray-3;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 35px;
+
+  @include respond-to(minWidth1024) {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+
+@mixin semibold-25 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+@mixin semibold-35 {
+  font-size: 28px;
+  font-weight: 500;
+
+  @include respond-to(minWidth1024) {
+    font-size: 35px;
+  }
+}
+
+@mixin semibold-40 {
+  font-size: 28px;
+  font-weight: 500;
+
+  @include respond-to(minWidth1024) {
+    font-size: 40px;
+  }
+}
+
+@mixin regular-16 {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+@mixin regular-17 {
+  font-size: 17px;
+  font-weight: 200;
+}
+
+@mixin semibold-30 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+@mixin semibold-18 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@mixin semibold-20 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@mixin semibold-22 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@mixin semibold-25 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+@mixin bold-18 {
+  color: $gray-4;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@mixin bigParagraph {
+  color: $gray;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+@mixin paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@mixin makeInvisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin makeVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin cardStyles {
+  background-color: $white;
+  border-radius: 27px;
+  box-shadow: 0 0 20px rgba($blue, 0.15);
+}

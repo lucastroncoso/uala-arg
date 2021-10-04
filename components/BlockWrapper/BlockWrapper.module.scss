@@ -1,0 +1,10 @@
+@use '../../styles/variables/variables' as *;
+@use '../../styles/mixins/respond-to' as *;
+
+.blockWrapper {
+  position: relative;
+  max-width: 1240px;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+}

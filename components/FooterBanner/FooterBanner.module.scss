@@ -1,0 +1,152 @@
+@use '../../styles/mixins/underline-hover' as *;
+@use '../../styles/variables/variables' as *;
+@use '../../styles/mixins/respond-to' as *;
+@use '../../styles/types/types' as *;
+@use '../../styles/mixins/reset-styles' as *;
+
+.footerBanner {
+  @include reset-styles;
+
+  --padding: 45px;
+
+  background: $cornflowerBlue;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  position: relative;
+  color: $white;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+    background: linear-gradient(90deg, rgba(62, 107, 253, 1) 0%, rgba(62, 107, 253, 0) 100%);
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 50%;
+
+  &:nth-child(1) {
+    bottom: 55px;
+    left: 10px;
+    transform: scale(1) rotate(-15deg);
+
+    @include respond-to(minWidth768) {
+      bottom: -50px;
+      left: 20px;
+      transform: scale(0.7) rotate(-45deg);
+      opacity: 0.7;
+    }
+  }
+
+  &:nth-child(2) {
+    top: 0px;
+    right: -35px;
+    transform: scale(1) rotate(-45deg);
+    opacity: 0.7;
+
+    @include respond-to(minWidth768) {
+      top: 50px;
+      right: 30vw;
+      transform: scale(0.7) rotate(-45deg);
+      opacity: 0.7;
+    }
+
+    @include respond-to(fullWidth) {
+      right: 35vw;
+    }
+  }
+
+  &:nth-child(3) {
+    right: 0px;
+    bottom: 0px;
+    transform: scale(1.6) rotate(160deg);
+
+    @include respond-to(minWidth768) {
+      right: 5%;
+      bottom: 0;
+      transform: scale(1.2) rotate(-45deg);
+      opacity: 0.7;
+    }
+    @include respond-to(fullWidth) {
+      right: 15vw;
+    }
+  }
+
+  &:nth-child(4) {
+    display: none;
+
+    @include respond-to(minWidth768) {
+      display: inline;
+      top: 50px;
+      right: 50px;
+      transform: scale(0.5) rotate(0deg);
+    }
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.31;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 24px;
+
+  @include respond-to(minWidth768) {
+    font-size: 40px;
+    text-align: left;
+    width: 55%;
+  }
+}
+
+.copy {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  opacity: 0.8;
+  @include respond-to(minWidth768) {
+    font-size: 30px;
+    text-align: left;
+    width: 55%;
+  }
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: calc(var(--padding) * -1);
+  margin-top: 24px;
+
+  @include respond-to(minWidth768) {
+    display: block;
+    position: absolute;
+    margin-bottom: 0;
+    margin-top: 0;
+    bottom: calc(var(--padding) * -1);
+    right: 0;
+    line-height: 0;
+  }
+}
