@@ -6,26 +6,27 @@ import ACardIcon from '../A-CardIcon/ACardIcon';
 
 const MHorizontalCard = ({ content, isTitleColorBlue, customClass, isHorizontalOnMobile }) => {
   return (
-    <div className={classNames(
-      styles.horizontalCard,
-      customClass && [...customClass],
-      { [styles.horizontalOnMobile]: isHorizontalOnMobile }
-    )}>
+    <div
+      data-animation="horizontal-cards"
+      className={classNames(styles.horizontalCard, customClass && [...customClass], {
+        [styles.horizontalOnMobile]: isHorizontalOnMobile,
+      })}
+    >
       <div className={styles.iconWrapper}>
         <ACardIcon iconName={content.icon} className={styles.icon} />
       </div>
 
       <div className={styles.textWrapper}>
-        <h4 className={classNames(styles.cardTitle, { [styles.isBlue]: isTitleColorBlue })}
-        >
+        <h4 className={classNames(styles.cardTitle, { [styles.isBlue]: isTitleColorBlue })}>
           {content.title}
         </h4>
 
-        {content.copy && <p className={styles.paragraph}
-          dangerouslySetInnerHTML={{ __html: content.copy }} />}
+        {content.copy && (
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: content.copy }} />
+        )}
       </div>
     </div>
-  )
+  );
 };
 
 MHorizontalCard.propTypes = {
@@ -33,6 +34,6 @@ MHorizontalCard.propTypes = {
   isTitleColorblue: PropTypes.bool,
   customClass: PropTypes.array,
   isHorizontalOnMobile: PropTypes.bool,
-}
+};
 
 export default MHorizontalCard;

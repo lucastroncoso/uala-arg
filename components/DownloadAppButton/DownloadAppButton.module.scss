@@ -1,14 +1,14 @@
 @use '../../styles/variables/variables' as *;
+@use '../../styles/types/types' as *;
 @use '../../styles/mixins/reset-button' as *;
 
 .button {
   @include reset-button;
 
+  @include bold-18;
   background: $blue;
   border-radius: 30px;
   color: $white;
-  font-size: 22px;
-  font-weight: 500;
   margin-top: 44px;
   padding: 10px 44px;
   position: relative;
