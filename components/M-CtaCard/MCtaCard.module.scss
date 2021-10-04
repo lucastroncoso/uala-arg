@@ -42,19 +42,19 @@
 }
 
 .cardTitle {
-  @include semibold-22;
-  padding: 20px 0 16px;
+  @include bold-22;
+  padding: 20px 0 14px;
 
   @include respond-to(minWidth768) {
-    @include semibold-25;
-    padding: 35px 0 17px;
+    @include bold-25;
+    padding: 35px 0 16px;
   }
 }
 
 .paragraph {
   @include regular-16;
   color: $gray-3;
-  line-height: 1.5;
+  line-height: 22px;
 }
 
 .ctaCopy {

@@ -6,6 +6,11 @@
   font-weight: 600;
 }
 
+@mixin bold-22 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
 @mixin bold-25 {
   font-size: 25px;
   font-weight: 600;
@@ -55,12 +60,12 @@
 
 @mixin regular-16 {
   font-size: 16px;
-  font-weight: 200;
+  font-weight:400;
 }
 
 @mixin regular-17 {
   font-size: 17px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 @mixin semibold-30 {
