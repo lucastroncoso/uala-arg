@@ -1,5 +1,5 @@
-@use '../mixins/respond-to' as *;
-@use '../variables/variables' as *;
+@use "../mixins/respond-to" as *;
+@use "../variables/variables" as *;
 
 @mixin bold-18 {
   font-size: 18px;
@@ -25,9 +25,13 @@
 
 @mixin bold-70 {
   color: $blue;
-  font-size: 70px;
+  font-size: 58px;
   font-weight: 700;
   line-height: 1.14;
+
+  @include respond-to(minWidth768) {
+    font-size: 70px;
+  }
 }
 
 @mixin semibold-25 {

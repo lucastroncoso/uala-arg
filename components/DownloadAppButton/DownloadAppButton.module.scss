@@ -1,6 +1,6 @@
-@use '../../styles/variables/variables' as *;
-@use '../../styles/types/types' as *;
-@use '../../styles/mixins/reset-button' as *;
+@use "../../styles/variables/variables" as *;
+@use "../../styles/types/types" as *;
+@use "../../styles/mixins/reset-button" as *;
 
 .button {
   @include reset-button;
@@ -9,10 +9,10 @@
   background: $blue;
   border-radius: 30px;
   color: $white;
-  margin-top: 44px;
   padding: 10px 44px;
   position: relative;
   overflow: hidden;
+  margin-top: 20px;
 
   & span {
     position: relative;
@@ -34,6 +34,8 @@
   }
 
   @media (hover: hover) {
+    margin-top: 44px;
+
     &:hover {
       &:before {
         opacity: 1;
