@@ -37,14 +37,19 @@ const Modal = ({ children, popupRef, onClickOutside, isYoutubePopup = false, ope
 
   // open-close transition
   useEffect(() => {
+    open
+      ? (popupRef.current.style.pointerEvents = 'auto')
+      : (popupRef.current.style.pointerEvents = 'none');
+
     if (!open) {
       gsap.set(popupRef.current, { autoAlpha: 0, y: -20 });
     } else {
-      gsap.fromTo(
-        popupRef.current,
-        { autoAlpha: 0, y: -20 },
-        { duration: 0.3, delay: 0.1, autoAlpha: 1, y: 0 },
-      );
+      gsap.to(popupRef.current, {
+        duration: 0.3,
+        delay: 0.1,
+        autoAlpha: 1,
+        y: 0,
+      });
     }
   }, [open]);
 
