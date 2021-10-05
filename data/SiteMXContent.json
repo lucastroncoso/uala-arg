@@ -82,10 +82,7 @@
           "url": "https://uala.com.mx/promociones"
         }
       ],
-      "languageButton": [
-        "es",
-        "en"
-      ],
+      "languageButton": ["es", "en"],
       "downloadAppButtonCopy": "Descargar la app",
       "menuButtonCopy": "Menú"
     },
@@ -194,16 +191,12 @@
     },
     "textWithImageSection": {
       "title": "Atención 100% online",
-      "paragraphs": [
-        "Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.",
-        "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.",
-        "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"
-      ]
+      "paragraphs": ["Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
     },
     "footer": {
       "footerBanner": {
         "title": "Súmate al lado bueno de tu dinero",
-        "copy": "<strong>Descarga la app</strong> y empieza a manejar tus finanzas fácil, rápido y 100% online"
+        "copy": "<strong>Descarga la app</strong> y empieza a manejar tus finanzas fácil, rápido y 100% online."
       },
       "title": "El lado bueno de tu dinero",
       "socialLinks": [
@@ -341,16 +334,7 @@
         }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": [
-        "walmart",
-        "bodega-aurrera",
-        "7-eleven",
-        "superama",
-        "extra",
-        "farmacias-del-ahorro",
-        "farmacias-benavides",
-        "circle-k"
-      ],
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
       "viewMoreCTA": {
         "copy": "Ver tiendas afiliadas",
         "url": "#"
@@ -440,10 +424,7 @@
           "url": "https://www.uala.com.ar/promociones"
         }
       ],
-      "languageButton": [
-        "es",
-        "en"
-      ],
+      "languageButton": ["es", "en"],
       "downloadAppButtonCopy": "Download App",
       "menuButtonCopy": "Menu"
     },
@@ -552,11 +533,7 @@
     },
     "textWithImageSection": {
       "title": "100% Online Service",
-      "paragraphs": [
-        "Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.",
-        "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.",
-        "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"
-      ]
+      "paragraphs": ["Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
     },
     "footer": {
       "footerBanner": {
@@ -699,16 +676,7 @@
         }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": [
-        "walmart",
-        "bodega-aurrera",
-        "7-eleven",
-        "superama",
-        "extra",
-        "farmacias-del-ahorro",
-        "farmacias-benavides",
-        "circle-k"
-      ],
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
       "viewMoreCTA": {
         "copy": "Ver tiendas afiliadas",
         "url": "#"
