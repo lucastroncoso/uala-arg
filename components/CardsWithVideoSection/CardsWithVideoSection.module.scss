@@ -45,11 +45,11 @@
 
 .title {
   color: $gray-3;
-  @include semibold-35;
+  @include bold-35;
 }
 
 .cardsRowWrapper {
-  padding: 40px 0;
+  padding: 40px 0 8px;
   justify-content: space-between;
   align-items: flex-start;
 
