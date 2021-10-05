@@ -6,6 +6,7 @@
 
 .cardsBackgroundSection {
   @include reset-styles;
+  overflow: hidden;
   padding-top: 38px;
 
   @include respond-to(minWidth768) {
