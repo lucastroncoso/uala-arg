@@ -67,6 +67,7 @@ h3.title {
 }
 
 .partnersButtonsCard {
+  width: 100%;
   display: flex;
   align-items: center;
   padding-left: 24px;
@@ -74,6 +75,10 @@ h3.title {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
+
+  &:first-child {
+    margin-bottom: 35px;
+  }
 
   & div:nth-child(2) {
     margin-left: 25px;
@@ -90,7 +95,10 @@ h3.title {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 35px;
-
+    &:first-child {
+      margin-bottom: 0;
+      margin-right: 24px;
+    }
     & div:nth-child(2) {
       margin-left: 43px;
     }
@@ -100,21 +108,6 @@ h3.title {
     }
     & h4 {
       font-size: 25px;
-    }
-  }
-}
-
-.buttonLink {
-  width: 100%;
-
-  &:first-child {
-    margin-bottom: 35px;
-  }
-
-  @include respond-to(minWidth768) {
-    &:first-child {
-      margin-bottom: 0;
-      margin-right: 24px;
     }
   }
 }
