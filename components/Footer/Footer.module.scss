@@ -1,16 +1,16 @@
-@use '../../styles/variables/variables' as *;
-@use '../../styles/mixins/respond-to' as *;
-@use '../../styles/types/types' as *;
-@use '../../styles/mixins/reset-styles' as *;
+@use "../../styles/variables/variables" as *;
+@use "../../styles/mixins/respond-to" as *;
+@use "../../styles/types/types" as *;
+@use "../../styles/mixins/reset-styles" as *;
 
 @mixin link-hover {
-  transition: color .3s;
-    
-    @media (hover: hover) {
-      &:hover {
-        color: $gray-3;
-      }
+  transition: color 0.3s;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $gray-3;
     }
+  }
 }
 
 .footer {
@@ -19,8 +19,11 @@
   background: $almost-white-gray;
   padding-top: 85px;
   position: relative;
-  padding-bottom: 24px;
+  padding-bottom: 72px;
 
+  @include respond-to(minWidth768) {
+    padding-bottom: 48px;
+  }
   .listTitle {
     font-size: 14px;
     font-weight: 600;
@@ -46,11 +49,31 @@
     justify-self: end;
   }
 
+  & div:nth-child(1) {
+    .link:last-child {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 45px;
+    }
+
+    @include respond-to(minWidth768) {
+      .link:last-child {
+        display: block;
+        margin-top: 12px;
+        margin-bottom: 0;
+      }
+    }
+  }
   & div:nth-child(2) {
-    margin-right: 30px;
+    justify-self: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 32px;
+
+    @include respond-to(minWidth768) {
+      margin-bottom: 0;
+    }
   }
 
   @include respond-to(minWidth768) {
@@ -82,7 +105,8 @@
 .title {
   @include bold-18;
 
-  margin: 14px 0 18px 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .appStoreWrapper {
@@ -123,12 +147,16 @@
       margin-right: 10px;
     }
   }
+
+  @include respond-to(minWidth768) {
+    margin-bottom: 68px;
+  }
 }
 
 .link {
   font-size: 14px;
   font-weight: 400;
-  
+
   @include link-hover;
 }
 
