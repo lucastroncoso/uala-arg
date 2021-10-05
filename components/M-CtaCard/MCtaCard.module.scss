@@ -43,6 +43,7 @@
 
 .cardTitle {
   @include bold-22;
+  color: $gray-3;
   padding: 20px 0 14px;
 
   @include respond-to(minWidth768) {
