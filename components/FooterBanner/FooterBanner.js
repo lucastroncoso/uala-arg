@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import styles from './FooterBanner.module.scss';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
@@ -6,9 +6,15 @@ import BlockWrapper from '../BlockWrapper/BlockWrapper';
 import IMAGE from '../../public/assets/images/banner_adquisicion.png';
 import gsap from 'gsap';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
+import { useAppContext } from '../../store/context';
 
 const FooterBanner = ({ content }) => {
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
+  const { setDownloadModalActiveState } = useAppContext();
+
+  const onDownloadButtonClick = useCallback(() => {
+    setDownloadModalActiveState(true);
+  }, [setDownloadModalActiveState]);
 
   const desktopAnimation = (tl) => {
     tl.fromTo(
@@ -20,14 +26,14 @@ const FooterBanner = ({ content }) => {
       .fromTo(
         childrenSelector('[data-animation="product"]'),
         { y: '100%' },
-        { y: 0, ease: 'Power2.out' },
+        { y: 0, ease: 'Power1.out' },
         0,
       )
       .fromTo(
         childrenSelector('[data-animation="copy"]'),
-        { x: 30, autoAlpha: 0 },
-        { x: 0, autoAlpha: 1, duration: 0.5, ease: 'Power1.easeOut' },
-        '-=0.75',
+        { x: 20, autoAlpha: 0 },
+        { x: 0, autoAlpha: 1, duration: 0.5, ease: 'Power2.easeOut' },
+        '-=0.50',
       );
   };
 
@@ -59,7 +65,7 @@ const FooterBanner = ({ content }) => {
   }, []);
 
   return (
-    <section className={styles.footerBanner} ref={sectionRef}>
+    <button className={styles.footerBanner} ref={sectionRef} onClick={onDownloadButtonClick}>
       <div className={styles.background}>
         <span data-animation="bubble" className={styles.circle} />
         <span data-animation="bubble" className={styles.circle} />
@@ -75,7 +81,7 @@ const FooterBanner = ({ content }) => {
           <Image src={IMAGE} width={409} height={362} />
         </div>
       </BlockWrapper>
-    </section>
+    </button>
   );
 };
 
