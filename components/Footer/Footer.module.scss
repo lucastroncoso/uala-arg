@@ -27,6 +27,7 @@
   .listTitle {
     font-size: 14px;
     font-weight: 600;
+    letter-spacing: 1.13px;
     color: $gray-4;
     text-transform: uppercase;
     margin-bottom: 24px;
@@ -135,7 +136,7 @@
 
 .socialLinksWrapper {
   display: flex;
-  margin-top: 30px;
+  margin-top: 56px;
   margin-bottom: 45px;
   color: $gray-2;
 
@@ -149,7 +150,8 @@
   }
 
   @include respond-to(minWidth768) {
-    margin-bottom: 68px;
+    margin-top: 30px;
+    margin-bottom: 37px;
   }
 }
 
@@ -171,8 +173,9 @@
 }
 
 ul.list {
-  margin-bottom: 75px;
+  margin-bottom: 63px;
   color: $gray-2;
+  line-height: 1;
 
   li:not(:last-child) {
     margin-bottom: 24px;
