@@ -262,36 +262,36 @@
           },
           {
             "copy": "Promociones",
-            "url": "#"
+            "url": "https://uala.com.mx/promociones"
           }
         ]
       },
       "costs": {
         "copy": "Costos",
-        "url": "#"
+        "url": "https://uala.com.mx/Consulta-los-costos-y-las-comisiones-de-nuestros-productos"
       },
       "legal": {
         "copy": "Legales",
-        "url": "#"
+        "url": "https://uala.com.mx/legales"
       },
       "terms": {
         "copy": "Términos y condiciones",
-        "url": "#"
+        "url": "https://statics.mx.ua.la/tyc/Ual%C3%A1_T%C3%A9rminos_y_Condiciones.pdf"
       },
       "about": {
         "title": "SOBRE UALÁ",
         "submenu": [
           {
             "copy": "Nosotr@s",
-            "url": "#"
+            "url": "https://uala.com.mx/nosotr@s"
           },
           {
             "copy": "Trabajá con nosotr@s",
-            "url": "#"
+            "url": "https://uala.com.mx/trabajar-en-uala"
           },
           {
             "copy": "Prensa",
-            "url": "#"
+            "url": "https://uala.com.mx/prensa"
           },
           {
             "copy": "Gaming",
@@ -304,23 +304,23 @@
         "submenu": [
           {
             "copy": "Métodos de contacto",
-            "url": "#"
+            "url": "https://uala.com.mx/contacto"
           },
           {
             "copy": "Preguntas frecuentes",
-            "url": "#"
+            "url": "https://uala.com.mx/faqs"
           },
           {
             "copy": "Comunidad",
-            "url": "#"
+            "url": "https://comunidad.uala.com.mx/"
           },
           {
             "copy": "Consejos de seguridad",
-            "url": "#"
+            "url": "https://uala.com.mx/seguridad"
           },
           {
             "copy": "Blog de educación financiera",
-            "url": "#"
+            "url": "https://blog.uala.com.mx/"
           }
         ]
       },
@@ -353,7 +353,7 @@
       ],
       "viewMoreCTA": {
         "copy": "Ver tiendas afiliadas",
-        "url": "#"
+        "url": "https://www.paynet.com.mx/mapa-tiendas/index.html"
       }
     }
   },
