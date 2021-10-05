@@ -1,17 +1,21 @@
-@use '../../styles/mixins/respond-to' as *;
-@use '../../styles/types/types' as *;
-@use '../../styles/variables/variables' as *;
-@use '../../styles/mixins/underline-hover' as *;
-@use '../../styles/mixins/reset-styles' as *;
+@use "../../styles/mixins/respond-to" as *;
+@use "../../styles/types/types" as *;
+@use "../../styles/variables/variables" as *;
+@use "../../styles/mixins/underline-hover" as *;
+@use "../../styles/mixins/reset-styles" as *;
 
 .partnersSection {
   @include reset-styles;
 
-  padding-top: 100px;
+  padding-top: 70px;
   padding-bottom: 60px;
   overflow: hidden;
   position: relative;
   text-align: center;
+
+  @include respond-to(minWidth768) {
+    padding-top: 100px;
+  }
 }
 
 h3.title {
