@@ -56,7 +56,7 @@ const C01Navigation = ({ content }) => {
   //);
 
   useEffect(() => {
-    const scrollPoint = isMobile ? 500 : 390;
+    const scrollPoint = isMobile ? 500 : 475;
     setIsScrolled(window.pageYOffset > scrollPoint);
 
     const handleScroll = () => {
