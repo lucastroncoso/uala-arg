@@ -13,13 +13,18 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
-const StepCard = ({ content }) => {
+const StepsCard = ({ content }) => {
   return (
-    <li className={styles.cardWrapper} data-animation="list-item">
-      <ACardIcon iconName={content.icon} className={styles.icon} />
-      <h5 className={styles.number}>0{content.index + 1}.</h5>
-      <p>{content.copy}</p>
-    </li>
+    <>
+      <li className={styles.stepsCard}>
+        <span className={styles.cardDot} />
+        <div className={styles.cardWrapper} data-animation="list-item">
+          <ACardIcon iconName={content.icon} className={styles.icon} />
+          <h5 className={styles.number}>0{content.index + 1}.</h5>
+          <p>{content.copy}</p>
+        </div>
+      </li>
+    </>
   );
 };
 
@@ -27,40 +32,68 @@ const StepsSection = ({ content }) => {
   const isMobile = useIsMobile(768);
   const [emblaRef] = useEmblaCarousel();
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
-  const desktopAnimation = (tl) => {
-    tl.fromTo(
-      childrenSelector('[data-animation="progress-line"]'),
-      { scaleX: 0, transformOrigin: '0% 50%' },
-      { scaleX: 1, duration: 2, ease: 'Power2.easeOut' },
-      0,
-    )
-      .fromTo(
-        childrenSelector('[data-animation="list-item"]'),
-        { scaleY: 0, transformOrigin: '0% 35%', opacity: 1 },
-        { duration: 0.75, scaleY: 1, stagger: 0.25, ease: 'back.out(1.25)', opacity: 1 },
-        0,
-      )
-      .fromTo(
-        childrenSelector('[data-animation="title"]'),
-        { scaleY: 0, transformOrigin: '0% 100%' },
-        { scaleY: 1, duration: 0.3, ease: 'Power4.Out' },
-        '-=1.5',
-      );
-  };
 
-  const mobileAnimation = (tl) => {
-    tl.fromTo(
-      sectionRef.current,
-      { scaleX: 0, transformOrigin: '0% 50%' },
-      { scaleX: 1, duration: 2, ease: 'Power2.easeOut' },
-      0,
-    );
-  };
   useEffect(() => {
     if (!sectionRef || !sectionRef.current) return;
+    const cardsElArray = childrenSelector('[data-animation="list-item"]');
+    const progressLineEl = childrenSelector('[data-animation="progress-line"]');
+    const tl = createTL({ once: true, start: '0% 50%' });
+    gsap.set(cardsElArray, { transformOrigin: '50% 35%' });
+    gsap.set(progressLineEl, { scaleX: 0, transformOrigin: '0% 50%' });
 
-    createTL({ once: true });
-    isMobile ? mobileAnimation(createTL()) : desktopAnimation(createTL());
+    tl.fromTo(
+      childrenSelector('[data-animation="title"]'),
+      { scaleY: 0, transformOrigin: '0% 100%' },
+      { scaleY: 1, duration: 0.3, ease: 'Power4.Out' },
+      0,
+    )
+      .addLabel('step1', '+=0')
+      .fromTo(
+        cardsElArray[0],
+        { scale: 0 },
+        {
+          duration: 0.5,
+          scale: 1,
+          ease: 'Sine.easeInOut',
+        },
+        'step1',
+      )
+      .to(progressLineEl, { scaleX: '+=34%', duration: 1, ease: 'Sine.easeInOut' }, 'step1+=0.25')
+      .addLabel('step2', '+=0')
+      .fromTo(
+        cardsElArray[1],
+        { scale: 0 },
+        {
+          duration: 0.5,
+          scale: 1,
+          ease: 'Sine.easeInOut',
+        },
+        'step2',
+      )
+      .to(progressLineEl, { scaleX: '+=34%', duration: 1, ease: 'Sine.easeInOut' }, 'step2+=0.25')
+      .addLabel('step3', '+=0')
+      .fromTo(
+        cardsElArray[2],
+        { scale: 0 },
+        {
+          duration: 0.5,
+          scale: 1,
+          ease: 'Sine.easeInOut',
+        },
+        'step3',
+      )
+      .to(progressLineEl, { scaleX: '+=32%', duration: 1, ease: 'Sine.easeInOut' }, 'step3+=0.25')
+      .addLabel('step4', '+=0')
+      .fromTo(
+        cardsElArray[3],
+        { scale: 0 },
+        {
+          duration: 0.5,
+          scale: 1,
+          ease: 'Sine.easeInOut',
+        },
+        'step4',
+      );
   }, []);
 
   return (
@@ -72,7 +105,7 @@ const StepsSection = ({ content }) => {
         <div className={styles.carouselContainer} ref={isMobile ? emblaRef : null}>
           <ol className={styles.listWrapper}>
             {content.stepsItems.map((item, index) => (
-              <StepCard content={{ ...item, index }} key={`step-card-${index}`} />
+              <StepsCard content={{ ...item, index }} key={`step-card-${index}`} />
             ))}
           </ol>
           <span data-animation="progress-line" className={styles.progress} />
