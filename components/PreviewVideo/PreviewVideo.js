@@ -18,19 +18,19 @@ const PreviewVideo = () => {
   const videoRef = useRef(null);
   const [isPaused, setIsPaused] = useState();
 
-  useEffect(() => {
-    setIsPaused(videoRef.current.paused);
-  }, []);
-
   const handlePlayPauseVideo = (event) => {
-    if (videoRef.current.paused) {
+    if (event.type === 'playing') {
       setIsPaused(false);
-      videoRef.current.play();
     } else {
-      setIsPaused(true);
-      videoRef.current.pause();
+      if (videoRef.current.paused) {
+        setIsPaused(false);
+        videoRef.current.play();
+      } else {
+        setIsPaused(true);
+        videoRef.current.pause();
+      }
+      event.stopPropagation();
     }
-    event.stopPropagation();
   };
 
   return (
@@ -39,12 +39,13 @@ const PreviewVideo = () => {
         data-animation="video-element"
         ref={videoRef}
         src="assets/video/cash-hero-desktop.mp4"
-        autoPlay
         muted
+        autoPlay
         playsInline
         loop
         aria-hidden="true"
         className={styles.video}
+        onPlaying={handlePlayPauseVideo}
       />
       <PlayPauseIcon videoState={isPaused} handlePlayPauseVideo={handlePlayPauseVideo} />
     </div>

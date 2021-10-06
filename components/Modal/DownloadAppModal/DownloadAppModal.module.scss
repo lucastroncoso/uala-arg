@@ -1,5 +1,5 @@
-@use '../../../styles/variables/variables' as *;
-@use '../../../styles/types/types' as *;
+@use "../../../styles/variables/variables" as *;
+@use "../../../styles/types/types" as *;
 
 .modalContentWrapper {
   background: $white;
@@ -23,7 +23,8 @@
   color: $blue;
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 16px !important;
+  width: 80%;
 }
 
 .paragraph {
@@ -56,5 +57,14 @@
     height: 100%;
     background: $gray;
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &:after,
+      &:before {
+        background: $blue;
+      }
+    }
   }
 }
