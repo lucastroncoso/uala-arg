@@ -6,11 +6,13 @@
 
 .cardsBackgroundSection {
   @include reset-styles;
-  overflow: hidden;
+  overflow-x: hidden;
   padding-top: 38px;
 
   @include respond-to(minWidth768) {
     padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: -100px;
   }
 }
 
@@ -21,7 +23,7 @@
 
 a.card {
   @include cardStyles;
-  background-color: black;
+  background: transparent;
   position: relative;
   color: $white;
   display: flex;
