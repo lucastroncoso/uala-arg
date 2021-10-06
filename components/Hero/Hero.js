@@ -3,12 +3,9 @@ import styles from './Hero.module.scss';
 import PropTypes from 'prop-types';
 import HEROBG from '/public/hero_bkg.jpg';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
-import { useAppContext } from '../../store/context';
 import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
 
 const Hero = ({ content }) => {
-  const { setDownloadModalActiveState } = useAppContext();
-
   return (
     <section className={styles.hero}>
       <div className={styles.background}>
