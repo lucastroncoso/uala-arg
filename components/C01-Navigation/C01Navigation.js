@@ -17,6 +17,8 @@ const C01Navigation = ({ content }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState(-1);
   const [selectedItem, setSelectedItem] = useState(0);
+  const isMobile = useIsMobile(768);
+  const scrollPoint = isMobile ? 250 : 475;
   /* 
     This is going to be unused until multilanguage support is added.
     Remove comments to enable language selector
@@ -32,8 +34,6 @@ const C01Navigation = ({ content }) => {
     setIsSubMenuOpen(false)
     setActiveSubMenu(-1)
   }
-
-  const isMobile = useIsMobile(768);
 
   const menuButtonStyle = classNames(styles.mobileMenuButton, { [styles.isOpen]: isMobileNavOpen });
   const itemsWrapperStyle = classNames(
@@ -56,15 +56,22 @@ const C01Navigation = ({ content }) => {
   //);
 
   useEffect(() => {
-    const scrollPoint = isMobile ? 500 : 475;
     setIsScrolled(window.pageYOffset > scrollPoint);
 
     const handleScroll = () => {
       setIsScrolled(window.pageYOffset >= scrollPoint);
     };
+    const handleResize = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   useEffect(() => {
@@ -100,7 +107,7 @@ const C01Navigation = ({ content }) => {
             onClick={() => { setIsMobileNavOpen(mobileNavOpen => !mobileNavOpen); }}
           >
             <span className={styles.buttonCopy}>{content.menuButtonCopy}</span>
-            <span className={styles.crossIcon}>x</span>
+            <span className={styles.crossIcon}>&times;</span>
           </button>
         </div>
 
