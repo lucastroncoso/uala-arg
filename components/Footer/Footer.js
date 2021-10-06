@@ -66,7 +66,7 @@ const Footer = ({ content }) => {
               <a className={styles.listTitle} href={content.legal.url}>
                 {content.legal.copy}
               </a>
-              <a className={styles.listTitle} href={content.terms.url}>
+              <a className={styles.listTitle} href={content.terms.url} target="_blank">
                 {content.terms.copy}
               </a>
             </div>
