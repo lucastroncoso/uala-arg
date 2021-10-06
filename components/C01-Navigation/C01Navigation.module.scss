@@ -220,12 +220,8 @@
     cursor: pointer;
     padding-bottom: 2px;
     transition: color 0.25s;
+    @include underline-hover($gray-3);
     display: block;
-
-    &.hasUnderline {
-      @include underline-hover($gray-3);
-      display: block;
-    }
 
     &.isActive {
       color: $gray-3;

@@ -118,7 +118,6 @@ const C01Navigation = ({ content }) => {
               const isCurrentItemActive = itemIndex === activeSubMenu;
               const buttonStyle = classNames(
                 styles.itemButton,
-                { [styles.hasUnderline]: hasSubMenu },
                 { [styles.isActive]: isCurrentItemActive }
               );
               const iconStyle = classNames(
