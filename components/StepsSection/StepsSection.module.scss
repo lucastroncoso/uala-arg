@@ -21,10 +21,11 @@ h3.title {
   color: $gray-3;
   font-weight: 600;
   margin-bottom: 35px;
-  text-align: center;
+  text-align: left;
 
   @include respond-to(minWidth768) {
     margin-bottom: 55px;
+    text-align: center;
   }
 }
 
@@ -35,6 +36,7 @@ h3.title {
   left: 12%;
   right: 12%;
   top: 35%;
+
   position: absolute;
   z-index: -1;
 

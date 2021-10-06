@@ -39,7 +39,7 @@ const StepsSection = ({ content }) => {
     const progressLineEl = childrenSelector('[data-animation="progress-line"]');
     const tl = createTL({ once: true, start: '0% 50%' });
     gsap.set(cardsElArray, { transformOrigin: '50% 35%' });
-    gsap.set(progressLineEl, { scaleX: 0, transformOrigin: '0% 50%' });
+    gsap.set(progressLineEl, { scaleX: 0, transformOrigin: '0% 50% ' });
 
     tl.fromTo(
       childrenSelector('[data-animation="title"]'),
@@ -58,7 +58,7 @@ const StepsSection = ({ content }) => {
         },
         'step1',
       )
-      .to(progressLineEl, { scaleX: '+=34%', duration: 1, ease: 'Sine.easeInOut' }, 'step1+=0.25')
+      .to(progressLineEl, { scaleX: '+=0.34', duration: 1, ease: 'Sine.easeInOut' }, 'step1+=0.25')
       .addLabel('step2', '+=0')
       .fromTo(
         cardsElArray[1],
@@ -70,7 +70,7 @@ const StepsSection = ({ content }) => {
         },
         'step2',
       )
-      .to(progressLineEl, { scaleX: '+=34%', duration: 1, ease: 'Sine.easeInOut' }, 'step2+=0.25')
+      .to(progressLineEl, { scaleX: '+=0.34', duration: 1, ease: 'Sine.easeInOut' }, 'step2+=0.25')
       .addLabel('step3', '+=0')
       .fromTo(
         cardsElArray[2],
@@ -82,7 +82,7 @@ const StepsSection = ({ content }) => {
         },
         'step3',
       )
-      .to(progressLineEl, { scaleX: '+=32%', duration: 1, ease: 'Sine.easeInOut' }, 'step3+=0.25')
+      .to(progressLineEl, { scaleX: '+=0.32', duration: 1, ease: 'Sine.easeInOut' }, 'step3+=0.25')
       .addLabel('step4', '+=0')
       .fromTo(
         cardsElArray[3],
@@ -94,6 +94,7 @@ const StepsSection = ({ content }) => {
         },
         'step4',
       );
+    tl.timeScale(1.15);
   }, []);
 
   return (
