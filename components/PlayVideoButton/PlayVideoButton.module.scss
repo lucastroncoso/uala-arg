@@ -1,6 +1,6 @@
-@use '../../styles/variables/variables' as *;
-@use '../../styles/mixins/respond-to' as *;
-@use '../../styles/mixins/reset-button' as *;
+@use "../../styles/variables/variables" as *;
+@use "../../styles/mixins/respond-to" as *;
+@use "../../styles/mixins/reset-button" as *;
 
 .button {
   @include reset-button;
@@ -21,23 +21,24 @@
   transform: translateZ(0);
   height: 0;
 
+  @include respond-to(minWidth768) {
+    @media (hover: hover) {
+      .playIcon {
+        opacity: 0;
+        transition: opacity 100ms ease, transform 200ms ease 50ms;
+      }
+
+      &:hover {
+        & .playIcon {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1.2);
+        }
+      }
+    }
+  }
   @include respond-to(minWidth1024) {
     padding-top: 50.9%;
     margin-bottom: 120px;
-  }
-
-  @media (hover: hover) {
-    .playIcon {
-      opacity: 0;
-      transition: opacity 100ms ease, transform 200ms ease 50ms;
-    }
-
-    &:hover {
-      & .playIcon {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1.2);
-      }
-    }
   }
 }
 
