@@ -25,6 +25,7 @@
   width: 100%;
   height: auto;
   max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
   color: $gray-2;
   top: 0;
   position: fixed;
@@ -112,6 +113,7 @@
   &.isOpen {
     background-attachment: fixed;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     @include makeVisible;
 
     @include respond-to(minWidth768) {
@@ -148,6 +150,7 @@
   position: relative;
   font-weight: 400;
   color: $blue;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   &:focus {
     outline: none;
@@ -166,8 +169,9 @@
 
   .crossIcon {
     position: absolute;
-    font-size: 24px;
-    top: 3px;
+    font-family: ui-rounded, "Public Sans", sans-serif;
+    font-size: 28px;
+    top: 2px;
     transform: translateX(20px);
     opacity: 0;
     transition: all 0.3s linear;
@@ -217,12 +221,8 @@
     cursor: pointer;
     padding-bottom: 2px;
     transition: color 0.25s;
+    @include underline-hover($gray-3);
     display: block;
-
-    &.hasUnderline {
-      @include underline-hover($gray-3);
-      display: block;
-    }
 
     &.isActive {
       color: $gray-3;
