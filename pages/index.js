@@ -48,6 +48,10 @@ export default function Home() {
             in <span className={styles.code}>/data/Site[region]Content.json</span>. All content
             should be edited there.
           </p>
+          <p>
+            The components will be conditionally rendered for each Region based on the{' '}
+            <span className={styles.code}>.json</span> content
+          </p>
         </BlockWrapper>
       </main>
 

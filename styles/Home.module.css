@@ -70,6 +70,13 @@
   padding-top: 48px;
 }
 
+.howTo p {
+  margin-bottom: 24px;
+}
+
+.howTo h2 {
+  margin: 36px 0;
+}
 .card {
   margin: 1rem;
   padding: 1.5rem 3rem;
