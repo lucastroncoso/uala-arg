@@ -30,7 +30,12 @@ const CardsWithVideoSection = ({ content }) => {
     });
 
     cardsTl
-      .fromTo(title, { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0 }, 0)
+      .fromTo(
+        title,
+        { scaleY: 0, transformOrigin: '0% 100%' },
+        { scaleY: 1, duration: 0.3, ease: 'Power4.Out' },
+        0,
+      )
       .fromTo(
         cards,
         { y: 100, transformOrigin: '50% 20%', opacity: 0 },

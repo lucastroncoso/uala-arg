@@ -27,7 +27,7 @@ const Hero = ({ content }) => {
       </div>
       <BlockWrapper customClass={[styles.heroContent]}>
         <h1 className={styles.title}>{content.title}</h1>
-        <p className={styles.paragraph}>{content.paragraph}</p>
+        <p className={styles.paragraph}>{content.paragraph} </p>
         <DownloadAppButton copy={content.buttonCopy} />
       </BlockWrapper>
     </section>
