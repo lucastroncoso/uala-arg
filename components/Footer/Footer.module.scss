@@ -189,6 +189,7 @@ ul.list {
 .new {
   display: flex;
   align-items: center;
+  position: relative;
 
   & span {
     background: $blue;
@@ -197,7 +198,9 @@ ul.list {
     font-size: 12px;
     font-weight: 700;
     margin-left: 20px;
-    padding: 0 7px;
+    padding: 4px 8px 2px;
+    position: absolute;
+    left: 48px;
   }
 }
 
