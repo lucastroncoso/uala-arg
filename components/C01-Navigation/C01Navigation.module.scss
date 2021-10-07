@@ -105,6 +105,8 @@
   align-items: center;
   flex-grow: 1;
   flex-wrap: wrap;
+  margin-right: -20px;
+  padding-right: 20px;
   height: 0;
   @include makeInvisible;
   overflow-y: auto;
@@ -127,7 +129,7 @@
     height: auto;
     padding: 26px 0;
     transition: padding 0.3s;
-    margin-left: 160px;
+    margin: 0 0 0 160px;
     @include makeVisible;
 
     &.scrolledNav {
@@ -296,6 +298,7 @@
 
 .customClass.downloadButton {
   margin: 58px auto 25px;
+  display: block;
 
   @include respond-to(minWidth768) {
     font-size: 15px;
