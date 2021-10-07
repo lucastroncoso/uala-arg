@@ -47,54 +47,23 @@ const StepsSection = ({ content }) => {
       { scaleY: 1, duration: 0.3, ease: 'Power4.Out' },
       0,
     )
-      .addLabel('step1', '+=0')
       .fromTo(
-        cardsElArray[0],
-        { scale: 0 },
-        {
-          duration: 0.5,
-          scale: 1,
-          ease: 'Sine.easeInOut',
-        },
-        'step1',
+        progressLineEl,
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.5, ease: 'Sine.easeInOut' },
+        '-=0.15',
       )
-      .to(progressLineEl, { scaleX: '+=0.34', duration: 1, ease: 'Sine.easeInOut' }, 'step1+=0.25')
-      .addLabel('step2', '+=0')
       .fromTo(
-        cardsElArray[1],
+        cardsElArray,
         { scale: 0 },
         {
-          duration: 0.5,
+          duration: 0.8,
           scale: 1,
-          ease: 'Sine.easeInOut',
+          ease: 'back.out(1.1)',
+          stagger: 0.25,
         },
-        'step2',
-      )
-      .to(progressLineEl, { scaleX: '+=0.34', duration: 1, ease: 'Sine.easeInOut' }, 'step2+=0.25')
-      .addLabel('step3', '+=0')
-      .fromTo(
-        cardsElArray[2],
-        { scale: 0 },
-        {
-          duration: 0.5,
-          scale: 1,
-          ease: 'Sine.easeInOut',
-        },
-        'step3',
-      )
-      .to(progressLineEl, { scaleX: '+=0.32', duration: 1, ease: 'Sine.easeInOut' }, 'step3+=0.25')
-      .addLabel('step4', '+=0')
-      .fromTo(
-        cardsElArray[3],
-        { scale: 0 },
-        {
-          duration: 0.5,
-          scale: 1,
-          ease: 'Sine.easeInOut',
-        },
-        'step4',
+        '+=0',
       );
-    tl.timeScale(1.15);
   }, []);
 
   return (

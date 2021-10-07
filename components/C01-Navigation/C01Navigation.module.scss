@@ -1,10 +1,9 @@
-@use '../../styles/variables/variables' as *;
-@use '../../styles/mixins/underline-hover' as *;
-@use '../../styles/types/types' as *;
-@use '../../styles/mixins/respond-to' as *;
-@use '../../styles/mixins/reset-styles' as *;
-@use '../../styles/mixins/reset-button' as *;
-
+@use "../../styles/variables/variables" as *;
+@use "../../styles/mixins/underline-hover" as *;
+@use "../../styles/types/types" as *;
+@use "../../styles/mixins/respond-to" as *;
+@use "../../styles/mixins/reset-styles" as *;
+@use "../../styles/mixins/reset-button" as *;
 
 @mixin bold-17 {
   font-size: 17px;
@@ -126,7 +125,7 @@
     display: flex;
     height: auto;
     padding: 26px 0;
-    transition: padding .3s;
+    transition: padding 0.3s;
     margin-left: 160px;
     @include makeVisible;
 
@@ -150,7 +149,7 @@
   position: relative;
   font-weight: 400;
   color: $blue;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:focus {
     outline: none;
@@ -295,7 +294,6 @@
 }
 
 .customClass.downloadButton {
-  display: block;
   margin: 58px auto 25px;
 
   @include respond-to(minWidth768) {
@@ -309,6 +307,11 @@
 
     &.isVisible {
       @include makeVisible;
+    }
+  }
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: none;
     }
   }
 }
