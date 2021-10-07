@@ -33,21 +33,11 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 48px;
+  font-weight: 700;
 }
 
 .title,
@@ -63,8 +53,6 @@
 .code {
   background: #fafafa;
   border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
@@ -73,14 +61,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1120px;
   margin-top: 3rem;
 }
 
+.howTo {
+  text-align: center;
+  padding-top: 48px;
+}
+
+.howTo p {
+  margin-bottom: 24px;
+}
+
+.howTo h2 {
+  margin: 36px 0;
+}
 .card {
   margin: 1rem;
-  padding: 1.5rem;
+  padding: 1.5rem 3rem;
   text-align: left;
   color: inherit;
   text-decoration: none;

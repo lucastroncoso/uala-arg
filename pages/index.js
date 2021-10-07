@@ -1,6 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import BlockWrapper from '../components/BlockWrapper/BlockWrapper';
 
 export default function Home() {
   return (
@@ -12,44 +14,45 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <h1 className={styles.title}>Ualá - Media.Monks Website Development</h1>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Link href="/LandingPage-AR">
+            <a className={styles.card}>
+              <h2>Argentina</h2>
+              <p>View Landing Page for Argentina region.</p>
+            </a>
+          </Link>
+          <Link href="/LandingPage-CO">
+            <a className={styles.card}>
+              <h2>Colombia</h2>
+              <p>View Landing Page for Colombia region.</p>
+            </a>
+          </Link>
+          <Link href="/LandingPage-MX">
+            <a className={styles.card}>
+              <h2>México</h2>
+              <p>View Landing Page for México region.</p>
+            </a>
+          </Link>
         </div>
+        <BlockWrapper customClass={[styles.howTo]}>
+          <h2 className={styles.description}>How to integrate:</h2>
+          <p>This Repository contains all the components to fulfill the tree regions.</p>
+          <p>
+            Find the page for each region and copy the content into the{' '}
+            <span className={styles.code}>index.js</span> of each region repository
+          </p>
+          <p>
+            The data is being handled in a <span className={styles.code}>.json</span> file located
+            in <span className={styles.code}>/data/Site[region]Content.json</span>. All content
+            should be edited there.
+          </p>
+          <p>
+            The components will be conditionally rendered for each Region based on the{' '}
+            <span className={styles.code}>.json</span> content
+          </p>
+        </BlockWrapper>
       </main>
 
       <footer className={styles.footer}>
@@ -65,5 +68,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
