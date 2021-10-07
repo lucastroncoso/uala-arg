@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './PreviewVideo.module.scss';
 
 const PlayPauseIcon = ({ videoState, handlePlayPauseVideo }) => {
@@ -38,7 +38,7 @@ const PreviewVideo = () => {
       <video
         data-animation="video-element"
         ref={videoRef}
-        src="assets/video/cash-hero-desktop.mp4"
+        src="assets/video/video_preview_somosuala_mx.mp4"
         muted
         autoPlay
         playsInline
