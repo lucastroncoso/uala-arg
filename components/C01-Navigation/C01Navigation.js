@@ -18,7 +18,7 @@ const C01Navigation = ({ content }) => {
   const [activeSubMenu, setActiveSubMenu] = useState(-1);
   const [selectedItem, setSelectedItem] = useState(0);
   const isMobile = useIsMobile(768);
-  const scrollPoint = isMobile ? 250 : 475;
+  const scrollPoint = isMobile ? 250 : 500;
   /* 
     This is going to be unused until multilanguage support is added.
     Remove comments to enable language selector
