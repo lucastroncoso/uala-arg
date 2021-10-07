@@ -7,6 +7,7 @@ import IMAGE from '../../public/assets/images/banner_adquisicion.png';
 import gsap from 'gsap';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
 import { useAppContext } from '../../store/context';
+import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
 
 const FooterBanner = ({ content }) => {
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
@@ -65,7 +66,7 @@ const FooterBanner = ({ content }) => {
   }, []);
 
   return (
-    <button className={styles.footerBanner} ref={sectionRef} onClick={onDownloadButtonClick}>
+    <DownloadAppButton customClass={[styles.footerBanner]} refProp={sectionRef}>
       <div className={styles.background}>
         <span data-animation="bubble" className={styles.circle} />
         <span data-animation="bubble" className={styles.circle} />
@@ -81,7 +82,7 @@ const FooterBanner = ({ content }) => {
           <Image src={IMAGE} width={409} height={362} />
         </div>
       </BlockWrapper>
-    </button>
+    </DownloadAppButton>
   );
 };
 

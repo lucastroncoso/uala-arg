@@ -5,9 +5,10 @@ import { useAppContext } from '../../store/context';
 import PropTypes from 'prop-types';
 import useIsMobile from '../utils/hooks/useIsMobile';
 
-const DownloadAppButton = ({ copy, customClass }) => {
+const DownloadAppButton = ({ children, isStyled, customClass, refProp }) => {
   const { setDownloadModalActiveState } = useAppContext();
   const isMobile = useIsMobile(768);
+
   const onDownloadButtonClick = useCallback(() => {
     setDownloadModalActiveState(true);
   }, [setDownloadModalActiveState]);
@@ -17,16 +18,18 @@ const DownloadAppButton = ({ copy, customClass }) => {
       {isMobile ? (
         <a
           href="https://uala.onelink.me/gqGz/30b751c4"
-          className={classNames(styles.button, customClass && [...customClass])}
+          className={classNames(isStyled && styles.button, customClass && [...customClass])}
+          ref={refProp}
         >
-          <span>{copy}</span>
+          {children}
         </a>
       ) : (
         <button
-          className={classNames(styles.button, customClass && [...customClass])}
+          className={classNames(isStyled && styles.button, customClass && [...customClass])}
           onClick={onDownloadButtonClick}
+          ref={refProp}
         >
-          <span>{copy}</span>
+          {children}
         </button>
       )}
     </>
@@ -34,8 +37,10 @@ const DownloadAppButton = ({ copy, customClass }) => {
 };
 
 DownloadAppButton.propTypes = {
-  copy: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   customClass: PropTypes.array,
+  isStyled: PropTypes.bool,
+  refProp: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ current: PropTypes.any })]),
 };
 
 export default DownloadAppButton;
