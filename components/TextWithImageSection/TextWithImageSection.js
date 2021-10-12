@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './TextWithImageSection.module.scss';
 import PropTypes from 'prop-types';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
+import PreviewVideo from '../PreviewVideo/PreviewVideo';
 
 const TextWithImageSection = ({ content }) => {
   return (
@@ -16,21 +17,23 @@ const TextWithImageSection = ({ content }) => {
           <h3 className={styles.title}>{content.title}</h3>
           <div className={styles.paragraphsWrapper}>
             {content.paragraphs.map((paragraph, index) => {
-              return <p dangerouslySetInnerHTML={{ __html: paragraph }} key={index} />
+              return <p dangerouslySetInnerHTML={{ __html: paragraph }} key={index} />;
             })}
           </div>
         </div>
-        <div className={styles.imageWrapper}>
+        <div className={styles.videoWrapper}>
           {/* This image is a placeholder until we get the video */}
-          <img src="/assets/images/chat-image.png" alt="chat-image" />
+          <div className={styles.video}>
+            <PreviewVideo assetPath={`assets/video/chat_web_${content.region}.mp4`} />
+          </div>
         </div>
       </BlockWrapper>
     </section>
-  )
+  );
 };
 
 TextWithImageSection.propTypes = {
   content: PropTypes.object.isRequired,
-}
+};
 
 export default TextWithImageSection;
