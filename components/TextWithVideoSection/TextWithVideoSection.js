@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './TextWithImageSection.module.scss';
+import styles from './TextWithVideoSection.module.scss';
 import PropTypes from 'prop-types';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
 import PreviewVideo from '../PreviewVideo/PreviewVideo';
 
-const TextWithImageSection = ({ content }) => {
+const TextWithVideoSection = ({ content }) => {
   return (
     <section className={styles.textWithImageSection}>
       <div className={styles.background}>
@@ -32,8 +32,8 @@ const TextWithImageSection = ({ content }) => {
   );
 };
 
-TextWithImageSection.propTypes = {
+TextWithVideoSection.propTypes = {
   content: PropTypes.object.isRequired,
 };
 
-export default TextWithImageSection;
+export default TextWithVideoSection;
