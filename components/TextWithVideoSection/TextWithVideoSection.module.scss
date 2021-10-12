@@ -15,47 +15,6 @@
   }
 }
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-}
-
-.circle {
-  position: absolute;
-  display: none;
-  background-color: rgba($skyblue-2, 0.5);
-  border-radius: 50%;
-
-  @include respond-to(minWidth768) {
-    display: block;
-
-    &:nth-child(1) {
-      width: 233px;
-      height: 233px;
-      top: -60px;
-      right: -120px;
-    }
-
-    &:nth-child(2) {
-      width: 25px;
-      height: 25px;
-      top: 135px;
-      left: 47%;
-    }
-
-    &:nth-child(3) {
-      width: 45px;
-      height: 45px;
-      top: 570px;
-      left: 42%;
-    }
-  }
-}
-
 .blockWrapper {
   display: flex;
   flex-direction: column;

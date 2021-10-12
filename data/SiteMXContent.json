@@ -175,7 +175,7 @@
         {
           "icon": "sin-letrachica",
           "title": "Sin letra chica",
-          "copy": "Olvídate de las letras chiquitas. Puedes encontrar toda la información a la vista con un click."
+          "copy": "Olvídate de las letras chiquitas. Puedes encontrar toda la información a la vista en un click."
         },
         {
           "icon": "sin-costosocultos",
@@ -192,7 +192,7 @@
     "textWithImageSection": {
       "region": "mx",
       "title": "Atención 100% online",
-      "paragraphs": ["Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
+      "paragraphs": ["<strong>Si tienes dudas, ¡pregúntanos a nosotros!</strong> <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas en un click."]
     },
     "footer": {
       "footerBanner": {
@@ -535,7 +535,7 @@
     "textWithImageSection": {
       "region": "mx",
       "title": "100% Online Service",
-      "paragraphs": ["Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
+      "paragraphs": ["<strong>Si tienes dudas, ¡pregúntanos a nosotros!</strong> <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
     },
     "footer": {
       "footerBanner": {
