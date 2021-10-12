@@ -14,7 +14,7 @@ const PlayPauseIcon = ({ videoState, handlePlayPauseVideo }) => {
   );
 };
 
-const PreviewVideo = () => {
+const PreviewVideo = ({ assetPath }) => {
   const videoRef = useRef(null);
   const [isPaused, setIsPaused] = useState();
 
@@ -38,7 +38,7 @@ const PreviewVideo = () => {
       <video
         data-animation="video-element"
         ref={videoRef}
-        src="assets/video/video_preview_somosuala_mx.mp4"
+        src={assetPath}
         muted
         autoPlay
         playsInline

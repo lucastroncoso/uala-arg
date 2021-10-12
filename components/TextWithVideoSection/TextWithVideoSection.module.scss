@@ -1,7 +1,7 @@
-@use '../../styles/variables/variables' as *;
-@use '../../styles/types/types' as *;
-@use '../../styles/mixins/respond-to' as *;
-@use '../../styles/mixins/reset-styles' as *;
+@use "../../styles/variables/variables" as *;
+@use "../../styles/types/types" as *;
+@use "../../styles/mixins/respond-to" as *;
+@use "../../styles/mixins/reset-styles" as *;
 
 .textWithImageSection {
   @include reset-styles;
@@ -33,21 +33,21 @@
   @include respond-to(minWidth768) {
     display: block;
 
-    &:nth-child(1){
+    &:nth-child(1) {
       width: 233px;
       height: 233px;
       top: -60px;
       right: -120px;
     }
 
-    &:nth-child(2){
+    &:nth-child(2) {
       width: 25px;
       height: 25px;
       top: 135px;
       left: 47%;
     }
 
-    &:nth-child(3){
+    &:nth-child(3) {
       width: 45px;
       height: 45px;
       top: 570px;
@@ -62,6 +62,7 @@
 
   @include respond-to(minWidth768) {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -95,18 +96,18 @@
   }
 }
 
-.imageWrapper {
+.videoWrapper {
+  margin-top: 60px;
+  position: relative;
   @include respond-to(minWidth768) {
-    width: 50%;
+    margin-top: 0;
+    width: min(464px, 50%);
   }
+}
 
-  img {
-    max-width: 100%;
-    margin: 70px auto 0;
-
-    @include respond-to(minWidth768) {
-      width: 464px;
-      margin: 0 auto;
-    }
-  }
+.video {
+  position: relative;
+  height: 0;
+  padding-top: 100%;
+  overflow: hidden;
 }

@@ -190,6 +190,7 @@
       ]
     },
     "textWithImageSection": {
+      "region": "mx",
       "title": "Atención 100% online",
       "paragraphs": ["Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
     },
@@ -532,6 +533,7 @@
       ]
     },
     "textWithImageSection": {
+      "region": "mx",
       "title": "100% Online Service",
       "paragraphs": ["Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
     },

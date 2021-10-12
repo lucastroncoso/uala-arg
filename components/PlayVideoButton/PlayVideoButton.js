@@ -14,7 +14,7 @@ const PlayVideoButton = ({ youtubeId }) => {
 
   return (
     <button className={styles.button} onClick={onPlayButtonClick} data-animation="video-button">
-      <PreviewVideo />
+      <PreviewVideo assetPath={'assets/video/video_preview_somosuala_mx.mp4'} />
       <PlayIcon className={styles.playIcon} />
     </button>
   );
