@@ -10,28 +10,33 @@ const TextWithVideoSection = ({ content }) => {
 
   useEffect(() => {
     const textElement = childrenSelector('[data-animation="text"]');
+    const titleElement = childrenSelector('[data-animation="title"]');
     const videoElement = childrenSelector('[data-animation="video"]');
 
     const tl = createTL({ start: '0% 50%' });
 
-    tl.from(textElement, { autoAlpha: 0, y: 20 }).fromTo(
-      videoElement,
-      { 'clip-path': 'circle(0%)' },
-      { 'clip-path': 'circle(100%)', duration: 1.25, ease: 'Sine.InOut' },
-      '-=0.25',
-    );
+    tl.fromTo(
+      titleElement,
+      { scaleY: 0, transformOrigin: '0% 100%' },
+      { scaleY: 1, duration: 0.3, ease: 'Power4.Out' },
+      0,
+    )
+      .from(textElement, { autoAlpha: 0, y: 20 })
+      .fromTo(
+        videoElement,
+        { 'clip-path': 'circle(0%)' },
+        { 'clip-path': 'circle(100%)', duration: 1.25, ease: 'Sine.InOut' },
+        '-=0.25',
+      );
   }, []);
   return (
     <section className={styles.textWithImageSection} ref={sectionRef}>
-      <div className={styles.background}>
-        <span className={styles.circle} />
-        <span className={styles.circle} />
-        <span className={styles.circle} />
-      </div>
       <BlockWrapper customClass={[styles.blockWrapper]}>
-        <div data-animation="text" className={styles.textWrapper}>
-          <h3 className={styles.title}>{content.title}</h3>
-          <div className={styles.paragraphsWrapper}>
+        <div className={styles.textWrapper}>
+          <h3 data-animation="title" className={styles.title}>
+            {content.title}
+          </h3>
+          <div data-animation="text" className={styles.paragraphsWrapper}>
             {content.paragraphs.map((paragraph, index) => {
               return <p dangerouslySetInnerHTML={{ __html: paragraph }} key={index} />;
             })}
