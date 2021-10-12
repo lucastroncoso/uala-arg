@@ -3,10 +3,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 import styles from './PartnersSection.module.scss';
 import PropTypes from 'prop-types';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
-// import { useAppContext } from '../../store/context';
 import Image from 'next/image';
 import MHorizontalCard from '../M-HorizontalCard/MHorizontalCard';
-import LOGO_PAYNET from '../../public/assets/images/paynet.png';
 import useIsMobile from '../utils/hooks/useIsMobile';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
 import gsap from 'gsap';
@@ -70,60 +68,70 @@ const PartnersSection = ({ content }) => {
         <h3 data-animation="title" className={styles.title}>
           {content.title}
         </h3>
-        <div className={styles.buttonsWrapper}>
-          {content.buttons.map((button, index) => (
+        <div className={styles.cardsWrapper}>
+          {content.cards.map((button, index) => (
             <MHorizontalCard
               key={index}
               isHorizontalOnMobile={true}
               content={{ title: button.title, icon: button.icon }}
-              customClass={[styles.partnersButtonsCard]}
+              customClass={[styles.partnersCard]}
             />
           ))}
         </div>
         <div className={styles.partnersLogos} data-animation="logos-container">
-          <div data-animation="partner-logos">
-            <Image className={styles.logoPaynet} src={LOGO_PAYNET} width={156} height={74} />
-          </div>
-          <p className={styles.partnersCopy} data-animation="partner-logos">
-            {content.partnersCopy}
-          </p>
-          <div className={styles.logoGrid}>
-            <div className={styles.sliderContainer} ref={isMobile ? emblaRef : null}>
-              <div className={styles.sliderInner}>
-                {content.partnersLogos.map((logo) => {
-                  return (
-                    <img
-                      data-animation="partner-logos"
-                      className={isMobile ? styles.carouselImage : ''}
-                      src={`/assets/images/partnersLogos/${logo}.png`}
-                      key={logo}
-                      alt={logo}
-                    />
-                  );
-                })}
-              </div>
-              {isMobile && (
-                <div className={styles.sliderDots}>
-                  {scrollSnaps.map((_, index) => (
-                    <button
-                      key={index}
-                      aria-label={`show logo number ${index}`}
-                      className={index === selectedIndex ? styles.selected : ''}
-                      onClick={() => scrollTo(index)}
-                    />
-                  ))}
-                </div>
-              )}
+          {content.paynetLogo &&
+            <div data-animation="partner-logos">
+              <Image className={styles.logoPaynet} src={`/assets/images/${content.paynetLogo}.png`}
+                width={156} height={74} />
             </div>
-          </div>
-          <a
-            data-animation="partner-logos"
-            href={content.viewMoreCTA.url}
-            target="_blank"
-            className={styles.viewMore}
-          >
-            {content.viewMoreCTA.copy}
-          </a>
+          }
+          {content.partnersCopy &&
+            <p className={styles.partnersCopy} data-animation="partner-logos">
+              {content.partnersCopy}
+            </p>
+          }
+          {content.logosCarousel &&
+            <div className={styles.logoGrid}>
+              <div className={styles.sliderContainer} ref={isMobile ? emblaRef : null}>
+                <div className={styles.sliderInner}>
+                  {content.logosCarousel.map((logo) => {
+                    return (
+                      <img
+                        data-animation="partner-logos"
+                        className={isMobile ? styles.carouselImage : ''}
+                        src={`/assets/images/partnersLogos/${logo}.png`}
+                        key={logo}
+                        alt={logo}
+                      />
+                    );
+                  })}
+                </div>
+                {isMobile && (
+                  <div className={styles.sliderDots}>
+                    {scrollSnaps.map((_, index) => (
+                      <button
+                        key={index}
+                        aria-label={`show logo number ${index}`}
+                        className={index === selectedIndex ? styles.selected : ''}
+                        onClick={() => scrollTo(index)}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          }
+
+          {content.viewMoreCTA &&
+            <a
+              data-animation="partner-logos"
+              href={content.viewMoreCTA.url}
+              target="_blank"
+              className={styles.viewMore}
+            >
+              {content.viewMoreCTA.copy}
+            </a>
+          }
         </div>
       </BlockWrapper>
     </section>
