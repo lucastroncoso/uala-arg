@@ -156,3 +156,50 @@ h5.title {
     line-height: 0;
   }
 }
+
+/* Colombia banner styles */
+.co {
+  .image {
+    @include respond-to(minWidth768) {
+      left: 0;
+      right: initial;
+    }
+  }
+  .copyWrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-right: 5%;
+
+    @include respond-to(minWidth768) {
+      flex-direction: row;
+    }
+  }
+  .copyArrayWrapper {
+    display: flex;
+    flex-direction: column;
+
+    span:first-child {
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    @include respond-to(minWidth768) {
+      &:nth-child(2) {
+        display: flex;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 70px;
+      }
+    }
+  }
+}

@@ -3,19 +3,16 @@ import styles from './FooterBanner.module.scss';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
-import IMAGE from '../../public/assets/images/banner_adquisicion.png';
 import gsap from 'gsap';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
 import { useAppContext } from '../../store/context';
 import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
+import useIsMobile from '../utils/hooks/useIsMobile';
 
 const FooterBanner = ({ content }) => {
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
-  const { setDownloadModalActiveState } = useAppContext();
-
-  const onDownloadButtonClick = useCallback(() => {
-    setDownloadModalActiveState(true);
-  }, [setDownloadModalActiveState]);
+  const { region } = useAppContext();
+  const isMobile = useIsMobile(768);
 
   const desktopAnimation = (tl) => {
     tl.fromTo(
@@ -40,6 +37,7 @@ const FooterBanner = ({ content }) => {
 
   useEffect(() => {
     if (!sectionRef || !sectionRef.current) return;
+    console.log('footerBanner', region);
 
     const bubbles = childrenSelector('[data-animation="bubble"]');
     const bubblesTimeline = gsap.timeline({ paused: true });
@@ -66,7 +64,10 @@ const FooterBanner = ({ content }) => {
   }, []);
 
   return (
-    <DownloadAppButton customClass={[styles.footerBanner]} refProp={sectionRef}>
+    <DownloadAppButton
+      customClass={[styles.footerBanner, region === 'co' ? styles.co : '']}
+      refProp={sectionRef}
+    >
       <div className={styles.background}>
         <span data-animation="bubble" className={styles.circle} />
         <span data-animation="bubble" className={styles.circle} />
@@ -74,12 +75,25 @@ const FooterBanner = ({ content }) => {
         <span data-animation="bubble" className={styles.circle} />
       </div>
       <BlockWrapper customClass={[styles.footerWrapper]}>
-        <div data-animation="copy">
-          <h5 className={styles.title}>{content.title}</h5>
-          <p className={styles.copy} dangerouslySetInnerHTML={{ __html: content.copy }} />
+        <div data-animation="copy" className={styles.copyWrapper}>
+          {content.title && <h5 className={styles.title}>{content.title}</h5>}
+          {content.copy && (
+            <p className={styles.copy} dangerouslySetInnerHTML={{ __html: content.copy }} />
+          )}
+          {content.copyArray &&
+            content.copyArray.map((copy, index) => {
+              return (
+                <div key={copy.title} className={styles.copyArrayWrapper}>
+                  <span>{copy.title}</span>
+                  <span>
+                    {index === 0 && isMobile ? copy.paragraph + copy.mobile : copy.paragraph}
+                  </span>
+                </div>
+              );
+            })}
         </div>
         <div className={styles.image} data-animation="product">
-          <Image src={IMAGE} width={409} height={362} />
+          <Image src={content.image.src} alt={content.image.alt} width={409} height={362} />
         </div>
       </BlockWrapper>
     </DownloadAppButton>
