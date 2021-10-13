@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import C01Navigation from '../components/C01-Navigation/C01Navigation';
 import Hero from '../components/Hero/Hero';
@@ -14,7 +15,11 @@ import CardsBackgroundSection from '../components/CardsBackgroundSection/CardsBa
 import TextWithVideoSection from '../components/TextWithVideoSection/TextWithVideoSection';
 
 export default function MainPageMX() {
-  const { locale } = useAppContext();
+  const { locale, setRegion } = useAppContext();
+
+  useEffect(() => {
+    setRegion('mx');
+  }, []);
 
   return (
     <>
