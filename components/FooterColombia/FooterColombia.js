@@ -10,6 +10,7 @@ import SocialIcons from '../SocialIcons/SocialIcons';
 import SUPERIN_LOGO from '../../public/assets/images/logo_superintendencia.png';
 import FOGAFIN_LOGO from '../../public/assets/images/logo_fogafin.png';
 import FooterBanner from '../FooterBanner/FooterBanner';
+import classNames from 'classnames';
 
 const FooterColombia = ({ content }) => {
   return (
@@ -55,9 +56,15 @@ const FooterColombia = ({ content }) => {
           </div>
           <div>
             <ul className={styles.list}>
-              {content.columnTwo.menu.map((link) => (
+              {content.columnTwo.menu.map((link, index) => (
                 <li key={link.copy}>
-                  <a className={styles.link} href={link.url}>
+                  <a
+                    className={classNames([
+                      styles.link,
+                      index === content.columnTwo.menu.length - 1 ? styles.lastItem : null,
+                    ])}
+                    href={link.url}
+                  >
                     {link.copy}
                   </a>
                 </li>
