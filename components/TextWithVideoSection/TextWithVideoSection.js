@@ -18,15 +18,15 @@ const TextWithVideoSection = ({ content }) => {
     tl.fromTo(
       titleElement,
       { scaleY: 0, transformOrigin: '0% 100%' },
-      { scaleY: 1, duration: 0.3, ease: 'Power4.Out' },
+      { scaleY: 1, duration: 0.3, ease: 'power4.out' },
       0,
     )
       .from(textElement, { autoAlpha: 0, y: 20 })
       .fromTo(
         videoElement,
         { 'clip-path': 'circle(0%)' },
-        { 'clip-path': 'circle(100%)', duration: 1.25, ease: 'Sine.InOut' },
-        '-=0.25',
+        { 'clip-path': 'circle(100%)', duration: 1.2, ease: 'power4.in' },
+        '-=0.5',
       );
   }, []);
   return (
@@ -43,9 +43,8 @@ const TextWithVideoSection = ({ content }) => {
           </div>
         </div>
         <div data-animation="video" className={styles.videoWrapper}>
-          {/* This image is a placeholder until we get the video */}
           <div className={styles.video}>
-            <PreviewVideo assetPath={`assets/video/chat_web_${content.region}.mp4`} />
+            <PreviewVideo assetPath={content.video.src} />
           </div>
         </div>
       </BlockWrapper>
