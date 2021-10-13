@@ -37,7 +37,6 @@ const FooterBanner = ({ content }) => {
 
   useEffect(() => {
     if (!sectionRef || !sectionRef.current) return;
-    console.log('footerBanner', region);
 
     const bubbles = childrenSelector('[data-animation="bubble"]');
     const bubblesTimeline = gsap.timeline({ paused: true });
