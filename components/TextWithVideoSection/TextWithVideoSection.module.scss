@@ -75,7 +75,4 @@
   height: 0;
   padding-top: 100%;
   overflow: hidden;
-
-  @include respond-to(minWidth768) {
-  }
 }
