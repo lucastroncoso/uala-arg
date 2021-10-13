@@ -45,8 +45,8 @@ const CardsWithVideoSection = ({ content }) => {
 
     tl.fromTo(videoElement, { scale: 1 }, { scale: 1.2 }, 0).fromTo(
       videoButton,
-      { scale: 0.9 },
-      { scale: 1.1 },
+      { scale: 0.8 },
+      { scale: 1 },
       0,
     );
   }, []);
