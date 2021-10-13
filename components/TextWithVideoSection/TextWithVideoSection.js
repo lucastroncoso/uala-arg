@@ -42,9 +42,11 @@ const TextWithVideoSection = ({ content }) => {
             })}
           </div>
         </div>
-        <div data-animation="video" className={styles.videoWrapper}>
-          <div className={styles.video}>
-            <PreviewVideo assetPath={content.video.src} />
+        <div className={styles.rightColumn}>
+          <div data-animation="video" className={styles.videoWrapper}>
+            <div className={styles.video}>
+              <PreviewVideo assetPath={content.video.src} />
+            </div>
           </div>
         </div>
       </BlockWrapper>

@@ -60,8 +60,14 @@
   position: relative;
   @include respond-to(minWidth768) {
     margin-top: 0;
-    width: min(464px, 50%);
+    width: min(464px, 100%);
   }
+}
+
+.rightColumn {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .video {
@@ -69,4 +75,7 @@
   height: 0;
   padding-top: 100%;
   overflow: hidden;
+
+  @include respond-to(minWidth768) {
+  }
 }
