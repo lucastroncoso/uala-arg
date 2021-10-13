@@ -37,7 +37,7 @@ export default function MainPageMX() {
         <StepsSection content={pageContent[locale].stepsSection} />
         <PartnersSection content={pageContent[locale].partnersSection} />
         <C06CardsGridSection content={pageContent[locale].cardsGridSection} />
-        <TextWithVideoSection content={pageContent[locale].textWithImageSection} />
+        <TextWithVideoSection content={pageContent[locale].textWithVideoSection} />
         <Footer content={pageContent[locale].footer} />
         <DownloadAppModal content={pageContent[locale].downloadApp} />
         <YoutubeModal />
