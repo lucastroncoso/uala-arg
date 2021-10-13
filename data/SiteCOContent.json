@@ -7,27 +7,27 @@
           "subMenu": [
             {
               "copy": "La App",
-              "url": "#"
+              "url": "https://uala.com.co/nuestro-producto"
             },
             {
               "copy": "La tarjeta",
-              "url": "#"
+              "url": "https://uala.com.co/nuestro-producto"
             },
             {
               "copy": "Nuestra cuenta",
-              "url": "#"
+              "url": "https://uala.com.co/nuestro-producto"
             },
             {
               "copy": "Transferencias",
-              "url": "#"
+              "url": "https://uala.com.co/transferencias"
             },
             {
               "copy": "Retiros",
-              "url": "#"
+              "url": "https://uala.com.co/retiros"
             },
             {
               "copy": "Consignaciones",
-              "url": "#"
+              "url": "https://uala.com.co/consignaciones"
             }
           ]
         },
@@ -36,23 +36,23 @@
           "subMenu": [
             {
               "copy": "Métodos de contacto",
-              "url": "#"
+              "url": "https://uala.com.co/contacto"
             },
             {
               "copy": "Preguntas frecuentes",
-              "url": "#"
+              "url": "https://uala.com.co/faqs"
             },
             {
               "copy": "Comunidad",
-              "url": "#"
+              "url": "https://comunidad.uala.com.co/"
             },
             {
               "copy": "Consejos de seguridad",
-              "url": "#"
+              "url": "https://uala.com.co/seguridad"
             },
             {
               "copy": "Educacion financiera",
-              "url": "#"
+              "url": "https://uala.com.co/educacion-financiera"
             }
           ]
         },
@@ -61,40 +61,40 @@
           "subMenu": [
             {
               "copy": "Nosotros",
-              "url": "#"
+              "url": "https://uala.com.co/nosotr@s"
             },
             {
               "copy": "Trabaja con nosotros",
-              "url": "#"
+              "url": "https://uala.com.co/trabajar-en-uala"
             },
             {
               "copy": "Prensa",
-              "url": "#"
+              "url": "https://uala.com.co/prensa"
             }
           ]
         },
         {
           "title": "Costos",
-          "url": "#"
+          "url": "https://uala.com.co/costos"
         },
         {
           "title": "Promociones",
-          "url": "#"
+          "url": "https://uala.com.co/alianzas-promociones"
         },
         {
           "title": "Legales",
           "subMenu": [
             {
               "copy": "Información productos y servicios",
-              "url": "#"
+              "url": "https://uala.com.co/legales"
             },
             {
               "copy": "Gobierno corporativo",
-              "url": "#"
+              "url": "https://uala.com.co/legales"
             },
             {
               "copy": "Otros regulatorios",
-              "url": "#"
+              "url": "https://uala.com.co/legales"
             }
           ]
         }
@@ -160,21 +160,21 @@
           "title": "Compras",
           "copy": "Vas a poder comprar todo lo que necesites con tu tarjeta Ualá Mastercard Internacional.",
           "ctaCopy": "Ver más",
-          "url": "#"
+          "url": "https://uala.com.co/nuestro-producto"
         },
         {
           "icon": "transferencias",
           "title": "Transferir",
           "copy": "Envía y recibe plata desde cualquier cuenta. Gratis y al instante.",
           "ctaCopy": "Ver más",
-          "url": "#"
+          "url": "https://uala.com.co/transferencias"
         },
         {
           "icon": "pagos-recargas",
           "title": "Retirar efectivo",
           "copy": "Saca plata de cualquier cajero con tu tarjeta Ualá. Retira plata en efectivo en los puntos de Baloto a nivel nacional.",
           "ctaCopy": "Ver más",
-          "url": "#"
+          "url": "https://uala.com.co/retiros"
         }
       ],
       "video": {
@@ -266,23 +266,23 @@
           },
           {
             "copy": "Comunidad",
-            "url": "#"
+            "url": "https://comunidad.uala.com.co/"
           },
           {
             "copy": "Educacion Financiera",
-            "url": "#"
+            "url": "https://uala.com.co/educacion-financiera"
           },
           {
             "copy": "Costos",
-            "url": "#"
+            "url": "https://uala.com.co/costos"
           },
           {
             "copy": "Promociones",
-            "url": "#"
+            "url": "https://uala.com.co/alianzas-promociones"
           },
           {
             "copy": "Preguntas Frecuentes",
-            "url": "#"
+            "url": "https://uala.com.co/faqs"
           }
         ]
       },
