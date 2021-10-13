@@ -97,6 +97,10 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  @media (hover: hover) {
+    cursor: pointer;
+  }
 }
 
 .collapsibleWrapper {
@@ -296,16 +300,56 @@
   }
 }
 
-.customClass.downloadButton {
-  margin: 58px auto 25px;
+.loginButton {
+  font-size: 18px;
+  color: $blue !important;
+  border: solid 1px $blue;
+  border-radius: 49px;
+  margin: 40px auto 0;
+  padding: 6px 37px;
+  width: 180px;
+  background-color: $skyblue-2;
+  text-align: center;
   display: block;
 
   @include respond-to(minWidth768) {
-    font-size: 15px;
+    display: inline-block;
     position: absolute;
-    padding: 9px 37px;
     margin: 0;
     right: 0;
+    font-size: 15px;
+    padding: 8px 37px;
+    top: 20px;
+    width: auto;
+    @include makeVisible;
+    transition: $visibilityTransition;
+
+    &.isHidden {
+      @include makeInvisible;
+    }
+  }
+
+  @media (hover: hover) {
+    transition: background-color .45s;
+    &:hover {
+      background-color: $skyblue;
+    }
+  }
+}
+
+.customClass.downloadButton {
+  margin: 40px auto 25px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include respond-to(minWidth768) {
+    font-size: 15px;
+    padding: 9px 37px;
+    position: absolute;
+    margin: 0;
+    right: 0;
+    left: unset;
+    transform: translateX(0);
     top: 10px;
     @include makeInvisible;
     transition: $visibilityTransition;

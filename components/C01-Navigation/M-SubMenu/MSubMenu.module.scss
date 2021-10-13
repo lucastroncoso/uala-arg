@@ -7,7 +7,7 @@
   opacity: 0;
   visibility: collapse;
   overflow: hidden;
-  transition: opacity .75s, visibility .75s, max-height .75s, padding .75s;
+  transition: opacity .65s, visibility .65s, max-height .6s, padding .6s;
 
   &.isOpen {
     opacity: 1;
@@ -19,6 +19,18 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+
+    &.isOpen {
+      opacity: 1;
+      visibility: visible;
+      max-height: 100vh;
+      padding-top: 15px !important;
+    }
+
+    &.isWrapped {
+      flex-wrap: wrap;
+      max-width: 80%;
+    }
   }
 }
 
@@ -36,13 +48,8 @@
     }
   }
 
-
   @include respond-to(minWidth768) {
-    padding: 25px 17px 10px;
-
-    &:first-of-type {
-      padding-left: 0;
-    }
+    padding: 10px 34px 6px 0;
 
     &:last-of-type {
       padding-right: 0;
