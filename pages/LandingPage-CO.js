@@ -6,8 +6,12 @@ import pageContent from '../data/SiteCOContent.json';
 import { useAppContext } from '../store/context';
 import DownloadAppModal from '../components/Modal/DownloadAppModal/DownloadAppModal';
 import YoutubeModal from '../components/Modal/YoutubeModal/YoutubeModal';
-import Footer from '../components/Footer/Footer';
+import FooterColombia from '../components/FooterColombia/FooterColombia';
 import TextWithVideoSection from '../components/TextWithVideoSection/TextWithVideoSection';
+import C06CardsGridSection from '../components/C06-CardsGridSection/C06CardsGridSection';
+import PartnersSection from '../components/PartnersSection/PartnersSection';
+import StepsSection from '../components/StepsSection/StepsSection';
+import CardsWithVideoSection from '../components/CardsWithVideoSection/CardsWithVideoSection';
 
 export default function MainPageCo() {
   const { locale, setRegion } = useAppContext();
@@ -32,8 +36,12 @@ export default function MainPageCo() {
       <main>
         <C01Navigation content={pageContent[locale].navbar} />
         <Hero content={pageContent[locale].hero} />
+        <CardsWithVideoSection content={pageContent[locale].cardsWithVideoSection} />
+        <StepsSection content={pageContent[locale].stepsSection} />
+        <PartnersSection content={pageContent[locale].partnersSection} />
+        <C06CardsGridSection content={pageContent[locale].cardsGridSection} />
         <TextWithVideoSection content={pageContent[locale].textWithVideoSection} />
-        <Footer content={pageContent[locale].footer} />
+        <FooterColombia content={pageContent[locale].footer} />
         <DownloadAppModal content={pageContent[locale].downloadApp} />
         <YoutubeModal />
       </main>
