@@ -189,26 +189,6 @@
         }
       ]
     },
-    "partnersSection": {
-      "title": "Deposita dinero gratis",
-      "cards": [
-        {
-          "title": "Depósito por transferencia bancaria (SPEI)",
-          "icon": "deposito-transferencias"
-        },
-        {
-          "title": "Depósito en efectivo",
-          "icon": "deposito-efectivo"
-        }
-      ],
-      "paynetLogo": "paynet",
-      "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "logosCarousel": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
-      "viewMoreCTA": {
-        "copy": "Ver tiendas afiliadas",
-        "url": "https://www.paynet.com.mx/mapa-tiendas/index.html"
-      }
-    },
     "textWithVideoSection": {
       "video": {
         "src": "/assets/video/chat_web_mx.mp4"
@@ -217,13 +197,27 @@
       "paragraphs": ["<strong>Si tienes dudas, ¡pregúntanos a nosotros!</strong> <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas en un click."]
     },
     "footer": {
+      "region": "co",
       "footerBanner": {
         "image": {
-          "alt": "Uala Mexico Mockup",
-          "src": "/assets/images/banner_adquisicion_mx.png"
+          "alt": "Uala Mockup",
+          "src": "/assets/images/banner_adquisicion_co.png"
         },
-        "title": "Súmate al lado bueno de tu dinero",
-        "copy": "<strong>Descarga la app</strong> y empieza a manejar tus finanzas fácil, rápido y 100% online."
+        "copyArray": [
+          {
+            "title": "+3 Millones",
+            "paragraph": "de usuarios",
+            "mobile": "en 3 paises"
+          },
+          {
+            "title": "3",
+            "paragraph": "países"
+          },
+          {
+            "title": "Súmate tú también",
+            "paragraph": "Disponible en IOS y Android."
+          }
+        ]
       },
       "title": "El lado bueno de tu dinero",
       "socialLinks": [
@@ -345,6 +339,27 @@
         ]
       },
       "disclaimer": "Belanea México S.A.P.I. de C.V. (en adelante Belanea) es responsable de la apertura, operación y administración de las cuentas denominadas comercialmente como cuentas Ualá, así como de la emisión y operación de las tarjetas asociadas a estas cuentas que se utilicen como medio de disposición, denominadas comercialmente como tarjetas Ualá. Belanea se encuentra en proceso de autorización para operar como institución de fondos de pago electrónico en cumplimiento de la disposición Octava transitoria de la Ley para Regular las Instituciones de Tecnología Financiera (en adelante la Ley), para que ésta pueda llevar a cabo operaciones y prestar los servicios relacionados con la emisión, administración, redención y transmisión de fondos de pago electrónico (actualmente no es una entidad supervisada por las autoridades financieras mexicanas). Adicionalmente se hace de su conocimiento que ni el Gobierno Federal, ni las Entidades de la Administración Pública Paraestatal podrán responsabilizarse o garantizar los recursos de los usuarios que sean utilizados en las operaciones celebradas con Belanea, ni asumirán responsabilidad alguna por las obligaciones contraídas por Belanea o por algún usuario frente a otro, respecto de las operaciones que realicen. Bancar Tecnología MX, S.A. de C.V. no ofrece los servicios de emisión, administración, redención y transmisión de fondos de pago electrónico, sino que funge como comisionista y prestador de servicios de Belanea, en apego a lo permitido por el artículo 54, primer párrafo de la Ley. Para más info <a href='https://uala.com.mx/legales'>aquí</a>."
+    },
+    "partnersSection": {
+      "title": "Deposita dinero gratis",
+      "buttons": [
+        {
+          "title": "Depósito por transferencia bancaria (SPEI)",
+          "url": "#",
+          "icon": "deposito-transferencias"
+        },
+        {
+          "title": "Depósito en efectivo",
+          "url": "#",
+          "icon": "deposito-efectivo"
+        }
+      ],
+      "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
+      "viewMoreCTA": {
+        "copy": "Ver tiendas afiliadas",
+        "url": "https://www.paynet.com.mx/mapa-tiendas/index.html"
+      }
     }
   },
   "en": {
@@ -537,26 +552,6 @@
         }
       ]
     },
-    "partnersSection": {
-      "title": "Deposit money for free",
-      "cards": [
-        {
-          "title": "Depósito por transferencia bancaria (SPEI)",
-          "icon": "deposito-transferencias"
-        },
-        {
-          "title": "Depósito en efectivo",
-          "icon": "deposito-efectivo"
-        }
-      ],
-      "paynetLogo": "paynet",
-      "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "logosCarousel": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
-      "viewMoreCTA": {
-        "copy": "Ver tiendas afiliadas",
-        "url": "https://www.paynet.com.mx/mapa-tiendas/index.html"
-      }
-    },
     "textWithVideoSection": {
       "video": {
         "src": "/assets/video/chat_web_mx.mp4"
@@ -567,11 +562,24 @@
     "footer": {
       "footerBanner": {
         "image": {
-          "alt": "Uala Mexico Mockup",
-          "src": "/assets/images/banner_adquisicion_mx.png"
+          "alt": "Uala Mockup",
+          "src": "/assets/images/banner_adquisicion_co.png"
         },
-        "title": "Get to the good side of your money",
-        "copy": "<strong>Descarga la app</strong> y empieza a manejar tus finanzas fácil, rápido y 100% online"
+        "copyArray": [
+          {
+            "title": "+3 Millones",
+            "paragraph": "de usuarios",
+            "mobile": "en 3 paises"
+          },
+          {
+            "title": "3",
+            "paragraph": "países"
+          },
+          {
+            "title": "Súmate tú también",
+            "paragraph": "Disponible en IOS y Android."
+          }
+        ]
       },
       "title": "El Lado Bueno de tu Dinero",
       "socialLinks": [
@@ -693,6 +701,27 @@
         ]
       },
       "disclaimer": "Belanea México S.A.P.I. de C.V. (en adelante Belanea) es responsable de la apertura, operación y administración de las cuentas denominadas comercialmente como cuentas Ualá, así como de la emisión y operación de las tarjetas asociadas a estas cuentas que se utilicen como medio de disposición, denominadas comercialmente como tarjetas Ualá. Belanea se encuentra en proceso de autorización para operar como institución de fondos de pago electrónico en cumplimiento de la disposición Octava transitoria de la Ley para Regular las Instituciones de Tecnología Financiera (en adelante la Ley), para que ésta pueda llevar a cabo operaciones y prestar los servicios relacionados con la emisión, administración, redención y transmisión de fondos de pago electrónico (actualmente no es una entidad supervisada por las autoridades financieras mexicanas). Adicionalmente se hace de su conocimiento que ni el Gobierno Federal, ni las Entidades de la Administración Pública Paraestatal podrán responsabilizarse o garantizar los recursos de los usuarios que sean utilizados en las operaciones celebradas con Belanea, ni asumirán responsabilidad alguna por las obligaciones contraídas por Belanea o por algún usuario frente a otro, respecto de las operaciones que realicen. Bancar Tecnología MX, S.A. de C.V. no ofrece los servicios de emisión, administración, redención y transmisión de fondos de pago electrónico, sino que funge como comisionista y prestador de servicios de Belanea, en apego a lo permitido por el artículo 54, primer párrafo de la Ley. Para más info aquí."
+    },
+    "partnersSection": {
+      "title": "Deposita dinero gratis",
+      "buttons": [
+        {
+          "title": "Depósito por transferencia bancaria (SPEI)",
+          "url": "#",
+          "icon": "deposito-transferencias"
+        },
+        {
+          "title": "Depósito en efectivo",
+          "url": "#",
+          "icon": "deposito-efectivo"
+        }
+      ],
+      "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
+      "viewMoreCTA": {
+        "copy": "Ver tiendas afiliadas",
+        "url": "#"
+      }
     }
   }
 }
