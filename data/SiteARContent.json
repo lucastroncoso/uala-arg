@@ -185,7 +185,8 @@
         }
       ],
       "video": {
-        "youtubeId": "vjQu4BcVpVU"
+        "youtubeId": "vjQu4BcVpVU",
+        "previewVideoSrc": "assets/video/video_preview_somosuala_ar.mp4"
       }
     },
     "cardsGridSection": {
@@ -527,7 +528,8 @@
         }
       ],
       "video": {
-        "youtubeId": "vjQu4BcVpVU"
+        "youtubeId": "vjQu4BcVpVU",
+        "previewVideoSrc": "assets/video/video_preview_somosuala_ar.mp4"
       }
     },
     "cardsGridSection": {
