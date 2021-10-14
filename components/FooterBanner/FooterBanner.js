@@ -54,13 +54,13 @@ const FooterBanner = ({ content }) => {
           from: 'random',
           repeat: -1,
           yoyo: true,
-          ease: 'Power1.Out',
-          yoyoEase: 'Power1.Out',
+          ease: 'power1.out',
+          yoyoEase: 'power1.out',
         },
       },
       0,
     );
-  }, []);
+  }, [sectionRef.current]);
 
   return (
     <DownloadAppButton
