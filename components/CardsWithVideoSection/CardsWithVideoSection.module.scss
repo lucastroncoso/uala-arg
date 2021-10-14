@@ -2,6 +2,7 @@
 @use '/styles/types/types' as *;
 @use '/styles/mixins/respond-to' as *;
 @use '../../styles/mixins/reset-styles' as *;
+@use '../../styles/mixins/card-hover' as *;
 
 .cardsWithVideosection {
   @include reset-styles;
@@ -48,7 +49,82 @@
   @include bold-35;
 }
 
-.cardsRowWrapper {
+.cardsGrid {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(minWidth768) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  a.card {
+    @include cardStyles;
+    @include bold-36;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 218px;
+    padding: 33px 25px;
+    margin-bottom: 42px;
+
+    @include respond-to(minWidth768) {
+      @include card-hover(35px, $blue, 0.3);
+      padding: 50px 60px 40px;
+      height: 283px;
+      width: 49%;
+      margin-bottom: 35px;
+      
+      @media (hover: hover) {
+        &:hover {
+          .backgroundImg {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  .title {
+    max-width: 95%;
+    z-index: 1;
+
+    @include respond-to(minWidth768) {
+      max-width: 65%;
+    }
+  }
+
+  .ctaCopy {
+    z-index: 1;
+    font-size: 16px;
+    text-underline-offset: 3px;
+    line-height: 22px;
+    text-decoration: underline;
+
+    @include respond-to(minWidth1024) {
+      font-size: 18px;
+    }
+  }
+
+  .backgroundImg {
+    z-index: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 145px;
+  
+    @include respond-to(minWidth768) {
+      width: 200px;
+      transform-origin: bottom right;
+      transition: transform 0.6s ease 0s;
+    }
+  }
+}
+
+.cardsRow {
   padding: 40px 0 8px;
   justify-content: space-between;
   align-items: flex-start;

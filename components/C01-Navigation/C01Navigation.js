@@ -23,12 +23,12 @@ const C01Navigation = ({ content }) => {
     This is going to be unused until multilanguage support is added.
     Remove comments to enable language selector
   */
-  //const { _, setLocale } = useAppContext();
+  /*const { _, setLocale } = useAppContext();
 
-  //const onLanguageButtonClick = useCallback((event) => {
-  //  const selectedLanguage = event.target.innerText.toLowerCase();
-  //  setLocale(selectedLanguage);
-  //}, [setLocale]);
+  const onLanguageButtonClick = useCallback((event) => {
+    const selectedLanguage = event.target.innerText.toLowerCase();
+    setLocale(selectedLanguage);
+  }, [setLocale]);*/
 
   const closeSubMenu = () => {
     setIsSubMenuOpen(false);
@@ -60,10 +60,10 @@ const C01Navigation = ({ content }) => {
     This is going to be unused until multilanguage support is added.
     Remove comments to enable language selector
   */
-  //const languageSelectorStyle = classNames(
-  //  styles.languageSelector,
-  //  { [styles.isHidden]: !isMobile && isScrolled },
-  //);
+  /*const languageSelectorStyle = classNames(
+    styles.languageSelector,
+    { [styles.isHidden]: !isMobile && isScrolled },
+  );*/
 
   useEffect(() => {
     setIsScrolled(window.pageYOffset > scrollPoint);
@@ -179,17 +179,17 @@ const C01Navigation = ({ content }) => {
               This is going to be unused until multilanguage support is added.
               Remove comments to enable language selector
             */
-          /*content.languageButton && 
-              <div className={languageSelectorStyle}>
-                <span onClick={onLanguageButtonClick}>
-                  {content.languageButton[0]}
-                </span>
-    
-                <span onClick={onLanguageButtonClick}>
-                  {content.languageButton[1]}
-                </span>
-              </div>
-          */}
+            /*content.languageButton &&
+            <div className={languageSelectorStyle}>
+              <span onClick={onLanguageButtonClick}>
+                {content.languageButton[0]}
+              </span>
+
+              <span onClick={onLanguageButtonClick}>
+                {content.languageButton[1]}
+              </span>
+            </div>*/
+          }
 
           {content.loginButton &&
             <a className={loginButtonStyle} href={content.loginButton.url}>
