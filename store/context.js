@@ -4,19 +4,22 @@ export const AppContext = createContext(null);
 
 export const AppContextProvider = ({ children }) => {
   const [locale, setLocale] = useState('es');
+  const [region, setRegion] = useState('mx');
   const [youtubeModalVideoId, setYoutubeModalVideoId] = useState('');
   const [downloadModalActiveState, setDownloadModalActiveState] = useState(false);
 
   const values = useMemo(
     () => ({
       locale,
+      region,
       downloadModalActiveState,
       youtubeModalVideoId,
       setDownloadModalActiveState,
       setYoutubeModalVideoId,
       setLocale,
+      setRegion,
     }),
-    [locale, downloadModalActiveState, youtubeModalVideoId],
+    [locale, downloadModalActiveState, youtubeModalVideoId, region],
   );
 
   return <AppContext.Provider value={values}>{children}</AppContext.Provider>;

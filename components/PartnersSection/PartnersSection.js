@@ -5,8 +5,10 @@ import PropTypes from 'prop-types';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
 import Image from 'next/image';
 import MHorizontalCard from '../M-HorizontalCard/MHorizontalCard';
+import classNames from 'classnames';
 import useIsMobile from '../utils/hooks/useIsMobile';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
+import useAppContext from '../../store/context';
 import gsap from 'gsap';
 
 const PartnersSection = ({ content }) => {
@@ -15,7 +17,7 @@ const PartnersSection = ({ content }) => {
   const [scrollSnaps, setScrollSnaps] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
-
+  const { region } = useAppContext();
   const scrollTo = useCallback((index) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
 
   const onSelect = useCallback(() => {
@@ -79,18 +81,25 @@ const PartnersSection = ({ content }) => {
           ))}
         </div>
         <div className={styles.partnersLogos} data-animation="logos-container">
-          {content.paynetLogo &&
+          {content.paynetLogo && (
             <div data-animation="partner-logos">
-              <Image className={styles.logoPaynet} src={`/assets/images/${content.paynetLogo}.png`}
-                width={156} height={74} />
+              <Image
+                className={styles.logoPaynet}
+                src={`/assets/images/${content.paynetLogo}.png`}
+                width={156}
+                height={74}
+              />
             </div>
-          }
-          {content.partnersCopy &&
-            <p className={styles.partnersCopy} data-animation="partner-logos">
+          )}
+          {content.partnersCopy && (
+            <p
+              className={classNames(styles.partnersCopy, region === 'co' ? styles.coCopy : '')}
+              data-animation="partner-logos"
+            >
               {content.partnersCopy}
             </p>
-          }
-          {content.logosCarousel &&
+          )}
+          {content.logosCarousel && (
             <div className={styles.logoGrid}>
               <div className={styles.sliderContainer} ref={isMobile ? emblaRef : null}>
                 <div className={styles.sliderInner}>
@@ -120,9 +129,23 @@ const PartnersSection = ({ content }) => {
                 )}
               </div>
             </div>
-          }
+          )}
 
-          {content.viewMoreCTA &&
+          {content.logosStatic && (
+            <div className={styles.logosStatic}>
+              {content.logosStatic.map((logo) => {
+                return (
+                  <img
+                    data-animation="partner-logos"
+                    src={`/assets/images/partnersLogos/${logo}.png`}
+                    key={logo}
+                    alt={logo}
+                  />
+                );
+              })}
+            </div>
+          )}
+          {content.viewMoreCTA && (
             <a
               data-animation="partner-logos"
               href={content.viewMoreCTA.url}
@@ -131,7 +154,7 @@ const PartnersSection = ({ content }) => {
             >
               {content.viewMoreCTA.copy}
             </a>
-          }
+          )}
         </div>
       </BlockWrapper>
     </section>

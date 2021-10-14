@@ -4,12 +4,20 @@ import PropTypes from 'prop-types';
 import HEROBG from '/public/hero_bkg.jpg';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
 import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
+import Image from 'next/image';
 
 const Hero = ({ content }) => {
   return (
     <section className={styles.hero}>
       <div className={styles.background}>
-        <img src={HEROBG.src} className={styles.video} />
+        <Image
+          data-animation="image"
+          src={HEROBG}
+          layout="fill"
+          objectFit={'cover'}
+          objectPosition={'90% 0%'}
+          placeholder={'blur'}
+        />
         <div className={styles.svgBottom}>
           <svg
             version="1.1"

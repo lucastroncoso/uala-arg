@@ -107,7 +107,7 @@ h3.title {
     }
     & h4 {
       font-size: 25px;
-      padding: 0
+      padding: 0;
     }
   }
 }
@@ -177,6 +177,24 @@ p.partnersCopy {
   }
 }
 
+p.partnersCopy.coCopy {
+  font-weight: 600;
+  color: $gray-3;
+  margin-bottom: 20px;
+  margin-top: 0;
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+  padding: 0 20px;
+
+  @include respond-to(minWidth768) {
+    padding: initial;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+
 a.viewMore {
   @include semibold-20;
 
@@ -184,4 +202,23 @@ a.viewMore {
   display: block;
   margin-top: 50px;
   text-decoration: underline;
+}
+
+.logosStatic {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: max-content;
+  align-items: center;
+  justify-content: center;
+  column-gap: 14px;
+
+  img {
+    width: 80%;
+  }
+  @include respond-to(minWidth768) {
+    column-gap: 72px;
+    img {
+      width: 100%;
+    }
+  }
 }

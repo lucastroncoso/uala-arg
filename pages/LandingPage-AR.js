@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import C01Navigation from '../components/C01-Navigation/C01Navigation';
 import Hero from '../components/Hero/Hero';
@@ -14,7 +15,11 @@ import StepsSection from '../components/StepsSection/StepsSection';
 import CardsBackgroundSection from '../components/CardsBackgroundSection/CardsBackgroundSection';
 
 export default function MainPageAr() {
-  const { locale } = useAppContext();
+  const { locale, setRegion } = useAppContext();
+
+  useEffect(() => {
+    setRegion('ar');
+  }, []);
 
   return (
     <>
