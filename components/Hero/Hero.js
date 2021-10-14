@@ -6,14 +6,14 @@ import NOTIF1 from '/public/assets/images/hero/mockup_mx_notif_1.png';
 import NOTIF2 from '/public/assets/images/hero/mockup_mx_notif_2.png';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
 import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
-import Image from 'next/image';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
+import gsap from 'gsap';
 
 const Hero = ({ content }) => {
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
 
   useEffect(() => {
-    const tl = createTL();
+    const tl = gsap.timeline({ repeat: -1, repeatDelay: 2, yoyo: true });
     const firstPopupElement = childrenSelector('[data-animation="popup-1"]');
     const secondPopupElement = childrenSelector('[data-animation="popup-2"]');
 
@@ -21,7 +21,7 @@ const Hero = ({ content }) => {
       firstPopupElement,
       { scale: 0.5, autoAlpha: 0 },
       { scale: 1, autoAlpha: 1, ease: 'back.out', transformOrigin: '75% 50%', duration: 0.5 },
-      2,
+      1,
     ).fromTo(
       secondPopupElement,
       { scale: 0.5, autoAlpha: 0 },

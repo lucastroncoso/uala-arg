@@ -321,11 +321,11 @@
       "cards": [
         {
           "title": "Depósito entre usuarios Ualá (PSP)",
-          "icon": "deposito-transferencias"
+          "icon": "transferencias"
         },
         {
           "title": "Transferencias Bancaria ACH desde cualquier banco.",
-          "icon": "deposito-efectivo"
+          "icon": "spei"
         }
       ],
       "partnersCopy": "Puedes cargar tu Ualá en efectivo desde un corresponsal aliado:",
@@ -670,11 +670,11 @@
       "cards": [
         {
           "title": "Depósito entre usuarios Ualá (PSP)",
-          "icon": "deposito-transferencias"
+          "icon": "transferencias"
         },
         {
           "title": "Transferencias Bancaria ACH desde cualquier banco.",
-          "icon": "deposito-efectivo"
+          "icon": "spei"
         }
       ],
       "partnersCopy": "Puedes cargar tu Ualá en efectivo desde un corresponsal aliado:",
