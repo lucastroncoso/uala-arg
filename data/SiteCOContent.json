@@ -208,7 +208,7 @@
     },
     "textWithVideoSection": {
       "video": {
-        "src": "/assets/video/chat_web_mx.mp4"
+        "src": "/assets/video/chat_web_ar.mp4"
       },
       "title": "Atención 100% online",
       "paragraphs": ["<strong>Si tienes dudas, ¡pregúntanos a nosotros!</strong> <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.co'>hola@uala.com.co</a> o por nuestras redes sociales.", "Además en la <a href='#'>Comunidad Ualá</a>, encontrarás las respuestas en un click."]
@@ -523,7 +523,7 @@
     },
     "textWithVideoSection": {
       "video": {
-        "src": "/assets/video/chat_web_mx.mp4"
+        "src": "/assets/video/chat_web_ar.mp4"
       },
       "title": "100% Online Service",
       "paragraphs": ["<strong>Si tienes dudas, ¡pregúntanos a nosotros!</strong> <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
