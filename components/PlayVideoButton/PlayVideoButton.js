@@ -5,7 +5,7 @@ import { useAppContext } from '../../store/context';
 import PlayIcon from '../../public/assets/svg/play-icon.svg';
 import PreviewVideo from '../PreviewVideo/PreviewVideo';
 
-const PlayVideoButton = ({ youtubeId }) => {
+const PlayVideoButton = ({ youtubeId, previewVideoSrc }) => {
   const { setYoutubeModalVideoId } = useAppContext();
 
   const onPlayButtonClick = useCallback(() => {
@@ -14,7 +14,7 @@ const PlayVideoButton = ({ youtubeId }) => {
 
   return (
     <button className={styles.button} onClick={onPlayButtonClick} data-animation="video-button">
-      <PreviewVideo assetPath={'assets/video/video_preview_somosuala_mx.mp4'} />
+      <PreviewVideo assetPath={previewVideoSrc} />
       <PlayIcon className={styles.playIcon} />
     </button>
   );

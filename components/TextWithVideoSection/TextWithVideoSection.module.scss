@@ -65,9 +65,12 @@
 }
 
 .rightColumn {
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
+  width: 100%;
+
+  @include respond-to(minWidth768) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .video {

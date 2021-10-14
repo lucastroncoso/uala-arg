@@ -79,7 +79,10 @@ const CardsWithVideoSection = ({ content }) => {
             })}
           </div>
         )}
-        <PlayVideoButton youtubeId={content.video.youtubeId} />
+        <PlayVideoButton
+          youtubeId={content.video.youtubeId}
+          previewVideoSrc={content.video.previewVideoSrc}
+        />
       </BlockWrapper>
     </section>
   );
