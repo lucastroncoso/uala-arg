@@ -102,7 +102,10 @@
           "url": "https://uala.com.mx/promociones"
         }
       ],
-      "languageButton": ["es", "en"],
+      "languageButton": [
+        "es",
+        "en"
+      ],
       "loginButton": {
         "copy": "Ingresar",
         "url": "https://web.uala.com.ar/login?utm_medium=Menu&utm_source=Web&utm_campaign=WebApp"
@@ -128,34 +131,34 @@
       "title": "Cómo ser parte de Ualá",
       "stepsItems": [
         {
-          "copy": "Descarga la app desde Play Store o App Store en tu celular.",
+          "copy": "Descargá la app desde Play Store o App Store en tu celular.",
           "icon": "pasos-envio-1"
         },
         {
-          "copy": "Completa el registro con tus datos desde la app. y tendrás una tarjeta digital para hacer compras online.",
+          "copy": "Completá el registro con tus datos desde la app y obtené tu tarjeta virtual.",
           "icon": "pasos-envio-2"
         },
         {
-          "copy": "En 5 días hábiles recibirás tu tarjeta física inclonable sin costos de envío.",
+          "copy": "Recibí tu tarjeta Ualá dentro de los 15 días hábiles, gratis y en todo el país.",
           "icon": "pasos-envio-3"
         },
         {
-          "copy": "¡Activa tu tarjeta desde la app para hacer compras físicas!",
+          "copy": "¡Activá tu tarjeta desde la app y cargá saldo para empezar a usarla!",
           "icon": "pasos-envio-4"
         }
       ]
     },
     "cardsBackgroundSection": [
       {
-        "title": "Aprovecha las promociones inigualables",
+        "title": "Aprovechá promociones inigualables",
         "ctaCopy": "Ver promociones",
-        "url": "https://uala.com.mx/promociones",
+        "url": "https://uala.com.ar/promociones",
         "image": "promociones-mex"
       },
       {
-        "title": "Compra juegos online y alcanza el siguiente nivel",
+        "title": "Comprá juegos online y alcanzá el siguiente nivel",
         "ctaCopy": "Conocer más",
-        "url": "https://uala.com.mx/gaming",
+        "url": "https://uala.com.ar/gaming",
         "image": "gaming"
       }
     ],
@@ -203,27 +206,27 @@
         {
           "icon": "compras",
           "title": "Compras",
-          "copy": "Vas a poder comprar todo lo que necesites con tu tarjeta Ualá Mastercard Internacional.",
+          "copy": "Podés hacer compras en cualquier comercio o página web del mundo que acepte Mastercard.",
           "ctaCopy": "Ver más",
-          "url": "https://uala.com.mx/tarjeta"
+          "url": "https://uala.com.ar/tarjeta"
         },
         {
           "icon": "transferencias",
           "title": "Transferencias",
-          "copy": "Transfiere dinero a tus amig@s que tienen Ualá o a otras cuentas bancarias a través de SPEI desde tu app.",
+          "copy": "Podés enviar y recibir plata desde cualquier cuenta. Gratis y en el acto.",
           "ctaCopy": "Ver más",
-          "url": "https://uala.com.mx/transferencias"
+          "url": "https://uala.com.ar/transferencias"
         },
         {
           "icon": "pagos-recargas",
           "title": "Pagos y Recargas",
-          "copy": "Realiza tus pagos de servicios (luz, internet, agua, etc) y recarga tiempo aire a tu celular en cuestión de segundos.",
+          "copy": "Podés pagar todas tus facturas, recargá tus servicios prepagos y cargá la SUBE.",
           "ctaCopy": "Ver más",
-          "url": "https://uala.com.mx/pagos"
+          "url": "https://uala.com.ar/pagos"
         }
       ],
       "video": {
-        "youtubeId": "vjQu4BcVpVU",
+        "youtubeId": "dJyRl1bq9eg",
         "previewVideoSrc": "assets/video/video_preview_somosuala_ar.mp4"
       }
     },
@@ -233,22 +236,22 @@
         {
           "icon": "sin-comisiones",
           "title": "Sin comisiones",
-          "copy": "Puedes utilizar Ualá totalmente gratis. No se te cobrarán comisiones por ninguna operación."
+          "copy": "Podés usar Ualá totalmente gratis. Sin costos de apertura, mantenimiento o cierre."
         },
         {
           "icon": "sin-letrachica",
           "title": "Sin letra chica",
-          "copy": "Olvídate de las letras chiquitas. Puedes encontrar toda la información a la vista con un click."
+          "copy": "Tranquilidad de saber que todas las operaciones que hagas, están bajo tu control."
         },
         {
           "icon": "sin-costosocultos",
           "title": "Sin costos ocultos",
-          "copy": "En Ualá no tenemos costos ocultos ni sorpresas en el manejo de tu cuenta. Conoce más <a href='https://www.uala.com.ar/'>aquí</a>."
+          "copy": "No tenemos costos ocultos ni sorpresas en el manejo de tu cuenta. Conoce más <a href='https://uala.com.ar/costos'>acá</a>."
         },
         {
           "icon": "sin-sucursales",
           "title": "Sin sucursales",
-          "copy": "Todo a través de la app 100% online. Ahorra tiempo y comunicate desde donde quieras."
+          "copy": "Todo a través de la app 100% online. Ahorrá tiempo y comunicate por chat desde donde quieras."
         }
       ]
     },
@@ -264,115 +267,142 @@
           "icon": "deposito-efectivo"
         }
       ],
-      "logosCarousel": ["rapipago", "pago-facil", "cobro-express", "tele-recargas"]
+      "logosCarousel": [
+        "rapipago",
+        "pago-facil",
+        "cobro-express",
+        "tele-recargas"
+      ]
     },
     "textWithVideoSection": {
       "video": {
-        "src": "/assets/video/chat_web_mx.mp4"
+        "src": "/assets/video/chat_web_ar.mp4"
       },
       "title": "Atención 100% online",
-      "paragraphs": ["Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
+      "paragraphs": [
+        "<strong>Si tenés dudas, ¡pregúntanos a nosotr@s!</strong> <br>Si sos usuari@ de Ualá escribinos por el chat de la app.",
+        "Si todavía no sos parte de Ualá, nos podés escribir por mail a <a href='mailto:hola@uala.com.ar'>hola@uala.com.ar</a> o por nuestras redes sociales.",
+        "Además en la <a href='https://comunidad.uala.com.ar/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"
+      ]
     },
     "footer": {
       "footerBanner": {
         "image": {
           "alt": "Uala Mockup",
-          "src": "/assets/images/banner_adquisicion_co.png"
+          "src": "/assets/images/banner_adquisicion_ar.png"
         },
-        "title": "Súmate al lado bueno de tu dinero",
-        "copy": "<strong>Descarga la app</strong> y empieza a manejar tus finanzas fácil, rápido y 100% online."
+        "title": "¡Sumate vos también!",
+        "copy": "<strong>Descargá la app</strong> y empezá a manejar tu plata fácil, rápido y 100% online."
       },
       "title": "El lado bueno de tu dinero",
       "socialLinks": [
         {
           "name": "facebook",
-          "url": "https://www.facebook.com/uala.mx/?brand_redir=454685955446345"
+          "url": "https://www.facebook.com/uala.arg/?brand_redir=454685955446345"
         },
         {
           "name": "instagram",
-          "url": "https://www.instagram.com/uala_mx/"
+          "url": "https://www.instagram.com/uala_arg/"
         },
         {
           "name": "youtube",
-          "url": "https://www.youtube.com/channel/UCGVDc5uFy4ZcrCafcnTGIng"
+          "url": "https://www.youtube.com/channel/UCYFkMsPU2HvERxI-gHqzLxg"
         },
         {
           "name": "twitter",
-          "url": "https://twitter.com/uala_mx"
+          "url": "https://twitter.com/uala_arg"
         },
         {
           "name": "tiktok",
-          "url": "https://www.tiktok.com/@uala_mx?"
+          "url": "https://www.tiktok.com/@uala_ar"
         }
       ],
-      "productContract": {
-        "copy": "Contrato de producto",
-        "url": "https://statics.mx.ua.la/tyc/Contrato_producto_Ual%C3%A1.docx.pdf"
-      },
-      "privacy": {
-        "copy": "Aviso de Privacidad",
-        "url": "https://statics.mx.ua.la/tyc/Ual%C3%A1_Aviso_de_Privacidad.pdf"
-      },
+      "contractsLegals": [
+        {
+          "copy": "CONTRATOS DE ADHESIÓN",
+          "url": "https://uala.com.ar/contratos"
+        },
+        {
+          "copy": "POLÍTICAS DE PRIVACIDAD",
+          "url": "https://uala.com.ar/privacidad.html"
+        },
+        {
+          "copy": "DEFENSA DEL CONSUMIDOR",
+          "url": "https://www.argentina.gob.ar/produccion/consumidor/oficinas-provinciales"
+        },
+        {
+          "copy": "TÉRMINOS DE USO",
+          "url": "https://uala.com.ar/tyc.html"
+        }
+      ],
       "functionabilities": {
         "title": "Funcionalidades",
         "submenu": [
           {
-            "copy": "La tarjeta",
-            "url": "https://uala.com.mx/tarjeta"
-          },
-          {
-            "copy": "Pagos y recargas",
-            "url": "https://uala.com.mx/pagos"
-          },
-          {
-            "copy": "Transferencias",
-            "url": "https://uala.com.mx/transferencias"
-          },
-          {
-            "copy": "Retiros",
-            "url": "https://uala.com.mx/extracciones"
+            "copy": "Compras",
+            "url": "https://uala.com.ar/tarjeta"
           },
           {
             "copy": "Créditos",
-            "url": "#",
-            "isNew": "NUEVO"
+            "url": "https://uala.com.ar/creditos"
+          },
+          {
+            "copy": "Transferencias",
+            "url": "https://uala.com.ar/transferencias"
+          },
+          {
+            "copy": "Inversiones",
+            "url": "https://uala.com.ar/inversiones"
+          },
+          {
+            "copy": "Pagos y recargas",
+            "url": "https://uala.com.ar/pagos"
+          },
+          {
+            "copy": "Extracciones",
+            "url": "https://uala.com.ar/extracciones"
+          },
+          {
+            "copy": "Seguros",
+            "url": "https://uala.com.ar/seguros"
+          },
+          {
+            "copy": "Análisis de gastos",
+            "url": "https://uala.com.ar/analisis-de-gastos"
           },
           {
             "copy": "Promociones",
-            "url": "https://uala.com.mx/promociones"
+            "url": "https://uala.com.ar/promociones"
+          },
+          {
+            "copy": "Uala más",
+            "url": "https://uala.com.ar/programa-de-beneficios",
+            "isNew": "NUEVO"
+          },
+          {
+            "copy": "Cobros",
+            "url": "https://www.ualabis.com.ar/"
           }
         ]
-      },
-      "costs": {
-        "copy": "Costos",
-        "url": "https://uala.com.mx/Consulta-los-costos-y-las-comisiones-de-nuestros-productos"
-      },
-      "legal": {
-        "copy": "Legales",
-        "url": "https://uala.com.mx/legales"
-      },
-      "terms": {
-        "copy": "Términos y condiciones",
-        "url": "https://statics.mx.ua.la/tyc/Ual%C3%A1_T%C3%A9rminos_y_Condiciones.pdf"
       },
       "about": {
         "title": "SOBRE UALÁ",
         "submenu": [
           {
             "copy": "Nosotr@s",
-            "url": "https://uala.com.mx/nosotr@s"
+            "url": "https://uala.com.ar/nosotr@s"
           },
           {
             "copy": "Trabajá con nosotr@s",
-            "url": "https://uala.com.mx/trabajar-en-uala"
+            "url": "https://uala.com.ar/trabajar-en-uala"
           },
           {
             "copy": "Prensa",
-            "url": "https://uala.com.mx/prensa"
+            "url": "https://uala.com.ar/prensa"
           },
           {
             "copy": "Gaming",
-            "url": "#"
+            "url": "https://uala.com.ar/gaming"
           }
         ]
       },
@@ -381,27 +411,35 @@
         "submenu": [
           {
             "copy": "Métodos de contacto",
-            "url": "https://uala.com.mx/contacto"
+            "url": "https://uala.com.ar/contacto"
           },
           {
             "copy": "Preguntas frecuentes",
-            "url": "https://uala.com.mx/faqs"
+            "url": "https://uala.com.ar/faqs"
           },
           {
             "copy": "Comunidad",
-            "url": "https://comunidad.uala.com.mx/"
+            "url": "https://comunidad.uala.com.ar/"
           },
           {
             "copy": "Consejos de seguridad",
-            "url": "https://uala.com.mx/seguridad"
+            "url": "https://uala.com.ar/seguridad"
           },
           {
             "copy": "Blog de educación financiera",
-            "url": "https://blog.uala.com.mx/"
+            "url": "https://blog.uala.com.ar/"
+          },
+          {
+            "copy": "Costos",
+            "url": "https://blog.uala.com.ar/"
           }
         ]
       },
-      "disclaimer": "Belanea México S.A.P.I. de C.V. (en adelante Belanea) es responsable de la apertura, operación y administración de las cuentas denominadas comercialmente como cuentas Ualá, así como de la emisión y operación de las tarjetas asociadas a estas cuentas que se utilicen como medio de disposición, denominadas comercialmente como tarjetas Ualá. Belanea se encuentra en proceso de autorización para operar como institución de fondos de pago electrónico en cumplimiento de la disposición Octava transitoria de la Ley para Regular las Instituciones de Tecnología Financiera (en adelante la Ley), para que ésta pueda llevar a cabo operaciones y prestar los servicios relacionados con la emisión, administración, redención y transmisión de fondos de pago electrónico (actualmente no es una entidad supervisada por las autoridades financieras mexicanas). Adicionalmente se hace de su conocimiento que ni el Gobierno Federal, ni las Entidades de la Administración Pública Paraestatal podrán responsabilizarse o garantizar los recursos de los usuarios que sean utilizados en las operaciones celebradas con Belanea, ni asumirán responsabilidad alguna por las obligaciones contraídas por Belanea o por algún usuario frente a otro, respecto de las operaciones que realicen. Bancar Tecnología MX, S.A. de C.V. no ofrece los servicios de emisión, administración, redención y transmisión de fondos de pago electrónico, sino que funge como comisionista y prestador de servicios de Belanea, en apego a lo permitido por el artículo 54, primer párrafo de la Ley. Para más info <a href='https://uala.com.mx/legales'>aquí</a>."
+      "footerEnd": {
+        "ualaInfo": "Ualá es un Proveedor de Servicios de Pago y no está autorizado por el BCRA para operar como entidad financiera. <a href='https://uala.com.ar/legales'>Mas info acá</a>",
+        "ualaAddress": "ALAU TECNOLOGÍA S.A.U. - CUIT 30-71542170- 0  Ualá 2020, Todos los derechos reservados.  Nicaragua 4677, C1414BVG CABA, Argentina",
+        "logo": "/assets/images/aaipLogo.png"
+      }
     }
   },
   "en": {
@@ -487,7 +525,10 @@
           "url": "https://www.uala.com.ar/promociones"
         }
       ],
-      "languageButton": ["es", "en"],
+      "languageButton": [
+        "es",
+        "en"
+      ],
       "downloadAppButtonCopy": "Download App",
       "menuButtonCopy": "Menu"
     },
@@ -600,7 +641,11 @@
         "src": "/assets/video/chat_web_mx.mp4"
       },
       "title": "100% Online Service",
-      "paragraphs": ["Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
+      "paragraphs": [
+        "Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.",
+        "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.",
+        "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"
+      ]
     },
     "footer": {
       "footerBanner": {
@@ -747,7 +792,16 @@
         }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
+      "partnersLogos": [
+        "walmart",
+        "bodega-aurrera",
+        "7-eleven",
+        "superama",
+        "extra",
+        "farmacias-del-ahorro",
+        "farmacias-benavides",
+        "circle-k"
+      ],
       "viewMoreCTA": {
         "copy": "Ver tiendas afiliadas",
         "url": "#"

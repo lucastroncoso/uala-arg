@@ -7,7 +7,6 @@ import UALA_ISO from '../../public/assets/logos/uala-logo-wave.png';
 import APP_STORE from '../../public/assets/images/app_store.png';
 import GOOGLE_PLAY from '../../public/assets/images/google_play.png';
 import SocialIcons from '../../components/SocialIcons/SocialIcons';
-import PARTNER_LOGO from '../../public/assets/images/unodostres.png';
 import FooterBanner from '../FooterBanner/FooterBanner';
 
 const Footer = ({ content }) => {
@@ -39,13 +38,16 @@ const Footer = ({ content }) => {
                 </a>
               ))}
             </div>
-            <a className={styles.link} target="_blank" href={content.productContract.url}>
-              {content.productContract.copy}
-            </a>
-            <br />
-            <a className={styles.link} target="_blank" href={content.privacy.url}>
-              {content.privacy.copy}
-            </a>
+
+            {content.contractsLegals.map((item, index) => {
+              return (
+                <a className={styles.link}
+                  {...item.hasTargetBlank ? { target: "_blank" } : null}
+                  href={item.url} key={index}>
+                  {item.copy}
+                </a>)
+            })}
+
           </div>
           <div>
             <ul className={styles.list}>
@@ -59,17 +61,21 @@ const Footer = ({ content }) => {
                 </li>
               ))}
             </ul>
-            <div className={styles.legalWrapper}>
-              <a className={styles.listTitle} href={content.costs.url}>
-                {content.costs.copy}
-              </a>
-              <a className={styles.listTitle} href={content.legal.url}>
-                {content.legal.copy}
-              </a>
-              <a className={styles.listTitle} href={content.terms.url} target="_blank">
-                {content.terms.copy}
-              </a>
-            </div>
+
+            {content.legalLinks &&
+              <div className={styles.legalWrapper}>
+                <a className={styles.listTitle} href={content.legalLinks.costs.url}>
+                  {content.legalLinks.costs.copy}
+                </a>
+                <a className={styles.listTitle} href={content.legalLinks.legal.url}>
+                  {content.legalLinks.legal.copy}
+                </a>
+                <a className={styles.listTitle} href={content.legalLinks.terms.url} target="_blank">
+                  {content.legalLinks.terms.copy}
+                </a>
+              </div>
+            }
+
           </div>
           <div>
             <ul className={styles.list}>
@@ -93,11 +99,29 @@ const Footer = ({ content }) => {
               ))}
             </ul>
           </div>
-          <img className={styles.partnerLogo} src={PARTNER_LOGO.src} />
-          <p
-            className={styles.disclaimer}
-            dangerouslySetInnerHTML={{ __html: content.disclaimer }}
-          />
+
+          {content.partnerLogo &&
+            <img className={styles.partnerLogo} src={content.partnerLogo} />
+          }
+
+          {content.disclaimer &&
+            <p
+              className={styles.disclaimer}
+              dangerouslySetInnerHTML={{ __html: content.disclaimer }}
+            />
+          }
+
+          {content.footerEnd &&
+            <div className={styles.footerEnd}>
+              <p
+                dangerouslySetInnerHTML={{ __html: content.footerEnd.ualaInfo }}
+              />
+              <div className={styles.logoWithText}>
+                <img src={content.footerEnd.logo} />
+                <p>{content.footerEnd.ualaAddress}</p>
+              </div>
+            </div>
+          }
         </BlockWrapper>
       </footer>
     </>
