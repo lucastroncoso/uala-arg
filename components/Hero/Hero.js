@@ -1,23 +1,41 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import styles from './Hero.module.scss';
 import PropTypes from 'prop-types';
-import HEROBG from '/public/hero_bkg.jpg';
+import HEROBG from '/public/assets/images/hero/background.jpg';
+import NOTIF1 from '/public/assets/images/hero/mockup_mx_notif_1.png';
+import NOTIF2 from '/public/assets/images/hero/mockup_mx_notif_2.png';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
 import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
 import Image from 'next/image';
+import useScrollTrigger from '../utils/hooks/useScrollTrigger';
 
 const Hero = ({ content }) => {
+  const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
+
+  useEffect(() => {
+    const tl = createTL();
+    const firstPopupElement = childrenSelector('[data-animation="popup-1"]');
+    const secondPopupElement = childrenSelector('[data-animation="popup-2"]');
+
+    tl.fromTo(
+      firstPopupElement,
+      { scale: 0.5, autoAlpha: 0 },
+      { scale: 1, autoAlpha: 1, ease: 'back.out', transformOrigin: '75% 50%', duration: 0.5 },
+      2,
+    ).fromTo(
+      secondPopupElement,
+      { scale: 0.5, autoAlpha: 0 },
+      { scale: 1, autoAlpha: 1, ease: 'back.out', transformOrigin: '75% 63%', duration: 0.5 },
+      '+=0',
+    );
+  }, []);
+
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} ref={sectionRef}>
       <div className={styles.background}>
-        <Image
-          data-animation="image"
-          src={HEROBG}
-          layout="fill"
-          objectFit={'cover'}
-          objectPosition={'90% 0%'}
-          placeholder={'blur'}
-        />
+        <img src={HEROBG.src} className={styles.backgroundImage} />
+        <img data-animation="popup-1" className={styles.popupNotification} src={NOTIF1.src} />
+        <img data-animation="popup-2" className={styles.popupNotification} src={NOTIF2.src} />
         <div className={styles.svgBottom}>
           <svg
             version="1.1"

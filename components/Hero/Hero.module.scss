@@ -31,6 +31,22 @@
   }
 }
 
+.backgroundImage,
+.popupNotification {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 170%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(-38%);
+  @include respond-to(minWidth768) {
+    min-width: initial;
+    transform: translateX(0);
+  }
+}
+
 .svgBottom,
 .video {
   position: absolute;
