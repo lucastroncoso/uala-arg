@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './Hero.module.scss';
 import PropTypes from 'prop-types';
-import HEROBG from '/public/assets/images/hero/background.jpg';
-import NOTIF1 from '/public/assets/images/hero/mockup_mx_notif_1.png';
-import NOTIF2 from '/public/assets/images/hero/mockup_mx_notif_2.png';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
 import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
@@ -33,9 +30,17 @@ const Hero = ({ content }) => {
   return (
     <section className={styles.hero} ref={sectionRef}>
       <div className={styles.background}>
-        <img src={HEROBG.src} className={styles.backgroundImage} />
-        <img data-animation="popup-1" className={styles.popupNotification} src={NOTIF1.src} />
-        <img data-animation="popup-2" className={styles.popupNotification} src={NOTIF2.src} />
+        <img src={content.background.src} className={styles.backgroundImage} />
+        <img
+          data-animation="popup-1"
+          className={styles.popupNotification}
+          src={content.notificationsSrc[0]}
+        />
+        <img
+          data-animation="popup-2"
+          className={styles.popupNotification}
+          src={content.notificationsSrc[1]}
+        />
         <div className={styles.svgBottom}>
           <svg
             version="1.1"

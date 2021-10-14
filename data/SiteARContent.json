@@ -102,10 +102,7 @@
           "url": "https://uala.com.mx/promociones"
         }
       ],
-      "languageButton": [
-        "es",
-        "en"
-      ],
+      "languageButton": ["es", "en"],
       "loginButton": {
         "copy": "Ingresar",
         "url": "https://web.uala.com.ar/login?utm_medium=Menu&utm_source=Web&utm_campaign=WebApp"
@@ -271,23 +268,14 @@
           "icon": "deposito-efectivo"
         }
       ],
-      "logosCarousel": [
-        "rapipago",
-        "pago-facil",
-        "cobro-express",
-        "tele-recargas"
-      ]
+      "logosCarousel": ["rapipago", "pago-facil", "cobro-express", "tele-recargas"]
     },
     "textWithVideoSection": {
       "video": {
         "src": "/assets/video/chat_web_ar.mp4"
       },
       "title": "Atención 100% online",
-      "paragraphs": [
-        "<strong>Si tenés dudas, ¡pregúntanos a nosotr@s!</strong> <br>Si sos usuari@ de Ualá escribinos por el chat de la app.",
-        "Si todavía no sos parte de Ualá, nos podés escribir por mail a <a href='mailto:hola@uala.com.ar'>hola@uala.com.ar</a> o por nuestras redes sociales.",
-        "Además en la <a href='https://comunidad.uala.com.ar/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"
-      ]
+      "paragraphs": ["<strong>Si tenés dudas, ¡pregúntanos a nosotr@s!</strong> <br>Si sos usuari@ de Ualá escribinos por el chat de la app.", "Si todavía no sos parte de Ualá, nos podés escribir por mail a <a href='mailto:hola@uala.com.ar'>hola@uala.com.ar</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.ar/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
     },
     "footer": {
       "footerBanner": {
@@ -441,7 +429,7 @@
       },
       "footerEnd": {
         "ualaInfo": "Ualá es un Proveedor de Servicios de Pago y no está autorizado por el BCRA para operar como entidad financiera. <a href='https://uala.com.ar/legales'>Mas info acá</a>",
-        "ualaAddress": "ALAU TECNOLOGÍA S.A.U. - CUIT 30-71542170- 0  Ualá 2020, Todos los derechos reservados.  Nicaragua 4677, C1414BVG CABA, Argentina",
+        "ualaAddress": "ALAU TECNOLOGÍA S.A.U. - CUIT 30-71542170- 0 Ualá 2020, Todos los derechos reservados. Nicaragua 4677, C1414BVG CABA, Argentina",
         "logo": "/assets/images/aaipLogo.png"
       }
     }
@@ -529,10 +517,7 @@
           "url": "https://www.uala.com.ar/promociones"
         }
       ],
-      "languageButton": [
-        "es",
-        "en"
-      ],
+      "languageButton": ["es", "en"],
       "downloadAppButtonCopy": "Download App",
       "menuButtonCopy": "Menu"
     },
@@ -649,11 +634,7 @@
         "src": "/assets/video/chat_web_mx.mp4"
       },
       "title": "100% Online Service",
-      "paragraphs": [
-        "Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.",
-        "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.",
-        "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"
-      ]
+      "paragraphs": ["Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
     },
     "footer": {
       "footerBanner": {
@@ -800,16 +781,7 @@
         }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": [
-        "walmart",
-        "bodega-aurrera",
-        "7-eleven",
-        "superama",
-        "extra",
-        "farmacias-del-ahorro",
-        "farmacias-benavides",
-        "circle-k"
-      ],
+      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
       "viewMoreCTA": {
         "copy": "Ver tiendas afiliadas",
         "url": "#"
