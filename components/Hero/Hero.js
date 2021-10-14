@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Hero.module.scss';
 import PropTypes from 'prop-types';
 import HEROBG from '/public/assets/images/hero/background.jpg';
@@ -8,7 +8,6 @@ import BlockWrapper from '../BlockWrapper/BlockWrapper';
 import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
 import Image from 'next/image';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
-import { useEffect } from 'react/cjs/react.development';
 
 const Hero = ({ content }) => {
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
