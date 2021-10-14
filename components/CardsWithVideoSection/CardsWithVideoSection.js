@@ -71,7 +71,7 @@ const CardsWithVideoSection = ({ content }) => {
       <BlockWrapper customClass={[styles.blockWrapper]}>
         <h2
           data-animation="title"
-          className={styles.title}
+          className={styles.mainTitle}
           dangerouslySetInnerHTML={{ __html: content.title }}
         />
 

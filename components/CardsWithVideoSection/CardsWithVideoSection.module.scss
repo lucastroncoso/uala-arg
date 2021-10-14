@@ -44,7 +44,7 @@
   }
 }
 
-.title {
+.mainTitle {
   color: $gray-3;
   @include bold-35;
 }
@@ -73,7 +73,7 @@
 
     @include respond-to(minWidth768) {
       @include card-hover(35px, $blue, 0.3);
-      padding: 50px 60px 40px;
+      padding: 65px 60px 40px;
       height: 283px;
       width: 49%;
       margin-bottom: 35px;
@@ -93,7 +93,7 @@
     z-index: 1;
 
     @include respond-to(minWidth768) {
-      max-width: 65%;
+      max-width: 75%;
     }
   }
 
