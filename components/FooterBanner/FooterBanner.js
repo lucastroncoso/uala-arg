@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import styles from './FooterBanner.module.scss';
 import Image from 'next/image';
 import PropTypes from 'prop-types';

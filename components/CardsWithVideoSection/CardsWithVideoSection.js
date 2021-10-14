@@ -19,29 +19,16 @@ const CardsWithVideoSection = ({ content }) => {
 
     const videoButton = childrenSelector('[data-animation="video-button"]');
     const videoElement = childrenSelector('[data-animation="video-element"]');
-    const cards = childrenSelector('[data-animation="cta-cards"]');
+    const ctaCards = childrenSelector('[data-animation="cta-cards"]');
+    const backgroundCards = childrenSelector('[data-animation="background-card"]');
     const title = childrenSelector('[data-animation="title"]');
-    const cardsTl = gsap.timeline({ paused: true });
+    const titleTl = gsap.timeline({ paused: true });
 
     const tl = createTL({
       scrub: 1,
-      onEnter: () => cardsTl.play(),
-      start: '0% 60%',
+      onEnter: () => titleTl.play(),
+      start: '0% 70%',
     });
-
-    cardsTl
-      .fromTo(
-        title,
-        { scaleY: 0, transformOrigin: '0% 100%' },
-        { scaleY: 1, duration: 0.3, ease: 'Power4.Out' },
-        0,
-      )
-      .fromTo(
-        cards,
-        { y: 100, transformOrigin: '50% 20%', opacity: 0 },
-        { duration: 0.55, y: 0, stagger: 0.15, ease: 'Power4.InOut', opacity: 1 },
-        '-=0.5',
-      );
 
     tl.fromTo(videoElement, { scale: 1 }, { scale: 1.2 }, 0).fromTo(
       videoButton,
@@ -49,6 +36,30 @@ const CardsWithVideoSection = ({ content }) => {
       { scale: 1 },
       0,
     );
+
+    titleTl.fromTo(
+      title,
+      { scaleY: 0, transformOrigin: '0% 100%' },
+      { scaleY: 1, duration: 0.3, ease: 'power4.out' },
+      0,
+    )
+
+    gsap.timeline({ scrollTrigger: { trigger: ctaCards, start: '0% 80%' } }).fromTo(
+      ctaCards,
+      { y: 100, transformOrigin: '50% 20%', opacity: 0 },
+      { duration: 0.55, y: 0, stagger: 0.2, ease: 'power4.inOut', opacity: 1 },
+      '-=0.5',
+    );
+
+    backgroundCards.forEach((card, index) => {
+      gsap
+        .timeline({ scrollTrigger: { trigger: card, start: '0% 65%' } })
+        .fromTo(
+          card,
+          { x: index % 2 ? 150 : -150, transformOrigin: '50% 20%', opacity: 0 },
+          { duration: 0.65, x: 0, ease: 'Power4.InOut', opacity: 1 },
+        );
+    })
   }, []);
 
   return (
@@ -64,14 +75,29 @@ const CardsWithVideoSection = ({ content }) => {
           dangerouslySetInnerHTML={{ __html: content.title }}
         />
 
+        {content.cardsGrid &&
+          <div className={styles.cardsGrid}>
+            {content.cardsGrid.map((card, cardIndex) => {
+              return <a className={styles.card} href={card.url}
+                key={`card-${cardIndex}`} data-animation="background-card"
+              >
+                <img src={card.image.src}
+                  alt={card.image.alt} className={styles.backgroundImg} />
+                <h3 className={styles.title}>{card.title}</h3>
+                <span className={styles.ctaCopy}>{card.ctaCopy}</span>
+              </a>
+            })}
+          </div>
+        }
+
         {isMobile ? (
           <MEmblaCarousel
             cards={content.cardsRow}
-            wrapperStyle={styles.cardsRowWrapper}
+            wrapperStyle={styles.cardsRow}
             cardStyle={[styles.card]}
           />
         ) : (
-          <div className={styles.cardsRowWrapper}>
+          <div className={styles.cardsRow}>
             {content.cardsRow.map((card, cardIndex) => {
               return (
                 <MCtaCard content={card} key={`card-${cardIndex}`} customClass={[styles.card]} />

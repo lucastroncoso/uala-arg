@@ -322,7 +322,7 @@
     top: 20px;
     width: auto;
     @include makeVisible;
-    transition: $visibilityTransition;
+    transition: $visibilityTransition, background-color .45s;
 
     &.isHidden {
       @include makeInvisible;
@@ -330,7 +330,6 @@
   }
 
   @media (hover: hover) {
-    transition: background-color .45s;
     &:hover {
       background-color: $skyblue;
     }

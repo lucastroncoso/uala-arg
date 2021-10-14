@@ -161,6 +161,44 @@
     ],
     "cardsWithVideoSection": {
       "title": "Mira todo lo que <br> puedes hacer con Ualá",
+      "cardsGrid": [
+        {
+          "title": "Cobrá en el acto con la mejor comisión",
+          "ctaCopy": "Conocé Ualá Bis",
+          "url": "https://www.ualabis.com.ar/",
+          "image": {
+            "src": "/assets/images/cardImages/uala-bis.png",
+            "alt": "Conocé Ualá Bis"
+          }
+        },
+        {
+          "title": "Créditos pensados para vos",
+          "ctaCopy": "Conocé Créditos",
+          "url": "https://uala.com.ar/creditos",
+          "image": {
+            "src": "/assets/images/cardImages/creditos.png",
+            "alt": "Conocé Créditos"
+          }
+        },
+        {
+          "title": "Invertí fácil y despertá tu plata",
+          "ctaCopy": "Conocé Inversiones",
+          "url": "https://uala.com.ar/inversiones",
+          "image": {
+            "src": "/assets/images/cardImages/inversiones.png",
+            "alt": "Conocé Inversiones"
+          }
+        },
+        {
+          "title": "Protegé lo que más querés",
+          "ctaCopy": "Conocé Seguros",
+          "url": "link",
+          "image": {
+            "src": "/assets/images/cardImages/seguros.png",
+            "alt": "Conocé Seguros"
+          }
+        }
+      ],
       "cardsRow": [
         {
           "icon": "compras",
