@@ -3,11 +3,12 @@ import styles from './MSubMenu.module.scss';
 import classNames from 'classnames'
 import PropTypes from 'prop-types';
 
-const MSubMenu = ({ content, isOpen }) => {
+const MSubMenu = ({ content, isOpen, isWrapped }) => {
   return (
     <ul className={classNames(
       styles.subMenu,
-      { [styles.isOpen]: isOpen }
+      { [styles.isOpen]: isOpen },
+      { [styles.isWrapped]: isWrapped }
     )}>
       {content && content.map((item, itemIndex) => {
         return (
@@ -23,6 +24,7 @@ const MSubMenu = ({ content, isOpen }) => {
 MSubMenu.propTypes = {
   content: PropTypes.array.isRequired,
   isOpen: PropTypes.bool,
+  isWrapped: PropTypes.bool,
 };
 
 export default MSubMenu;

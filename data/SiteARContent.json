@@ -7,19 +7,39 @@
           "subMenu": [
             {
               "copy": "Compras",
-              "url": "https://uala.com.mx/tarjeta"
+              "url": "https://uala.com.ar/tarjeta"
             },
             {
               "copy": "Transferencias",
-              "url": "https://uala.com.mx/transferencias"
+              "url": "https://uala.com.ar/transferencias"
+            },
+            {
+              "copy": "Créditos",
+              "url": "https://uala.com.ar/créditos"
             },
             {
               "copy": "Pagos y Recargas",
-              "url": "https://uala.com.mx/pagos"
+              "url": "https://uala.com.ar/pagos"
             },
             {
-              "copy": "Retiros",
-              "url": "https://uala.com.mx/extracciones"
+              "copy": "Inversiones",
+              "url": "https://uala.com.ar/inversiones"
+            },
+            {
+              "copy": "Extracciones",
+              "url": "https://uala.com.ar/extracciones"
+            },
+            {
+              "copy": "Cobros",
+              "url": "https://www.ualabis.com.ar/"
+            },
+            {
+              "copy": "Seguros",
+              "url": "link"
+            },
+            {
+              "copy": "Análisis de gastos",
+              "url": "https://uala.com.ar/analisis-de-gastos"
             }
           ]
         },
@@ -28,23 +48,23 @@
           "subMenu": [
             {
               "copy": "Preguntas frecuentes",
-              "url": "https://uala.com.mx/faqs"
+              "url": "https://uala.com.ar/faqs"
             },
             {
               "copy": "Métodos de contacto",
-              "url": "https://uala.com.mx/contacto"
+              "url": "https://uala.com.ar/contacto"
             },
             {
               "copy": "Comunidad",
-              "url": "https://comunidad.uala.com.mx/"
+              "url": "https://comunidad.uala.com.ar/"
             },
             {
               "copy": "Consejos de seguridad",
-              "url": "https://uala.com.mx/seguridad"
+              "url": "https://uala.com.ar/seguridad"
             },
             {
               "copy": "Reporte por robo o pérdida",
-              "url": "https://uala.com.mx/tarjeta#reporte"
+              "url": "https://uala.com.ar/tarjeta#robo"
             }
           ]
         },
@@ -53,29 +73,29 @@
           "subMenu": [
             {
               "copy": "Nosotros",
-              "url": "https://uala.com.mx/nosotr@s"
+              "url": "https://uala.com.ar/nosotr@s"
             },
             {
               "copy": "Búsquedas laborales",
-              "url": "https://uala.com.mx/trabajar-en-uala"
+              "url": "https://uala.com.ar/trabajar-en-uala"
             },
             {
               "copy": "Prensa",
-              "url": "https://uala.com.mx/prensa"
+              "url": "https://uala.com.ar/prensa"
             },
             {
               "copy": "El blog de Ualá",
-              "url": "https://blog.uala.com.mx/"
+              "url": "https://blog.uala.com.ar/"
             },
             {
               "copy": "Gaming",
-              "url": "link5"
+              "url": "https://uala.com.ar/gaming"
             }
           ]
         },
         {
           "title": "Costos",
-          "url": "https://uala.com.mx/Consulta-los-costos-y-las-comisiones-de-nuestros-productos"
+          "url": "https://uala.com.ar/costos"
         },
         {
           "title": "Promociones",
@@ -83,6 +103,10 @@
         }
       ],
       "languageButton": ["es", "en"],
+      "loginButton": {
+        "copy": "Ingresar",
+        "url": "https://web.uala.com.ar/login?utm_medium=Menu&utm_source=Web&utm_campaign=WebApp"
+      },
       "downloadAppButtonCopy": "Descargar la app",
       "menuButtonCopy": "Menú"
     },
