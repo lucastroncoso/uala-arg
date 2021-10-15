@@ -97,6 +97,18 @@
     grid-area: 1/1;
     padding-bottom: 0;
   }
+
+  .wordCycle {
+    position: relative;
+  
+    & span {
+      position: absolute;
+      left: 10px;
+      @include respond-to(minWidth768) {
+        left: 13px;
+      }
+    }
+  }
 }
 
 .title {
