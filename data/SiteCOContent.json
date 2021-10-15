@@ -174,7 +174,7 @@
           "url": "https://uala.com.co/transferencias"
         },
         {
-          "icon": "pagos-recargas",
+          "icon": "deposito-efectivo",
           "title": "Retirar efectivo",
           "copy": "Saca plata de cualquier cajero con tu tarjeta Ualá. Retira plata en efectivo en los puntos de Baloto a nivel nacional.",
           "ctaCopy": "Ver más",
@@ -494,7 +494,7 @@
           "url": "https://uala.com.mx/transferencias"
         },
         {
-          "icon": "pagos-recargas",
+          "icon": "deposito-efectivo",
           "title": "Payments and Refills",
           "copy": "Realiza tus pagos de servicios (luz, internet, agua, etc) y recarga tiempo aire a tu celular en cuestión de segundos.",
           "ctaCopy": "Ver más",
