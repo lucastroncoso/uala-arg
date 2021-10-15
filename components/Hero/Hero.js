@@ -7,6 +7,11 @@ import useScrollTrigger from '../utils/hooks/useScrollTrigger';
 import gsap from 'gsap';
 import classNames from 'classnames';
 import { useAppContext } from '../../store/context';
+import { TextPlugin } from 'gsap/dist/TextPlugin';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(TextPlugin);
+}
 
 const Hero = ({ content }) => {
   const [sectionRef, childrenSelector] = useScrollTrigger();
@@ -17,6 +22,8 @@ const Hero = ({ content }) => {
     const tl = gsap.timeline({ repeat: -1, repeatDelay: 2, yoyo: true });
     const firstPopupElement = childrenSelector('[data-animation="popup-1"]');
     const secondPopupElement = childrenSelector('[data-animation="popup-2"]');
+    const cycleContainer = childrenSelector('[data-animation="cycle-container"]');
+    const wordsToCycle = content.wordCycle;
 
     tl.fromTo(
       firstPopupElement,
@@ -41,6 +48,13 @@ const Hero = ({ content }) => {
       },
       '+=0',
     );
+
+    const wordCycleTL = gsap.timeline({ repeat: -1 });
+    wordsToCycle.forEach(word => {
+      let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 })
+      tl.to(cycleContainer, { duration: 1, text: word, ease: 'slow (0.7, 0.4, false)' })
+      wordCycleTL.add(tl)
+    })
   }, []);
 
   return (
@@ -72,7 +86,14 @@ const Hero = ({ content }) => {
         </div>
       </div>
       <BlockWrapper customClass={[styles.heroContent]}>
-        <h1 className={styles.title}>{content.title}</h1>
+        <h1 className={styles.title}>
+          {content.titleFirstLine}
+          <span className={styles.wordCycle}>
+            <span data-animation="cycle-container" />
+          </span>
+          <br />
+          {content.titleSecondLine}
+        </h1>
         <p className={styles.paragraph}>{content.paragraph} </p>
         <DownloadAppButton isStyled>{content.buttonCopy}</DownloadAppButton>
       </BlockWrapper>

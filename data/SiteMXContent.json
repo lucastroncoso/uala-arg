@@ -87,7 +87,13 @@
       "menuButtonCopy": "Menú"
     },
     "hero": {
-      "title": "El lado bueno de tu dinero",
+      "titleFirstLine": "El lado",
+      "wordCycle": [
+        "bueno",
+        "simple",
+        "seguro"
+      ],
+      "titleSecondLine": "de tu dinero",
       "paragraph": "Una tarjeta de débito Mastercard gratis y una app para manejar tu dinero mucho más fácil.",
       "buttonCopy": "Descargar la app",
       "background": {

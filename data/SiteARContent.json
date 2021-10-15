@@ -111,7 +111,13 @@
       "menuButtonCopy": "Menú"
     },
     "hero": {
-      "title": "El lado bueno de tu plata",
+      "titleFirstLine": "El lado",
+      "wordCycle": [
+        "bueno",
+        "simple",
+        "seguro"
+      ],
+      "titleSecondLine": "de tu plata",
       "paragraph": "Una tarjeta prepaga Mastercard gratis y una app para manejar tu plata mucho más fácil",
       "buttonCopy": "Descargar la app",
       "background": {
