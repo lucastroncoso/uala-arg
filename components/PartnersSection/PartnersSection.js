@@ -102,7 +102,7 @@ const PartnersSection = ({ content }) => {
           {content.logosCarousel && (
             <div className={styles.logoGrid}>
               <div className={styles.sliderContainer} ref={isMobile ? emblaRef : null}>
-                <div className={styles.sliderInner}>
+                <div data-animation="partner-logos" className={styles.sliderInner}>
                   {content.logosCarousel.map((logo) => {
                     return (
                       <img
@@ -132,7 +132,7 @@ const PartnersSection = ({ content }) => {
           )}
 
           {content.logosStatic && (
-            <div className={styles.logosStatic}>
+            <div data-animation="partner-logos" className={styles.logosStatic}>
               {content.logosStatic.map((logo) => {
                 return (
                   <img

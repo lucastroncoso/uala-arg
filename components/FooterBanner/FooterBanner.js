@@ -13,6 +13,7 @@ const FooterBanner = ({ content }) => {
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
   const { region } = useAppContext();
   const isMobile = useIsMobile(768);
+  const isColombia = region === 'co';
 
   const desktopAnimation = (tl) => {
     tl.fromTo(
@@ -64,7 +65,7 @@ const FooterBanner = ({ content }) => {
 
   return (
     <DownloadAppButton
-      customClass={[styles.footerBanner, region === 'co' ? styles.co : '']}
+      customClass={[styles.footerBanner, isColombia ? styles.colombia : '']}
       refProp={sectionRef}
     >
       <div className={styles.background}>

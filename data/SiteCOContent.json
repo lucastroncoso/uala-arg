@@ -51,7 +51,7 @@
               "url": "https://uala.com.co/seguridad"
             },
             {
-              "copy": "Educacion financiera",
+              "copy": "Educación financiera",
               "url": "https://uala.com.co/educacion-financiera"
             }
           ]
@@ -60,11 +60,11 @@
           "title": "Sobre Ualá",
           "subMenu": [
             {
-              "copy": "Nosotros",
+              "copy": "Nosotr@s",
               "url": "https://uala.com.co/nosotr@s"
             },
             {
-              "copy": "Trabaja con nosotros",
+              "copy": "Trabaja con nosotr@s",
               "url": "https://uala.com.co/trabajar-en-uala"
             },
             {
@@ -174,7 +174,7 @@
           "url": "https://uala.com.co/transferencias"
         },
         {
-          "icon": "pagos-recargas",
+          "icon": "deposito-efectivo",
           "title": "Retirar efectivo",
           "copy": "Saca plata de cualquier cajero con tu tarjeta Ualá. Retira plata en efectivo en los puntos de Baloto a nivel nacional.",
           "ctaCopy": "Ver más",
@@ -216,7 +216,7 @@
         "src": "/assets/video/chat_web_co.mp4"
       },
       "title": "Atención 100% online",
-      "paragraphs": ["<strong>Si tienes dudas, ¡pregúntanos a nosotros!</strong> <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.co'>hola@uala.com.co</a> o por nuestras redes sociales.", "Además en la <a href='#'>Comunidad Ualá</a>, encontrarás las respuestas en un click."]
+      "paragraphs": ["<strong>Si tienes dudas, ¡pregúntanos a nosotros!</strong> <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.co'>hola@uala.com.co</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.co/'>Comunidad Ualá</a>, encontrarás las respuestas en un click."]
     },
     "footer": {
       "footerBanner": {
@@ -442,7 +442,7 @@
       "close": "close modal"
     },
     "stepsSection": {
-      "title": "Cómo ser parte de Ualá",
+      "title": "¿Cómo empezar a usar Ualá?",
       "stepsItems": [
         {
           "copy": "Descarga la app desde Play Store o App Store en tu celular.",
@@ -494,7 +494,7 @@
           "url": "https://uala.com.mx/transferencias"
         },
         {
-          "icon": "pagos-recargas",
+          "icon": "deposito-efectivo",
           "title": "Payments and Refills",
           "copy": "Realiza tus pagos de servicios (luz, internet, agua, etc) y recarga tiempo aire a tu celular en cuestión de segundos.",
           "ctaCopy": "Ver más",
@@ -502,7 +502,7 @@
         }
       ],
       "video": {
-        "youtubeId": "vjQu4BcVpVU",
+        "youtubeId": "",
         "previewVideoSrc": "assets/video/video_preview_somosuala_co.mp4"
       }
     },
@@ -555,7 +555,7 @@
             "paragraph": "países"
           },
           {
-            "title": "Súmate tú también",
+            "title": "¡Súmate tu también!",
             "paragraph": "Disponible en IOS y Android."
           }
         ]
