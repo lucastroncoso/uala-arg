@@ -117,3 +117,21 @@ p.paragraph {
     max-width: 428px;
   }
 }
+
+.hero.regionAr {
+  .backgroundImage,
+  .popupNotification {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 180%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(-42%);
+    @include respond-to(minWidth768) {
+      min-width: initial;
+      transform: translateX(0);
+    }
+  }
+}
