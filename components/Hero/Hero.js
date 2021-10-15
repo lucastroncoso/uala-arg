@@ -5,9 +5,13 @@ import BlockWrapper from '../BlockWrapper/BlockWrapper';
 import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
 import gsap from 'gsap';
+import classNames from 'classnames';
+import { useAppContext } from '../../store/context';
 
 const Hero = ({ content }) => {
-  const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
+  const [sectionRef, childrenSelector] = useScrollTrigger();
+  const { region } = useAppContext();
+  const regionAr = region === 'ar';
 
   useEffect(() => {
     const tl = gsap.timeline({ repeat: -1, repeatDelay: 2, yoyo: true });
@@ -17,30 +21,41 @@ const Hero = ({ content }) => {
     tl.fromTo(
       firstPopupElement,
       { scale: 0.5, autoAlpha: 0 },
-      { scale: 1, autoAlpha: 1, ease: 'back.out', transformOrigin: '75% 50%', duration: 0.5 },
+      {
+        scale: 1,
+        autoAlpha: 1,
+        ease: 'back.out',
+        transformOrigin: '75% 50%',
+        duration: 0.5,
+      },
       1,
     ).fromTo(
       secondPopupElement,
       { scale: 0.5, autoAlpha: 0 },
-      { scale: 1, autoAlpha: 1, ease: 'back.out', transformOrigin: '75% 63%', duration: 0.5 },
+      {
+        scale: 1,
+        autoAlpha: 1,
+        ease: 'back.out',
+        transformOrigin: '75% 63%',
+        duration: 0.5,
+      },
       '+=0',
     );
   }, []);
 
   return (
-    <section className={styles.hero} ref={sectionRef}>
+    <section
+      className={classNames([styles.hero, regionAr ? styles.regionAr : null])}
+      ref={sectionRef}
+    >
       <div className={styles.background}>
         <img src={content.background.src} className={styles.backgroundImage} />
-        <img
-          data-animation="popup-1"
-          className={styles.popupNotification}
-          src={content.notificationsSrc[0]}
-        />
-        <img
-          data-animation="popup-2"
-          className={styles.popupNotification}
-          src={content.notificationsSrc[1]}
-        />
+        <span className={styles.popupNotification}>
+          <img data-animation="popup-1" src={content.notificationsSrc[0]} />
+        </span>
+        <span className={styles.popupNotification}>
+          <img data-animation="popup-2" src={content.notificationsSrc[1]} />
+        </span>
         <div className={styles.svgBottom}>
           <svg
             version="1.1"

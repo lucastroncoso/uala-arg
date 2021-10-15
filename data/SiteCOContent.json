@@ -116,7 +116,7 @@
       "title": "El Lado Bueno de tu Dinero",
       "paragraph": "Escanea el QR con la cámara de tu celular y descarga Ualá.",
       "image": {
-        "src": "/public/assets/images/qr_mx.png",
+        "src": "/public/assets/images/qr_co.png",
         "alt": "Scanea el QR con tu dispositivo"
       },
       "close": "cerrar modal"
@@ -161,7 +161,7 @@
       "cardsRow": [
         {
           "icon": "compras",
-          "title": "Compras",
+          "title": "Comprar",
           "copy": "Vas a poder comprar todo lo que necesites con tu tarjeta Ualá Mastercard Internacional.",
           "ctaCopy": "Ver más",
           "url": "https://uala.com.co/nuestro-producto"
@@ -436,7 +436,7 @@
       "title": "The good side of your Money",
       "paragraph": "Escanea el QR con la cámara de tu celular y descarga Ualá.",
       "image": {
-        "src": "/public/assets/images/qr_mx.png",
+        "src": "/public/assets/images/qr_co.png",
         "alt": "Scan the QR with your Device"
       },
       "close": "close modal"
