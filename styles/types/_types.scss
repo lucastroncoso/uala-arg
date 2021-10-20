@@ -18,9 +18,9 @@
 
 @mixin bold-35 {
   color: $gray-3;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 35px;
+  line-height: 32px;
 
   @include respond-to(minWidth1024) {
     font-size: 35px;

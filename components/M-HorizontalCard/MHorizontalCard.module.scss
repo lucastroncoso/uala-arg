@@ -1,6 +1,6 @@
-@use '../../styles/variables/variables' as *;
-@use '../../styles/types/types' as *;
-@use '../../styles/mixins/respond-to' as *;
+@use "../../styles/variables/variables" as *;
+@use "../../styles/types/types" as *;
+@use "../../styles/mixins/respond-to" as *;
 
 .horizontalCard {
   @include cardStyles;
@@ -41,12 +41,14 @@
   }
 }
 
-.cardTitle {
-  @include bold-25;
+h4.cardTitle {
+  font-size: 16px;
+  font-weight: 500;
   color: $gray-3;
   padding: 12px 0;
 
   @include respond-to(minWidth1024) {
+    font-size: 25px;
     padding-top: 0;
     padding-bottom: 6px;
   }
