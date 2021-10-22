@@ -42,7 +42,7 @@ const CardsWithVideoSection = ({ content }) => {
       { scaleY: 0, transformOrigin: '0% 100%' },
       { scaleY: 1, duration: 0.3, ease: 'power4.out' },
       0,
-    )
+    );
 
     gsap.timeline({ scrollTrigger: { trigger: ctaCards, start: '0% 80%' } }).fromTo(
       ctaCards,

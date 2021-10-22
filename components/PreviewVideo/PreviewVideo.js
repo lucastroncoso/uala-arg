@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react';
 import styles from './PreviewVideo.module.scss';
+import useIsMobile from '../utils/hooks/useIsMobile';
+import classNames from 'classnames';
 
 const PlayPauseIcon = ({ videoState, handlePlayPauseVideo }) => {
   return (
@@ -17,6 +19,7 @@ const PlayPauseIcon = ({ videoState, handlePlayPauseVideo }) => {
 const PreviewVideo = ({ assetPath }) => {
   const videoRef = useRef(null);
   const [isPaused, setIsPaused] = useState();
+  const isMobile = useIsMobile(768);
 
   const handlePlayPauseVideo = (event) => {
     if (event.type === 'playing') {
@@ -36,7 +39,7 @@ const PreviewVideo = ({ assetPath }) => {
   return (
     <div className={styles.previewVideo}>
       <video
-        data-animation="video-element"
+        data-animation = 'video-element'
         ref={videoRef}
         src={assetPath}
         muted
@@ -44,7 +47,7 @@ const PreviewVideo = ({ assetPath }) => {
         playsInline
         loop
         aria-hidden="true"
-        className={styles.video}
+        className={classNames(styles.video, {[styles.mobilePosition]: isMobile})}
         onPlaying={handlePlayPauseVideo}
       />
       <PlayPauseIcon videoState={isPaused} handlePlayPauseVideo={handlePlayPauseVideo} />
