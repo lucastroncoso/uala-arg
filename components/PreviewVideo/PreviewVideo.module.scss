@@ -1,4 +1,5 @@
 @use '../../styles/variables/variables' as *;
+@use "../../styles/mixins/respond-to" as *;
 
 .previewVideo {
   position: absolute;
@@ -9,9 +10,17 @@
 }
 .video {
   position: relative;
-  object-fit: cover;
   width: 100%;
   height: 100%;
+  
+  &.mobilePosition {
+    transform: scale(1.52) !important;
+    left: -45px;
+  }
+
+  @include respond-to(minWidth768) {
+    object-fit: cover;
+  }
 }
 
 .playPauseButton {
