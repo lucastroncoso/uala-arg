@@ -108,6 +108,7 @@ const CardsWithVideoSection = ({ content }) => {
         <PlayVideoButton
           youtubeId={content.video.youtubeId}
           previewVideoSrc={content.video.previewVideoSrc}
+          isPreviewVideoScaled={true}
         />
       </BlockWrapper>
     </section>

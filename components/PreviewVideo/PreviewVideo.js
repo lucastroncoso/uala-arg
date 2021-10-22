@@ -16,7 +16,7 @@ const PlayPauseIcon = ({ videoState, handlePlayPauseVideo }) => {
   );
 };
 
-const PreviewVideo = ({ assetPath }) => {
+const PreviewVideo = ({ assetPath, isVideoScaled }) => {
   const videoRef = useRef(null);
   const [isPaused, setIsPaused] = useState();
   const isMobile = useIsMobile(768);
@@ -47,7 +47,7 @@ const PreviewVideo = ({ assetPath }) => {
         playsInline
         loop
         aria-hidden="true"
-        className={classNames(styles.video, {[styles.mobilePosition]: isMobile})}
+        className={classNames(styles.video, {[styles.scaledVideo]: isVideoScaled && isMobile})}
         onPlaying={handlePlayPauseVideo}
       />
       <PlayPauseIcon videoState={isPaused} handlePlayPauseVideo={handlePlayPauseVideo} />

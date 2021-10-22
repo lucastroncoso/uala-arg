@@ -5,7 +5,7 @@ import { useAppContext } from '../../store/context';
 import PlayIcon from '../../public/assets/svg/play-icon.svg';
 import PreviewVideo from '../PreviewVideo/PreviewVideo';
 
-const PlayVideoButton = ({ youtubeId, previewVideoSrc }) => {
+const PlayVideoButton = ({ youtubeId, previewVideoSrc, isPreviewVideoScaled }) => {
   const { setYoutubeModalVideoId } = useAppContext();
 
   const onPlayButtonClick = useCallback(() => {
@@ -14,7 +14,7 @@ const PlayVideoButton = ({ youtubeId, previewVideoSrc }) => {
 
   return (
     <button className={styles.button} onClick={onPlayButtonClick} data-animation="video-button">
-      <PreviewVideo assetPath={previewVideoSrc} />
+      <PreviewVideo assetPath={previewVideoSrc} isVideoScaled={isPreviewVideoScaled}/>
       <PlayIcon className={styles.playIcon} />
     </button>
   );

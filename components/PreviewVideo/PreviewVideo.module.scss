@@ -10,16 +10,14 @@
 }
 .video {
   position: relative;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   
-  &.mobilePosition {
+  &.scaledVideo {
+    object-fit: contain;
     transform: scale(1.52) !important;
     left: -45px;
-  }
-
-  @include respond-to(minWidth768) {
-    object-fit: cover;
   }
 }
 
