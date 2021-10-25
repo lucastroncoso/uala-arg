@@ -88,17 +88,20 @@
     },
     "hero": {
       "titleFirstLine": "El lado",
-      "wordCycle": [
-        "bueno",
-        "simple",
-        "seguro"
-      ],
+      "wordCycle": ["bueno", "simple", "seguro"],
       "titleSecondLine": "de tu dinero",
       "paragraph": "Una tarjeta de débito Mastercard gratis y una app para manejar tu dinero mucho más fácil.",
       "buttonCopy": "Descargar la app",
-      "background": {
-        "src": "/assets/images/hero/background_mx.jpg"
-      },
+      "background": [
+        {
+          "alt": "",
+          "src": "/assets/images/hero/background_mx.jpg"
+        },
+        {
+          "alt": "",
+          "src": "/assets/images/hero/tarjeta_mx-co.png"
+        }
+      ],
       "notificationsSrc": ["/assets/images/hero/notificacion1_mx.png", "/assets/images/hero/notificacion2_mx.png"]
     },
     "downloadApp": {
@@ -456,9 +459,16 @@
       "title": "The good side of your Money",
       "paragraph": "Paragraph but in english",
       "buttonCopy": "Download the app",
-      "background": {
-        "src": "/assets/images/hero/background_mx.jpg"
-      },
+      "background": [
+        {
+          "alt": "",
+          "src": "/assets/images/hero/background_mx.jpg"
+        },
+        {
+          "alt": "",
+          "src": "/assets/images/hero/tarjeta_mx-co.png"
+        }
+      ],
       "notificationsSrc": ["/assets/images/hero/notificacion1_mx.png", "/assets/images/hero/notificacion2_mx.png"]
     },
     "downloadApp": {
