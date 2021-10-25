@@ -59,11 +59,21 @@ const Hero = ({ content }) => {
       wordCycleTL.add(tl);
     });
 
-    const CardFloatTl = gsap.timeline({ repeat: -1, yoyo: true, yoyoDelay: 0.5 });
+    const CardFloatTl = gsap.timeline({
+      repeat: -1,
+      yoyo: true,
+      yoyoDelay: 0.5,
+      onRepeat: () => {
+        CardFloatTl.timeScale(1.5);
+      },
+      onStart: () => {
+        CardFloatTl.timeScale(1);
+      },
+    });
     CardFloatTl.fromTo(
       cardElement,
       { y: -20, x: -4, rotate: 1 },
-      { rotate: -1, x: 2, duration: isMobile ? 8 : 6, y: 20, ease: 'sine.inOut' },
+      { rotate: -1, x: 2, duration: isMobile ? 8 : 4, y: 20, ease: 'sine.inOut' },
       0,
     );
   }, [isMobile]);
