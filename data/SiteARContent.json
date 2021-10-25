@@ -116,9 +116,16 @@
       "titleSecondLine": "de tu plata",
       "paragraph": "Una tarjeta prepaga Mastercard gratis y una app para manejar tu plata mucho más fácil",
       "buttonCopy": "Descargar la app",
-      "background": {
-        "src": "/assets/images/hero/background_ar.jpg"
-      },
+      "background": [
+        {
+          "alt": "",
+          "src": "/assets/images/hero/background_ar.jpg"
+        },
+        {
+          "alt": "",
+          "src": "/assets/images/hero/tarjeta_ar.png"
+        }
+      ],
       "notificationsSrc": ["/assets/images/hero/notificacion1_ar.png", "/assets/images/hero/notificacion2_ar.png"]
     },
     "downloadApp": {
@@ -527,9 +534,16 @@
       "title": "The good side of your Money",
       "paragraph": "Paragraph but in english",
       "buttonCopy": "Download the app",
-      "background": {
-        "src": "/assets/images/hero/background_ar.jpg"
-      },
+      "background": [
+        {
+          "alt": "",
+          "src": "/assets/images/hero/background_ar.jpg"
+        },
+        {
+          "alt": "",
+          "src": "/assets/images/hero/tarjeta_ar.png"
+        }
+      ],
       "notificationsSrc": ["/assets/images/hero/notificacion1_ar.png", "/assets/images/hero/notificacion2_ar.png"]
     },
     "downloadApp": {
