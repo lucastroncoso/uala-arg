@@ -8,6 +8,7 @@ import gsap from 'gsap';
 import classNames from 'classnames';
 import { useAppContext } from '../../store/context';
 import { TextPlugin } from 'gsap/dist/TextPlugin';
+import useIsMobile from '../utils/hooks/useIsMobile';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(TextPlugin);
@@ -17,11 +18,13 @@ const Hero = ({ content }) => {
   const [sectionRef, childrenSelector] = useScrollTrigger();
   const { region } = useAppContext();
   const regionAr = region === 'ar';
+  const isMobile = useIsMobile(768);
 
   useEffect(() => {
     const tl = gsap.timeline({ repeat: -1, repeatDelay: 2, yoyo: true });
     const firstPopupElement = childrenSelector('[data-animation="popup-1"]');
     const secondPopupElement = childrenSelector('[data-animation="popup-2"]');
+    const cardElement = childrenSelector('[data-animation="floating-card"]');
     const cycleContainer = childrenSelector('[data-animation="cycle-container"]');
     const wordsToCycle = content.wordCycle;
 
@@ -50,12 +53,20 @@ const Hero = ({ content }) => {
     );
 
     const wordCycleTL = gsap.timeline({ repeat: -1 });
-    wordsToCycle.forEach(word => {
-      let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 })
-      tl.to(cycleContainer, { duration: 1, text: word, ease: 'slow (0.7, 0.4, false)' })
-      wordCycleTL.add(tl)
-    })
-  }, []);
+    wordsToCycle.forEach((word) => {
+      let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 });
+      tl.to(cycleContainer, { duration: 1, text: word, ease: 'slow (0.7, 0.4, false)' });
+      wordCycleTL.add(tl);
+    });
+
+    const CardFloatTl = gsap.timeline({ repeat: -1, yoyo: true, yoyoDelay: 0.5 });
+    CardFloatTl.fromTo(
+      cardElement,
+      { y: -20, x: -4, rotate: 1 },
+      { rotate: -1, x: 2, duration: isMobile ? 8 : 6, y: 20, ease: 'sine.inOut' },
+      0,
+    );
+  }, [isMobile]);
 
   return (
     <section
@@ -63,7 +74,18 @@ const Hero = ({ content }) => {
       ref={sectionRef}
     >
       <div className={styles.background}>
-        <img src={content.background.src} className={styles.backgroundImage} />
+        <img
+          src={content.background[0].src}
+          alt={content.background[0].alt}
+          className={styles.backgroundImage}
+        />
+        <span className={styles.backgroundImage}>
+          <img
+            data-animation="floating-card"
+            src={content.background[1].src}
+            alt={content.background[1].alt}
+          />
+        </span>
         <span className={styles.popupNotification}>
           <img data-animation="popup-1" src={content.notificationsSrc[0]} />
         </span>
