@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import '../styles/backgrounds.css';
 import { AppContextProvider } from '../store/context';
 import 'tailwindcss/tailwind.css';
 

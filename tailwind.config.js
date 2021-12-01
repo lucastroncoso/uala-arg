@@ -20,6 +20,14 @@ module.exports = {
         width: 'width',
         height: 'height',
       },
+      colors: {
+        blue: {
+          250: "#3E6BFD"
+        },
+        red: {
+          250: "#FFEBEB"
+        }
+      }
     },
   },
   variants: {

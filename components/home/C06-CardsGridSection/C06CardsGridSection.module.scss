@@ -1,0 +1,53 @@
+@use '../../../styles/variables/variables' as *;
+@use '../../../styles/types/types' as *;
+@use '../../../styles/mixins/respond-to' as *;
+@use '../../../styles/mixins/reset-styles' as *;
+
+.cardsGridSection {
+  @include reset-styles;
+  background-color: $skyblue;
+  padding-top: 60px;
+  overflow: hidden;
+
+  @include respond-to(minWidth1024) {
+    padding-top: 115px;
+    padding-bottom: 120px;
+  }
+}
+
+h2.mainTitle {
+  @include bold-35;
+  text-align: center;
+  padding-bottom: 5px;
+
+  @include respond-to(minWidth1024) {
+    padding-bottom: 60px;
+  }
+}
+
+.cardsWrapper {
+  width: 100%;
+  height: auto;
+  padding: 30px 0;
+
+  @include respond-to(minWidth1024) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px 19px 29px;
+  margin-bottom: 35px;
+
+  @include respond-to(minWidth1024) {
+    padding: 15px 29px 15px 35px;
+    flex-direction: row;
+    margin-bottom: 41px;
+    max-width: 49%;
+  }
+}

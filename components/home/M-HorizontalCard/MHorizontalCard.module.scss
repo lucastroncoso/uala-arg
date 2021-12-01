@@ -1,0 +1,70 @@
+@use "../../../styles/variables/variables" as *;
+@use "../../../styles/types/types" as *;
+@use "../../../styles/mixins/respond-to" as *;
+
+.horizontalCard {
+  @include cardStyles;
+}
+
+.horizontalOnMobile {
+  @include respond-to(maxWidth1023) {
+    border-radius: 11px;
+
+    .icon {
+      width: 49px;
+      height: 49px;
+    }
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+
+  @include respond-to(minWidth1024) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.textWrapper {
+  @include respond-to(minWidth1024) {
+    margin-left: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+h4.cardTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: $gray-3;
+  padding: 12px 0;
+
+  @include respond-to(minWidth1024) {
+    font-size: 25px;
+    padding-top: 0;
+    padding-bottom: 6px;
+  }
+
+  &.isBlue {
+    color: $blue;
+  }
+}
+
+.paragraph {
+  @include regular-16;
+  color: $gray;
+  line-height: 1.5;
+
+  a {
+    color: $blue !important;
+    border-bottom: 1px solid $blue;
+  }
+}

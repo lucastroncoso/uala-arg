@@ -1,0 +1,25 @@
+
+
+.bg-red-degrade {
+  background: linear-gradient(180deg, #FFEBEB 0%, rgba(239, 244, 255, 0) 100%);
+}
+.bg-red-degrade-oposite {
+  background: linear-gradient(180deg, rgba(255, 235, 235, 0) 0%, #FFEBEB 83.33%);
+}
+@media only screen and (max-width: 600px) {
+  .bg-coral-wave {
+    background: url(/assets/images/tarjeta/compras-curva-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 105%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .bg-coral-wave{
+    background: url(/assets/images/bg/Compras_curva.png);
+    background-position: center 110%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

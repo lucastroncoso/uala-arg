@@ -1,0 +1,38 @@
+@use "../../../styles/variables/variables" as *;
+@use "../../../styles/types/types" as *;
+@use "../../../styles/mixins/reset-button" as *;
+@use "../../../styles/mixins/respond-to" as *;
+
+.button {
+  @include reset-button;
+
+  @include semibold-18;
+  background: $blue;
+  border-radius: 30px;
+  color: $white;
+  padding: 10px 44px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  transition: box-shadow 400ms ease;
+
+  & span {
+    position: relative;
+    z-index: 1;
+  }
+
+  @include respond-to(minWidth768) {
+    margin-top: 44px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 2px 4px 8px rgba($blue, 0.5);
+    }
+  }
+}
+
+a.button {
+  color: $white !important;
+  display: inline-block !important;
+}
