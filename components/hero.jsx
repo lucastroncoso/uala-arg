@@ -8,7 +8,7 @@ export default function Hero(props) {
             <div className="grid md:my-24 mt-20 mb-12 md:grid-cols-2">
                 <div className="flex flex-wrap content-center mb-12 md:order-none order-2">
                     <div className="w-full">
-                        <p className="text-xl w-5/6 text-gray-500">
+                        <p className="text-xl w-5/6 ">
                             <div className="">{props.section}</div>
                         </p>
                     </div>
@@ -18,7 +18,7 @@ export default function Hero(props) {
                         </h1>
                     </div>
                     <div className="w-full mt-4">
-                        <div className="md:w-2/3 text-lg leading-8 text-gray-500">
+                        <div className="md:w-2/3 text-lg leading-8 ">
                             {props.subtitle}
                         </div>
 
