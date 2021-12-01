@@ -1,7 +1,7 @@
-import C01Navigation from '../components/C01-Navigation/C01Navigation';
+import C01Navigation from '../components/home/C01-Navigation/C01Navigation';
 import pageContent from '../data/SiteMXContent.json';
 import { useAppContext } from '../store/context';
-import Footer from '../components/Footer/Footer';
+import Footer from '../components/home/Footer/Footer';
 
 
 
