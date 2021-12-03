@@ -18,7 +18,7 @@ export default function Prestamos(props) {
             </Head>
             <Layout nav footer>
                 <Hero
-
+                    containerStyles="bg-blue-wave mt-12"
                     section="Créditos"
                     title="Créditos pensados para vos"
                     subtitle="Rápido, seguro y 100% online."

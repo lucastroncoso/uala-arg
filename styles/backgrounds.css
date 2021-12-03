@@ -35,7 +35,7 @@
 @media only screen and (min-width: 600px) {
   .bg-blue-wave{
     background: url(/assets/images/bg/Creditos_curva.png);
-    background-position: center 110%;
+    background-position: center 200%;
     background-size: contain;
     background-repeat: no-repeat;
   }
