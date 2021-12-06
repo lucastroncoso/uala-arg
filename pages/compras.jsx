@@ -87,7 +87,7 @@ export default function Tarjeta(props) {
                         </ImageTextItem>
                         <ImageTextItem title="Hacé la denuncia " img="/assets/images/tarjeta/Item-2-coral.png">
                             <p className="text">Si perdiste o te robaron tu Ualá, hacé la denuncia desde la app y te mandamos una nueva dentro de los 15 días hábiles.</p>
-                            <a className="underline text-blue-700" href="">Mira el tutorial acá</a>
+                            <a className="underline text-blue-700" target="_blank" href="https://www.youtube.com/watch?v=xD7xz3jyZ2A">Mira el tutorial acá</a>
                         </ImageTextItem>
                     </div>
 

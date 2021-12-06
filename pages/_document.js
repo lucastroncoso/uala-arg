@@ -26,3 +26,5 @@ class WebDocument extends Document {
         )
     }
 }
+
+export default WebDocument
