@@ -22,10 +22,15 @@ module.exports = {
       },
       colors: {
         blue: {
+          150: "#EEF3FF",
           250: "#3E6BFD"
         },
         red: {
           250: "#FFEBEB"
+        },
+        gray: {
+          150: "#757575",
+          250: "#3A3A3A"
         }
       }
     },

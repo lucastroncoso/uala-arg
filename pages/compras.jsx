@@ -80,7 +80,7 @@ export default function Tarjeta(props) {
                 />
 
                 <Container className="pb-24 bg-red-250">
-                    <h2 className="title-3">¿Perdiste o te robaron tu Ualá?</h2>
+                    <h2 className="title-2">¿Perdiste o te robaron tu Ualá?</h2>
                     <div className="grid lg:grid-cols-2 py-8">
                         <ImageTextItem title="Congelá tu tarjeta" img="/assets/images/tarjeta/Item-1-coral.png">
                             <p className="text">Si no encontrás tu Ualá podés congelarla en el acto desde la app para inhabilitar las operaciones con la tarjeta. <br /> Si la encontrás en un bolsillo, la descongelás y la seguís usando como siempre.</p>

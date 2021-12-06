@@ -10,10 +10,10 @@ export default function ImageItemsSection(props) {
                     {props.img}
                 </div>
 
-                <div className="flex flex-col   order-1 ">
+                <div className="flex flex-col  order-1 ">
                     <div>
-                        <div className="mb-4 title-3">{props.title}</div>
-                        <div className="title-4">{props.subtitle}</div>
+                        <div className="mb-4 title-2">{props.title}</div>
+                        <div className="subtitle-2">{props.subtitle}</div>
                     </div>
                     <div className="flex flex-col justify-around h-full">
                         {props.items && props.items.map((i) => i)}

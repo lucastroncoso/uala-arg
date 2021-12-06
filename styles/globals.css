@@ -19,40 +19,32 @@ body {
     @apply text-blue-250 text-5xl font-semibold leading-snug;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .subtitle-1 {
+    @apply text-xl leading-8 text-gray-150;
+  }
+}
 @media only screen and (max-width: 600px) {
-  .title-2 {
-    @apply text-blue-250 text-2xl font-medium;
+  .subtitle-1 {
+    @apply  text-xl leading-8 text-gray-150;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .title-2 {
-    @apply text-blue-250 text-4xl font-medium;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .title-3 {
-    @apply  text-3xl font-medium;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .title-3 {
     @apply  text-4xl font-medium;
   }
 }
 
-.slick-track{
-  display: flex;
+
+
+.subtitle-2 {
+  @apply  text-xl font-normal;
 }
 
-
-
-
-
-
-.title-4 {
-  @apply  text-xl font-normal;
+.subtitle-blue {
+  @apply  text-2xl font-normal text-blue-250;
 }
 
 .text {
@@ -73,4 +65,8 @@ p {
 
 .menu-option:hover .menu-list {
   @apply block;
+}
+
+.slick-track{
+  display: flex;
 }

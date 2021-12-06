@@ -1,11 +1,17 @@
 
-
+/* GRADIENTS */
 .bg-red-degrade {
   background: linear-gradient(180deg, #FFEBEB 0%, rgba(239, 244, 255, 0) 100%);
 }
 .bg-red-degrade-oposite {
   background: linear-gradient(180deg, rgba(255, 235, 235, 0) 0%, #FFEBEB 83.33%);
 }
+
+.bg-blue-degrade {
+  background: linear-gradient(180deg, #EEF3FF 83.33%, rgba(222, 231, 255, 0) 100%);
+}
+
+/* WAVES */
 @media only screen and (max-width: 600px) {
   .bg-coral-wave {
     background: url(/assets/images/tarjeta/compras-curva-mobile.png);
@@ -35,8 +41,8 @@
 @media only screen and (min-width: 600px) {
   .bg-blue-wave{
     background: url(/assets/images/bg/Creditos_curva.png);
-    background-position: center 200%;
-    background-size: contain;
+    background-position: -130px 150px;
+    background-size: 120%;
     background-repeat: no-repeat;
   }
 }
