@@ -116,6 +116,11 @@
 .appStoreWrapper {
   display: flex;
   margin-top: 34px;
+  width: 85%;
+  @include respond-to(minWidth768){
+    width: 70%;
+  }
+  
 
   & a:first-child {
     margin-right: 15px;

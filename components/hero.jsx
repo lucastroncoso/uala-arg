@@ -18,7 +18,7 @@ export default function Hero(props) {
                         </h1>
                     </div>
                     <div className="w-full mt-4">
-                        <div className="md:w-2/3 subtitle-1 ">
+                        <div className="md:w-5/6 subtitle-1 ">
                             {props.subtitle}
                         </div>
 

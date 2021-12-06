@@ -9,6 +9,7 @@ import Head from 'next/head';
 import Image from "next/image";
 
 
+
 export default function Prestamos(props) {
     const [page, pageSet] = useState("prestamos")
     const handleClick = function (page) {
@@ -25,7 +26,7 @@ export default function Prestamos(props) {
                     containerStyles="bg-blue-wave mt-12"
                     section="Créditos"
                     title="Créditos pensados para vos"
-                    subtitle="Rápido, seguro y 100% online."
+                    subtitle="Te ofrecemos más crédito para lo que necesites de la forma más fácil, rápido y transparente."
                     img={<Image src="/assets/images/prestamos/Rectangle 153.png" width={542} height={400} />}
                 />
 
@@ -47,18 +48,18 @@ export default function Prestamos(props) {
                         <ImageItemsSection
                             reverse
                             bg="bg-blue-degrade"
-                            title="Usalo como quieras"
+                            title="Podes usarlo como quieras"
                             subtitle="Pedilo desde la app y usalo para tu emprendimiento, un viaje, tu hogar o para comprar lo que quieras."
                             img={<Image src="/assets/images/prestamos/Mask Group (21).png" width={1852} height={1512} />}
                             items={[
-                                <CardItem text="Al registrarte contarás con una tarjeta digital para hacer compras online. "
-                                    img="/assets/images/tarjeta/Icono compras.png" />,
-                                <CardItem text="Con chip, para que tu información esté más protegida que nunca."
-                                    img="/assets/images/tarjeta/Icono chip.png" />,
-                                <CardItem text="Con tecnología conctacless para que tus compras sean mucho más seguras."
-                                    img="/assets/images/tarjeta/Icono contactless.png" />]}
+                                <CardItem text="Pedí hasta [b]$500.000[/b] en 24 cuotas fijas."
+                                    img="/assets/images/prestamos/Icono_prestamos.png" />,
+                                <CardItem text="La plata se deposita en tu cuenta de Ualá."
+                                    img="/assets/images/prestamos/Icono-depositar-plata.png" />,
+                                <CardItem text="Hacé la simulación en tiempo real."
+                                    img="/assets/images/prestamos/Icono-tiemporeal.png" />]}
                         />
-                        <VideoTitle title="¿Cómo cargar tu Ualá?"
+                        <VideoTitle title="¿Cómo pedir un préstamo?"
                             imgDesktop={<Image src="/assets/images/tarjeta/thumbnail_cargar_destkop.png" width={2453} height={1273} />}
                             imgMobile={<Image src="/assets/images/tarjeta/thumbnail_cargar_mobile.png" width={661} height={687} />}
                         />

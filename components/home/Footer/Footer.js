@@ -20,10 +20,10 @@ const Footer = ({ content, banner }) => {
             <h5 className={styles.title}>{content.title}</h5>
             <div className={styles.appStoreWrapper}>
               <a href={'https://uala.onelink.me/gqGz/30b751c4'}>
-                <Image src={GOOGLE_PLAY} width={110} height={34} />
+                <Image src={GOOGLE_PLAY} width={317} height={69} />
               </a>
               <a href={'https://uala.onelink.me/gqGz/557eaed9'}>
-                <Image src={APP_STORE} width={110} height={34} />
+                <Image src={APP_STORE} width={299} height={66} />
               </a>
             </div>
             <div className={styles.socialLinksWrapper}>
