@@ -43,7 +43,7 @@ export default function MainPageAr() {
         <CardsBackgroundSection content={pageContent[locale].cardsBackgroundSection} />
         <C06CardsGridSection content={pageContent[locale].cardsGridSection} />
         <TextWithVideoSection content={pageContent[locale].textWithVideoSection} />
-        <Footer content={pageContent[locale].footer} />
+        <Footer banner content={pageContent[locale].footer} />
         <DownloadAppModal content={pageContent[locale].downloadApp} />
         <YoutubeModal />
       </main>

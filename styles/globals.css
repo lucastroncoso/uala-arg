@@ -36,6 +36,22 @@ body {
     @apply  text-4xl font-medium;
   }
 }
+@media only screen and (max-width: 600px) {
+  .title-2 {
+    @apply  text-3xl font-medium;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .title-3 {
+    @apply  text-2xl font-semibold;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .title-3 {
+    @apply  text-xl font-semibold;
+  }
+}
 
 
 

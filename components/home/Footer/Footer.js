@@ -9,10 +9,10 @@ import GOOGLE_PLAY from '../../../public/assets/images/google_play.png';
 import SocialIcons from '../SocialIcons/SocialIcons';
 import FooterBanner from '../FooterBanner/FooterBanner';
 
-const Footer = ({ content }) => {
+const Footer = ({ content, banner }) => {
   return (
     <>
-      <FooterBanner content={content.footerBanner} />
+      {banner && <FooterBanner content={content.footerBanner} />}
       <footer className={styles.footer}>
         <BlockWrapper customClass={[styles.footerWrapper]}>
           <div className={styles.about}>
