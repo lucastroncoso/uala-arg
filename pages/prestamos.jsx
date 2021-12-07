@@ -32,11 +32,11 @@ export default function Prestamos(props) {
                     <div className="grid grid-cols-2 w-full gap-8">
                         <div className="  border-b border-blue-250">
                             <a href="/prestamos"
-                                className=" w-full block text-center subtitle-blue px-20 outline-none">Préstamos</a>
+                                className=" w-full block text-center subtitle-blue md:px-20 outline-none">Préstamos</a>
                         </div>
                         <div className=" border-b border-blue-50">
                             <a href="/cuotas"
-                                className=" w-full block text-center subtitle-blue px-20 outline-none text-blue-50">Pasar a Cuotas</a>
+                                className=" w-full block text-center subtitle-blue md:px-20 outline-none text-blue-50">Pasar a Cuotas</a>
                         </div>
                     </div>
                 </Container>
@@ -50,21 +50,21 @@ export default function Prestamos(props) {
                     img={<Image src="/assets/images/prestamos/Mask Group (25).png" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Pedí hasta [b]$500.000[/b] en 24 cuotas fijas."
-                            img="/assets/images/prestamos/Icono_prestamos.png" />,
+                            img="/assets/images/prestamos/icono_prestamos.png" />,
                         <CardItem text="La plata se deposita en tu cuenta de Ualá."
-                            img="/assets/images/prestamos/Icono-depositar-plata.png" />,
+                            img="/assets/images/prestamos/icono-depositar-plata.png" />,
                         <CardItem text="Hacé la simulación en tiempo real."
-                            img="/assets/images/prestamos/Icono-tiemporeal.png" />]}
+                            img="/assets/images/prestamos/icono-tiemporeal.png" />]}
                 />
 
                 <VideoTitle title="¿Cómo pedir un préstamo?"
+                    href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s"
                     imgDesktop={<Image src="/assets/images/prestamos/thumbnail_prestamos_destkop 1.png" width={2453} height={1273} />}
                     imgMobile={<Image src="/assets/images/prestamos/thumbnail_prestamos_mobile 1.png" width={661} height={687} />}
                 />
 
                 <ImageItemsSection
                     title="Podés tener el control de los pagos"
-                    href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s"
                     img={<Image src="/assets/images/prestamos/Mask Group (24).png" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Elegí en cuántas cuotas querés pagarlo."
@@ -76,9 +76,9 @@ export default function Prestamos(props) {
                 />
 
                 <Container className="my-12">
-                    <div className=" mx-auto shadow-blue p-16 rounded-xl">
+                    <div className=" mx-auto shadow-blue md:p-16 p-8 rounded-2xl">
                         <h2 className="title-2">Requisitos para pedir un préstamo</h2>
-                        <div className="grid grid-cols-2">
+                        <div className="grid md:grid-cols-2">
                             <ol>
                                 <li className="pt-4">1. Ser ciudadano argentino o residente en el país. </li>
                                 <li className="pt-4">2. Tener 18 años o más.</li>
