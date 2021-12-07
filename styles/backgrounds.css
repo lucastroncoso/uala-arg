@@ -11,6 +11,9 @@
   background: linear-gradient(180deg, #EEF3FF 83.33%, rgba(222, 231, 255, 0) 100%);
 }
 
+.bg-blue-degrade-calculator {
+  background: linear-gradient(360deg, #E2EAFF -128.74%, #3E6BFD 117.3%);}
+
 /* WAVES */
 @media only screen and (max-width: 600px) {
   .bg-coral-wave {

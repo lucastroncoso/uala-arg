@@ -22,6 +22,7 @@ module.exports = {
       },
       colors: {
         blue: {
+          50: "#8EA8FD",
           150: "#EEF3FF",
           250: "#3E6BFD"
         },
@@ -32,7 +33,10 @@ module.exports = {
           150: "#757575",
           250: "#3A3A3A"
         }
-      }
+      },
+      boxShadow: {
+        blue: '0px 5px 24px 6px rgba(62, 107, 253, 0.2)',
+      },
     },
   },
   variants: {
