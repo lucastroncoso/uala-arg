@@ -58,13 +58,13 @@ export default function Prestamos(props) {
                 />
 
                 <VideoTitle title="¿Cómo pedir un préstamo?"
+                    href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s"
                     imgDesktop={<Image src="/assets/images/prestamos/thumbnail_prestamos_destkop 1.png" width={2453} height={1273} />}
                     imgMobile={<Image src="/assets/images/prestamos/thumbnail_prestamos_mobile 1.png" width={661} height={687} />}
                 />
 
                 <ImageItemsSection
                     title="Podés tener el control de los pagos"
-                    href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s"
                     img={<Image src="/assets/images/prestamos/Mask Group (24).png" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Elegí en cuántas cuotas querés pagarlo."
