@@ -6,14 +6,14 @@ export default function Hero(props) {
     return (
         <Container className={props.containerStyles || "bg-coral-wave md:min-h-screen"}>
             <div className="grid md:my-24 mt-20 mb-12 md:grid-cols-2">
-                <div className="flex flex-wrap content-center mb-12 md:order-none order-2">
+                <div className="flex flex-wrap content-center mb-12 md:order-none order-2 md:mt-0 mt-8">
                     <div className="w-full">
                         <p className="text-xl w-5/6 ">
                             <div className="">{props.section}</div>
                         </p>
                     </div>
                     <div className="w-full">
-                        <h1 className="title-1 md:w-5/6">
+                        <h1 className="title-1 md:w-5/6 mt-4">
                             <div className="">{props.title}</div>
                         </h1>
                     </div>

@@ -32,11 +32,11 @@ export default function Prestamos(props) {
                     <div className="grid grid-cols-2 w-full gap-8">
                         <div className="  border-b border-blue-250">
                             <a href="/prestamos"
-                                className=" w-full block text-center subtitle-blue px-20 outline-none">Préstamos</a>
+                                className=" w-full block text-center subtitle-blue md:px-20 outline-none">Préstamos</a>
                         </div>
                         <div className=" border-b border-blue-50">
                             <a href="/cuotas"
-                                className=" w-full block text-center subtitle-blue px-20 outline-none text-blue-50">Pasar a Cuotas</a>
+                                className=" w-full block text-center subtitle-blue md:px-20 outline-none text-blue-50">Pasar a Cuotas</a>
                         </div>
                     </div>
                 </Container>
@@ -76,9 +76,9 @@ export default function Prestamos(props) {
                 />
 
                 <Container className="my-12">
-                    <div className=" mx-auto shadow-blue p-16 rounded-xl">
+                    <div className=" mx-auto shadow-blue md:p-16 p-8 rounded-2xl">
                         <h2 className="title-2">Requisitos para pedir un préstamo</h2>
-                        <div className="grid grid-cols-2">
+                        <div className="grid md:grid-cols-2">
                             <ol>
                                 <li className="pt-4">1. Ser ciudadano argentino o residente en el país. </li>
                                 <li className="pt-4">2. Tener 18 años o más.</li>
