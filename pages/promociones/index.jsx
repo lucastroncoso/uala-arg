@@ -107,6 +107,7 @@ export default function Promociones(props) {
                 selectableCategories.push( category );
             }
         });
+        selectableCategories.unshift({slug: 'any-category', name: 'Cualquier categoría'});
         setCategories(selectableCategories);
 
         // Lista de ubicaciones para el filtro - solo aquellas que tengan alguna promoción activa
@@ -125,6 +126,7 @@ export default function Promociones(props) {
                 selectableLocations.push( location );
             }
         });
+        selectableLocations.unshift({slug: 'any-place', name: 'Cualquier lugar'});
         setLocations(selectableLocations);
 
     }, [ allPromotions ] );
@@ -155,38 +157,42 @@ export default function Promociones(props) {
 
             // Cuando se selecciona una categoría
             if ( selectedCategory.slug !== '' ) {
-                filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
-                    if (promotion.categoriesCollection.items.find(element => element.slug === selectedCategory.slug) !== undefined) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                });
-                filteredPromotions = filteredPromotions.filter(promotion => {
-                    if (promotion.categoriesCollection.items.find(element => element.slug === selectedCategory.slug) !== undefined) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                });
+                if ( selectedCategory.slug !== 'any-category' ) {
+                    filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
+                        if (promotion.categoriesCollection.items.find(element => element.slug === selectedCategory.slug) !== undefined) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                    filteredPromotions = filteredPromotions.filter(promotion => {
+                        if (promotion.categoriesCollection.items.find(element => element.slug === selectedCategory.slug) !== undefined) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                }
             }
 
             // Cuando se selecciona una ubicacion
             if ( selectedLocation.slug !== '' ) {
-                filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
-                    if (promotion.locationsCollection.items.find(element => ( element.slug === selectedLocation.slug || element.slug === 'todo-el-pais' )) !== undefined) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                });
-                filteredPromotions = filteredPromotions.filter(promotion => {
-                    if (promotion.locationsCollection.items.find(element => ( element.slug === selectedLocation.slug || element.slug === 'todo-el-pais' )) !== undefined) {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                });
+                if ( selectedLocation.slug !== 'any-place' ) {
+                    filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
+                        if (promotion.locationsCollection.items.find(element => ( element.slug === selectedLocation.slug || element.slug === 'todo-el-pais' )) !== undefined) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                    filteredPromotions = filteredPromotions.filter(promotion => {
+                        if (promotion.locationsCollection.items.find(element => ( element.slug === selectedLocation.slug || element.slug === 'todo-el-pais' )) !== undefined) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                }
             }
 
             
