@@ -2,9 +2,14 @@ import Head from 'next/head';
 import { useEffect, useState } from "react";
 import { fetchContent } from '../../utils/contentful';
 import Layout from "../../components/layout";
+import Container from '../../components/container';
+import Dropdown from '../../components/dropdown';
+import FeaturedPromotionCard from '../../components/promotions/featuredPromotionCard';
+import PromotionCard from '../../components/promotions/promotionCard';
+import PromotionFilters from '../../components/promotions/promotionFilters';
 
 export async function getStaticProps() {
-    const response = await fetchContent(`
+    const response_promos = await fetchContent(`
     {
         argentinaPromotionCollection (limit: 50) {
             items {
@@ -35,95 +40,64 @@ export async function getStaticProps() {
                 publishedAt
               }
             }
-          },
-        
-        banner(id:"7DHXlgGa8Bywucy53A3Ai"){
-            bannerDesktop{
-                url
-            }
-            bannerMobile1{
-                url
-            }
+          }
         }
-    }
-      
+    `);
+
+    const response_others = await fetchContent(`
+    {
+        banner(id: "7DHXlgGa8Bywucy53A3Ai") {
+          bannerDesktop {
+            url
+          }
+          bannerMobile1 {
+            url
+          }
+        },
+        promotionCategoryCollection {
+          items {
+            slug
+            name
+          }
+        },
+        promotionLocationCollection {
+          items {
+            slug
+            name
+          }
+        }
+      }  
     `);
 
     return {
-        props: { response },
+        props: { response_promos, response_others },
         revalidate: 10
     }
 }
 
-function Promotion(props) {
-
-    return (
-        <div className="grid">
-            <div className="flex flex-col p-4 m-4 border border-gray-100 shadow-lg rounded-3xl">
-                <div className="flex justify-center">
-                    <div>
-                        <img className="max-h-16" src={props.logo.url} alt="" />
-                    </div>
-                </div>
-                <div className="flex items-center flex-grow mt-4 font-medium text-center">
-                    <div className="w-full">{props.title}</div>
-                </div>
-                <div className="mt-4 text-sm text-center">{props.date}</div>
-                <div className="mt-4 text-center"><a href={"/promociones/" + props.slug} className="link">Ver mas</a></div>
-            </div>
-        </div>
-    )
-}
-
-function FeaturedPromotion(props) {
-
-    return (
-        <div className="grid">
-            <div className="flex flex-col m-4 border border-gray-100 shadow-lg rounded-3xl overflow-hidden wrapper ">
-
-                <div className="relative">
-                    <img src={props.image.url}  alt={props.name}  />
-
-                    <div className="flex absolute left-4 -bottom-4">
-                        <div className="border border-gray-100 shadow-lg rounded-xl bg-white h-24 flex items-center p-1">
-                            <img className="max-h-16" src={props.logo.url} alt="" />
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="p-3 space-y-3 m-4">
-                    
-                    <div className="flex flex-grow mt-4 font-medium ">
-                        <div className="w-full">{props.title}</div>
-                    </div>
-                    <div className="flex justify-between flex-row flex-grow mt-4 font-medium text-center">
-                        <div className="mt-4 text-sm text-center">{props.date}</div>
-                        <div className="mt-4 text-center"><a href={"/promociones/" + props.slug} className="link">Ver mas</a></div>
-                    </div>
-                    
-                </div>
-
-            </div>
-        </div>
-    )
-}
 
 export default function Promociones(props) {
-    const [ allPromotions, setAllPromotions ] = useState( props.response.argentinaPromotionCollection.items ); // Lista completa de promociones
-    const [ featuredPromotions, setFeaturedPromotions ] = useState(); // Lista de promos destacadas
-    const [ promotions, setPromotions ] = useState(); // Lista de promociones restantes
+    const [ allPromotions, setAllPromotions ] = useState( props.response_promos.argentinaPromotionCollection.items ); // Lista completa de promociones
+    const [ featuredPromotions, setFeaturedPromotions ] = useState(); // Lista de promos destacadas completa
+    const [ promotions, setPromotions ] = useState(); // Lista de promociones restantes completa
+    const [ displayableFeaturedPromotions, setDisplayableFeaturedPromotions ] = useState([]); // Lista de promos destacadas visibles ( filtradas )
+    const [ displayablePromotions, setDisplayablePromotions ] = useState([]); // Lista de promociones restantes visibles ( filtradas )
+    const [ categories, setCategories ] = useState( props.response_others.promotionCategoryCollection.items ); // Lista de categorias - filtro
+    const [ locations, setLocations ] = useState( props.response_others.promotionLocationCollection.items ); // Lista de ubicaciones - filtro
+    const [ selectedCategory, setSelectedCategory ] = useState({slug: ''}); // Categoría seleccionada
+    const [ selectedLocation, setSelectedLocation ] = useState({slug: ''}); // Ubicación seleccionada
 
     useEffect( () => {
+        // Lista de promociones destacadas - las primeras 2 que tengan la propiedad featured
         const featured = allPromotions.filter( promo => promo.featured === true );
-        setFeaturedPromotions( featured.slice( 0, 3 ) );
+        setFeaturedPromotions( featured.slice( 0, 2 ) );
+        setDisplayableFeaturedPromotions( featured.slice( 0, 2 ) );
+
     }, [ allPromotions ] );
 
     useEffect( () => {
+        // Listado de todas las promociones que no están destacadas
         if ( !!featuredPromotions ) {
-            console.log(featuredPromotions.length)
-            featuredPromotions.forEach(element => {
-                console.log(element.slug)
-            });
             const otherPromotions = allPromotions.filter( promo => {
                 if ( featuredPromotions.length === 1 ) {
                     return promo.slug !== featuredPromotions[0].slug;
@@ -133,43 +107,108 @@ export default function Promociones(props) {
                 } 
             } );
             setPromotions( otherPromotions );
+            setDisplayablePromotions( otherPromotions );
         }
         
     }, [ featuredPromotions ] );
+
+    useEffect( () => {
+        // Modificar las listas de promociones visibles cuando se selecciona un filtro
+        if ( selectedCategory.slug !== '' || selectedLocation.slug !== '' ) {
+
+            let filteredFeaturedPromotions = featuredPromotions;
+            let filteredPromotions = promotions;
+
+            // Cuando se selecciona una categoría
+            if ( selectedCategory.slug !== '' ) {
+                filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
+                    if (promotion.categoriesCollection.items.find(element => element.slug === selectedCategory.slug) !== undefined) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+                filteredPromotions = filteredPromotions.filter(promotion => {
+                    if (promotion.categoriesCollection.items.find(element => element.slug === selectedCategory.slug) !== undefined) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+            }
+
+            // Cuando se selecciona una ubicacion
+            if ( selectedLocation.slug !== '' ) {
+                filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
+                    if (promotion.locationsCollection.items.find(element => ( element.slug === selectedLocation.slug || element.slug === 'todo-el-pais' )) !== undefined) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+                filteredPromotions = filteredPromotions.filter(promotion => {
+                    if (promotion.locationsCollection.items.find(element => ( element.slug === selectedLocation.slug || element.slug === 'todo-el-pais' )) !== undefined) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+            }
+
+            
+            setDisplayableFeaturedPromotions( filteredFeaturedPromotions );
+            setDisplayablePromotions( filteredPromotions );
+        }
+    }, [ selectedCategory, selectedLocation, featuredPromotions, promotions ] );
 
     return (
         <>
             <Head>
                 <title>Ualá</title>
             </Head>
-            {/* <Layout nav footer> */}
+            <Layout nav footer>
                 
-
-
-                
-            <div className="flex justify-center md:mt-20 mt-12">
-                    <div className="hidden lg:block"><img src={props.response.banner.bannerDesktop.url} /></div>
-                    <div className="lg:hidden"><img src={props.response.banner.bannerMobile1.url} /></div>
+                <div className="flex justify-center md:mt-20 mt-12">
+                    <div className="hidden lg:block"><img src={props.response_others.banner.bannerDesktop.url} /></div>
+                    <div className="lg:hidden"><img src={props.response_others.banner.bannerMobile1.url} /></div>
                 </div>
 
-                <div className="mx-auto lg:w-10/12 mb-72">
+                <Container className="mx-auto lg:w-10/12 mb-72">
+            
+                <div className="">
                     <div className="my-16 text-3xl font-medium text-center text-blue-600">No te pierdas estas súper promociones</div>
                     
-                    <div className="grid my-16 lg:grid-cols-2">
-                        {
-                            featuredPromotions && featuredPromotions.map(promotion => <FeaturedPromotion key={ promotion.slug } {...promotion} />)
-                        }
-                    </div>
+                    <PromotionFilters
+                        categories={ categories }
+                        selectedCategory={ selectedCategory }
+                        setSelectedCategory={ setSelectedCategory }
+                        locations={ locations }
+                        selectedLocation={ selectedLocation }
+                        setSelectedLocation={ setSelectedLocation }
+                    />
+
+                    {
+                        displayableFeaturedPromotions.length > 0 && 
+                            <div className="grid my-16 lg:grid-cols-2">
+                                {
+                                    displayableFeaturedPromotions.map(promotion => <FeaturedPromotionCard key={ promotion.slug } {...promotion} />)
+                                }
+                            </div>
+                    }
+                    
                     
                     <div className="grid my-16 lg:grid-cols-3">
                         {
-                            !promotions ? <div className="text-center col-span-full">Cargando...</div> : promotions.map(promotion => <Promotion key={ promotion.slug } {...promotion} />)
+                            displayablePromotions.length == 0 
+                            ? <div className="text-center col-span-full">Parece que no se encontraron promociones...</div> 
+                            : displayablePromotions.map(promotion => <PromotionCard key={ promotion.slug } {...promotion} />) 
                         }
                     </div>
                 </div>
+                </Container>
 
 
-            {/* </Layout> */}
+            </Layout>
         </>
     )
 
