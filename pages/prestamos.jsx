@@ -50,11 +50,11 @@ export default function Prestamos(props) {
                     img={<Image src="/assets/images/prestamos/Mask Group (25).png" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Pedí hasta [b]$500.000[/b] en 24 cuotas fijas."
-                            img="/assets/images/prestamos/Icono_prestamos.png" />,
+                            img="/assets/images/prestamos/icono_prestamos.png" />,
                         <CardItem text="La plata se deposita en tu cuenta de Ualá."
-                            img="/assets/images/prestamos/Icono-depositar-plata.png" />,
+                            img="/assets/images/prestamos/icono-depositar-plata.png" />,
                         <CardItem text="Hacé la simulación en tiempo real."
-                            img="/assets/images/prestamos/Icono-tiemporeal.png" />]}
+                            img="/assets/images/prestamos/icono-tiemporeal.png" />]}
                 />
 
                 <VideoTitle title="¿Cómo pedir un préstamo?"
