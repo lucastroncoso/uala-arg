@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import Dropdown from '../../components/dropdown';
+import CheckboxSelector from '../checkboxSelector';
 
 export default function PromotionFilters({
     categories,
@@ -7,13 +7,15 @@ export default function PromotionFilters({
     setSelectedCategory,
     locations,
     selectedLocation,
-    setSelectedLocation
+    setSelectedLocation,
+    showNewest,
+    setShowNewest
 }) {
     
 
     return (
         <div className="grid grid-cols-3 space-x-4 mx-4">
-            <div className="rounded shadow-lightblue p-2">
+            <div className="rounded-xl shadow-lightblue p-2">
                 <Dropdown 
                     key="categoria" 
                     slug="categoria" 
@@ -23,7 +25,7 @@ export default function PromotionFilters({
                     setSelectedValue={ setSelectedCategory }
                 />
             </div>
-            <div className="rounded shadow-lightblue p-2">
+            <div className="rounded-xl shadow-lightblue p-2">
                 <Dropdown 
                     key="ubicaciones" 
                     slug="ubicaciones" 
@@ -33,8 +35,14 @@ export default function PromotionFilters({
                     setSelectedValue={ setSelectedLocation }
                 />
             </div>
-            <div className="rounded shadow-lightblue p-2">
-            test
+            <div className="rounded-xl shadow-lightblue p-2">
+                <CheckboxSelector
+                    value="show-newest"
+                    label="Nuevos beneficios"
+                    labelPlacement="start"
+                    selected={ showNewest }
+                    setSelected={ setShowNewest }
+                />
             </div>
         </div>
     )
