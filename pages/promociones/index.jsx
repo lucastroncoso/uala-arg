@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { fetchContent } from '../../utils/contentful';
 import Layout from "../../components/layout";
 import Container from '../../components/container';
-import Dropdown from '../../components/dropdown';
 import FeaturedPromotionCard from '../../components/promotions/featuredPromotionCard';
 import PromotionCard from '../../components/promotions/promotionCard';
 import PromotionFilters from '../../components/promotions/promotionFilters';
@@ -75,7 +74,6 @@ export async function getStaticProps() {
     }
 }
 
-
 export default function Promociones(props) {
     const [ allPromotions, setAllPromotions ] = useState( props.response_promos.argentinaPromotionCollection.items ); // Lista completa de promociones
     const [ featuredPromotions, setFeaturedPromotions ] = useState(); // Lista de promos destacadas completa
@@ -92,6 +90,42 @@ export default function Promociones(props) {
         const featured = allPromotions.filter( promo => promo.featured === true );
         setFeaturedPromotions( featured.slice( 0, 2 ) );
         setDisplayableFeaturedPromotions( featured.slice( 0, 2 ) );
+
+        // Lista de categorías para el filtro - solo aquellas que tengan alguna promoción activa
+        let allCategories = props.response_others.promotionCategoryCollection.items;
+        let selectableCategories = [];
+        let categoriesInUse = [];
+        allPromotions.forEach(promotion => {
+            promotion.categoriesCollection.items.forEach(element => {
+                categoriesInUse.push(element.slug);
+            });
+        });
+        const selectableCategoriesSlugs = [ ...new Set(categoriesInUse)];
+        
+        allCategories.forEach(category => {
+            if ( selectableCategoriesSlugs.find(element => element === category.slug) !== undefined ) {
+                selectableCategories.push( category );
+            }
+        });
+        setCategories(selectableCategories);
+
+        // Lista de ubicaciones para el filtro - solo aquellas que tengan alguna promoción activa
+        let allLocations = props.response_others.promotionLocationCollection.items;
+        let selectableLocations = [];
+        let locationsInUse = [];
+        allPromotions.forEach(promotion => {
+            promotion.locationsCollection.items.forEach(element => {
+                locationsInUse.push(element.slug);
+            });
+        });
+        const selectableLocationsSlugs = [ ...new Set(locationsInUse)];
+
+        allLocations.forEach(location => {
+            if ( selectableLocationsSlugs.find(element => element === location.slug) !== undefined ) {
+                selectableLocations.push( location );
+            }
+        });
+        setLocations(selectableLocations);
 
     }, [ allPromotions ] );
 
