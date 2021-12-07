@@ -5,6 +5,7 @@ import CardItem from "../components/cardItem";
 import ImageItemsSection from "../components/imageItemsSection";
 import VideoTitle from "../components/videoTitle";
 import Calculator from "../components/calculator";
+import Legal from "../components/legal";
 import Layout from "../components/layout";
 import Head from 'next/head';
 import Image from "next/image";
@@ -63,6 +64,7 @@ export default function Prestamos(props) {
 
                 <ImageItemsSection
                     title="Podés tener el control de los pagos"
+                    href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s"
                     img={<Image src="/assets/images/prestamos/Mask Group (24).png" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Elegí en cuántas cuotas querés pagarlo."
@@ -91,6 +93,13 @@ export default function Prestamos(props) {
                 </Container>
 
                 <Calculator bg="bg-blue-degrade-calculator" />
+
+
+                <Legal main=" La funcionalidad de Créditos está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo
+                    Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos, la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante.
+                    Tasa Nominal Anual (TNA): Mínima: 50,00% - Máxima 85,00%. Tasa Efectiva Anual (TEA): Mínima: 63,21% - Máxima 127,33%."
+                    secondary="Costo Financiero Total: Mínimo: 95,86% - Máximo 247,91%"
+                />
 
 
 
