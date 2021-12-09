@@ -45,6 +45,7 @@ export default function Prestamos(props) {
                 <ImageItemsSection
                     reverse
                     bg="bg-blue-degrade"
+                    pushImg="/assets/images/prestamos/push.png"
                     title="Podes usarlo como quieras"
                     subtitle="Pedilo desde la app y usalo para tu emprendimiento, un viaje, tu hogar o para comprar lo que quieras."
                     img={<Image src="/assets/images/prestamos/Mask Group (25).png" width={1389} height={1134} />}
