@@ -7,8 +7,8 @@ export default function ImageItemsSection(props) {
         <Container className={props.bg}>
             <a target="_blank" href={props.href}>
                 <div className="grid md:my-24 my-12 lg:grid-cols-2 items-center gap-16 justify-items-center relative">
-                    <div className={props.reverse ? "order-2 rounded-2xl flex relative" : "order-2 lg:order-none rounded-2xl flex relative"}>
-                        <div className={props.reverse ? "order-2 rounded-2xl overflow-hidden flex" : "order-2 lg:order-none rounded-2xl overflow-hidden flex"}>
+                    <div className={props.reverse ? "order-2 rounded-3xl flex relative" : "order-2 lg:order-none rounded-3xl flex relative"}>
+                        <div className={props.reverse ? "order-2 rounded-3xl overflow-hidden flex" : "order-2 lg:order-none rounded-3xl overflow-hidden flex"}>
                             {props.img}
                         </div>
                         {props.pushImg &&
@@ -20,10 +20,10 @@ export default function ImageItemsSection(props) {
                     </div>
                     <div className="flex flex-col  order-1 ">
                         <div>
-                            <div className="mb-4 title-2">{props.title}</div>
-                            <div className="subtitle-2">{props.subtitle}</div>
+                            {props.title && <div className="mb-4 title-2">{props.title}</div>}
+                            {props.subtitle && <div className="subtitle-2">{props.subtitle}</div>}
                         </div>
-                        <div className="flex flex-col justify-around h-full">
+                        <div className="flex flex-col justify-around h-full lg:mr-12">
                             {props.items && props.items.map((i) => i)}
                         </div>
                     </div>

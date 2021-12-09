@@ -5,7 +5,7 @@ import Container from "./container";
 export default function Hero(props) {
     return (
         <Container className={props.containerStyles || "bg-coral-wave md:min-h-screen"}>
-            <div className="grid md:my-24 mt-20 mb-12 md:grid-cols-2">
+            <div className="grid lg:mb-20 lg:mt-24 md:mb-0 mt-20 mb-12 md:grid-cols-2">
                 <div className="flex flex-wrap content-center mb-12 md:order-none order-2 md:mt-0 mt-8">
                     <div className="w-full">
                         <p className="text-xl w-5/6 ">
