@@ -5,7 +5,7 @@ export default function ImageItemsSection(props) {
     return (
         <Container className={props.bg}>
             <a target="_blank" href={props.href}>
-                <div className="grid md:my-24 my-12 lg:grid-cols-2 items-center gap-16 justify-items-center">
+                <div className="grid md:my-24 my-12 lg:grid-cols-2 items-center gap-16 justify-items-center relative">
                     <div className={props.reverse ? "order-2 rounded-2xl overflow-hidden flex" : "order-2 lg:order-none rounded-2xl overflow-hidden flex"}>
                         {props.img}
                     </div>
@@ -18,6 +18,9 @@ export default function ImageItemsSection(props) {
                             {props.items && props.items.map((i) => i)}
                         </div>
                     </div>
+                    {props.pushImg && <div className="absolute w-5/12 top-64 right-40">
+                        <img src={props.pushImg} alt="" />
+                    </div>}
                 </div>
             </a>
         </Container>

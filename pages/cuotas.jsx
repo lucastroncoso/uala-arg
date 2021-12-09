@@ -44,6 +44,7 @@ export default function Cuotas(props) {
 
                 <ImageItemsSection
                     reverse
+                    pushImg="/assets/images/cuotas/push.png"
                     bg="bg-blue-degrade"
                     title="Podés tener tu plata de vuelta"
                     subtitle="Pasá a cuotas un pago que ya hiciste y te devolvemos la plata en el momento."
