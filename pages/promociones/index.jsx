@@ -74,6 +74,19 @@ export async function getStaticProps() {
     }
 }
 
+const isPromotionNew = date => {
+    // const today = new Date('2021-12-22T19:20:00.660Z'); // Prueba para promociones creadas junto con la prueba de la web
+    const today = new Date();
+    const promotionCreationDate = new Date(date);
+    const differenceTime = today.getTime() - promotionCreationDate.getTime();
+    const differenceDays = differenceTime / ( 1000 * 3600 * 24 );
+    if ( differenceDays >= 0 && differenceDays <= 15 ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 export default function Promociones(props) {
     const [ allPromotions, setAllPromotions ] = useState( props.response_promos.argentinaPromotionCollection.items ); // Lista completa de promociones
     const [ featuredPromotions, setFeaturedPromotions ] = useState(); // Lista de promos destacadas completa
@@ -84,6 +97,7 @@ export default function Promociones(props) {
     const [ locations, setLocations ] = useState( props.response_others.promotionLocationCollection.items ); // Lista de ubicaciones - filtro
     const [ selectedCategory, setSelectedCategory ] = useState({slug: ''}); // Categoría seleccionada
     const [ selectedLocation, setSelectedLocation ] = useState({slug: ''}); // Ubicación seleccionada
+    const [ showNewest, setShowNewest ] = useState( false ); // Mostrar promociones nuevas
 
     useEffect( () => {
         // Lista de promociones destacadas - las primeras 2 que tengan la propiedad featured
@@ -145,12 +159,11 @@ export default function Promociones(props) {
             setPromotions( otherPromotions );
             setDisplayablePromotions( otherPromotions );
         }
-        
     }, [ featuredPromotions ] );
 
     useEffect( () => {
         // Modificar las listas de promociones visibles cuando se selecciona un filtro
-        if ( selectedCategory.slug !== '' || selectedLocation.slug !== '' ) {
+        if ( !!promotions && !!featuredPromotions ) {
 
             let filteredFeaturedPromotions = featuredPromotions;
             let filteredPromotions = promotions;
@@ -195,11 +208,21 @@ export default function Promociones(props) {
                 }
             }
 
+            // Al seleccionar la opción de promociones recientes 
+            if ( showNewest ) {
+                filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
+                    return ( isPromotionNew( promotion.sys.publishedAt ) );
+                });
+
+                filteredPromotions = filteredPromotions.filter(promotion => {
+                    return ( isPromotionNew( promotion.sys.publishedAt ) );
+                });
+            }
             
             setDisplayableFeaturedPromotions( filteredFeaturedPromotions );
-            setDisplayablePromotions( filteredPromotions );
+            setDisplayablePromotions( filteredPromotions ); 
         }
-    }, [ selectedCategory, selectedLocation, featuredPromotions, promotions ] );
+    }, [ selectedCategory, selectedLocation, showNewest, featuredPromotions, promotions ] ); 
 
     return (
         <>
@@ -225,6 +248,8 @@ export default function Promociones(props) {
                         locations={ locations }
                         selectedLocation={ selectedLocation }
                         setSelectedLocation={ setSelectedLocation }
+                        showNewest={ showNewest }
+                        setShowNewest={ setShowNewest }
                     />
 
                     {
