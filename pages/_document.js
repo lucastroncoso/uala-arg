@@ -13,6 +13,7 @@ class WebDocument extends Document {
                         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                         })(window,document,'script','dataLayer','GTM-MPZ7RRW');`}}>
                     </script> */}
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"></link>
 
                 </Head>
                 <body>

@@ -24,8 +24,8 @@ export default function Hero(props) {
 
                     </div>
                 </div>
-                <div className="flex items-center justify-center md:order-none order-1" >
-                    <div>
+                <div className="flex items-center justify-center md:order-none order-1 " >
+                    <div className="rounded-3xl overflow-hidden flex">
                         {props.img}
                     </div>
                 </div>

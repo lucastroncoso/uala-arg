@@ -117,6 +117,9 @@
   display: flex;
   margin-top: 34px;
   width: 85%;
+  @include respond-to(minWidth480){
+    width: 40%;
+  }
   @include respond-to(minWidth768){
     width: 70%;
   }
