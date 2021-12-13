@@ -27,9 +27,7 @@ export default function ImageItemsSection(props) {
                             {props.items && props.items.map((i) => i)}
                         </div>
                     </div>
-                    {/* {props.pushImg && <div className="absolute lg:bottom-8 lg:right-56 -bottom-4">
-                        <img src={props.pushImg} alt="" className="h-28" />
-                    </div>} */}
+
                 </div>
             </a>
         </Container>

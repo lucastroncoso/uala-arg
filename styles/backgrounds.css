@@ -49,3 +49,20 @@
     background-repeat: no-repeat;
   }
 }
+@media only screen and (max-width: 600px) {
+  .bg-coral-wave-2 {
+    background: url(/assets/images/tarjeta/compras-curva-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 105%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .bg-coral-wave-2{
+    background: url(/assets/images/bg/coralWave2.png);
+    background-position: -150px 150px;
+    background-size: 120%;
+    background-repeat: no-repeat;
+  }
+}
