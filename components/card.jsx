@@ -6,7 +6,7 @@ export default function Card(props) {
             <img style={{ width: "90px", height: "90px" }} className="object-cover my-2 " src={props.img} alt="" />
             <div className="min-h-full">
                 <h2 className="title-3 my-2 w-full self-start">{props.title}</h2>
-                <p className="text my-2 ">{parser.toReact(props.text)}</p>
+                <p className="text lg:text-base mt-2 mb-4 ">{parser.toReact(props.text)}</p>
                 <div>{props.children}</div>
             </div>
 
