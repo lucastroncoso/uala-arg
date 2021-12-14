@@ -1,4 +1,6 @@
 import Container from "./container";
+import parser from 'bbcode-to-react';
+
 
 
 
@@ -19,7 +21,7 @@ export default function Hero(props) {
                     </div>
                     <div className="w-full mt-4">
                         <div className="md:w-5/6 subtitle-1 ">
-                            {props.subtitle}
+                            {parser.toReact(props.subtitle)}
                         </div>
 
                     </div>
