@@ -10,8 +10,10 @@ export default function VideoTitleNosotros(props) {
                 <h3 className="subtitle-3 text-center mb-12">{props.subtitle}</h3>
             </div>
 
-            <a className="flex " href={props.href} target="_blank">
+            <a className="flex relative" href={props.href} target="_blank">
                 <div className="flex bg-blue-150 rounded-3xl shadow-lightblue">{props.imgDesktop}</div>
+                <img style={{}} src="/assets/images/icono-play.png" alt="" className="absolute w-20 md:w-28 top-2/4 left-2/4 transform -translate-x-1/2 -translate-y-2/4" />
+
             </a>
         </Container>
     );

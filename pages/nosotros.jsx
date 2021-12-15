@@ -48,7 +48,7 @@ export default function Nosotros(props) {
 
                     <div className=" mx-auto shadow-blue md:p-12 p-8 rounded-3xl bg-white">
                         <h2 className="title-3 text-center mb-6">Un mensaje de nuestro fundador</h2>
-                        <div className="grid md:grid-cols-2 gap-16">
+                        <div className="grid md:grid-cols-2 md:gap-16 ">
                             <ol>
                                 <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos que manejes toda tu plata desde una app: fácil, gratis y segura.</li></div>
                                 <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos que compres lo que quieras, donde quieras.</li></div>
@@ -63,7 +63,7 @@ export default function Nosotros(props) {
                                 <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos ser esa generación que creció en el 2001 y que trabaja para que nunca se repita.</li></div >
                                 <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos que te sumes, para construir el futuro con vos – cuantos más seamos, mejor.</li></div >
                                 <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos estar siempre que nos necesites, empezando por mi.</li></div >
-                                <li className="pt-6 pl-48 text "><span className="font-semibold">Pierpaolo Barbieri</span> <br /> Fundador  y CEO de Ualá</li>
+                                <li className="pt-6 md:pl-48 text "><span className="font-semibold">Pierpaolo Barbieri</span> <br /> Fundador  y CEO de Ualá</li>
                             </ol >
                         </div >
                     </div >

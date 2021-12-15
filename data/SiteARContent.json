@@ -126,16 +126,16 @@
       "background": [
         {
           "alt": "",
-          "src": "/assets/images/hero/background_ar.png"
+          "src": "/assets/images/hero/fondo.png"
         },
         {
           "alt": "",
-          "src": "/assets/images/hero/tarjeta_ar.png"
+          "src": "/assets/images/hero/tarjeta.png"
         }
       ],
       "notificationsSrc": [
-        "/assets/images/hero/notificacion1_ar.png",
-        "/assets/images/hero/notificacion2_ar.png"
+        "/assets/images/hero/notificacion-1.png",
+        "/assets/images/hero/notificacion-2.png"
       ]
     },
     "downloadApp": {

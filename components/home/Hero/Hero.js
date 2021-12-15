@@ -121,18 +121,18 @@ const Hero = ({ content }) => {
           <h1 data-animation="cycle-container" className={styles.title + " col-span-6 title-1"}>
 
           </h1>
-          <h1 data-animation="cycle-container2" className={styles.titleRight + " col-span-6 title-1"}></h1>
+          <h1 data-animation="cycle-container2" className={styles.titleRight + " col-span-6 title-1 xl:pl-72 lg:pl-56"}></h1>
         </div>
         <div className="hidden pt-2 md:block">
           <DownloadAppButton
-            customClass={["text-blue-uala", "rounded-full", "border-blue-uala", "border-2", "px-10", "py-2", "text-xl", "hover:text-white", "hover:bg-blue-uala", "focus:outline-none"]}>
+            customClass={["text-blue-250", "rounded-full", "border-blue-250", "border-2", "px-10", "py-2", "text-xl", "hover:text-white", "hover:bg-blue-250", "focus:outline-none"]}>
             {content.buttonCopy}
           </DownloadAppButton>
         </div>
 
         <div className="w-10/12 mx-auto md:hidden ">
-          <h1 data-animation="cycle-container" className={styles.title}></h1>
-          <h1 data-animation="cycle-container2" className={styles.title}></h1>
+          <h1 data-animation="cycle-container" className={styles.title + " title-1"}></h1>
+          <h1 data-animation="cycle-container2" className={styles.title + " title-1"}></h1>
 
           <p className={styles.paragraph}>{content.paragraph} </p>
           <DownloadAppButton isStyled>{content.buttonCopy}</DownloadAppButton>
