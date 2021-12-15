@@ -37,11 +37,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  min-width: 170%;
+  min-width: 200%;
   height: 100%;
   object-fit: cover;
-  transform: translateX(-38%);
+  transform: translateX(-27%);
   @include respond-to(minWidth768) {
+    min-width: 170%;
     min-width: initial;
     transform: translateX(0);
   }
@@ -90,6 +91,8 @@
   margin-top: 0;
   background: $skyblue;
   padding-bottom: 72px;
+  padding-left: 0;
+  padding-right: 0;
 
   @include respond-to(minWidth768) {
     background: none;
@@ -98,9 +101,13 @@
     padding-bottom: 0;
   }
 
+  @include respond-to(fullWidth) {
+    max-width: 1440px;
+  }
+
   .wordCycle {
     position: relative;
-  
+
     & span {
       position: absolute;
       left: 10px;
@@ -112,11 +119,26 @@
 }
 
 .title {
-  @include bold-70;
+  font-size: 41px;
+  font-weight: 700;
   width: 100%;
+  
+    @include respond-to(minWidth768){
+      font-size: 60px;
+      font-weight: 700
+  }
+}
 
-  @include respond-to(minWidth768) {
-    max-width: 445px;
+.titleRight{
+  font-size: 41px;
+    width: 100%;
+    padding-left: 47%;
+    @include respond-to(minWidth768){
+      font-size: 60px;
+      font-weight: 700
+  }
+    @include respond-to(fullWidth){
+      padding-left: 57%;
   }
 }
 
@@ -135,7 +157,7 @@ p.paragraph {
   .popupNotification {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 70px;
     width: 100%;
     min-width: 180%;
     height: 100%;

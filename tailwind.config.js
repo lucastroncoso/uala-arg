@@ -24,7 +24,8 @@ module.exports = {
         blue: {
           50: "#8EA8FD",
           150: "#EEF3FF",
-          250: "#3E6BFD"
+          250: "#3E6BFD",
+          350: "#EFF4FF"
         },
         red: {
           250: "#FFEBEB"

@@ -102,7 +102,10 @@
           "url": "https://uala.com.mx/promociones"
         }
       ],
-      "languageButton": ["es", "en"],
+      "languageButton": [
+        "es",
+        "en"
+      ],
       "loginButton": {
         "copy": "Ingresar",
         "url": "https://web.uala.com.ar/login?utm_medium=Menu&utm_source=Web&utm_campaign=WebApp"
@@ -112,21 +115,28 @@
     },
     "hero": {
       "titleFirstLine": "El lado",
-      "wordCycle": ["bueno", "simple", "seguro"],
+      "wordCycle": [
+        "bueno",
+        "simple",
+        "seguro"
+      ],
       "titleSecondLine": "de tu plata",
       "paragraph": "Una tarjeta prepaga Mastercard gratis y una app para manejar tu plata mucho más fácil",
       "buttonCopy": "Descargar la app",
       "background": [
         {
           "alt": "",
-          "src": "/assets/images/hero/background_ar.jpg"
+          "src": "/assets/images/hero/background_ar.png"
         },
         {
           "alt": "",
           "src": "/assets/images/hero/tarjeta_ar.png"
         }
       ],
-      "notificationsSrc": ["/assets/images/hero/notificacion1_ar.png", "/assets/images/hero/notificacion2_ar.png"]
+      "notificationsSrc": [
+        "/assets/images/hero/notificacion1_ar.png",
+        "/assets/images/hero/notificacion2_ar.png"
+      ]
     },
     "downloadApp": {
       "title": "El Lado Bueno de tu Plata",
@@ -277,14 +287,23 @@
           "icon": "deposito-efectivo"
         }
       ],
-      "logosCarousel": ["rapipago", "pago-facil", "cobro-express", "tele-recargas"]
+      "logosCarousel": [
+        "rapipago",
+        "pago-facil",
+        "cobro-express",
+        "tele-recargas"
+      ]
     },
     "textWithVideoSection": {
       "video": {
         "src": "/assets/video/chat_web_ar.mp4"
       },
       "title": "Atención 100% online",
-      "paragraphs": ["<strong>Si tenés dudas, ¡pregúntanos a nosotr@s!</strong> <br>Si sos usuari@ de Ualá escribinos por el chat de la app.", "Si todavía no sos parte de Ualá, nos podés escribir por mail a <a href='mailto:hola@uala.com.ar'>hola@uala.com.ar</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.ar/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
+      "paragraphs": [
+        "<strong>Si tenés dudas, ¡pregúntanos a nosotr@s!</strong> <br>Si sos usuari@ de Ualá escribinos por el chat de la app.",
+        "Si todavía no sos parte de Ualá, nos podés escribir por mail a <a href='mailto:hola@uala.com.ar'>hola@uala.com.ar</a> o por nuestras redes sociales.",
+        "Además en la <a href='https://comunidad.uala.com.ar/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"
+      ]
     },
     "footer": {
       "footerBanner": {
@@ -526,7 +545,10 @@
           "url": "https://www.uala.com.ar/promociones"
         }
       ],
-      "languageButton": ["es", "en"],
+      "languageButton": [
+        "es",
+        "en"
+      ],
       "downloadAppButtonCopy": "Download App",
       "menuButtonCopy": "Menu"
     },
@@ -544,7 +566,10 @@
           "src": "/assets/images/hero/tarjeta_ar.png"
         }
       ],
-      "notificationsSrc": ["/assets/images/hero/notificacion1_ar.png", "/assets/images/hero/notificacion2_ar.png"]
+      "notificationsSrc": [
+        "/assets/images/hero/notificacion1_ar.png",
+        "/assets/images/hero/notificacion2_ar.png"
+      ]
     },
     "downloadApp": {
       "title": "The good side of your Money",
@@ -650,7 +675,11 @@
         "src": "/assets/video/chat_web_mx.mp4"
       },
       "title": "100% Online Service",
-      "paragraphs": ["Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.", "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.", "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"]
+      "paragraphs": [
+        "Si tienes dudas, ¡pregúntanos a nosotros! <br>Si eres usuario de Ualá escríbenos por el chat de la app.",
+        "Si todavía no eres parte de Ualá, nos puedes escribir por mail a <a href='mailto:hola@uala.com.mx'>hola@uala.com.mx</a> o por nuestras redes sociales.",
+        "Además en la <a href='https://comunidad.uala.com.mx/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"
+      ]
     },
     "footer": {
       "footerBanner": {
@@ -797,7 +826,16 @@
         }
       ],
       "partnersCopy": "Puedes depositar dinero a tu Ualá en efectivo con tu código de barras desde más de 14 mil establecimientos",
-      "partnersLogos": ["walmart", "bodega-aurrera", "7-eleven", "superama", "extra", "farmacias-del-ahorro", "farmacias-benavides", "circle-k"],
+      "partnersLogos": [
+        "walmart",
+        "bodega-aurrera",
+        "7-eleven",
+        "superama",
+        "extra",
+        "farmacias-del-ahorro",
+        "farmacias-benavides",
+        "circle-k"
+      ],
       "viewMoreCTA": {
         "copy": "Ver tiendas afiliadas",
         "url": "#"

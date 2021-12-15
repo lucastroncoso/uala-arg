@@ -10,6 +10,7 @@ import { useAppContext } from '../../../store/context';
 import { TextPlugin } from 'gsap/dist/TextPlugin';
 import useIsMobile from '../utils/hooks/useIsMobile';
 
+
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(TextPlugin);
 }
@@ -20,12 +21,14 @@ const Hero = ({ content }) => {
   const regionAr = region === 'ar';
   const isMobile = useIsMobile(768);
 
+
   useEffect(() => {
     const tl = gsap.timeline({ repeat: -1, repeatDelay: 2, yoyo: true });
     const firstPopupElement = childrenSelector('[data-animation="popup-1"]');
     const secondPopupElement = childrenSelector('[data-animation="popup-2"]');
     const cardElement = childrenSelector('[data-animation="floating-card"]');
     const cycleContainer = childrenSelector('[data-animation="cycle-container"]');
+    const cycleContainer2 = childrenSelector('[data-animation="cycle-container2"]');
     const wordsToCycle = content.wordCycle;
 
     tl.fromTo(
@@ -35,7 +38,7 @@ const Hero = ({ content }) => {
         scale: 1,
         autoAlpha: 1,
         ease: 'back.out',
-        transformOrigin: '75% 50%',
+        transformOrigin: '62% 50%',
         duration: 0.5,
       },
       1,
@@ -46,18 +49,18 @@ const Hero = ({ content }) => {
         scale: 1,
         autoAlpha: 1,
         ease: 'back.out',
-        transformOrigin: '75% 63%',
+        transformOrigin: '60% 63%',
         duration: 0.5,
       },
       '+=0',
     );
 
-    const wordCycleTL = gsap.timeline({ repeat: -1 });
-    wordsToCycle.forEach((word) => {
-      let tl = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 });
-      tl.to(cycleContainer, { duration: 1, text: word, ease: 'slow (0.7, 0.4, false)' });
-      wordCycleTL.add(tl);
-    });
+
+    let tl2 = gsap.timeline({ repeat: 0, yoyo: false, repeatDelay: 2 })
+    tl2.to(cycleContainer, { duration: 1, text: "El lado bueno", ease: 'slow (0.7, 0.4, false)' }).to(
+      cycleContainer2, { duration: 1, text: "de tu plata", ease: 'slow (0.7, 0.4, false)' }
+    )
+
 
     const CardFloatTl = gsap.timeline({
       repeat: -1,
@@ -76,7 +79,7 @@ const Hero = ({ content }) => {
       { rotate: -1, x: 2, duration: isMobile ? 8 : 5, y: 20, ease: 'sine.inOut' },
       0,
     );
-  }, [isMobile]);
+  }, []);
 
   return (
     <section
@@ -84,23 +87,19 @@ const Hero = ({ content }) => {
       ref={sectionRef}
     >
       <div className={styles.background}>
-        <img
-          src={content.background[0].src}
-          alt={content.background[0].alt}
-          className={styles.backgroundImage}
-        />
+        <img src={content.background[0].src} className={styles.backgroundImage} />
+        <span className={styles.popupNotification}>
+          <img data-animation="popup-1" src={content.notificationsSrc[0]} />
+        </span>
+        <span className={styles.popupNotification}>
+          <img data-animation="popup-2" src={content.notificationsSrc[1]} />
+        </span>
         <span className={styles.backgroundImage}>
           <img
             data-animation="floating-card"
             src={content.background[1].src}
             alt={content.background[1].alt}
           />
-        </span>
-        <span className={styles.popupNotification}>
-          <img data-animation="popup-1" src={content.notificationsSrc[0]} />
-        </span>
-        <span className={styles.popupNotification}>
-          <img data-animation="popup-2" src={content.notificationsSrc[1]} />
         </span>
         <div className={styles.svgBottom}>
           <svg
@@ -118,16 +117,27 @@ const Hero = ({ content }) => {
         </div>
       </div>
       <BlockWrapper customClass={[styles.heroContent]}>
-        <h1 className={styles.title}>
-          {content.titleFirstLine}
-          <span className={styles.wordCycle}>
-            <span data-animation="cycle-container" />
-          </span>
-          <br />
-          {content.titleSecondLine}
-        </h1>
-        <p className={styles.paragraph}>{content.paragraph} </p>
-        <DownloadAppButton isStyled>{content.buttonCopy}</DownloadAppButton>
+        <div className="hidden w-full grid-cols-12 md:grid mt-36 justify-items-between">
+          <h1 data-animation="cycle-container" className={styles.title + " col-span-6 title-1"}>
+
+          </h1>
+          <h1 data-animation="cycle-container2" className={styles.titleRight + " col-span-6 title-1"}></h1>
+        </div>
+        <div className="hidden pt-2 md:block">
+          <DownloadAppButton
+            customClass={["text-blue-uala", "rounded-full", "border-blue-uala", "border-2", "px-10", "py-2", "text-xl", "hover:text-white", "hover:bg-blue-uala", "focus:outline-none"]}>
+            {content.buttonCopy}
+          </DownloadAppButton>
+        </div>
+
+        <div className="w-10/12 mx-auto md:hidden ">
+          <h1 data-animation="cycle-container" className={styles.title}></h1>
+          <h1 data-animation="cycle-container2" className={styles.title}></h1>
+
+          <p className={styles.paragraph}>{content.paragraph} </p>
+          <DownloadAppButton isStyled>{content.buttonCopy}</DownloadAppButton>
+        </div>
+
       </BlockWrapper>
     </section>
   );

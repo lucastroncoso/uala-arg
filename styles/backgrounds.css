@@ -66,3 +66,18 @@
     background-repeat: no-repeat;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .bg-blue-wave-nosotros {
+    background-color:#EFF4FF;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .bg-blue-wave-nosotros{
+    background: url(/assets/images/bg/Curva-nosotros-desktop.png);
+    background-position: center 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
