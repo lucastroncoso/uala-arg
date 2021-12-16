@@ -1,6 +1,7 @@
 import { fetchContent } from '../utils/contentful';
 import Layout from "../components/layout";
-import Faqss from "../components/faqsCategories";
+import FaqsCategories from "../components/faqs/faqsCategories";
+import Container from "../components/container"
 
 export async function getStaticProps() {
     const response = await fetchContent(`
@@ -31,27 +32,23 @@ export async function getStaticProps() {
     }
 }
 
-export default function Faqs({ response }) {
+export default function PreguntasFrecuentes({ response }) {
 
     let categories = response.argentinaFaqCategoryCollection.items
     let faqs = response.argentinaFaqCollection.items
 
     return (
         <>
-            <Layout nav footer
+            <Layout nav footer>
 
-            >
-
-
-                <div className="grid grid-cols-12 mt-14">
-                    <div className="col-span-10 col-start-2 mt-20">
-                        <p className="text-xl w-5/6 ">
-                            <div className="">Preguntas frecuentas</div>
-                        </p>
-                        <div className="mb-16 title-1 mt-4">¿Tenés <br /> alguna duda?</div>
-                        <Faqss categories={categories} faqs={faqs} />
+                <Container className="mt-32">
+                    <div className="text-xl w-5/6 ">Preguntas frecuentas</div>
+                    <div className="mb-16 title-1 mt-4">
+                        ¿Tenés <br /> alguna duda?
                     </div>
-                </div>
+                </Container>
+                <FaqsCategories categories={categories} faqs={faqs} />
+
 
             </Layout>
         </>

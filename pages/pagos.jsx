@@ -26,6 +26,7 @@ export default function Pagos(props) {
                     img={<Image src="/assets/images/pagos/hero-pagosyrecargas.jpg" width={1084} height={834} />}
                 />
 
+
                 <CardSection className="bg-red-degrade">
                     <Card img="/assets/images/pagos/icono-recarga-celular.png"
                         title="Recargá tu celular o TV"
