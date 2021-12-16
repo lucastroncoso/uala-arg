@@ -20,7 +20,7 @@ export default function Nosotros(props) {
             </Head>
             <Layout nav footer>
                 <Hero
-                    containerStyles="bg-blue-wave md:bg-none mt-12"
+                    containerStyles="bg-blue-wave-onli-mobile md:bg-none mt-12"
                     section="Nosotros"
                     title="Somos Ualá"
                     subtitle="Somos la fintech que te permite manejar todas tus finanzas desde una app y una tarjeta"

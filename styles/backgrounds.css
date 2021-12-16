@@ -32,6 +32,7 @@
     background-repeat: no-repeat;
   }
 }
+
 @media only screen and (max-width: 600px) {
   .bg-blue-wave {
     background: url(/assets/images/bg/Creditos_curva_mobile.png);
@@ -80,4 +81,25 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg-blue-wave-onli-mobile {
+    background: url(/assets/images/bg/Creditos_curva_mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 105%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .bg-blue-wave-onli-mobile{
+    background-color: white;
+  }
+}
+
+.bg-prensa {
+  background: linear-gradient(to top, #000000ad, #00000061), url(/assets/images/bg/aboutBg.jpeg);
+  background-size: 100%;
+  background-position: center;
 }

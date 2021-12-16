@@ -49,7 +49,6 @@ export default function PreguntasFrecuentes({ response }) {
                 </Container>
                 <FaqsCategories categories={categories} faqs={faqs} />
 
-
             </Layout>
         </>
     )
