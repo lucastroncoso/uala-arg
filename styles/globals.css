@@ -75,14 +75,18 @@ p {
   @apply my-4;
 }
 
-.menu-list {
-  @apply hidden;
+.list-dot li:before {
+  content: "\2022";
+  color: #3e6afb;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -20px;
+  position: absolute;
 }
 
-.menu-option:hover .menu-list {
-  @apply block;
+.list-dot {
+  margin-left: 25px;
 }
 
-.slick-track{
-  display: flex;
-}
+

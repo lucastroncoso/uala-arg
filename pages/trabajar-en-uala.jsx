@@ -22,13 +22,9 @@ export default function Carrers(props) {
     };
 
     return (
-        <Layout>
-            <div className="bg-about h-96 flex items-center justify-center">
-                <Container>
-                    <div>
-                        <div className="text-white font-semibold text-5xl">Sobre Ualá</div>
-                    </div>
-                </Container>
+        <Layout nav footer>
+            <div className="bg-prensa h-96 flex items-center justify-center mt-20">
+                <div className="text-white font-semibold pl-24 text-5xl w-full">Sobre Ualá</div>
             </div>
             <Container>
                 <div className="my-24">
@@ -78,16 +74,16 @@ export default function Carrers(props) {
                             <div className="mt-8">
                                 <Slider {...settings}>
                                     <div>
-                                        <img className="rounded-md" src="/assets/images/office/1.jpeg" width={516} height={346} />
+                                        <img className="rounded-md" src="/assets/images/trabajar/office/1.jpeg" width={516} height={346} />
                                     </div>
                                     <div>
-                                        <img className="rounded-md" src="/assets/images/office/2.jpeg" width={516} height={346} />
+                                        <img className="rounded-md" src="/assets/images/trabajar/office/2.jpeg" width={516} height={346} />
                                     </div>
                                     <div>
-                                        <img className="rounded-md" src="/assets/images/office/3.jpeg" width={516} height={346} />
+                                        <img className="rounded-md" src="/assets/images/trabajar/office/3.jpeg" width={516} height={346} />
                                     </div>
                                     <div>
-                                        <img className="rounded-md" src="/assets/images/office/4.jpeg" width={516} height={346} />
+                                        <img className="rounded-md" src="/assets/images/trabajar/office/4.jpeg" width={516} height={346} />
                                     </div>
                                 </Slider>
                             </div>
@@ -97,14 +93,14 @@ export default function Carrers(props) {
                             <div className="grid lg:grid-cols-2">
                                 <div>
                                     <div>
-                                        <Image src="/assets/images/logo-gptw.svg" width={68} height={68} />
+                                        <Image src="/assets/images/trabajar/logo-gptw.svg" width={68} height={68} />
                                     </div>
                                     <div className="text-4xl mt-8">Great Place to Work</div>
                                     <div className="w-5/6"><p className="text">En 2019 logramos un lugar en el ranking de los mejores 20 lugares para trabajar en Argentina y en el 2020 fuimos reconocidos como una de las mejores empresas para trabajar para las mujeres y para los Millennials.</p></div>
                                 </div>
                                 <div>
                                     <div>
-                                        <img className="rounded-md" src="/assets/images/office/9.jpeg" />
+                                        <img className="rounded-md" src="/assets/images/trabajar/office/9.jpeg" />
                                     </div>
                                 </div>
                             </div>
@@ -118,13 +114,13 @@ export default function Carrers(props) {
                                         <img className="rounded-md" src="/assets/images/office/5.jpeg" width={516} height={346} />
                                     </div> */}
                                     <div>
-                                        <img className="rounded-md" src="/assets/images/office/6.jpeg" width={516} height={346} />
+                                        <img className="rounded-md" src="/assets/images/trabajar/office/6.jpeg" width={516} height={346} />
                                     </div>
                                     <div>
-                                        <img className="rounded-md" src="/assets/images/office/7.jpeg" width={516} height={346} />
+                                        <img className="rounded-md" src="/assets/images/trabajar/office/7.jpeg" width={516} height={346} />
                                     </div>
                                     <div>
-                                        <img className="rounded-md" src="/assets/images/office/8.jpeg" width={516} height={346} />
+                                        <img className="rounded-md" src="/assets/images/trabajar/office/8.jpeg" width={516} height={346} />
                                     </div>
                                 </Slider>
                             </div>
