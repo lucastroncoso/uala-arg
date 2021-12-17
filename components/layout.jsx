@@ -21,7 +21,11 @@ export default function Container(props) {
       <div>
         {props.nav && <C01Navigation content={pageContent[locale].navbar} />}
         {props.children}
-        {props.footer && <Footer content={pageContent[locale].footer} />}
+        {props.footer && (
+          props.banner 
+          ? <Footer content={pageContent[locale].footer} banner />
+          : <Footer content={pageContent[locale].footer} />
+        )}
       </div>
     </>
   );
