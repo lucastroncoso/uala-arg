@@ -95,7 +95,7 @@ const C01Navigation = ({ content }) => {
       <BlockWrapper customClass={[styles.blockWrapper]}>
         <div className={styles.brandWrapper}>
         <Link href="/">
-            <a>
+            <a className="h-full w-auto flex items-center">
               <img
                 src={LOGO_TEXT.src}
                 className={classNames(styles.logo, { [styles.isHidden]: isScrolled }, styles.logoText, {
