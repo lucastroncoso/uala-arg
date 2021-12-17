@@ -1,4 +1,11 @@
-import { fetchContent } from '../../utils/contentful'
+import { fetchContent } from '../../utils/contentful';
+import Head from 'next/head';
+import Layout from "../../components/layout";
+import Container from '../../components/container';
+import CardRoundedShadow from "../../components/cardRoundedShadow";
+import Image from "next/image";
+import OutlinedButton from '../../components/outlinedButton';
+import Link from 'next/link';
 
 export const getStaticPaths = async () => {
   const response = await fetchContent(`
@@ -23,7 +30,6 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  console.log(`where: { slug:"${ params.slug }" }`);
   const response = await fetchContent(`
   {
     argentinaPromotionCollection (
@@ -34,15 +40,13 @@ export const getStaticProps = async ({ params }) => {
         title,
         date,
         logo {
-          url
-        },
-        categoriesCollection {
-          items {
-            slug
-          }
+          url,
+          width,
+          height
         },
         locationsCollection {
           items {
+            name,
             slug
           }
         },
@@ -50,8 +54,7 @@ export const getStaticProps = async ({ params }) => {
         callToAction
         actionText,
         actionUrl,
-        conditions,
-        featured
+        conditions
       }
     }
   } 
@@ -61,14 +64,114 @@ export const getStaticProps = async ({ params }) => {
     props: { promotion: response.argentinaPromotionCollection.items[0] },
     revalidate: 10
   }
-
 }
 
 export default function Details({ promotion }) {
   if (!promotion) return <div>Loading</div>
   return (
-    <div>
-      {promotion.title}
-    </div>
+    <>
+            <Head>
+                <title>Ualá</title>
+            </Head>
+            <Layout nav footer banner>
+
+                <Container className="mx-auto lg:w-10/12 mb-72 mt-40">
+
+                  
+                  <div className="cursor-pointer flex flex-row items-center mb-12 lg:mb-20">
+                    <Link href="/promociones">
+                      <a className="link outline-none">
+                        <i className="fas fa-chevron-left mr-4"></i>Regresar a promociones
+                      </a>
+                    </Link>
+                  </div>
+
+
+                  <div className="flex flex-row justify-between">
+
+                    <div className="w-8/12">
+                        <CardRoundedShadow className="ml-0 mt-0 p-4 lg:p-12 w-1/2 mb-12 lg:mb-20">
+                          <Image
+                            src={ promotion.logo.url }
+                            width={ promotion.logo.width }
+                            height={ promotion.logo.height }
+                            alt={ promotion.title }
+                          />
+                        </CardRoundedShadow>
+                          
+
+                        <div className="w-full">
+                            <h1 className="title-2 md:w-5/6 mt-4">
+                                <div className="">{promotion.title}</div>
+                            </h1>
+                        </div>
+
+                        <div className="w-full mt-4">
+                            <div className="md:w-9/12 subtitle-1 ">
+                                {promotion.description}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="w-4/12 ml-4">
+                      <Image
+                        src="/assets/images/tarjeta/tarjeta-3D 1.png"
+                        width={ 1000 }
+                        height={ 1000 }
+                        alt="Promociones"
+                      />
+                    </div>
+
+                  </div>
+
+                  
+
+
+                  <div className="w-8/12 mt-8 flex flex-row flex-wrap">
+
+                    <div className="w-1/2 p">
+                        {promotion.date}
+                    </div>
+
+                    <div className="w-1/2 p ">
+                      <i className="fas fa-map-marker-alt mr-2 text-blue-250"></i>
+                      {
+                        !!promotion && promotion.locationsCollection.items.map(loc => {
+                          if (loc.name !== promotion.locationsCollection.items.slice(-1)[0].name ) {
+                            return loc.name + ", ";
+                          } 
+                          return loc.name;
+                        })
+                      }
+                    </div>
+
+                    {
+                      promotion.callToAction &&
+                      <div className="w-full">
+                        <OutlinedButton
+                          href={promotion.actionUrl}
+                          text={promotion.actionText}
+                        />
+                      </div>
+                    }
+
+                  </div>
+
+                  <div className="w-full mt-20 mb-2">
+                    <p className="subtitle-3 ">Bases y condiciones</p>
+
+                    <p className="p text-justify">
+                      <small>
+                        {promotion.conditions}
+                      </small>
+                    </p>
+                  </div>
+
+
+                </Container>
+
+
+            </Layout>
+        </>
   )
 }
