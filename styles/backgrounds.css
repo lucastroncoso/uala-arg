@@ -12,7 +12,12 @@
 }
 
 .bg-blue-degrade-calculator {
-  background: linear-gradient(360deg, #E2EAFF -128.74%, #3E6BFD 117.3%);}
+  background: linear-gradient(360deg, #E2EAFF -128.74%, #3E6BFD 117.3%);
+}
+
+.bg-gradient-misionuala {
+  background: linear-gradient(259.36deg, rgba(255, 103, 102, 0.3) -17.15%, rgba(142, 168, 255, 0.3) 112.98%);
+}
 
 /* WAVES */
 @media only screen and (max-width: 600px) {
@@ -102,4 +107,29 @@
   background: linear-gradient(to top, #000000ad, #00000061), url(/assets/images/bg/aboutBg.jpeg);
   background-size: 100%;
   background-position: center;
+}
+
+.bg-header-misionuala {
+  background-image: url(/assets/images/misionuala/sorteoPS5_header-desktop.png);
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  .bg-header-misionuala {
+      background-image: url(/assets/images/misionuala/fondo-mobile.png);
+      background-size: 100%;
+      background-position: top center;
+      background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .bg-header-misionuala {
+      background-image: url(/assets/images/misionuala/sorteoPS5_header-desktop.png);
+      background-size: 100%;
+      background-position: top right;
+      background-repeat: no-repeat;
+  }
 }
