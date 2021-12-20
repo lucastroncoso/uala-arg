@@ -32,6 +32,7 @@ export default function MisionUala(props) {
             method: 'POST'
         }).then(response => response.json())
             .then(() => setSended(true))
+            .then()
 
 
         if (res.type == "PS5_ADD_SUCCESS") {
