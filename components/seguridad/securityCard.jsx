@@ -3,7 +3,7 @@ import styles from './SeguridadCard.module.css'
 
 export default function SecurityCard(props) {
     return (
-        <div className={styles.securityCard + "  pb-8 py-20 md:pt-0 text-gray-250"}>
+        <div className={styles.securityCard + "  py-4 md:py-20  md:pt-0 text-gray-250"}>
             <div className={styles.tab + " border bg-white rounded-2xl col-span-12 col-start-2 shadow-xl"}>
                 <div className="border-l-2 border-transparent relative">
                     <input
@@ -11,10 +11,10 @@ export default function SecurityCard(props) {
                         type="checkbox"
                         id="chck2"
                     />
-                    <div className={styles.tabLabel + " flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none "}
+                    <div className={styles.tabLabel + " flex justify-between items-center md:p-5 p-2 md:pl-8 pr-8 cursor-pointer select-none "}
                         for="chck2">
                         <div className="inline-flex left">
-                            <img src={props.src} className="w-20 h-auto"></img>
+                            <img src={props.src} className="md:w-20 w-16 h-auto"></img>
                             <h4 className="place-self-center  title-3 pl-4 md:pl-10">
                                 {props.title}
                             </h4>
@@ -27,7 +27,7 @@ export default function SecurityCard(props) {
                     </div>
                     <div className={styles.tabContent + "  flex  pr-8 subtitle-2"}>
 
-                        <div className="pl-36 pb-8">{props.children}</div>
+                        <div className="md:pl-36 pl-12 pb-8">{props.children}</div>
                     </div>
                 </div>
             </div>

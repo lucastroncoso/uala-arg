@@ -18,7 +18,7 @@ export default function Seguridad(props) {
           subtitle="Seguí estos consejos para operar de forma segura con Ualá."
           img={<Image src="/assets/images/seguridad/Mask Group (28).png" width={1365} height={1050} />}
         />
-        <Container className=" bg-red-degrade  md:py-36 text-gray-250">
+        <Container className=" bg-red-degrade  md:py-36 py-20 text-gray-250">
           <SecurityCard title="Seguridad de tus claves"
             src="/assets/images/seguridad/1.png">
             <div>
