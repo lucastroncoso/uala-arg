@@ -131,7 +131,7 @@ export default function Promociones(props) {
                 selectableCategories.push( category );
             }
         });
-        selectableCategories.unshift({slug: 'any-category', name: 'Cualquier categoría'});
+        selectableCategories.unshift({slug: 'any-category', name: 'Todas las categorías'});
         setCategories(selectableCategories);
 
         // Lista de ubicaciones para el filtro - solo aquellas que tengan alguna promoción activa
@@ -150,7 +150,7 @@ export default function Promociones(props) {
                 selectableLocations.push( location );
             }
         });
-        selectableLocations.unshift({slug: 'any-place', name: 'Cualquier lugar'});
+        selectableLocations.unshift({slug: 'any-place', name: 'Todas las ubicaciones'});
         setLocations(selectableLocations);
 
     }, [ allPromotions ] );
@@ -241,7 +241,8 @@ export default function Promociones(props) {
             </Head>
             <Layout nav footer banner>
 
-            <div className="mt-16 md:mt-22 md:pt-2 lg:pt-4 w-full gap-x-4 overflow-hidden">
+                <div className="mt-16 md:mt-22 md:pt-2 lg:pt-4 w-full gap-x-4 overflow-hidden">
+                    {/* Se oculta temporalmente para first deploy
                     <Slider autoplaySpeed={5000} slidesToShow={1} infinite autoplay pauseOnHover>
                         {
                             !!banners && banners.map( banner => (
@@ -269,7 +270,31 @@ export default function Promociones(props) {
                                 </div> 
                             ))
                         }
-                    </Slider>
+                    </Slider> */}
+                    {!!banners && 
+                                
+                                <div className="w-full">
+                                    <div className="hidden md:block">
+                                        <Image 
+                                            layout="responsive"
+                                            src={ banners[0].desktopImage.url }
+                                            width={ banners[0].desktopImage.width }
+                                            height={ banners[0].desktopImage.height }
+                                            alt={ banners[0].description }
+                                        />
+                                    </div>
+
+                                    <div className="block md:hidden">
+                                        <Image 
+                                            layout="responsive"
+                                            src={ banners[0].mobileImage.url }
+                                            width={ banners[0].mobileImage.width }
+                                            height={ banners[0].mobileImage.height }
+                                            alt={ banners[0].description }
+                                        />
+                                    </div>
+                                </div> 
+                        }
                 </div>
 
                 <Container className="mx-auto lg:w-10/12 mb-72">

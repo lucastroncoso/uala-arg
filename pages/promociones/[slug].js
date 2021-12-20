@@ -115,17 +115,14 @@ export default function Details({ promotion }) {
 
                     <div className="w-4/12 ml-4">
                       <Image
-                        src="/assets/images/tarjeta/tarjeta-3D 1.png"
+                        src="/assets/images/promociones/promociones-hero.png"
                         width={ 1000 }
-                        height={ 1000 }
+                        height={ 919 }
                         alt="Promociones"
                       />
                     </div>
 
                   </div>
-
-                  
-
 
                   <div className="w-8/12 mt-8 flex flex-row flex-wrap">
 

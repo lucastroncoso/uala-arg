@@ -14,7 +14,7 @@ export default function PromotionFilters({
     
 
     return (
-        <div className="grid grid-cols-3 space-x-4 mx-4">
+        <div className="grid grid-cols-2 space-x-4 mx-4">
             <div className="rounded-xl shadow-lightblue p-2 pl-4 pb-4">
                 <Dropdown 
                     key="categoria" 
@@ -35,6 +35,7 @@ export default function PromotionFilters({
                     setSelectedValue={ setSelectedLocation }
                 />
             </div>
+            {/* Se oculta temporalmente para first deploy
             <div className="rounded-xl shadow-lightblue p-2 flex flex-col justify-center">
                 <CheckboxSelector
                     value="show-newest"
@@ -43,7 +44,7 @@ export default function PromotionFilters({
                     selected={ showNewest }
                     setSelected={ setShowNewest }
                 />
-            </div>
+            </div> */}
         </div>
     )
 }
