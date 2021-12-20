@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import { fetchContent } from '../../utils/contentful';
 import Layout from "../../components/layout";
 import Container from '../../components/container';
+import Image from "next/image";
 import FeaturedPromotionCard from '../../components/promotions/featuredPromotionCard';
 import PromotionCard from '../../components/promotions/promotionCard';
 import PromotionFilters from '../../components/promotions/promotionFilters';
+import Slider from '../../components/slider/slider';
 
 export async function getStaticProps() {
     const response_promos = await fetchContent(`
@@ -45,27 +47,34 @@ export async function getStaticProps() {
 
     const response_others = await fetchContent(`
     {
-        banner(id: "7DHXlgGa8Bywucy53A3Ai") {
-          bannerDesktop {
-            url
-          }
-          bannerMobile1 {
-            url
+        promotionBannerArgentinaCollection {
+          items {
+            description
+            desktopImage {
+                url
+                width
+                height
+            }
+            mobileImage {
+                url
+                width
+                height
+            }
           }
         },
-        promotionCategoryCollection {
+        argentinaPromotionCategoryCollection (order: [id_ASC]) {
           items {
             slug
             name
           }
         },
-        promotionLocationCollection {
+        argentinaPromotionLocationCollection (order: [name_ASC]) {
           items {
             slug
             name
           }
         }
-      }  
+      }      
     `);
 
     return {
@@ -75,7 +84,7 @@ export async function getStaticProps() {
 }
 
 const isPromotionNew = date => {
-    // const today = new Date('2021-12-22T19:20:00.660Z'); // Prueba para promociones creadas junto con la prueba de la web
+    // const today = new Date('2021-12-16T19:46:30.00Z'); // Prueba para promociones creadas junto con la prueba de la web
     const today = new Date();
     const promotionCreationDate = new Date(date);
     const differenceTime = today.getTime() - promotionCreationDate.getTime();
@@ -93,11 +102,12 @@ export default function Promociones(props) {
     const [ promotions, setPromotions ] = useState(); // Lista de promociones restantes completa
     const [ displayableFeaturedPromotions, setDisplayableFeaturedPromotions ] = useState([]); // Lista de promos destacadas visibles ( filtradas )
     const [ displayablePromotions, setDisplayablePromotions ] = useState([]); // Lista de promociones restantes visibles ( filtradas )
-    const [ categories, setCategories ] = useState( props.response_others.promotionCategoryCollection.items ); // Lista de categorias - filtro
-    const [ locations, setLocations ] = useState( props.response_others.promotionLocationCollection.items ); // Lista de ubicaciones - filtro
+    const [ categories, setCategories ] = useState( props.response_others.argentinaPromotionCategoryCollection.items ); // Lista de categorias - filtro
+    const [ locations, setLocations ] = useState( props.response_others.argentinaPromotionLocationCollection.items ); // Lista de ubicaciones - filtro
     const [ selectedCategory, setSelectedCategory ] = useState({slug: ''}); // Categoría seleccionada
     const [ selectedLocation, setSelectedLocation ] = useState({slug: ''}); // Ubicación seleccionada
     const [ showNewest, setShowNewest ] = useState( false ); // Mostrar promociones nuevas
+    const [ banners, setBanners ] = useState( props.response_others.promotionBannerArgentinaCollection.items ); // Banners
 
     useEffect( () => {
         // Lista de promociones destacadas - las primeras 2 que tengan la propiedad featured
@@ -106,7 +116,7 @@ export default function Promociones(props) {
         setDisplayableFeaturedPromotions( featured.slice( 0, 2 ) );
 
         // Lista de categorías para el filtro - solo aquellas que tengan alguna promoción activa
-        let allCategories = props.response_others.promotionCategoryCollection.items;
+        let allCategories = props.response_others.argentinaPromotionCategoryCollection.items;
         let selectableCategories = [];
         let categoriesInUse = [];
         allPromotions.forEach(promotion => {
@@ -125,7 +135,7 @@ export default function Promociones(props) {
         setCategories(selectableCategories);
 
         // Lista de ubicaciones para el filtro - solo aquellas que tengan alguna promoción activa
-        let allLocations = props.response_others.promotionLocationCollection.items;
+        let allLocations = props.response_others.argentinaPromotionLocationCollection.items;
         let selectableLocations = [];
         let locationsInUse = [];
         allPromotions.forEach(promotion => {
@@ -229,11 +239,37 @@ export default function Promociones(props) {
             <Head>
                 <title>Ualá</title>
             </Head>
-            <Layout nav footer>
-                
-                <div className="flex justify-center md:mt-20 mt-12">
-                    <div className="hidden lg:block"><img src={props.response_others.banner.bannerDesktop.url} /></div>
-                    <div className="lg:hidden"><img src={props.response_others.banner.bannerMobile1.url} /></div>
+            <Layout nav footer banner>
+
+            <div className="mt-16 md:mt-22 md:pt-2 lg:pt-4 w-full gap-x-4 overflow-hidden">
+                    <Slider autoplaySpeed={5000} slidesToShow={1} infinite autoplay pauseOnHover>
+                        {
+                            !!banners && banners.map( banner => (
+                                
+                                <div key={ banner.description } className="w-full">
+                                    <div className="hidden md:block">
+                                        <Image 
+                                            layout="responsive"
+                                            src={ banner.desktopImage.url }
+                                            width={ banner.desktopImage.width }
+                                            height={ banner.desktopImage.height }
+                                            alt={ banner.description }
+                                        />
+                                    </div>
+
+                                    <div className="block md:hidden">
+                                        <Image 
+                                            layout="responsive"
+                                            src={ banner.mobileImage.url }
+                                            width={ banner.mobileImage.width }
+                                            height={ banner.mobileImage.height }
+                                            alt={ banner.description }
+                                        />
+                                    </div>
+                                </div> 
+                            ))
+                        }
+                    </Slider>
                 </div>
 
                 <Container className="mx-auto lg:w-10/12 mb-72">

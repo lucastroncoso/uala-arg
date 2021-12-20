@@ -10,6 +10,7 @@ import MSubMenu from './M-SubMenu/MSubMenu';
 import useIsMobile from '../utils/hooks/useIsMobile';
 import ArrowIcon from '../A-ArrowIcon/ArrowIcon';
 import DownloadAppButton from '../DownloadAppButton/DownloadAppButton';
+import Link from 'next/link';
 
 const C01Navigation = ({ content }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -93,25 +94,29 @@ const C01Navigation = ({ content }) => {
     <nav className={styles.C01Navigation} onMouseLeave={closeSubMenu}>
       <BlockWrapper customClass={[styles.blockWrapper]}>
         <div className={styles.brandWrapper}>
-          <img
-            src={LOGO_TEXT.src}
-            className={classNames(styles.logo, { [styles.isHidden]: isScrolled }, styles.logoText, {
-              [styles.isVisible]: !isScrolled,
-            })}
-            alt="logo-text"
-          />
+        <Link href="/">
+            <a className="h-full w-auto flex items-center">
+              <img
+                src={LOGO_TEXT.src}
+                className={classNames(styles.logo, { [styles.isHidden]: isScrolled }, styles.logoText, {
+                  [styles.isVisible]: !isScrolled,
+                })}
+                alt="logo-text"
+              />
 
-          <img
-            onClick={onLogoClick}
-            src={LOGO_WAVE.src}
-            className={classNames(
-              styles.logo,
-              { [styles.isHidden]: !isScrolled },
-              styles.logoWave,
-              { [styles.isVisible]: isScrolled },
-            )}
-            alt="logo-wave"
-          />
+              <img
+                onClick={onLogoClick}
+                src={LOGO_WAVE.src}
+                className={classNames(
+                  styles.logo,
+                  { [styles.isHidden]: !isScrolled },
+                  styles.logoWave,
+                  { [styles.isVisible]: isScrolled },
+                )}
+                alt="logo-wave"
+              />
+            </a>
+          </Link>
 
           <button
             className={menuButtonStyle}

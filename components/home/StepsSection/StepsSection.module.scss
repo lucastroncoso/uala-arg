@@ -70,6 +70,9 @@ h3.title {
     display: grid;
     grid-auto-flow: column;
   }
+
+  /* Para que todas las cards tengan la misma altura */
+  align-items: stretch;
 }
 
 .cardWrapper {
@@ -91,6 +94,9 @@ h3.title {
     align-items: center;
     margin-right: 0;
   }
+
+  /* Para que todas las cards tengan la misma altura */
+  height: 100%;
 }
 
 .number {
@@ -104,8 +110,10 @@ h3.title {
 
 .stepsCard {
   flex: 0 0 100%;
-
   position: relative;
+
+  /* Para que todas las cards tengan la misma altura */
+  flex-grow: 1;
 }
 
 .cardDot {

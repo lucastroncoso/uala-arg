@@ -15,7 +15,7 @@ export default function PromotionFilters({
 
     return (
         <div className="grid grid-cols-3 space-x-4 mx-4">
-            <div className="rounded-xl shadow-lightblue p-2">
+            <div className="rounded-xl shadow-lightblue p-2 pl-4 pb-4">
                 <Dropdown 
                     key="categoria" 
                     slug="categoria" 
@@ -25,7 +25,7 @@ export default function PromotionFilters({
                     setSelectedValue={ setSelectedCategory }
                 />
             </div>
-            <div className="rounded-xl shadow-lightblue p-2">
+            <div className="rounded-xl shadow-lightblue p-2 pl-4 pb-4">
                 <Dropdown 
                     key="ubicaciones" 
                     slug="ubicaciones" 
@@ -35,7 +35,7 @@ export default function PromotionFilters({
                     setSelectedValue={ setSelectedLocation }
                 />
             </div>
-            <div className="rounded-xl shadow-lightblue p-2">
+            <div className="rounded-xl shadow-lightblue p-2 flex flex-col justify-center">
                 <CheckboxSelector
                     value="show-newest"
                     label="Nuevos beneficios"

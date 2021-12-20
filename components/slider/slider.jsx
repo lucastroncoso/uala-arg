@@ -9,15 +9,15 @@ export default class SimpleSlider extends Component {
     }
     render() {
         const settings = {
-            dots: false,
-            infinite: false,
-            slidesToShow: 1.1,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 3500,
-            pauseOnHover: true,
-            accessibility: false,
-            arrows: false,
+            dots: this.props.dots || false,
+            infinite: this.props.infinite || false,
+            slidesToShow: this.props.slidesToShow || 1.1,
+            slidesToScroll: this.props.slidesToScroll || 1,
+            autoplay: this.props.autoplay || false,
+            autoplaySpeed: this.props.autoplaySpeed || 3500,
+            pauseOnHover: this.props.pauseOnHover || false,
+            accessibility: this.props.accessibility || false,
+            arrows: this.props.arrows || false,
 
             // responsive: [
             //     {
@@ -35,7 +35,7 @@ export default class SimpleSlider extends Component {
         return (
 
 
-            <div className="bg-red-250">
+            <div className="">
                 <Slider {...settings}>
                     {this.props.children}
                 </Slider>

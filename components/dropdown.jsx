@@ -11,7 +11,7 @@ export default function Dropdown( props ) {
 
   return (
     <div>
-      <FormControl variant="standard" sx={{ width: '100%' }}>
+      <FormControl variant="standard" sx={{ width: '100%' }} >
         <InputLabel id={ `${ props.slug }-label` }>{ props.name }</InputLabel>
         <Select
           labelId={ `${ props.slug }-label` }
@@ -19,6 +19,7 @@ export default function Dropdown( props ) {
           value={ props.selectedValue.slug }
           onChange={ handleChange }
           label={ props.name }
+          disableUnderline
         >
           { 
             props.items.map( item => (
