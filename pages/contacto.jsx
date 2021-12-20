@@ -27,7 +27,7 @@ export default function Seguridad(props) {
                     <div className="grid gap-8 md:grid-cols-2 gap-x-40 col-span-full ">
                         <ContactCard title="Chat de la app"
                             href="/assets/images/contacto/Ilus-Chat.png"
-                            subtitle="Chatea con nosotros desde la app de Ualá de lunes a viernes de 7 a 23hs y los sábados de 7 a 18hs.Inicia el chat, escribe tu consulta y quédate en línea para que podamos responderte."
+                            subtitle="Chatea con nosotros desde la app de Ualá de lunes a viernes de 7 a 23hs y los sábados de 7 a 18hs. Inicia el chat, escribe tu consulta y quédate en línea para que podamos responderte."
                         />
                         <ContactCard title="Mail"
                             href="/assets/images/contacto/Ilus-Mail.png"

@@ -1,7 +1,4 @@
-import Container from "../components/container";
 import Hero from "../components/hero";
-import CardItem from "../components/cardItem";
-import CardSmItem from "../components/cardSmItem";
 import Card from "../components/card";
 import CardSection from "../components/cardSection";
 import Layout from "../components/layout";
