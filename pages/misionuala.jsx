@@ -8,7 +8,8 @@ export default function MisionUala(props) {
     const [ sended, setSended ] = useState(false);
     const [ datos, setDatos ] = useState({
         usuarioUala: '',
-        dni: ''
+        dni: '',
+        termsAcepted: false
     });
 
     const handleSubmit = async (event) => {
@@ -46,6 +47,14 @@ export default function MisionUala(props) {
             ...datos,
             [event.target.name]: event.target.value,
         });
+    }; 
+
+    const handleCheckboxChange = (event) => {
+        setDatos({
+            ...datos,
+            [event.target.name]: event.target.checked,
+        });
+        console.log(event.target.checked)
     }; 
 
   return (
@@ -163,6 +172,7 @@ export default function MisionUala(props) {
                                 <input type="checkbox" required="required" 
                                     className="ml-1 mr-2 lg:ml-0 "
                                     id="termsAcepted" name="termsAcepted"
+                                    onChange={handleCheckboxChange}
                                 />
                                 <label forHtml="termsAcepted" className="mb-4 text-sm text-gray-800">
                                     He leído y acepto los <a className="link" href="/legalesmisionuala" target="_blank">Términos y Condiciones.</a>
