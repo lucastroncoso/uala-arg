@@ -1,0 +1,43 @@
+
+.securityCard .tab {
+    overflow: hidden;
+  }
+
+.securityCard .tabContent {
+    max-height: 0;
+    transition: all 0.1s;
+}
+  
+.securityCard input:checked + .tabLabel .test svg {
+    transform: rotate(180deg);
+    stroke: #3e6bfd;
+}
+  
+.securityCard input:checked + .tabLabel::after {
+    transform: rotate(90deg);
+}
+  /* input:checked ~ .tabContent {
+    max-height: 100vh;
+  } */
+.securityCard input:checked + h4{
+    color: #3e6afb;
+}
+  
+.securityCard .tab-2 {
+    overflow: hidden;
+}
+.securityCard .tabContent {
+    max-height: 0;
+    transition: all 0.1s;
+}
+  
+.securityCard input:checked + .tabLabel .test svg {
+    transform: rotate(180deg);
+    stroke: #4a5053;
+}
+.securityCard input:checked + .tabLabel::after {
+    transform: rotate(90deg);
+}
+.securityCard input:checked ~ .tabContent {
+    max-height: 300vh;
+}
