@@ -5,8 +5,8 @@ import Layout from "../components/layout";
 import Container from '../components/container';
 
 export default function MisionUala(props) {
-    const [ sended, setSended ] = useState(false);
-    const [ datos, setDatos ] = useState({
+    const [sended, setSended] = useState(false);
+    const [datos, setDatos] = useState({
         usuarioUala: '',
         dni: '',
         termsAcepted: false
@@ -31,7 +31,7 @@ export default function MisionUala(props) {
             },
             method: 'POST'
         }).then(response => response.json())
-        .then(() => setSended(true))
+            .then(() => setSended(true))
 
 
         if (res.type == "PS5_ADD_SUCCESS") {
@@ -47,21 +47,21 @@ export default function MisionUala(props) {
             ...datos,
             [event.target.name]: event.target.value,
         });
-    }; 
+    };
 
     const handleCheckboxChange = (event) => {
         setDatos({
             ...datos,
-            [event.target.name]: event.target.checked,
+            [event.target.name]: event.target.value,
         });
         console.log(event.target.checked)
-    }; 
+    };
 
-  return (
-    <>
-        <Head>
-            <title>Ualá</title>
-        </Head>
+    return (
+        <>
+            <Head>
+                <title>Ualá</title>
+            </Head>
             <Layout nav footer>
 
                 <Container className="bg-header-misionuala mt-16 lg:mt-20 text-center  pt-4 lg:pt-0 ">
@@ -70,7 +70,7 @@ export default function MisionUala(props) {
                             <div className="w-full">
                                 <p className="">
                                     <div className="">
-                                        <Image 
+                                        <Image
                                             src="/assets/images/misionuala/isologo.svg"
                                             width={64}
                                             height={71}
@@ -82,12 +82,12 @@ export default function MisionUala(props) {
                             <div className="w-full">
                                 <h1 className="title-1 md:w-5/6 mt-4">
                                     <div className="">
-                                        <Image 
+                                        <Image
                                             src="/assets/images/misionuala/title.png"
                                             width={420}
                                             height={83}
                                             alt="Misión Ualá"
-                                        />    
+                                        />
                                     </div>
                                 </h1>
                             </div>
@@ -114,19 +114,19 @@ export default function MisionUala(props) {
                         </p>
 
                         <p className="lg:text-center text-xl lg:text-3xl text-gray-800 mb-4 lg:mb-12"> Te explicamos cuáles son los
-                            objetivos:
+                        objetivos:
                         </p>
                     </div>
                     <div className="shadow-xl lg:p-12 lg:mx-32 rounded-2xl p-4 mx-4 border border-gray-100 mb-12">
                         <div className="flex mx-auto mb-4 items-center">
-                            <img className="pr-4 lg:pr-10" src="assets/images/misionuala/icono1.svg " alt=""/>
+                            <img className="pr-4 lg:pr-10" src="assets/images/misionuala/icono1.svg " alt="" />
                             <p className="text-xl text-gray-600">Hacé una compra con tu tarjeta Ualá.
                             </p>
                         </div>
                         <div className="flex mx-auto items-center">
-                            <img className="pr-4 lg:pr-10" src="assets/images/misionuala/icono2.svg" alt=""/>
+                            <img className="pr-4 lg:pr-10" src="assets/images/misionuala/icono2.svg" alt="" />
                             <p className="text-xl link ">
-                                    Completá el siguiente formulario.
+                                Completá el siguiente formulario.
                             </p>
                         </div>
 
@@ -141,9 +141,9 @@ export default function MisionUala(props) {
                                 <label for="usuarioUala"
                                     className="block w-2/4 lg:py-8 py-4 pl-0 mx-auto text-center lg:mr-0 lg:ml-4 lg:text-left lg:pl-4 text-xl text-gray-800"
                                 >Usuario de Ualá</label>
-                                <input type="text" required="required" 
-                                    id="usuarioUala" 
-                                    name="usuarioUala" 
+                                <input type="text" required="required"
+                                    id="usuarioUala"
+                                    name="usuarioUala"
                                     placeholder="Ale.rodriguez"
                                     value={datos.usuarioUala}
                                     onChange={handleInputChange}
@@ -157,7 +157,7 @@ export default function MisionUala(props) {
                                 <label for="dni"
                                     className="block w-2/4 lg:py-8 py-4 pl-0 mx-auto text-center lg:mr-0 lg:ml-4 lg:text-left lg:pl-4 text-xl text-gray-800 "
                                 >DNI</label>
-                                <input type="text" required="required" id="dni" 
+                                <input type="text" required="required" id="dni"
                                     name="dni" placeholder="xxxxxxxxx"
                                     pattern="[0-9]{8}" title="Debe poner 8 números"
                                     value={datos.name}
@@ -166,12 +166,12 @@ export default function MisionUala(props) {
                                 />
                             </div>
                         </div>
-                        
+
                         <div className="col-span-2 flex my-8">
                             <div className="mx-auto">
-                                <input type="checkbox" required="required" 
+                                <input type="checkbox" required="required"
                                     className="ml-1 mr-2 lg:ml-0 "
-                                    id="termsAcepted" name="termsAcepted"
+                                    id="termsAcepted" name="termsAcepted" value="true"
                                     onChange={handleCheckboxChange}
                                 />
                                 <label forHtml="termsAcepted" className="mb-4 text-sm text-gray-800">
@@ -192,7 +192,7 @@ export default function MisionUala(props) {
                     <div class="container mx-auto w-full">
                         <div class="grid grid-cols-12 p-8 lg:p-12 ">
                             <div class=" col-span-12 lg:col-span-4 ">
-                                <img src="assets/images/misionuala/PS5-consola.png" alt="" class="w-3/4 lg:w-5/6 mx-auto"/>
+                                <img src="assets/images/misionuala/PS5-consola.png" alt="" class="w-3/4 lg:w-5/6 mx-auto" />
                             </div>
                             <div class="col-span-12 lg:col-span-8 content-center flex flex-wrap lg:pr-10 text-center lg:text-left">
                                 <p class="mb-8 text-2xl font-bold text-blue-250" >Apurate, porque tod@s la quieren.</p>
@@ -203,13 +203,13 @@ export default function MisionUala(props) {
                     </div>
                     <div class="py-12 text-justify mx-8 lg:mx-0">
                         <div class="marginContainer  text-gray-600">
-                        El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3, de la Ley N° 25.326. Esto es obligatorio en formularios de recolección de datos personales. 
+                            El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3, de la Ley N° 25.326. Esto es obligatorio en formularios de recolección de datos personales.
                         </div>
                     </div>
                 </Container>
 
-        </Layout>
+            </Layout>
 
-    </>
-  );
+        </>
+    );
 }
