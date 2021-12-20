@@ -27,7 +27,7 @@ export default function Costos(props) {
                 <title>Ualá</title>
             </Head>
             <Layout nav footer>
-                <Container className="md:mt-12 mt-24 bg-blue-wave-2">
+                <Container className="md:mt-12 mt-24 bg-blue-wave-2 md:pb-44">
                     <div className="grid lg:grid-cols-2 lg:mt-8 mb-26">
                         <div className="flex content-center flex-wrap order-2">
                             <div className="">
@@ -44,13 +44,13 @@ export default function Costos(props) {
                     </div>
                 </Container>
 
-                <div className="bg-blue-degrade mb-24">
+                <div className="bg-blue-degrade mb-24 ">
                     <Container>
-                        <div className="my-20 grid md:grid-cols-2">
+                        <div className="py-20 grid md:grid-cols-2 md:-mt-44">
                             {
                                 charges.map(charge => (
                                     <div className="grid">
-                                        <div className="bg-white rounded-md p-8 m-3 flex flex-col border-gray-5' rounded-2xl shadow">
+                                        <div className="bg-white rounded-md p-8 m-3 flex flex-col border-gray-5' rounded-2xl shadow-blue">
                                             <div className="text-blue-600 text-center text-2xl">{charge.title}</div>
                                             <div className="md:text-8xl text-5xl text-gray-800 text-center md:my-12 my-4 flex items-center justify-center">{charge.cost}</div>
                                             {charge.description && <div className="flex-grow  flex items-center text-gray-600 text-center">{charge.description}</div>}
