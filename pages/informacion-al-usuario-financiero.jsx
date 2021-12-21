@@ -35,7 +35,7 @@ export default function Nosotros(props) {
                     <p className="break-words">
                         Las quejas y/o reclamos de los usuarios deberán resolverse definitivamente en un plazo máximo de 10 días hábiles. La falta de respuesta o disconformidad en la resolución podrán ser informados al BCRA. Podés contactar a su área de Protección al Usuario de Servicios Financieros ingresando a <a target="_blank" className="link" href="http://www.bcra.gob.ar/BCRAyVos/Usuarios_Financieros.asp">www.bcra.gob.ar/BCRAyVos/Usuarios_Financieros.asp</a>
                     </p>
-                    <div className="grid md:grid-cols-2">
+                    <div className="grid md:grid-cols-2  md:w-8/12 my-12">
                         <Image src="/assets/images/legal/cartel-BCRA-baja-de-servicio.jpeg" width={1000} height={1414} />
                         <Image src="/assets/images/legal/cartel-BCRA-contacto.jpeg" width={1000} height={1414} />
                     </div>
