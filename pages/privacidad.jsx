@@ -13,9 +13,9 @@ export default function Privacidad(props) {
             <Layout nav footer>
 
                 <Container className="mt-24 md:mt-36 mb-20">
-                    <p className="text-xl w-5/6 ">
+                    <div className="text-xl w-5/6 ">
                         <div className="">Políticas de privacidad</div>
-                    </p>
+                    </div>
 
                     <h1 className="title-3 md:w-5/6 my-4">
                         <div className="">Políticas de privacidad</div>
