@@ -14,4 +14,33 @@ module.exports = {
 
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/tyc-ualabis',
+        destination: '/assets/legales/TyCUalaBis.pdf',
+        permanent: true,
+      },
+      {
+        source: '/legalesmisionuala',
+        destination: '/assets/legales/SorteoPS5-diciembre2021.pdf',
+        permanent: true,
+      },
+      {
+        source: '/tyc-samsung',
+        destination: '/assets/legales/TyCCréditosSamsung.pdf',
+        permanent: true,
+      },
+      {
+        source: '/tyc_programa_referidos',
+        destination: '/assets/legales/TérminosyCondicionesdelProgramadeReferidosUalá.pdf',
+        permanent: true,
+      },
+      {
+        source: '/promo-20-reintegro-asistencias',
+        destination: '/assets/legales/Promo20ReintegroAsistencias.pdf',
+        permanent: true,
+      },
+    ]
+  }
 };

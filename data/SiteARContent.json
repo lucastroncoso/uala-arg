@@ -7,7 +7,7 @@
           "subMenu": [
             {
               "copy": "Compras",
-              "url": "/tarjeta"
+              "url": "/compras"
             },
             {
               "copy": "Transferencias",
@@ -15,7 +15,7 @@
             },
             {
               "copy": "Créditos",
-              "url": "/creditos"
+              "url": "/prestamos"
             },
             {
               "copy": "Pagos y Recargas",
@@ -32,10 +32,6 @@
             {
               "copy": "Cobros",
               "url": "https://www.ualabis.com.ar/"
-            },
-            {
-              "copy": "Seguros",
-              "url": "/seguros"
             },
             {
               "copy": "Análisis de gastos",
@@ -64,7 +60,7 @@
             },
             {
               "copy": "Reporte por robo o pérdida",
-              "url": "/tarjeta#robo"
+              "url": "/seguridad"
             }
           ]
         },
@@ -73,7 +69,7 @@
           "subMenu": [
             {
               "copy": "Nosotros",
-              "url": "/nosotr@s"
+              "url": "/nosotros"
             },
             {
               "copy": "Búsquedas laborales",
@@ -99,7 +95,7 @@
         },
         {
           "title": "Promociones",
-          "url": "https://uala.com.mx/promociones"
+          "url": "/promociones"
         }
       ],
       "languageButton": [
@@ -381,10 +377,6 @@
           {
             "copy": "Extracciones",
             "url": "/extracciones"
-          },
-          {
-            "copy": "Seguros",
-            "url": "/seguros"
           },
           {
             "copy": "Análisis de gastos",
