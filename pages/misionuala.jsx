@@ -14,7 +14,7 @@ export default function MisionUala(props) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(datos);
+        /* console.log(datos); */
         const url = 'https://cms.prod.websites.uala.com.ar:2082/ps5';
 
         let formData = new FormData(form);
@@ -38,7 +38,7 @@ export default function MisionUala(props) {
         if (res.type == "PS5_ADD_SUCCESS") {
             formButton.innerHTML = '¡Ya estas inscripto!';
             formButton.disabled = true;
-            console.log(res)
+            /* console.log(res) */
         }
         else alert('Hay un error en el formulario')
     };
@@ -55,7 +55,7 @@ export default function MisionUala(props) {
             ...datos,
             [event.target.name]: event.target.value,
         });
-        console.log(event.target.checked)
+        /* console.log(event.target.checked) */
     };
 
     return (
@@ -110,7 +110,7 @@ export default function MisionUala(props) {
                 <Container>
                     <div className="lg:px-48 px-4">
                         <p
-                            className="lg:text-center lg:text-4xl text-2xl mb-4 lg:mb-12 text-gray-800 font-semibold lg:leading-relaxed	animate-pop-in header-title">
+                            className="lg:text-center lg:text-4xl text-2xl mb-12 mt-12 text-gray-800 font-semibold lg:leading-relaxed	animate-pop-in header-title">
                             Podés ganarte una Playstation 5 con tu próxima compra.
                         </p>
 
@@ -118,7 +118,7 @@ export default function MisionUala(props) {
                         objetivos:
                         </p>
                     </div>
-                    <div className="shadow-xl lg:p-12 lg:mx-32 rounded-2xl p-4 mx-4 border border-gray-100 mb-12">
+                    <div className="shadow-xl lg:p-12 lg:mx-32 rounded-2xl p-4 mx-4 border border-gray-100 mb-28">
                         <div className="flex mx-auto mb-4 items-center">
                             <img className="pr-4 lg:pr-10" src="assets/images/misionuala/icono1.svg " alt="" />
                             <p className="text-xl text-gray-600">Hacé una compra con tu tarjeta Ualá.
