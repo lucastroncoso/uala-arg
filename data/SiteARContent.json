@@ -340,15 +340,15 @@
         },
         {
           "copy": "POLÍTICAS DE PRIVACIDAD",
-          "url": "/privacidad.html"
+          "url": "/privacidad"
         },
         {
           "copy": "DEFENSA DEL CONSUMIDOR",
-          "url": "https://www.argentina.gob.ar/produccion/consumidor/oficinas-provinciales"
+          "url": "/defensa-consumidor"
         },
         {
           "copy": "TÉRMINOS DE USO",
-          "url": "/tyc.html"
+          "url": "/terminosycondiciones"
         }
       ],
       "functionabilities": {
@@ -356,11 +356,11 @@
         "submenu": [
           {
             "copy": "Compras",
-            "url": "/tarjeta"
+            "url": "/compras"
           },
           {
             "copy": "Créditos",
-            "url": "/creditos"
+            "url": "/prestamos"
           },
           {
             "copy": "Transferencias",
@@ -380,7 +380,7 @@
           },
           {
             "copy": "Análisis de gastos",
-            "url": "/analisis-de-gastos"
+            "url": "/gastos"
           },
           {
             "copy": "Promociones",
@@ -388,12 +388,14 @@
           },
           {
             "copy": "Uala más",
-            "url": "/programa-de-beneficios",
-            "isNew": "NUEVO"
+            "url": "https://www.ualamas.com.ar/",
+            "isNew": "NUEVO",
+            "hasTargetBlank": true
           },
           {
             "copy": "Cobros",
-            "url": "https://www.ualabis.com.ar/"
+            "url": "https://www.ualabis.com.ar/",
+            "hasTargetBlank": true
           }
         ]
       },
@@ -402,7 +404,7 @@
         "submenu": [
           {
             "copy": "Nosotr@s",
-            "url": "/nosotr@s"
+            "url": "/nosotros"
           },
           {
             "copy": "Trabajá con nosotr@s",
@@ -427,7 +429,7 @@
           },
           {
             "copy": "Preguntas frecuentes",
-            "url": "/faqs"
+            "url": "/preguntas-frecuentes"
           },
           {
             "copy": "Comunidad",
@@ -443,7 +445,7 @@
           },
           {
             "copy": "Costos",
-            "url": "https://blog.uala.com.ar/"
+            "url": "/costos"
           }
         ]
       },
