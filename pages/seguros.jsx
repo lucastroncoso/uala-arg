@@ -63,7 +63,7 @@ export default function Seguros(props) {
                     </CardChildren>
 
                     <CardChildren img="/assets/images/seguros/Icono-seguro-movilidad.png"
-                        title="Asistencia de movilidad">
+                        title="Seguro de movilidad">
                         <h2 className="text mb-4">Desde <span className="font-semibold">$440</span> por mes</h2>
                         <p className="py-2">👉 Es un solo seguro para todos tus medios de transporte.</p>
                         <p className="py-2">👉 Incluye cobertura por robo y daño total.</p>

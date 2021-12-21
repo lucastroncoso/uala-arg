@@ -7,27 +7,27 @@
           "subMenu": [
             {
               "copy": "Compras",
-              "url": "https://uala.com.ar/tarjeta"
+              "url": "/tarjeta"
             },
             {
               "copy": "Transferencias",
-              "url": "https://uala.com.ar/transferencias"
+              "url": "/transferencias"
             },
             {
               "copy": "Créditos",
-              "url": "https://uala.com.ar/créditos"
+              "url": "/creditos"
             },
             {
               "copy": "Pagos y Recargas",
-              "url": "https://uala.com.ar/pagos"
+              "url": "/pagos"
             },
             {
               "copy": "Inversiones",
-              "url": "https://uala.com.ar/inversiones"
+              "url": "/inversiones"
             },
             {
               "copy": "Extracciones",
-              "url": "https://uala.com.ar/extracciones"
+              "url": "/extracciones"
             },
             {
               "copy": "Cobros",
@@ -35,11 +35,11 @@
             },
             {
               "copy": "Seguros",
-              "url": "link"
+              "url": "/seguros"
             },
             {
               "copy": "Análisis de gastos",
-              "url": "https://uala.com.ar/analisis-de-gastos"
+              "url": "/analisis-de-gastos"
             }
           ]
         },
@@ -48,11 +48,11 @@
           "subMenu": [
             {
               "copy": "Preguntas frecuentes",
-              "url": "https://uala.com.ar/faqs"
+              "url": "/faqs"
             },
             {
               "copy": "Métodos de contacto",
-              "url": "https://uala.com.ar/contacto"
+              "url": "/contacto"
             },
             {
               "copy": "Comunidad",
@@ -60,11 +60,11 @@
             },
             {
               "copy": "Consejos de seguridad",
-              "url": "https://uala.com.ar/seguridad"
+              "url": "/seguridad"
             },
             {
               "copy": "Reporte por robo o pérdida",
-              "url": "https://uala.com.ar/tarjeta#robo"
+              "url": "/tarjeta#robo"
             }
           ]
         },
@@ -73,15 +73,15 @@
           "subMenu": [
             {
               "copy": "Nosotros",
-              "url": "https://uala.com.ar/nosotr@s"
+              "url": "/nosotr@s"
             },
             {
               "copy": "Búsquedas laborales",
-              "url": "https://uala.com.ar/trabajar-en-uala"
+              "url": "/trabajar-en-uala"
             },
             {
               "copy": "Prensa",
-              "url": "https://uala.com.ar/prensa"
+              "url": "/prensa"
             },
             {
               "copy": "El blog de Ualá",
@@ -89,13 +89,13 @@
             },
             {
               "copy": "Gaming",
-              "url": "https://uala.com.ar/gaming"
+              "url": "/gaming"
             }
           ]
         },
         {
           "title": "Costos",
-          "url": "https://uala.com.ar/costos"
+          "url": "/costos"
         },
         {
           "title": "Promociones",
@@ -172,13 +172,13 @@
       {
         "title": "Aprovechá promociones inigualables",
         "ctaCopy": "Ver promociones",
-        "url": "https://uala.com.ar/promociones",
+        "url": "/promociones",
         "image": "promociones-ar"
       },
       {
         "title": "Comprá juegos online y alcanzá el siguiente nivel",
         "ctaCopy": "Conocer más",
-        "url": "https://uala.com.ar/gaming",
+        "url": "/gaming",
         "image": "gaming"
       }
     ],
@@ -197,7 +197,7 @@
         {
           "title": "Créditos pensados para vos",
           "ctaCopy": "Conocé Créditos",
-          "url": "https://uala.com.ar/creditos",
+          "url": "/creditos",
           "image": {
             "src": "/assets/images/cardImages/creditos.png",
             "alt": "Conocé Créditos"
@@ -206,7 +206,7 @@
         {
           "title": "Invertí fácil y despertá tu plata",
           "ctaCopy": "Conocé Inversiones",
-          "url": "https://uala.com.ar/inversiones",
+          "url": "/inversiones",
           "image": {
             "src": "/assets/images/cardImages/inversiones.png",
             "alt": "Conocé Inversiones"
@@ -228,21 +228,21 @@
           "title": "Compras",
           "copy": "Podés hacer compras en cualquier comercio o página web del mundo que acepte Mastercard.",
           "ctaCopy": "Ver más",
-          "url": "https://uala.com.ar/tarjeta"
+          "url": "/tarjeta"
         },
         {
           "icon": "transferencias",
           "title": "Transferencias",
           "copy": "Podés enviar y recibir plata desde cualquier cuenta. Gratis y en el acto.",
           "ctaCopy": "Ver más",
-          "url": "https://uala.com.ar/transferencias"
+          "url": "/transferencias"
         },
         {
           "icon": "pagos-recargas",
           "title": "Pagos y Recargas",
           "copy": "Podés pagar todas tus facturas, recargá tus servicios prepagos y cargá la SUBE.",
           "ctaCopy": "Ver más",
-          "url": "https://uala.com.ar/pagos"
+          "url": "/pagos"
         }
       ],
       "video": {
@@ -266,7 +266,7 @@
         {
           "icon": "sin-costosocultos",
           "title": "Sin costos ocultos",
-          "copy": "No tenemos costos ocultos ni sorpresas en el manejo de tu cuenta. Conoce más <a href='https://uala.com.ar/costos'>acá</a>."
+          "copy": "No tenemos costos ocultos ni sorpresas en el manejo de tu cuenta. Conoce más <a href='/costos'>acá</a>."
         },
         {
           "icon": "sin-sucursales",
@@ -340,11 +340,11 @@
       "contractsLegals": [
         {
           "copy": "CONTRATOS DE ADHESIÓN",
-          "url": "https://uala.com.ar/contratos"
+          "url": "/contratos"
         },
         {
           "copy": "POLÍTICAS DE PRIVACIDAD",
-          "url": "https://uala.com.ar/privacidad.html"
+          "url": "/privacidad.html"
         },
         {
           "copy": "DEFENSA DEL CONSUMIDOR",
@@ -352,7 +352,7 @@
         },
         {
           "copy": "TÉRMINOS DE USO",
-          "url": "https://uala.com.ar/tyc.html"
+          "url": "/tyc.html"
         }
       ],
       "functionabilities": {
@@ -360,43 +360,43 @@
         "submenu": [
           {
             "copy": "Compras",
-            "url": "https://uala.com.ar/tarjeta"
+            "url": "/tarjeta"
           },
           {
             "copy": "Créditos",
-            "url": "https://uala.com.ar/creditos"
+            "url": "/creditos"
           },
           {
             "copy": "Transferencias",
-            "url": "https://uala.com.ar/transferencias"
+            "url": "/transferencias"
           },
           {
             "copy": "Inversiones",
-            "url": "https://uala.com.ar/inversiones"
+            "url": "/inversiones"
           },
           {
             "copy": "Pagos y recargas",
-            "url": "https://uala.com.ar/pagos"
+            "url": "/pagos"
           },
           {
             "copy": "Extracciones",
-            "url": "https://uala.com.ar/extracciones"
+            "url": "/extracciones"
           },
           {
             "copy": "Seguros",
-            "url": "https://uala.com.ar/seguros"
+            "url": "/seguros"
           },
           {
             "copy": "Análisis de gastos",
-            "url": "https://uala.com.ar/analisis-de-gastos"
+            "url": "/analisis-de-gastos"
           },
           {
             "copy": "Promociones",
-            "url": "https://uala.com.ar/promociones"
+            "url": "/promociones"
           },
           {
             "copy": "Uala más",
-            "url": "https://uala.com.ar/programa-de-beneficios",
+            "url": "/programa-de-beneficios",
             "isNew": "NUEVO"
           },
           {
@@ -410,19 +410,19 @@
         "submenu": [
           {
             "copy": "Nosotr@s",
-            "url": "https://uala.com.ar/nosotr@s"
+            "url": "/nosotr@s"
           },
           {
             "copy": "Trabajá con nosotr@s",
-            "url": "https://uala.com.ar/trabajar-en-uala"
+            "url": "/trabajar-en-uala"
           },
           {
             "copy": "Prensa",
-            "url": "https://uala.com.ar/prensa"
+            "url": "/prensa"
           },
           {
             "copy": "Gaming",
-            "url": "https://uala.com.ar/gaming"
+            "url": "/gaming"
           }
         ]
       },
@@ -431,11 +431,11 @@
         "submenu": [
           {
             "copy": "Métodos de contacto",
-            "url": "https://uala.com.ar/contacto"
+            "url": "/contacto"
           },
           {
             "copy": "Preguntas frecuentes",
-            "url": "https://uala.com.ar/faqs"
+            "url": "/faqs"
           },
           {
             "copy": "Comunidad",
@@ -443,7 +443,7 @@
           },
           {
             "copy": "Consejos de seguridad",
-            "url": "https://uala.com.ar/seguridad"
+            "url": "/seguridad"
           },
           {
             "copy": "Blog de educación financiera",
@@ -456,7 +456,7 @@
         ]
       },
       "footerEnd": {
-        "ualaInfo": "Ualá es un Proveedor de Servicios de Pago y no está autorizado por el BCRA para operar como entidad financiera. <a href='https://uala.com.ar/legales'>Mas info acá</a>",
+        "ualaInfo": "Ualá es un Proveedor de Servicios de Pago y no está autorizado por el BCRA para operar como entidad financiera. <a href='/legales'>Mas info acá</a>",
         "ualaAddress": "ALAU TECNOLOGÍA S.A.U. - CUIT 30-71542170- 0 Ualá 2020, Todos los derechos reservados. Nicaragua 4677, C1414BVG CABA, Argentina",
         "logo": "/assets/images/aaipLogo.png"
       }
