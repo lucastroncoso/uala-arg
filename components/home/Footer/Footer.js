@@ -8,8 +8,33 @@ import APP_STORE from '../../../public/assets/images/app_store.png';
 import GOOGLE_PLAY from '../../../public/assets/images/google_play.png';
 import SocialIcons from '../SocialIcons/SocialIcons';
 import FooterBanner from '../FooterBanner/FooterBanner';
+import Swal from 'sweetalert2';
 
 const Footer = ({ content, banner }) => {
+  const handlePopUp = () => {
+    Swal.fire({
+        showCloseButton: false,
+        showConfirmButton: true,
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#3E6BFD',
+        customClass: { popup: 'rounded-2xl', closeButton: 'focus:shadow-none', confirmButton: 'confirm-btn-popup' },
+        html:  `
+                <div class='p-5 rounded-2xl' >
+                    <p class='text-left text-sm text-gray-500 mb-8'>
+                    La Ley N° 2.244 establece que las personas físicas o jurídicas que comercialicen, o presten servicios a consumidores y/o usuarios en el ámbito de la C.A.B.A. y posean página de internet, deberán agregar un enlace con la Dirección General de Defensa y Protección al Consumidor. 
+                    </p>
+                    <p class='text-left text-sm text-gray-500'>
+                      <a class="link" target="_blank" href='https://www.buenosaires.gob.ar/defensaconsumidor/como-denunciar'>Podés realizar tu consulta aqui</a>
+                    </p>
+                    <p class='text-left text-sm text-gray-500'>
+                      <a class="link" target="_blank" href='https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario'>Si te encontrás en otro lugar del país, podés consultar aquí</a>
+                    </p>
+                </div>
+             `
+        ,
+    });
+  };
+
   return (
     <>
       {banner && <FooterBanner content={content.footerBanner} />}
@@ -41,11 +66,22 @@ const Footer = ({ content, banner }) => {
 
             {content.contractsLegals.map((item, index) => {
               return (
-                <a className={styles.link}
-                  {...item.hasTargetBlank ? { target: "_blank" } : null}
-                  href={item.url} key={index}>
-                  {item.copy}
-                </a>)
+                <div key={index} className={styles.link}>
+                  {
+                    item.url == "/defensa-consumidor"
+                      ? <a 
+                          onClick={ handlePopUp }
+                          className="cursor-pointer" >
+                            <span>{ item.copy }</span>
+                        </a>
+                      : <a 
+                          {...item.hasTargetBlank ? { target: "_blank" } : null}
+                          href={item.url}>
+                          {item.copy}
+                        </a>
+                  }
+                </div>
+              )
             })}
 
           </div>
@@ -54,7 +90,7 @@ const Footer = ({ content, banner }) => {
               <li className={styles.listTitle}>{content.functionabilities.title}</li>
               {content.functionabilities.submenu.map((link) => (
                 <li key={link.copy} className={link.isNew ? styles.new : null}>
-                  <a className={styles.link} href={link.url}>
+                  <a className={styles.link} href={link.url} {...link.hasTargetBlank ? { target: "_blank" } : null} >
                     {link.copy}
                   </a>
                   {link.isNew && <span>{link.isNew}</span>}
