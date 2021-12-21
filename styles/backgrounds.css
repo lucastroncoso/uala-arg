@@ -118,10 +118,21 @@
 
 @media only screen and (max-width: 768px) {
   .bg-header-misionuala {
-      background-image: url(/assets/images/misionuala/fondo-mobile.png);
+      background-image: url(/assets/images/misionuala/sorteoPS5_gradient-line1.png), url(/assets/images/misionuala/fondo-mobile.png);
       background-size: 100%;
-      background-position: top center;
+      background-position: center bottom, top center;
       background-repeat: no-repeat;
+      padding-bottom: 70px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .bg-header-misionuala {
+      background-image: url(/assets/images/misionuala/sorteoPS5_gradient-line1.png), url(/assets/images/misionuala/fondo-mobile.png);
+      background-size: 100%;
+      background-position: center center, top center;
+      background-repeat: no-repeat;
+      padding-bottom: 70px;
   }
 }
 
