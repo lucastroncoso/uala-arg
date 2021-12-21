@@ -89,5 +89,18 @@ p {
   margin-left: 25px;
 }
 
+.confirm-btn-popup {
+  border-radius: 92px !important;
+  padding-left: 35px !important;
+  padding-right: 35px !important;
+}
 
+.rounded-full-popup {
+  border-radius: 25px !important;
+}
+
+.rounded-full-popup .swal2-close:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
 
