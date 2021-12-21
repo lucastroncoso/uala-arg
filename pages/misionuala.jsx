@@ -69,7 +69,7 @@ export default function MisionUala(props) {
                     <div className="grid lg:mb-20 md:mb-0 mt-4 mb-12 md:grid-cols-2">
                         <div className="flex flex-wrap content-center mb-12 md:mt-0 mt-8">
                             <div className="w-full">
-                                <p className="">
+                                <div className="">
                                     <div className="">
                                         <Image
                                             src="/assets/images/misionuala/isologo.svg"
@@ -78,7 +78,7 @@ export default function MisionUala(props) {
                                             alt="Ualá"
                                         />
                                     </div>
-                                </p>
+                                </div>
                             </div>
                             <div className="w-full">
                                 <h1 className="title-1 md:w-5/6 mt-4">
@@ -139,7 +139,7 @@ export default function MisionUala(props) {
                     <form className="grid w-full grid-cols-2 mb-0 lg:mb-8" action="" method="POST" id="form" onSubmit={handleSubmit} >
                         <div className="col-span-2 lg:col-span-1">
                             <div className="w-full mx-auto lg:w-11/12 lg:ml-0">
-                                <label for="usuarioUala"
+                                <label htmlFor="usuarioUala"
                                     className="block w-2/4 lg:py-8 py-4 pl-0 mx-auto text-center lg:mr-0 lg:ml-4 lg:text-left lg:pl-4 text-xl text-gray-800"
                                 >Usuario de Ualá</label>
                                 <input type="text" required="required"
@@ -155,7 +155,7 @@ export default function MisionUala(props) {
 
                         <div className="col-span-2 lg:col-span-1">
                             <div className="w-full mx-auto lg:w-11/12 lg:ml-0">
-                                <label for="dni"
+                                <label htmlFor="dni"
                                     className="block w-2/4 lg:py-8 py-4 pl-0 mx-auto text-center lg:mr-0 lg:ml-4 lg:text-left lg:pl-4 text-xl text-gray-800 "
                                 >DNI</label>
                                 <input type="text" required="required" id="dni"
@@ -175,7 +175,7 @@ export default function MisionUala(props) {
                                     id="termsAcepted" name="termsAcepted" value="true"
                                     onChange={handleCheckboxChange}
                                 />
-                                <label forHtml="termsAcepted" className="mb-4 text-sm text-gray-800">
+                                <label htmlFor="termsAcepted" className="mb-4 text-sm text-gray-800">
                                     He leído y acepto los <a className="link" href="/legalesmisionuala" target="_blank">Términos y Condiciones.</a>
                                 </label>
                             </div>
@@ -190,20 +190,20 @@ export default function MisionUala(props) {
                 </Container>
 
                 <Container>
-                    <div class="container mx-auto w-full">
-                        <div class="grid grid-cols-12 p-8 lg:p-12 ">
-                            <div class=" col-span-12 lg:col-span-4 ">
-                                <img src="assets/images/misionuala/PS5-consola.png" alt="" class="w-3/4 lg:w-5/6 mx-auto" />
+                    <div className="container mx-auto w-full">
+                        <div className="grid grid-cols-12 p-8 lg:p-12 ">
+                            <div className=" col-span-12 lg:col-span-4 ">
+                                <img src="assets/images/misionuala/PS5-consola.png" alt="" className="w-3/4 lg:w-5/6 mx-auto" />
                             </div>
-                            <div class="col-span-12 lg:col-span-8 content-center flex flex-wrap lg:pr-10 text-center lg:text-left">
-                                <p class="mb-8 text-2xl font-bold text-blue-250" >Apurate, porque tod@s la quieren.</p>
-                                <p class="mb-8 text-gray-800">Una vez que completes todas los pasos de la Misión Ualá, ya estás participando por la PlayStation®5.</p>
-                                <p class="mb-8 text-gray-800">¡Te estaremos avisando si ganaste o no vía mail, hasta 10 días después del cierre del mes!</p>
+                            <div className="col-span-12 lg:col-span-8 content-center flex flex-wrap lg:pr-10 text-center lg:text-left">
+                                <p className="mb-8 text-2xl font-bold text-blue-250" >Apurate, porque tod@s la quieren.</p>
+                                <p className="mb-8 text-gray-800">Una vez que completes todas los pasos de la Misión Ualá, ya estás participando por la PlayStation®5.</p>
+                                <p className="mb-8 text-gray-800">¡Te estaremos avisando si ganaste o no vía mail, hasta 10 días después del cierre del mes!</p>
                             </div>
                         </div>
                     </div>
-                    <div class="py-12 text-justify mx-8 lg:mx-0">
-                        <div class="marginContainer  text-gray-600">
+                    <div className="py-12 text-justify mx-8 lg:mx-0">
+                        <div className="marginContainer  text-gray-600">
                             El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3, de la Ley N° 25.326. Esto es obligatorio en formularios de recolección de datos personales.
                         </div>
                     </div>
