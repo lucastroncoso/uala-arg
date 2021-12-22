@@ -21,7 +21,7 @@ export default function Tarjeta(props) {
                 <Hero
                     section="Compras"
                     title="Una tarjeta para tod@s y para todo"
-                    subtitle="Compra en cualquier comercio o página web del mundo que acepte Mastercard."
+                    subtitle="Comprá en cualquier comercio o página web del mundo que acepte Mastercard."
                     img={<Image src="/assets/images/tarjeta/tarjeta-3D 1.png" width={2132} height={2304} />}
                 />
 
@@ -36,7 +36,7 @@ export default function Tarjeta(props) {
                             img="/assets/images/tarjeta/Icono compras.png" />,
                         <CardItem text="Con chip, para que tu información esté más protegida que nunca."
                             img="/assets/images/tarjeta/Icono chip.png" />,
-                        <CardItem text="Con tecnología conctacless para que tus compras sean mucho más seguras."
+                        <CardItem text="Con tecnología contactless para que tus compras sean mucho más seguras."
                             img="/assets/images/tarjeta/Icono contactless.png" />]}
                 />
 
@@ -59,7 +59,7 @@ export default function Tarjeta(props) {
                     subtitle="En efectivo o por transferencia. Es simple y rápido."
                     img={<Image src="/assets/images/tarjeta/cargar-uala.jpg" width={1389} height={1184} />}
                     items={[
-                        <CardItem text="En efectivo a través de Rapipago, Pago Fácil
+                        <CardItem text="En efectivo a través de Rapipago, Pago Fácil,
                         Cobro Express y Telerecargas."
                             img="/assets/images/tarjeta/Icono efectivo.png" />,
                         <CardItem text="Por transferencia desde una cuenta bancaria
@@ -69,11 +69,12 @@ export default function Tarjeta(props) {
                 <VideoTitle title="¿Cómo cargar tu Ualá?"
                     imgDesktop={<Image src="/assets/images/tarjeta/thumbnail_cargar_destkop.png" width={2453} height={1273} />}
                     imgMobile={<Image src="/assets/images/tarjeta/thumbnail_cargar_mobile.png" width={661} height={687} />}
+                    href="https://www.youtube.com/watch?v=6Bv0IdBFdDc"
                 />
                 <div id="robo"></div>
                 <ImageItemsSection
                     bg="bg-red-degrade-oposite"
-                    title="Lleva tu Ualá de viaje"
+                    title="Llevá tu Ualá de viaje"
                     subtitle="Hacé el aviso de viaje a través de la app y comprá con tu Ualá en cualquier parte del mundo al cambio del día."
                     img={<Image src="/assets/images/tarjeta/uala-de-viaje.jpg" width={1389} height={1134} />}
 

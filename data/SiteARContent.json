@@ -137,7 +137,7 @@
     },
     "downloadApp": {
       "title": "El Lado Bueno de tu Plata",
-      "paragraph": "Escanea el QR con la cámara de tu celular y descarga Ualá.",
+      "paragraph": "Escanea el QR con la cámara de tu celular y descargá Ualá.",
       "image": {
         "src": "/public/assets/images/qr_ar.png",
         "alt": "Scanea el QR con tu dispositivo"
@@ -180,7 +180,7 @@
       }
     ],
     "cardsWithVideoSection": {
-      "title": "Mira todo lo que <br> puedes hacer con Ualá",
+      "title": "Mirá todo lo que <br> podés hacer con Ualá",
       "cardsGrid": [
         {
           "title": "Cobrá en el acto con la mejor comisión",
@@ -194,7 +194,7 @@
         {
           "title": "Créditos pensados para vos",
           "ctaCopy": "Conocé Créditos",
-          "url": "/creditos",
+          "url": "/prestamos",
           "image": {
             "src": "/assets/images/cardImages/creditos.png",
             "alt": "Conocé Créditos"
@@ -211,8 +211,6 @@
         },
         {
           "title": "Protegé lo que más querés",
-          "ctaCopy": "Conocé Seguros",
-          "url": "link",
           "image": {
             "src": "/assets/images/cardImages/seguros.png",
             "alt": "Conocé Seguros"
@@ -225,7 +223,7 @@
           "title": "Compras",
           "copy": "Podés hacer compras en cualquier comercio o página web del mundo que acepte Mastercard.",
           "ctaCopy": "Ver más",
-          "url": "/tarjeta"
+          "url": "/compras"
         },
         {
           "icon": "transferencias",
@@ -297,7 +295,7 @@
       },
       "title": "Atención 100% online",
       "paragraphs": [
-        "<strong>Si tenés dudas, ¡pregúntanos a nosotr@s!</strong> <br>Si sos usuari@ de Ualá escribinos por el chat de la app.",
+        "<strong>Si tenés dudas, ¡preguntanos a nosotr@s!</strong> <br>Si sos usuari@ de Ualá escribinos por el chat de la app.",
         "Si todavía no sos parte de Ualá, nos podés escribir por mail a <a href='mailto:hola@uala.com.ar'>hola@uala.com.ar</a> o por nuestras redes sociales.",
         "Además en la <a href='https://comunidad.uala.com.ar/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"
       ]
@@ -311,7 +309,7 @@
         "title": "¡Sumate vos también!",
         "copy": "<strong>Descargá la app</strong> y empezá a manejar tu plata fácil, rápido y 100% online."
       },
-      "title": "El lado bueno de tu dinero",
+      "title": "El Lado Bueno de tu Plata",
       "socialLinks": [
         {
           "name": "facebook",
@@ -568,7 +566,7 @@
     },
     "downloadApp": {
       "title": "The good side of your Money",
-      "paragraph": "Escanea el QR con la cámara de tu celular y descarga Ualá.",
+      "paragraph": "Escanea el QR con la cámara de tu celular y descargá Ualá.",
       "image": {
         "src": "/public/assets/images/qr_ar.png",
         "alt": "Scan the QR with your Device"
@@ -685,7 +683,7 @@
         "title": "Get to the good side of your money",
         "copy": "<strong>Descarga la app</strong> y empieza a manejar tus finanzas fácil, rápido y 100% online"
       },
-      "title": "El Lado Bueno de tu Dinero",
+      "title": "El Lado Bueno de tu Plata",
       "socialLinks": [
         {
           "name": "facebook",

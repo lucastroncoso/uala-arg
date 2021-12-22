@@ -91,7 +91,7 @@ export default function Details({ promotion }) {
 
                     <div className="w-8/12">
                         <CardRoundedShadow className="ml-0 mt-0 p-4 lg:p-12 w-1/2 mb-12 lg:mb-20">
-                          <div className="h-16 flex flex-row items-center">
+                          <div className="min-h-16 flex flex-row items-center">
                             { promotion.logo 
                             ? <Image
                                 src={ promotion.logo.url}
