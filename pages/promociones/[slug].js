@@ -91,12 +91,21 @@ export default function Details({ promotion }) {
 
                     <div className="w-8/12">
                         <CardRoundedShadow className="ml-0 mt-0 p-4 lg:p-12 w-1/2 mb-12 lg:mb-20">
-                          <Image
-                            src={ promotion.logo.url }
-                            width={ promotion.logo.width }
-                            height={ promotion.logo.height }
-                            alt={ promotion.title }
-                          />
+                          <div className="h-16 flex flex-row items-center">
+                            { promotion.logo 
+                            ? <Image
+                                src={ promotion.logo.url}
+                                width={ promotion.logo.width }
+                                height={ promotion.logo.height }
+                                alt={ promotion.title }
+                              /> 
+                            : <Image
+                                src="/assets/logos/uala-logo-wave.png"
+                                width={ 200 }
+                                height={ 100 }
+                                alt={ promotion.title }
+                              />}
+                          </div>
                         </CardRoundedShadow>
                           
 
