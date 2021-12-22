@@ -17,14 +17,14 @@ export default function Inversiones(props) {
         {
             "faqsid": 1,
             "category": 1,
-            "question": "¿Qué es un mPOS? ¿Cómo lo pido?",
-            "answer": "Es un lector de tarjetas que te permite realizar ventas con tarjeta de débito, crédito y prepaga desde donde estés. ¡Llevalo a donde quieras!\nAcepta tanto lectura de tarjetas por banda magnética y chip, y se conecta de manera inalámbrica vía Bluetooth.\n\nPara adquirir el mPOS \n👉Ingresá a la sección de cobros\n👉Poné el monto a cobrar\n👉Elegí cobrar con mPOS Bluetooth\n👉Aparecerá la opción de comprar tu mPOS Bluetooth\n👉Completá los datos\n👉¡Listo! Muy pronto te llegará tu mPOS\nRecordá que no tiene costo de mantenimiento y si lo usas es GRATIS."
+            "question": "¿Qué significa invertir en un FCI (Fondo Común de Inversión)?",
+            "answer": "Un fondo común de inversión (FCI) es un instrumento de inversión colectiva compuesto por diferentes activos financieros (por ejemplo, bonos o plazos fijos) administrado por un profesional. Cuando suscribís plata a un Fondo Común de Inversión, lo que hacés es comprar pequeñas partes del fondo a un valor determinado. Esas partes, se llaman cuotapartes y cuando su precio cambia varía el resultado de tu inversión. El administrador del FCI procura generar el mejor resultado comprando y vendiendo los activos que componen el fondo."
         },
         {
             "faqsid": 2,
             "category": 1,
-            "question": "¿Cómo utilizo mi mPOS?",
-            "answer": "Si ya recibiste tu mPOS, seguí los siguientes pasos:\n\n1. Entrá a la sección Cobros de Ualá.\n2. Ingresá el monto que querés cobrar.\n3. Seleccioná cobrar con mPOS y conectá tu lector a tu celular por bluetooth.\n4. Seguí los pasos que te indica la app para cobrar con el mPOS \n5. Una vez que se confirme el pago, recibís la plata en el acto en tu Ualá."
+            "question": "¿Dónde se invierte tu plata?",
+            "answer": "Cuando invertís a través de Ualá, con tu plata suscribís cuotapartes del fondo SBS Ahorro Pesos FCI, administrado por SBS Asset Management S.A.S.G.F.C.I. Podés conocer más sobre la composición del FCI acá. De acuerdo con la Ley 24.083 los fondos comunes de inversión están regulados por la CNV (Comisión Nacional de Valores), y como no son depósitos, no cuentan con garantía del BCRA (Banco Central de la República Argentina). * La suscripción al Fondo Común de Inversión no asegura ni garantiza el resultado de la inversión."
         }]
 
 

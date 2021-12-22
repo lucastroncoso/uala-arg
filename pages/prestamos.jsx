@@ -24,7 +24,7 @@ export default function Prestamos(props) {
                     containerStyles="bg-blue-wave mt-12"
                     section="Créditos"
                     title="Créditos pensados para vos"
-                    subtitle="Te ofrecemos más crédito para lo que necesites de la forma más fácil, rápido y transparente."
+                    subtitle="Te ofrecemos más crédito para lo que necesites de la forma más fácil, rápida y transparente."
                     img={<Image src="/assets/images/prestamos/hero-creditos.jpg" width={1389} height={1184} />}
                 />
 
@@ -46,7 +46,7 @@ export default function Prestamos(props) {
                     reverse
                     bg="bg-blue-degrade"
                     pushImg="/assets/images/prestamos/push.png"
-                    title="Podes usarlo como quieras"
+                    title="Podés usarlo como quieras"
                     subtitle="Pedilo desde la app y usalo para tu emprendimiento, un viaje, tu hogar o para comprar lo que quieras."
                     img={<Image src="/assets/images/prestamos/Mask Group (25).png" width={1389} height={1134} />}
                     items={[

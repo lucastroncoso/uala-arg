@@ -42,7 +42,7 @@ export default function Extracciones(props) {
                         title="Montos de extracción"
                         text="Red Link: $8.500 cada 24hs.
                         Banelco: $8.500 cada 24hs.
-                        Rapipago: Hasta dos extracciones de $15,000 por día y hasta 8 extracciones por mes." />
+                        Rapipago: Hasta dos extracciones de $15.000 por día y hasta 8 extracciones por mes." />
 
                 </CardSection>
 
@@ -55,7 +55,7 @@ export default function Extracciones(props) {
 
 
                 <VideoTitle title="¿Cómo sacar plata del cajero?"
-                    href="https://www.youtube.com/watch?v=YaH4MZUAlXAhttps://www.youtube.com/watch?v=08HLUarWD5Q"
+                    href="https://www.youtube.com/watch?v=08HLUarWD5Q"
                     imgDesktop={<Image src="/assets/images/extracciones/icono_extracciones_destkop.png" width={2453} height={1273} />}
                     imgMobile={<Image src="/assets/images/extracciones/icono_extracciones_mobile.png" width={661} height={687} />}
                 />

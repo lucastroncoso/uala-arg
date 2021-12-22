@@ -24,7 +24,7 @@ export default function Cuotas(props) {
                     containerStyles="bg-blue-wave mt-12"
                     section="Cuotas"
                     title="Créditos pensados para vos"
-                    subtitle="Te ofrecemos más crédito para lo que necesites de la forma más fácil, rápido y transparente."
+                    subtitle="Te ofrecemos más crédito para lo que necesites de la forma más fácil, rápida y transparente."
                     img={<Image src="/assets/images/prestamos/hero-creditos.jpg" width={1389} height={1184} />}
                 />
 

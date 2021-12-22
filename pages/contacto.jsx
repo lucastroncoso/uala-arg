@@ -27,12 +27,11 @@ export default function Seguridad(props) {
                     <div className="grid gap-8 md:grid-cols-2 gap-x-40 col-span-full ">
                         <ContactCard title="Chat de la app"
                             href="/assets/images/contacto/Ilus-Chat.png"
-                            subtitle="Chatea con nosotros desde la app de Ualá de lunes a viernes de 7 a 23hs y los sábados de 7 a 18hs. Inicia el chat, escribe tu consulta y quédate en línea para que podamos responderte."
+                            subtitle="Chateá con nosotros desde la app de Ualá de lunes a viernes de 9 a 21hs y los sábados de 9 a 18hs. Iniciá el chat, escribí tu consulta y quedate en línea para que podamos responderte."
                         />
                         <ContactCard title="Mail"
                             href="/assets/images/contacto/Ilus-Mail.png"
-                            subtitle="Puedes escribirnos por mail a hola@uala.com.co cualquier día de la semana, a cualquier hora.
-                                Acuérdate de incluir tu número de identificación (cédula de ciudadanía/extranjería) y el detalle de tu consulta."
+                            subtitle="Podés escribirnos por mail a hola@uala.com.ar cualquier día de la semana, a cualquier hora. Acordate de incluir tu número de DNI y el detalle de tu consulta."
                         />
                         <ContactCard title="Redes sociales"
                             href="/assets/images/contacto/Ilus-RRSS (1).png"
@@ -40,7 +39,7 @@ export default function Seguridad(props) {
                         />
                         <ContactCard title="Comunidad Ualá"
                             href="/assets/images/contacto/Ilus-Comunidad.png"
-                            subtitle="En la Comunidad Ualá puedes hablar con otros usuarios e intercambias dudas, sugerencias o ideas."
+                            subtitle="En la Comunidad Ualá podés hablar con otros usuarios e intercambiar dudas, sugerencias o ideas."
                         />
 
                     </div>
