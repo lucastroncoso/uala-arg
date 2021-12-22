@@ -107,7 +107,7 @@ export default function Carrers(props) {
                                                 <img src={`/assets/images/prensa/${story.image}`} alt="" />
                                             </div>
                                             <div className="text-gray-600 my-4 flex-grow">{story.text}</div>
-                                            <div className="link"><a href={story.link} target="_blank" >Leer más</a></div>
+                                            <div className="link"><a href={story.link} target="_blank">Leer más</a></div>
                                         </div>
                                     ))
 
