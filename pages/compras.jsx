@@ -70,7 +70,7 @@ export default function Tarjeta(props) {
                     imgDesktop={<Image src="/assets/images/tarjeta/thumbnail_cargar_destkop.png" width={2453} height={1273} />}
                     imgMobile={<Image src="/assets/images/tarjeta/thumbnail_cargar_mobile.png" width={661} height={687} />}
                 />
-
+                <div id="robo"></div>
                 <ImageItemsSection
                     bg="bg-red-degrade-oposite"
                     title="Lleva tu Ualá de viaje"

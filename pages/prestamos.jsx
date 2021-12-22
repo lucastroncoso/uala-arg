@@ -25,7 +25,7 @@ export default function Prestamos(props) {
                     section="Créditos"
                     title="Créditos pensados para vos"
                     subtitle="Te ofrecemos más crédito para lo que necesites de la forma más fácil, rápido y transparente."
-                    img={<Image src="/assets/images/prestamos/Rectangle 153.png" width={542} height={400} />}
+                    img={<Image src="/assets/images/prestamos/hero-creditos.jpg" width={1389} height={1184} />}
                 />
 
                 <Container className="bg-blue-150">
@@ -36,7 +36,7 @@ export default function Prestamos(props) {
                         </div>
                         <div className=" border-b border-blue-50">
                             <a href="/cuotas"
-                                className=" w-full block text-center subtitle-blue md:px-20 outline-none text-blue-50">Pasar a Cuotas</a>
+                                className=" w-full block text-center subtitle-blue md:px-20 outline-none text-blue-50">Cuotas</a>
                         </div>
                     </div>
                 </Container>

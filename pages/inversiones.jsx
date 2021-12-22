@@ -39,7 +39,7 @@ export default function Inversiones(props) {
                     section="Inversiones"
                     title="Hacemos que invertir sea fácil"
                     subtitle="Despertá tu plata a través de Ualá y mirá los resultados todos los días."
-                    img={<Image src="/assets/images/prestamos/Rectangle 153.png" width={542} height={400} />}
+                    img={<Image src="/assets/images/inversiones/hero-inversiones.jpg" width={1389} height={1184} />}
                 />
 
 

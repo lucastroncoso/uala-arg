@@ -31,11 +31,12 @@
             },
             {
               "copy": "Cobros",
-              "url": "https://www.ualabis.com.ar/"
+              "url": "https://www.ualabis.com.ar/",
+              "target": "_BLANK"
             },
             {
               "copy": "Análisis de gastos",
-              "url": "/analisis-de-gastos"
+              "url": "/gastos"
             }
           ]
         },
@@ -44,7 +45,7 @@
           "subMenu": [
             {
               "copy": "Preguntas frecuentes",
-              "url": "/faqs"
+              "url": "/preguntas-frecuentes"
             },
             {
               "copy": "Métodos de contacto",
@@ -60,7 +61,7 @@
             },
             {
               "copy": "Reporte por robo o pérdida",
-              "url": "/seguridad"
+              "url": "/compras#robo"
             }
           ]
         },

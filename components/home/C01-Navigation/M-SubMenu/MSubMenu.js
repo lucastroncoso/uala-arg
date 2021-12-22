@@ -13,7 +13,7 @@ const MSubMenu = ({ content, isOpen, isWrapped }) => {
       {content && content.map((item, itemIndex) => {
         return (
           <li key={`subItem-${itemIndex}`} className={styles.item}>
-            <a href={item.url}>{item.copy}</a>
+            <a target={item.target} href={item.url}>{item.copy}</a>
           </li>
         )
       })}

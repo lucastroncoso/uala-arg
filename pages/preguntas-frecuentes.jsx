@@ -14,7 +14,7 @@ export async function getStaticProps() {
             }
         }
 
-        argentinaFaqCollection(order: [id_ASC], limit: 100) {
+        argentinaFaqCollection(order: [id_ASC], limit: 500) {
             items{
                 categoryId {
                     faqCategoryId
