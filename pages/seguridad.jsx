@@ -42,7 +42,7 @@ export default function Seguridad(props) {
               <p>Nuestra casilla oficial de mail es hola@uala.com.ar y nuestras redes sociales @uala_arg (chequeá el tilde azul para comprobar que sea la cuenta oficial). Nunca te vamos a contactar por otro medio.</p>
               <p>Cuando compres online, verificá que la dirección de la página web sea legitima y que se trate de un sitio seguro.</p>
               <p>Si comprás un producto o servicio a otra persona, asegurate de que todo sea legítimo y confiable. Leé las experiencias de otros compradores. Recordá que Ualá es un medio de pago y no es responsable por las transacciones entre partes.</p>
-              <p className="text-blue-250">Si tenes alguna duda o sospecha antes o después de haber realizado alguna operación escribinos por el chat de la app o por mail a hola@uala.com.ar para que podamos ayudarte.</p>
+              <p className="text-blue-250">Si tenés alguna duda o sospecha antes o después de haber realizado alguna operación escribinos por el chat de la app o por mail a hola@uala.com.ar para que podamos ayudarte.</p>
             </div>
           </SecurityCard>
 

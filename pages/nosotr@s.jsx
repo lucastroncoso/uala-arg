@@ -21,7 +21,7 @@ export default function Nosotros(props) {
             <Layout nav footer>
                 <Hero
                     containerStyles="bg-blue-wave-onli-mobile md:bg-none mt-12"
-                    section="Nosotros"
+                    section="Nosotr@s"
                     title="Somos Ualá"
                     subtitle="Somos la fintech que te permite manejar todas tus finanzas desde una app y una tarjeta"
                     img={<Image src="/assets/images/nosotros/oficinas-nica-2.jpg" width={1389} height={1134} />}
@@ -30,7 +30,7 @@ export default function Nosotros(props) {
 
                 <ImageItemsSection
                     bg="bg-blue-wave-nosotros md:pt-20"
-                    subtitle="El emprendedor argentino Pierpaolo Barbieri creó y lanzó Ualá en octubre de 2017 con el objetivo de mejorar la inclusión financiera en Argentina ofreciendo una experiencia innovadora, integrada, sin sucursales y de bajo costo. Hoy, Ualá es la solución financiera de más de 3 millones de personas en todo el país."
+                    subtitle="El emprendedor argentino Pierpaolo Barbieri creó y lanzó Ualá en octubre de 2017 con el objetivo de mejorar la inclusión financiera en Argentina ofreciendo una experiencia innovadora, integrada, sin sucursales y de bajo costo. Hoy, Ualá es la solución financiera de millones de personas de todo el país."
                     img={<Image src="/assets/images/nosotros/oficinas-pasillo.jpg" width={1389} height={1134} />}
 
                 />
@@ -39,7 +39,7 @@ export default function Nosotros(props) {
                     className="bg-blue-350 md:bg-white"
                     title="Así empezó todo"
                     subtitle="En 2015 empezamos a pensar en cómo revolucionar el sistema financiero. Conocé nuestra historia."
-                    href="https://www.youtube.com/watch?v=12gi-FVZ97o"
+                    href="https://www.youtube.com/watch?v=_noKYrhsb3I"
                     imgDesktop={<Image src="/assets/images/nosotros/thumbnail_acerca_Uala.png" width={2448} height={1250} />}
                 />
 

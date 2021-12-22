@@ -69,8 +69,8 @@
           "title": "Sobre Ualá",
           "subMenu": [
             {
-              "copy": "Nosotros",
-              "url": "/nosotros"
+              "copy": "Nosotr@s",
+              "url": "/nosotr@s"
             },
             {
               "copy": "Búsquedas laborales",
@@ -403,7 +403,7 @@
         "submenu": [
           {
             "copy": "Nosotr@s",
-            "url": "/nosotros"
+            "url": "/nosotr@s"
           },
           {
             "copy": "Trabajá con nosotr@s",
@@ -450,7 +450,7 @@
       },
       "footerEnd": {
         "ualaInfo": "Ualá es un Proveedor de Servicios de Pago y no está autorizado por el BCRA para operar como entidad financiera. <a href='/legales'>Mas info acá</a>",
-        "ualaAddress": "ALAU TECNOLOGÍA S.A.U. - CUIT 30-71542170- 0 Ualá 2020, Todos los derechos reservados. Nicaragua 4677, C1414BVG CABA, Argentina",
+        "ualaAddress": "ALAU TECNOLOGÍA S.A.U. - CUIT 30-71542170- 0 Ualá 2021, Todos los derechos reservados. Nicaragua 4677, C1414BVG CABA, Argentina",
         "logo": "/assets/images/aaipLogo.png"
       }
     }

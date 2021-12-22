@@ -71,7 +71,7 @@ export default function Tarjeta(props) {
                     imgMobile={<Image src="/assets/images/tarjeta/thumbnail_cargar_mobile.png" width={661} height={687} />}
                     href="https://www.youtube.com/watch?v=6Bv0IdBFdDc"
                 />
-                <div id="robo"></div>
+                
                 <ImageItemsSection
                     bg="bg-red-degrade-oposite"
                     title="Llevá tu Ualá de viaje"
@@ -79,7 +79,7 @@ export default function Tarjeta(props) {
                     img={<Image src="/assets/images/tarjeta/uala-de-viaje.jpg" width={1389} height={1134} />}
 
                 />
-
+                <div id="robo"></div>
                 <Container className="pb-24 bg-red-250">
                     <h2 className="title-2">¿Perdiste o te robaron tu Ualá?</h2>
                     <div className="grid lg:grid-cols-2 py-8">

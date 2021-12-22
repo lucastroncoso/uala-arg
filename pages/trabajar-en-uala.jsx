@@ -36,7 +36,7 @@ export default function Carrers(props) {
                             </div>
                             <div className="col-span-full mb-4 lg:mb-0 lg:col-span-8">
                                 <div className="text-gray-500 text-xl leading-8">
-                                    En Ualá somos un equipo de profesionales innovadores y comprometidos que viene a revolucionar el sistema financiero, para hacerlo abierto y para tod@s. Y lo mejoramos todos los días con gente como tú. Trabajamos en un ambiente dinámico en pleno crecimiento donde todos podemos intercambiar, proponer e impulsar ideas para que sucedan.
+                                    En Ualá somos un equipo de profesionales innovador@s y comprometid@s que viene a revolucionar el sistema financiero, para hacerlo abierto y para tod@s. Y lo mejoramos todos los días con gente como vos. Trabajamos en un ambiente dinámico en pleno crecimiento donde tod@s podemos intercambiar, proponer e impulsar ideas para que sucedan.
                                 </div>
                                 <div className="mt-4 text-gray-500 text-xl">Por eso, #SomosUalá</div>
                             </div>
