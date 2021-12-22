@@ -33,7 +33,7 @@ export default function Carrers(props) {
 
                         {/* Últimos comunicados */}
                         <div className="py-8">
-                            <div className="text-4xl font-medium text-gray-800">Últimos comunicados</div>
+                            <div className="text-4xl font-medium text-gray-800">Últimos anuncios</div>
                             <div className="grid lg:grid-cols-3 gap-5 mt-8">
                                 {
 
@@ -48,7 +48,7 @@ export default function Carrers(props) {
                                 }
                             </div>
                             <div className="mt-8">
-                                <div className="link text-2xl">Ver todos los comunicados de prensa</div>
+                                <div className="link text-2xl">Mirá nuestros últimos anuncios</div>
                             </div>
                         </div>
 
@@ -56,21 +56,21 @@ export default function Carrers(props) {
 
                             <div className="grid grid-cols-12">
                                 <div className="col-span-full mb-4 lg:mb-0 lg:col-span-4">
-                                    <div className="link text-3xl">Acerca de Ualá</div>
+                                    <div className="link text-3xl"><a href="https://uala.com.ar/prensa-sobre" target="_blank" >Acerca de Ualá</a> </div>
                                 </div>
                                 <div className="col-span-full mb-4 lg:mb-0 lg:col-span-8">
-                                    <div className="link text-3xl">Acerca de Pierpaolo Barbieri, fundador y CEO de Ualá</div>
+                                    <div className="link text-3xl"><a href="https://uala.com.ar/prensa-pier" target="_blank" >Acerca de Pierpaolo Barbieri, fundador y CEO de Ualá</a></div>
                                 </div>
                             </div>
 
                         </div>
 
                         <div className="py-8">
-                            <div className="text-4xl font-medium text-gray-800">Descarga nuestro material institucional</div>
+                            <div className="text-4xl font-medium text-gray-800">Descargá nuestro material institucional</div>
                             <div className="grid lg:grid-cols-12 mt-8 gap-4">
                                 <div className="col-span-4 flex border border-blue-600 rounded-md p-4 items-center">
                                     <div className="flex-grow">
-                                        <div className="link">Logo de Ualá</div>
+                                        <div className="link"><a href="https://drive.google.com/drive/folders/1p9oFw6tVSQix_1mSX5h7_46MEBsvSoeK?usp=sharing" target="_blank" >Logo de Ualá</a></div>
                                     </div>
                                     <div>
                                         <Image src="/assets/images/icono-descarga.svg" width={30} height={30} />
@@ -78,7 +78,7 @@ export default function Carrers(props) {
                                 </div>
                                 <div className="col-span-4 flex border border-blue-600 rounded-md p-4 items-center">
                                     <div className="flex-grow">
-                                        <div className="link">Imágenes de producto</div>
+                                        <div className="link"><a href="https://drive.google.com/drive/folders/1WU03reTPU0jtqysli6nKEsy7JBd14Pg0?usp=sharing" target="_blank" >Imágenes de producto</a> </div>
                                     </div>
                                     <div>
                                         <Image src="/assets/images/icono-descarga.svg" width={30} height={30} />
@@ -86,7 +86,7 @@ export default function Carrers(props) {
                                 </div>
                                 <div className="col-span-4 flex border border-blue-600 rounded-md p-4 items-center">
                                     <div className="flex-grow">
-                                        <div className="link">Imágenes de las oficinas</div>
+                                        <div className="link"><a href="https://drive.google.com/drive/folders/1m1SjV7h-CVF018jpizmtUN8rsj1nPTCQ?usp=sharing" target="_blank" >Imágenes de las oficinas</a> </div>
                                     </div>
                                     <div>
                                         <Image src="/assets/images/icono-descarga.svg" width={30} height={30} />
@@ -107,7 +107,7 @@ export default function Carrers(props) {
                                                 <img src={`/assets/images/prensa/${story.image}`} alt="" />
                                             </div>
                                             <div className="text-gray-600 my-4 flex-grow">{story.text}</div>
-                                            <div className="link">Leer más</div>
+                                            <div className="link"><a href={story.link} target="_blank" >Leer más</a></div>
                                         </div>
                                     ))
 
@@ -116,9 +116,9 @@ export default function Carrers(props) {
                         </div>
 
                         <div className="py-8">
-                            <div className="text-4xl font-medium text-gray-800">Contáctanos</div>
-                            <p className="text">Si eres periodista y quieres contactarnos déjanos tus datos <a className="link" href="https://docs.google.com/forms/d/1RAFk3jbl1ehgozUJWK3WgpygtLK3jKtagttAcsj9Ij0/edit">aquí</a> y nos comunicaremos contigo.</p>
-                            <p className="text">Si quieres invitar a una persona de Ualá a dar una conferencia, déjanos los detalles <a href="https://docs.google.com/forms/d/1J4d8XK3gZwHjcml5kjJvuMHAqKKpTQFH21aN1xFii_w/edit" className="link">aquí</a>.</p>
+                            <div className="text-4xl font-medium text-gray-800">Contacto institucional</div>
+                            <p className="text">Si sos periodista y querés contactarnos <a className="link" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdKURPSgRSYF2DueqsrIOhC73qgJVQNY_UAdM3oUEHUDX1LSA/viewform">dejanos tus datos acá</a> y nos comunicaremos con vos.</p>
+                            <p className="text">Si querés invitar a una persona de Ualá a dar una conferencia/charla, <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdVlptYpVITSP0XYCElMOGyZQM0J_bYomdKVBiS-QQec8HfTQ/viewform" className="link">dejanos los detalles acá</a>.</p>
                         </div>
 
                     </div>
