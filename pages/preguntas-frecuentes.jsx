@@ -1,7 +1,8 @@
 import { fetchContent } from '../utils/contentful';
 import Layout from "../components/layout";
 import FaqsCategories from "../components/faqs/faqsCategories";
-import Container from "../components/container"
+import Container from "../components/container";
+import Head from 'next/head';
 
 export async function getStaticProps() {
     const response = await fetchContent(`
@@ -39,6 +40,9 @@ export default function PreguntasFrecuentes({ response }) {
 
     return (
         <>
+            <Head>
+                <title>Ualá</title>
+            </Head>
             <Layout nav footer>
 
                 <Container className="mt-32">
