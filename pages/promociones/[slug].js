@@ -124,13 +124,13 @@ export default function Details({ promotion }) {
 
                   </div>
 
-                  <div className="w-8/12 mt-8 flex flex-row flex-wrap">
+                  <div className=" mt-8 flex flex-row flex-wrap">
 
-                    <div className="w-1/2 p">
+                    <div className="w-1/3 p">
                         {promotion.date}
                     </div>
 
-                    <div className="w-1/2 p ">
+                    <div className="w-2/3 p ">
                       <i className="fas fa-map-marker-alt mr-2 text-blue-250"></i>
                       {
                         !!promotion && promotion.locationsCollection.items.map(loc => {
