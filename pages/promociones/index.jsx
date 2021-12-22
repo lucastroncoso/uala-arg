@@ -112,8 +112,10 @@ export default function Promociones(props) {
     useEffect( () => {
         // Lista de promociones destacadas - las primeras 2 que tengan la propiedad featured
         const featured = allPromotions.filter( promo => promo.featured === true );
-        setFeaturedPromotions( featured.slice( 0, 2 ) );
-        setDisplayableFeaturedPromotions( featured.slice( 0, 2 ) );
+        if ( featured.length > 0 ) {
+            setFeaturedPromotions( featured.slice( 0, 2 ) );
+            setDisplayableFeaturedPromotions( featured.slice( 0, 2 ) );
+        }
 
         // Lista de categorías para el filtro - solo aquellas que tengan alguna promoción activa
         let allCategories = props.response_others.argentinaPromotionCategoryCollection.items;
@@ -168,8 +170,11 @@ export default function Promociones(props) {
             } );
             setPromotions( otherPromotions );
             setDisplayablePromotions( otherPromotions );
+        } else {
+            setPromotions( allPromotions );
+            setDisplayablePromotions( allPromotions );
         }
-    }, [ featuredPromotions ] );
+    }, [ featuredPromotions, allPromotions ] );
 
     useEffect( () => {
         // Modificar las listas de promociones visibles cuando se selecciona un filtro

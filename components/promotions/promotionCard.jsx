@@ -7,7 +7,7 @@ export default function PromotionCard(props) {
         <CardRoundedShadow className="p-4" roundXl>
             <div className="flex justify-center">
                 <div>
-                    <img className="max-h-16" src={props.logo.url} alt="" />
+                    <img className="max-h-16" src={props.logo ? props.logo.url : ''} alt="" />
                 </div>
             </div>
             <div className="flex items-center flex-grow mt-4 font-medium text-center">
