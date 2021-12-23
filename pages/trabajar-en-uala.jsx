@@ -134,7 +134,7 @@ export default function Carrers(props) {
                                 <div>Porque mientras más seamos, mejor.</div>
                             </div>
                             <div className="mt-4 flex justify-center">
-                                <div className="rounded-full border border-blue-600 text-blue-600 py-3 px-8 text-center"><a href="" className="link">Consultá las oportunidades aquí</a></div>
+                                <div className="rounded-full border border-blue-600 text-blue-600 py-3 px-8 text-center"><a target="_blank" href="/sumate" className="link">Consultá las oportunidades aquí</a></div>
                             </div>
                         </div>
 

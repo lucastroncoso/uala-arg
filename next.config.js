@@ -40,6 +40,11 @@ module.exports = {
         source: '/promo-20-reintegro-asistencias',
         destination: '/assets/legales/Promo20ReintegroAsistencias.pdf',
         permanent: true,
+      },
+      {
+        source: '/sumate',
+        destination: 'https://www.comeet.com/jobs/Uala/54.00B',
+        permanent: true,
       }
     ]
   }
