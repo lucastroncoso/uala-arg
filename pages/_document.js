@@ -5,6 +5,14 @@ class WebDocument extends Document {
             <Html lang="en-US">
 
                 <Head>
+                    <script dangerouslySetInnerHTML={{
+                        __html:
+                            `(function(w,d,s,l,i){w[l] = w[l] || []{'gtm.start':
+                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                            })(window,document,'script','dataLayer','GTM-MPZ7RRW');`}}>
+                    </script>
                     <title>Ualá</title>
                     <meta name="description" content="El Lado Bueno de tu Plata" />
                     <link rel="icon" href="/favicon.ico" />
@@ -16,14 +24,7 @@ class WebDocument extends Document {
                     />
                     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"></link>
 
-                    <script dangerouslySetInnerHTML={{
-                        __html:
-                            `(function(w,d,s,l,i){w[l] = w[l] || []{'gtm.start':
-                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                            })(window,document,'script','dataLayer','GTM-MPZ7RRW');`}}>
-                    </script>
+
                 </Head>
                 <body>
                     <noscript dangerouslySetInnerHTML={{
