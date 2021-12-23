@@ -40,7 +40,7 @@ module.exports = {
         source: '/promo-20-reintegro-asistencias',
         destination: '/assets/legales/Promo20ReintegroAsistencias.pdf',
         permanent: true,
-      },
+      }
     ]
   }
 };

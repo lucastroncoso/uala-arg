@@ -5,7 +5,7 @@ class WebDocument extends Document {
             <Html lang="en-US">
 
                 <Head>
-                    <title>Ualá</title>
+
                     <meta name="description" content="El Lado Bueno de tu Plata" />
                     <link rel="icon" href="/favicon.ico" />
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
