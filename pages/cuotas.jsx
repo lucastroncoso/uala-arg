@@ -50,7 +50,7 @@ export default function Cuotas(props) {
                     subtitle="Pasá a cuotas un pago que ya hiciste y te devolvemos la plata en el momento."
                     img={<Image src="/assets/images/cuotas/cuotas-otorgadas 1.png" width={1389} height={1134} />}
                     items={[
-                        <CardItem text="Podés pasar compras, recargas o pago de facturas."
+                        <CardItem text="Podés pasar compras, recargas o pagos de facturas."
                             img="/assets/images/prestamos/icono_prestamos.png" />,
                         <CardItem text="La plata se deposita en el momento."
                             img="/assets/images/prestamos/icono-depositar-plata.png" />]}

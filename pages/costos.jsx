@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Costos(props) {
 
     const charges = [
-        { cost: "$0", title: "Descarga la app" },
+        { cost: "$0", title: "Descargá la app" },
         { cost: "$0", title: "Costo de apertura, mantenimiento y cierre" },
         { cost: "$0", title: "Comisión por consumos con la tarjeta" },
         { cost: "$0", title: "Transferencias entre usuarios Ualá " },

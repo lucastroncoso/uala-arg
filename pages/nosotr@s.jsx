@@ -53,7 +53,6 @@ export default function Nosotros(props) {
                                 <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos que manejes toda tu plata desde una app: fácil, gratis y segura.</li></div>
                                 <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos que compres lo que quieras, donde quieras.</li></div>
                                 <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos que mandes plata a quien quieras, cuando quieras.</li></div>
-                                <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos que manejes toda tu plata desde una app: fácil, gratis y segura.</li></div>
                                 <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos que analices todos tus gastos, para así ahorrar mejor.</li></div>
                                 <div className="flex flex-nowrap pb-4"><i className="fas fa-chevron-right text-blue-50 pt-2 pr-2"></i><li className=" text">Queremos que recibas el mejor soporte, por redes sociales, Comunidad, mail o chat en vivo.</li></div>
                             </ol>

@@ -50,7 +50,7 @@ export default function Inversiones(props) {
                     pushImg="/assets/images/inversiones/push.png"
                     img={<Image src="/assets/images/inversiones/inversiones-invertir 1.png" width={1389} height={1134} />}
                     items={[
-                        <CardItem text="Invertí y libertá tu plata al instante
+                        <CardItem text="Invertí y liberá tu plata al instante
                         con un solo click."
                             img="/assets/images/inversiones/icono-inversiones.png" />,
                         <CardItem text="Desde $1 y sin límites de inversión."

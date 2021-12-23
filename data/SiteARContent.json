@@ -53,7 +53,8 @@
             },
             {
               "copy": "Comunidad",
-              "url": "https://comunidad.uala.com.ar/"
+              "url": "https://comunidad.uala.com.ar/",
+              "target": "_BLANK"
             },
             {
               "copy": "Consejos de seguridad",
@@ -82,11 +83,13 @@
             },
             {
               "copy": "El blog de Ualá",
-              "url": "https://blog.uala.com.ar/"
+              "url": "https://blog.uala.com.ar/",
+              "target": "_BLANK"
             },
             {
               "copy": "Gaming",
-              "url": "/gaming"
+              "url": "/gaming",
+              "target": "_BLANK"
             }
           ]
         },
@@ -137,7 +140,7 @@
     },
     "downloadApp": {
       "title": "El Lado Bueno de tu Plata",
-      "paragraph": "Escanea el QR con la cámara de tu celular y descargá Ualá.",
+      "paragraph": "Escaneá el QR con la cámara de tu celular y descargá Ualá.",
       "image": {
         "src": "/public/assets/images/qr_ar.png",
         "alt": "Scanea el QR con tu dispositivo"
@@ -235,7 +238,7 @@
         {
           "icon": "pagos-recargas",
           "title": "Pagos y Recargas",
-          "copy": "Podés pagar todas tus facturas, recargá tus servicios prepagos y cargá la SUBE.",
+          "copy": "Podés pagar todas tus facturas, recargar tus servicios prepagos y cargar la SUBE.",
           "ctaCopy": "Ver más",
           "url": "/pagos"
         }
@@ -297,7 +300,7 @@
       "paragraphs": [
         "<strong>Si tenés dudas, ¡preguntanos a nosotr@s!</strong> <br>Si sos usuari@ de Ualá escribinos por el chat de la app.",
         "Si todavía no sos parte de Ualá, nos podés escribir por mail a <a href='mailto:hola@uala.com.ar'>hola@uala.com.ar</a> o por nuestras redes sociales.",
-        "Además en la <a href='https://comunidad.uala.com.ar/'>Comunidad Ualá</a>, encontrarás las respuestas con un click"
+        "Además en la <a href='https://comunidad.uala.com.ar/'>Comunidad Ualá</a>, encontrarás las respuestas con un click."
       ]
     },
     "footer": {
@@ -342,7 +345,7 @@
           "url": "/privacidad"
         },
         {
-          "copy": "DEFENSA DEL CONSUMIDOR",
+          "copy": "DEFENSA DE LAS Y LOS CONSUMIDORES",
           "url": "/defensa-consumidor"
         },
         {
@@ -566,7 +569,7 @@
     },
     "downloadApp": {
       "title": "The good side of your Money",
-      "paragraph": "Escanea el QR con la cámara de tu celular y descargá Ualá.",
+      "paragraph": "Escaneá el QR con la cámara de tu celular y descargá Ualá.",
       "image": {
         "src": "/public/assets/images/qr_ar.png",
         "alt": "Scan the QR with your Device"
