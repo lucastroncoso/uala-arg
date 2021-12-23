@@ -84,7 +84,6 @@ export async function getStaticProps() {
 }
 
 const isPromotionNew = date => {
-    // const today = new Date('2021-12-16T19:46:30.00Z'); // Prueba para promociones creadas junto con la prueba de la web
     const today = new Date();
     const promotionCreationDate = new Date(date);
     const differenceTime = today.getTime() - promotionCreationDate.getTime();
