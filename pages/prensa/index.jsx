@@ -111,20 +111,35 @@ export default function Prensa(props) {
                     </h1>
                 </div>
                 <div className="grid grid-cols-12 gap-5">
-                    <div className="col-span-full mb-4 lg:mb-0 lg:col-span-3">
-                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                            <Link href="/prensa/sobre">
-                                <a className="link">Acerca de Ualá →</a>
-                            </Link>
+
+                    <Link href="/prensa/sobre">
+                        <div className="mb-4 lg:mb-0 col-span-full lg:col-span-3 cursor-pointer">
+                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                                <div className="flex items-center">
+                                    <div className="flex-grow">
+                                        <a className="link">Acerca de Ualá</a>
+                                    </div>
+                                    <div>
+                                        <span className="text-blue-250"> →</span> 
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-span-full mb-4 lg:mb-0 lg:col-span-7">
-                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                            <Link href="/prensa/pier">
-                                <a className="link">Acerca de Pierpaolo Barbieri, fundador y CEO de Ualá →</a>
-                            </Link>
+                    </Link>
+                    <Link href="/prensa/pier">
+                        <div className="mb-4 lg:mb-0 col-span-full lg:col-span-7 cursor-pointer">
+                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                                <div className="flex items-center">
+                                    <div className="flex-grow">
+                                        <a className="link">Acerca de Pierpaolo Barbieri, fundador y CEO de Ualá</a>
+                                    </div>
+                                    <div>
+                                        <span className="text-blue-250"> →</span> 
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </Container>
 
@@ -136,56 +151,56 @@ export default function Prensa(props) {
                 </div>
                 <div className="grid md:grid-cols-3 gap-5">
 
-                    <div className="mb-4 lg:mb-0 ">
-                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                            <div className="flex items-center">
-                                <div className="flex-grow">
-                                    <div className="link">
-                                        <a href="https://drive.google.com/drive/folders/1p9oFw6tVSQix_1mSX5h7_46MEBsvSoeK?usp=sharing" target="_blank" >
-                                            Logo de Ualá
-                                        </a>
+                    <a href="https://drive.google.com/drive/folders/1p9oFw6tVSQix_1mSX5h7_46MEBsvSoeK?usp=sharing" target="_blank" >
+                        <div className="mb-4 lg:mb-0 ">
+                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                                <div className="flex items-center">
+                                    <div className="flex-grow">
+                                        <div className="link">
+                                                Logo de Ualá
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <Image src="/assets/images/icono-descarga.png" width={30} height={30} />
+                                    <div>
+                                        <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div className="mb-4 lg:mb-0 ">
-                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                            <div className="flex items-center">
-                                <div className="flex-grow">
-                                    <div className="link">
-                                        <a href="https://drive.google.com/drive/folders/1WU03reTPU0jtqysli6nKEsy7JBd14Pg0?usp=sharing" target="_blank" >
-                                            Imágenes de producto
-                                        </a>
+                    <a href="https://drive.google.com/drive/folders/1WU03reTPU0jtqysli6nKEsy7JBd14Pg0?usp=sharing" target="_blank" >
+                        <div className="mb-4 lg:mb-0 ">
+                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                                <div className="flex items-center">
+                                    <div className="flex-grow">
+                                        <div className="link">
+                                                Imágenes de producto
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <Image src="/assets/images/icono-descarga.png" width={30} height={30} />
+                                    <div>
+                                        <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div className="mb-4 lg:mb-0 ">
-                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                            <div className="flex items-center">
-                                <div className="flex-grow">
-                                    <div className="link">
-                                        <a href="https://drive.google.com/drive/folders/1m1SjV7h-CVF018jpizmtUN8rsj1nPTCQ?usp=sharing" target="_blank" >
-                                            Imágenes de las oficinas
-                                        </a> 
+                    <a href="https://drive.google.com/drive/folders/1m1SjV7h-CVF018jpizmtUN8rsj1nPTCQ?usp=sharing" target="_blank" >
+                        <div className="mb-4 lg:mb-0 ">
+                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                                <div className="flex items-center">
+                                    <div className="flex-grow">
+                                        <div className="link">
+                                                Imágenes de las oficinas
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <Image src="/assets/images/icono-descarga.png" width={30} height={30} />
+                                    <div>
+                                        <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a> 
 
                 </div>
             </Container>
@@ -222,13 +237,20 @@ export default function Prensa(props) {
                     </h1>
                 </div>
                 <div className="grid grid-cols-12 gap-5">
-                    <div className="col-span-full mb-4 lg:mb-0 lg:col-span-3">
-                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                            <Link href="/prensa/">
-                                <a className="link">Reporte 2021 →</a>
-                            </Link>
+                    <Link href="/prensa/reporte">
+                        <div className="mb-4 lg:mb-0 col-span-full lg:col-span-3 cursor-pointer">
+                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                                <div className="flex items-center">
+                                    <div className="flex-grow">
+                                        <a className="link">Reporte 2021</a>
+                                    </div>
+                                    <div>
+                                        <span className="text-blue-250"> →</span> 
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </Container>
             
