@@ -17,6 +17,16 @@ module.exports = {
   async redirects() {
     return [
       {
+        source: '/tyc',
+        destination: '/tyc.html',
+        permanent: true,
+      },
+      {
+        source: '/terminosycondiciones',
+        destination: '/tyc.html',
+        permanent: true,
+      },
+      {
         source: '/tyc-ualabis',
         destination: '/assets/legales/TyCUalaBis.pdf',
         permanent: true,
