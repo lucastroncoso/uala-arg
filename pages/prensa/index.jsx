@@ -106,101 +106,102 @@ export default function Prensa(props) {
 
             <Container className="mt-12 w-full">
                 <div className="w-full">
-                    <h1 className="title-2 md:w-5/6 my-4">
+                    <h1 className="title-2 md:w-5/6 mt-4 mb-8">
                         <div className="text-gray-250">Conocé más sobre Ualá</div>
                     </h1>
                 </div>
                 <div className="grid grid-cols-12 gap-5">
 
-                    <Link href="/prensa/sobre">
-                        <div className="mb-4 lg:mb-0 col-span-full lg:col-span-3 cursor-pointer">
-                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                                <div className="flex items-center">
-                                    <div className="flex-grow">
+                    <div className="mb-4 lg:mb-0 col-span-full lg:col-span-3">
+                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                            <div className="flex items-center">
+                                <div className="flex-grow">
+                                    <Link href="/prensa/sobre">
                                         <a className="link">Acerca de Ualá</a>
-                                    </div>
-                                    <div>
-                                        <span className="text-blue-250"> →</span> 
-                                    </div>
+                                    </Link>
+                                </div>
+                                <div>
+                                    <span className="text-blue-250"> →</span> 
                                 </div>
                             </div>
                         </div>
-                    </Link>
-                    <Link href="/prensa/pier">
-                        <div className="mb-4 lg:mb-0 col-span-full lg:col-span-7 cursor-pointer">
-                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                                <div className="flex items-center">
-                                    <div className="flex-grow">
+                    </div>
+
+                    <div className="mb-4 lg:mb-0 col-span-full lg:col-span-7">
+                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                            <div className="flex items-center">
+                                <div className="flex-grow">
+                                    <Link href="/prensa/pier">
                                         <a className="link">Acerca de Pierpaolo Barbieri, fundador y CEO de Ualá</a>
-                                    </div>
-                                    <div>
-                                        <span className="text-blue-250"> →</span> 
-                                    </div>
+                                    </Link>
+                                </div>
+                                <div>
+                                    <span className="text-blue-250"> →</span> 
                                 </div>
                             </div>
                         </div>
-                    </Link>
+                    </div>
                 </div>
             </Container>
 
             <Container className="mt-12 w-full">
                 <div className="w-full">
-                    <h1 className="title-2 md:w-5/6 my-4">
+                    <h1 className="title-2 md:w-5/6 mt-4 mb-8">
                         <div className="text-gray-250">Descargá nuestro material institucional</div>
                     </h1>
                 </div>
                 <div className="grid md:grid-cols-3 gap-5">
 
-                    <a href="https://drive.google.com/drive/folders/1p9oFw6tVSQix_1mSX5h7_46MEBsvSoeK?usp=sharing" target="_blank" >
-                        <div className="mb-4 lg:mb-0 ">
-                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                                <div className="flex items-center">
-                                    <div className="flex-grow">
-                                        <div className="link">
-                                                Logo de Ualá
-                                        </div>
+                    <div className="mb-4 lg:mb-0 ">
+                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                            <div className="flex items-center">
+                                <div className="flex-grow">
+                                    <div className="link">
+                                        <a href="https://drive.google.com/drive/folders/1p9oFw6tVSQix_1mSX5h7_46MEBsvSoeK?usp=sharing" target="_blank" >
+                                            Logo de Ualá
+                                        </a>
                                     </div>
-                                    <div>
-                                        <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
-                                    </div>
+                                </div>
+                                <div>
+                                    <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="https://drive.google.com/drive/folders/1WU03reTPU0jtqysli6nKEsy7JBd14Pg0?usp=sharing" target="_blank" >
-                        <div className="mb-4 lg:mb-0 ">
-                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                                <div className="flex items-center">
-                                    <div className="flex-grow">
-                                        <div className="link">
-                                                Imágenes de producto
-                                        </div>
+                    <div className="mb-4 lg:mb-0 ">
+                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                            <div className="flex items-center">
+                                <div className="flex-grow">
+                                    <div className="link">
+                                        <a href="https://drive.google.com/drive/folders/1WU03reTPU0jtqysli6nKEsy7JBd14Pg0?usp=sharing" target="_blank" >
+                                            Imágenes de producto
+                                        </a>
                                     </div>
-                                    <div>
-                                        <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
-                                    </div>
+                                </div>
+                                <div>
+                                    <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="https://drive.google.com/drive/folders/1m1SjV7h-CVF018jpizmtUN8rsj1nPTCQ?usp=sharing" target="_blank" >
-                        <div className="mb-4 lg:mb-0 ">
-                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                                <div className="flex items-center">
-                                    <div className="flex-grow">
-                                        <div className="link">
-                                                Imágenes de las oficinas
-                                        </div>
+                    <div className="mb-4 lg:mb-0 ">
+                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                            <div className="flex items-center">
+                                <div className="flex-grow">
+                                    <div className="link">
+                                        <a href="https://drive.google.com/drive/folders/1m1SjV7h-CVF018jpizmtUN8rsj1nPTCQ?usp=sharing" target="_blank" >
+                                            Imágenes de las oficinas
+                                        </a> 
                                     </div>
-                                    <div>
-                                        <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
-                                    </div>
+                                </div>
+                                <div>
+                                    <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
                                 </div>
                             </div>
                         </div>
-                    </a> 
+                    </div>
 
                 </div>
             </Container>
@@ -208,7 +209,7 @@ export default function Prensa(props) {
             <Container>
                 <div className="mt-16">
                     <div className="w-full">
-                        <h1 className="title-2 md:w-5/6 my-4">
+                        <h1 className="title-2 md:w-5/6 mt-4 mb-8">
                             <div className="text-gray-250">Ualá como caso de éxito</div>
                         </h1>
                     </div>
@@ -218,7 +219,12 @@ export default function Prensa(props) {
                             stories.map(story => (
                                 <div key={story.link} className="shadow-md rounded-xl p-6 border border-gray-100 flex flex-col">
                                     <div className="h-12">
-                                        <img src={`/assets/images/prensa/${story.image}`} alt="" />
+                                        {
+                                            story.image === 'facebook.svg'
+                                            ? <img src={`/assets/images/prensa/${story.image}`} alt=""  className="max-h-5" />
+                                            : <img src={`/assets/images/prensa/${story.image}`} alt=""  className="max-h-9" />
+                                        }
+                                        
                                     </div>
                                     <div className="text-gray-600 my-4 flex-grow">{story.text}</div>
                                     <div className="link"><a href={story.link} target="_blank">Leer más</a></div>
@@ -230,6 +236,7 @@ export default function Prensa(props) {
                 </div>
             </Container>
 
+            {/* Oculto mientras no esté listo el reporte 2021
             <Container className="mt-12 w-full">
                 <div className="w-full">
                     <h1 className="title-2 md:w-5/6 my-4">
@@ -237,22 +244,22 @@ export default function Prensa(props) {
                     </h1>
                 </div>
                 <div className="grid grid-cols-12 gap-5">
-                    <Link href="/prensa/reporte">
-                        <div className="mb-4 lg:mb-0 col-span-full lg:col-span-3 cursor-pointer">
-                            <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
-                                <div className="flex items-center">
-                                    <div className="flex-grow">
+                    <div className="mb-4 lg:mb-0 col-span-full lg:col-span-3">
+                        <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
+                            <div className="flex items-center">
+                                <div className="flex-grow">
+                                    <Link href="/prensa/reporte">
                                         <a className="link">Reporte 2021</a>
-                                    </div>
-                                    <div>
-                                        <span className="text-blue-250"> →</span> 
-                                    </div>
+                                    </Link>
+                                </div>
+                                <div>
+                                    <span className="text-blue-250"> →</span> 
                                 </div>
                             </div>
                         </div>
-                    </Link>
+                    </div>
                 </div>
-            </Container>
+            </Container> */}
             
             <ContactoInstitucional />
 
