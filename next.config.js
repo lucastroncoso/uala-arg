@@ -55,6 +55,21 @@ module.exports = {
         source: '/sumate',
         destination: 'https://www.comeet.com/jobs/Uala/54.00B',
         permanent: true,
+      },
+      {
+        source: '/programa-de-beneficios',
+        destination: 'https://www.ualamas.com.ar/',
+        permanent: true,
+      },
+      {
+        source: '/tarjeta',
+        destination: '/compras',
+        permanent: true,
+      },
+      {
+        source: '/qr',
+        destination: '/compras',
+        permanent: true,
       }
     ]
   }
