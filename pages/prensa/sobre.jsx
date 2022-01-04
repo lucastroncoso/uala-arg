@@ -1,8 +1,7 @@
-import Layout from "../components/layout";
-import Container from "../components/container";
-import Image from "next/image";
+import Layout from "../../components/layout";
+import Container from "../../components/container";
 import Head from 'next/head';
-import ContactoInstitucional from "../components/contactoInstitucional";
+import ContactoInstitucional from "../../components/contactoInstitucional";
 import Link from 'next/link';
 
 export default function PrensaSobre(props) {
@@ -25,7 +24,7 @@ export default function PrensaSobre(props) {
             </Container>
 
             <Container>
-                <div className="pb-20 lg:px-20">
+                <div className=" lg:px-20">
                     <h2 className="title-2">Acerca de Ualá</h2>
                     <p className="text">Ualá es la fintech que está revolucionando las finanzas en América Latina. Fue fundada por el emprendedor argentino Pierpaolo Barbieri y lanzada en octubre de 2017 con la misión de llevar los servicios financieros al siglo XXI. A través de una aplicación móvil y una tarjeta prepaga internacional Mastercard, ofrece un ecosistema financiero con una experiencia innovadora, integrada, segura, 100% digital, fácil de usar y de bajo costo. 
                     </p>

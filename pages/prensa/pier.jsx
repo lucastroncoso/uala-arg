@@ -1,8 +1,8 @@
-import Layout from "../components/layout";
-import Container from "../components/container";
+import Layout from "../../components/layout";
+import Container from "../../components/container";
 import Image from "next/image";
 import Head from 'next/head';
-import ContactoInstitucional from "../components/contactoInstitucional";
+import ContactoInstitucional from "../../components/contactoInstitucional";
 import Link from 'next/link';
 
 export default function PrensaPier(props) {
@@ -25,7 +25,7 @@ export default function PrensaPier(props) {
             </Container>
 
             <Container>
-                <div className="pb-20">
+                <div className="">
                     <div className="flex flex-row">
                         <div className="w-7/12 pr-4">
                             <h2 className="title-2">Acerca de Pierpaolo Barbieri, fundador y CEO de Ualá</h2>
