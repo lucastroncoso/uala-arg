@@ -70,6 +70,11 @@ module.exports = {
         source: '/qr',
         destination: '/compras',
         permanent: true,
+      },
+      {
+        source: '/faqs',
+        destination: '/preguntas-frecuentes',
+        permanent: true,
       }
     ]
   }
