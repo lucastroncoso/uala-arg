@@ -10,14 +10,18 @@ import Link from 'next/link';
 export async function getStaticProps() {
     const response = await fetchContent(`
     {
-        argentinaPrensaCollection (limit:3) {
+        argentinaPrensaCollection(order: [sys_publishedAt_DESC], limit: 3) {
           items {
             cardDate
             cardTitle
             slug
+            sys {
+              id
+              publishedAt
+            }
           }
         }
-    }
+      }
     `);
 
     return {
