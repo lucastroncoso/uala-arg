@@ -87,9 +87,9 @@ export default function Details({ news }) {
                               <p className="text mb-8 mt-12">
                               { news.dateAndLocation }
                               </p>
-                              <p className="text">
+                              <div className="text reactMarkdown">
                                 <ReactMarkdown>{ news.body }</ReactMarkdown>
-                              </p>
+                              </div>
                           </div>
                           {
                             !!news.image &&
