@@ -92,7 +92,7 @@ export default function Details({ news }) {
                               </p>
                           </div>
                           {
-                            news.image.url &&
+                            !!news.image &&
                           
                               <div className="w-full flex flex-col items-end justify-center">
                                   <div className="w-full h-auto rounded-2xl overflow-hidden my-8">
