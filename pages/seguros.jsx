@@ -58,20 +58,30 @@ export default function Seguros(props) {
                     </div>
                 </Container>
 
-                <CardSection className="bg-blue-degrade" noStretch>
+                <CardSection className="bg-blue-degrade">
+
                     <CardChildren img="/assets/images/seguros/Icono-seguro-celular.png"
                         title="Seguro para celular">
                         <h2 className="text mb-4">Desde <span className="font-semibold">$492</span> por mes</h2>
+                        <p className="py-2"><span className="mr-4">👉</span>Cobertura del valor asegurado de tu celular ante robo o daño accidental</p>
+                        <p className="py-2"><span className="mr-4">👉</span>Reembolso por pérdida de llaves y documentación. </p>
+                        <p className="py-2"><span className="mr-4">👉</span>Asesoramiento ante robo y/o hurto de tarjetas y celular.</p>
                     </CardChildren>
 
                     <CardChildren img="/assets/images/seguros/Icono-seguro-movilidad.png"
                         title="Seguro de movilidad">
                         <h2 className="text mb-4">Desde <span className="font-semibold">$440</span> por mes</h2>
+                        <p className="py-2"><span className="mr-4">👉</span>Incluye cobertura por robo y daño total.</p>
+                        <p className="py-2"><span className="mr-4">👉</span>Incluye cobertura por accidentes.</p>
+                        <p className="py-2"><span className="mr-4">👉</span>Incluye cobertura por robo de efectos.</p>
                     </CardChildren>
 
                     <CardChildren img="/assets/images/seguros/Icono-seguro-Hogar.png"
                         title="Asistencia para el hogar">
                         <h2 className="text mb-4">Desde <span className="font-semibold">$240</span> por mes</h2>
+                        <p className="py-2"><span className="mr-4">👉</span>Revisión de estufas y aire acondicionado e instalación de equipos de frío/calor.</p>
+                        <p className="py-2"><span className="mr-4">👉</span>Reparación de electrodomésticos. </p>
+                        <p className="py-2"><span className="mr-4">👉</span>Servicios de emergencia las 24 hs y los 365 días del año.</p>
                     </CardChildren>
 
                     <CardChildren img="/assets/images/seguros/Icono-seguro-salud.png"
@@ -86,6 +96,11 @@ export default function Seguros(props) {
                     <CardChildren img="/assets/images/seguros/Icono-seguro-mascotas.png"
                         title="Asistencia para mascotas">
                         <h2 className="text mb-4">Desde <span className="font-semibold">$350</span> por mes</h2>
+                        <p className="py-2"><span className="mr-4">👉</span>Consultas virtuales 24x7 con especialistas. </p>
+                        <p className="py-2"><span className="mr-4">👉</span>Consulta en centros veterinarios.</p>
+                        <p className="py-2"><span className="mr-4">👉</span>Descuento en la compra de alimentos y accesorios.</p>
+                        <p className="py-2"><span className="mr-4">👉</span>Vacunación anual.</p>
+                        <p className="py-2"><span className="mr-4">👉</span>Baño para tu mascota.</p>
                     </CardChildren>
 
                 </CardSection>
