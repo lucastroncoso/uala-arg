@@ -8,7 +8,7 @@ import Link from 'next/link';
 export async function getStaticProps() {
     const response = await fetchContent(`
     {
-        argentinaPrensaCollection(order: [sys_publishedAt_DESC]) {
+        argentinaPrensaCollection(order: [sys_firstPublishedAt_DESC]) {
           items {
             cardDate
             cardTitle
