@@ -155,7 +155,7 @@ export default function RondasDeInversion(props) {
                         <div className="flex flex-wrap content-center mb-12 md:order-none order-2 md:mt-0 mt-8">
                             <div className="w-full">
                                 <h1 className="title-1 md:w-5/6 mt-8">
-                                    <div className="text-black">Ualá recibió inversión de US$350 M de SoftBank y Tencent</div>
+                                    <div className="text-gray-250">Ualá recibió inversión de US$350 M de SoftBank y Tencent</div>
                                 </h1>
                             </div>
                         </div>
