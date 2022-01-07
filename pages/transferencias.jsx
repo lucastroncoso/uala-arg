@@ -47,10 +47,6 @@ export default function Pagos(props) {
                     imgMobile={<Image src="/assets/images/transferencias/thumbnail_transferencias_mobile.png" width={661} height={687} />}
                 />
 
-
-
-
-
             </Layout>
         </>
     )
