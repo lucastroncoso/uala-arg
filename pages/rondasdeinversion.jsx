@@ -151,16 +151,16 @@ export default function RondasDeInversion(props) {
             </Head>
             <Layout nav footer>
                 <Container className="bg-blue-150">
-                    <div className="grid lg:mb-20 lg:mt-24 md:mb-0 mt-20 mb-12 md:grid-cols-2">
+                    <div className="grid  lg:mt-24 md:mb-4 mt-20 mb-12 md:grid-cols-2">
                         <div className="flex flex-wrap content-center mb-12 md:order-none order-2 md:mt-0 mt-8">
                             <div className="w-full">
-                                <h1 className="title-2 md:w-5/6 mt-8">
+                                <h1 className="title-1 md:w-5/6 mt-8">
                                     <div className="text-black">Ualá recibió inversión de US$350 M de SoftBank y Tencent</div>
                                 </h1>
                             </div>
                         </div>
                         <div className="flex items-center justify-center md:order-none order-1 " >
-                            <div className="rounded-3xl overflow-hidden flex w-5/6">
+                            <div className="rounded-3xl overflow-hidden flex w-4/6">
                                 <Image src="/assets/images/rondasdeinversion/ecosistema.png" width={1676} height={1470} />
                             </div>
                         </div>
