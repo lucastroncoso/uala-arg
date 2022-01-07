@@ -154,7 +154,7 @@ export default function RondasDeInversion(props) {
                     <div className="grid lg:mb-20 lg:mt-24 md:mb-0 mt-20 mb-12 md:grid-cols-2">
                         <div className="flex flex-wrap content-center mb-12 md:order-none order-2 md:mt-0 mt-8">
                             <div className="w-full">
-                                <h1 className="title-1 md:w-5/6 mt-8">
+                                <h1 className="title-2 md:w-5/6 mt-8">
                                     <div className="text-black">Ualá recibió inversión de US$350 M de SoftBank y Tencent</div>
                                 </h1>
                             </div>
@@ -173,18 +173,18 @@ export default function RondasDeInversion(props) {
                             <p className="text" >La fintech alcanza una valuación de <strong>2.450 millones de dólares.</strong> Representa la ronda de inversión privada más grande que ha recibido una empresa argentina.</p>
                         </div>
                         <div className="w-full">
-                            <h1 className="title-2 md:w-5/6 mb-4 mt-8">
+                            <h1 className="title-3 md:w-5/6 mb-4 mt-8">
                                 <div className="text-gray-250">Descargá el kit de prensa</div>
                             </h1>
                         </div>
                     </div>
                 
-                    <div className="grid lg:grid-cols-3 gap-5 mb-8">
+                    <div className="grid lg:grid-cols-3 gap-5 mb-20">
                         {
                             links !== undefined &&
                             links.map(link => (
                                 <div key={link.url.url} className="shadow-md rounded-2xl py-8 px-12 border border-gray-100 flex flex-col items-center justify-center bg-white">
-                                    <div className="text-blue-250 text-2xl font-semibold text-center mb-4 ">{link.title}</div>
+                                    <div className="text-blue-250 text-xl font-semibold text-center mb-4 ">{link.title}</div>
                                     <div className={` flex flex-row w-full link ${ !!link.url2 ? 'justify-between' : 'justify-center'}`}>
                                         <a href={link.url.url} target="_blank">{link.url.text}</a>
                                         { !!link.url2 &&
@@ -202,7 +202,7 @@ export default function RondasDeInversion(props) {
                     <div className="grid lg:mb-20 lg:mt-24 md:mb-0 mb-12 md:grid-cols-2 gap-x-12">
                         <div className="flex flex-col justify-around py-4 md:order-none order-1 md:mt-0 mt-8">
                             
-                                <h1 className="title-3 md:w-5/6 ">
+                                <h1 className="title-3 md:w-5/6 mb-4">
                                     <div className="">Acerca de Pierpaolo Barbieri, Fundador y CEO de Ualá</div>
                                 </h1>
                                 <div className="rounded-3xl overflow-hidden flex">
@@ -233,7 +233,7 @@ export default function RondasDeInversion(props) {
                 <Container>
                     <div className="py-8">
                         <div className="w-full">
-                            <h1 className="title-2 md:w-5/6 mb-4 mt-8">
+                            <h1 className="title-3 md:w-5/6 mb-4 mt-8">
                                 <div className="text-gray-250">Contenido de nuestro Blog para conocer un poco más sobre rondas de inversión</div>
                             </h1>
                         </div>
@@ -244,7 +244,7 @@ export default function RondasDeInversion(props) {
                             blogLinks !== undefined &&
                             blogLinks.map(link => (
                                 <div key={link.url.url} className="shadow-md rounded-2xl py-8 px-12 border border-gray-100 flex flex-col bg-white">
-                                    <div className=" text-2xl font-semibold text-left mb-4 flex-grow">{link.title}</div>
+                                    <div className=" text-xl font-semibold text-left mb-4 flex-grow">{link.title}</div>
                                     <div className={` flex flex-row w-full link `}>
                                         <a href={link.url.url} target="_blank"><span className="link">{link.url.text}</span> →</a>
                                             
