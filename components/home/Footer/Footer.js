@@ -13,12 +13,12 @@ import Swal from 'sweetalert2';
 const Footer = ({ content, banner }) => {
   const handlePopUp = () => {
     Swal.fire({
-        showCloseButton: false,
-        showConfirmButton: true,
-        confirmButtonText: 'Aceptar',
-        confirmButtonColor: '#3E6BFD',
-        customClass: { popup: 'rounded-2xl', closeButton: 'focus:shadow-none', confirmButton: 'confirm-btn-popup' },
-        html:  `
+      showCloseButton: false,
+      showConfirmButton: true,
+      confirmButtonText: 'Aceptar',
+      confirmButtonColor: '#3E6BFD',
+      customClass: { popup: 'rounded-2xl', closeButton: 'focus:shadow-none', confirmButton: 'confirm-btn-popup' },
+      html: `
                 <div class='p-5 rounded-2xl' >
                     <p class='text-left text-sm text-gray-500 mb-8'>
                     La Ley N° 2.244 establece que las personas físicas o jurídicas que comercialicen, o presten servicios a consumidores y/o usuarios en el ámbito de la C.A.B.A. y posean página de internet, deberán agregar un enlace con la Dirección General de Defensa y Protección al Consumidor. 
@@ -31,7 +31,7 @@ const Footer = ({ content, banner }) => {
                     </p>
                 </div>
              `
-        ,
+      ,
     });
   };
 
@@ -44,10 +44,10 @@ const Footer = ({ content, banner }) => {
             <Image src={UALA_ISO} width={54} height={30} />
             <h5 className={styles.title}>{content.title}</h5>
             <div className={styles.appStoreWrapper}>
-              <a href={'https://uala.onelink.me/gqGz/30b751c4'}>
+              <a href={'https://uala.onelink.me/Mhko/b29136b4'}>
                 <Image src={GOOGLE_PLAY} width={317} height={69} />
               </a>
-              <a href={'https://uala.onelink.me/gqGz/557eaed9'}>
+              <a href={'https://uala.onelink.me/Mhko/1bc0d182'}>
                 <Image src={APP_STORE} width={299} height={66} />
               </a>
             </div>
@@ -69,16 +69,16 @@ const Footer = ({ content, banner }) => {
                 <div key={index} className={styles.link}>
                   {
                     item.url == "/defensa-consumidor"
-                      ? <a 
-                          onClick={ handlePopUp }
-                          className="cursor-pointer" >
-                            <span>{ item.copy }</span>
-                        </a>
-                      : <a 
-                          {...item.hasTargetBlank ? { target: "_blank" } : null}
-                          href={item.url}>
-                          {item.copy}
-                        </a>
+                      ? <a
+                        onClick={handlePopUp}
+                        className="cursor-pointer" >
+                        <span>{item.copy}</span>
+                      </a>
+                      : <a
+                        {...item.hasTargetBlank ? { target: "_blank" } : null}
+                        href={item.url}>
+                        {item.copy}
+                      </a>
                   }
                 </div>
               )
