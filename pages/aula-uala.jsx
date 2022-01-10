@@ -177,7 +177,7 @@ export default function Tarjeta(props) {
                                                 id="mailInput" required />
                                         </div>
                                         <button id="registerButton"
-                                            className="bg-gray-300 text-white rounded-full px-6 py-4 text-lg lg:w-4/12 w-6/12 mt-6 lg:mt-0 mx-auto outline-none">Suscribirme</button>
+                                            className="bg-blue-250 text-white rounded-full px-6 py-4 text-lg lg:w-4/12 w-6/12 mt-6 lg:mt-0 mx-auto outline-none">Suscribirme</button>
                                     </form>
                                 </div>
                             </div>

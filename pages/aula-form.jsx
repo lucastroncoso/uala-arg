@@ -167,7 +167,7 @@ export default function Tarjeta(props) {
                                 </div>
                                 <div classNameName="flex mx-auto mt-2 lg:col-start-2">
                                     <button type="submit" id="registerButton" disabled
-                                        className="text-white p-3 rounded-full bg-gray-300   outline-none px-20 text-xl justify-self-center ">Enviar</button>
+                                        className="text-white p-3 rounded-full bg-blue-250   outline-none px-20 text-xl justify-self-center ">Enviar</button>
                                 </div>
                             </div>
                         </form>
