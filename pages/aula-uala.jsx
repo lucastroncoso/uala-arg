@@ -1,13 +1,6 @@
-import Container from "../components/container";
-import Hero from "../components/hero";
-import CardItem from "../components/cardItem";
-import CardSmItem from "../components/cardSmItem";
-import ImageItemsSection from "../components/imageItemsSection";
-import ImageTextItem from "../components/tarjeta/imageTextItem";
+
 import Layout from "../components/layout";
-import VideoTitle from "../components/videoTitle";
 import Head from 'next/head';
-import Image from "next/image";
 
 
 export default function Tarjeta(props) {
@@ -58,7 +51,7 @@ export default function Tarjeta(props) {
                             </div>
                             <div className="flex justify-center items-center lg:order-none order-1 col-span-2 lg:col-span-1">
                                 <div className="lg:px-24">
-                                    <h1 className="text-5xl font-medium  color-black mb-6">Aula Ualá</h1>
+                                    <img src="/assets/images/aula/Logo Aula Ualá.png" alt="" className="w-9/12" />
                                     <p className="text-2xl color-gray font-light">Nuestro espacio de educación
                                         financiera. ¡Hablamos de finanzas, pero fácil!</p>
                                 </div>
@@ -68,6 +61,10 @@ export default function Tarjeta(props) {
 
                     {/* <!-- CARDS --> */}
                     <div className="col-span-12 grid grid-cols-12 mt-8 lg:px-12">
+                        <div className="col-span-10 col-start-2 mt-12 title-2 text-center">
+                            El lado fácil de tus finanzas
+                        </div>
+
                         <div className="col-span-10 col-start-2 grid grid-cols-2 gap-8 mt-12">
                             <a target="_blank" href="https://blog.uala.com.ar/"
                                 className="rounded-xl grid grid-cols-12 shadow-2xl border border-gray-100 lg:p-12 p-8 lg:pr-18 px-4 col-span-2 lg:col-span-1 transform hover:scale-105 transition duration-300 ">
