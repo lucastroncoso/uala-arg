@@ -94,7 +94,7 @@ export default function RondasDeInversion(props) {
                 text: "Versión AR"
             },
             url2: {
-                url: "https://bit.ly/3sevc1a",
+                url: "https://blog.uala.com.mx/educacion-financiera/que-es-una-empresa-unicornio/",
                 text: "Versión MX"
             }
         },
@@ -116,7 +116,7 @@ export default function RondasDeInversion(props) {
                 text: "Versión AR"
             },
             url2: {
-                url: "https://bit.ly/3sc9zi8",
+                url: "https://blog.uala.com.mx/educacion-financiera/que-es-una-oferta-publica-inicial-o-ipo/",
                 text: "Versión MX"
             }
         },
@@ -138,7 +138,7 @@ export default function RondasDeInversion(props) {
                 text: "Versión AR"
             },
             url2: {
-                url: "https://bit.ly/3xMd5AK",
+                url: "https://blog.uala.com.mx/educacion-financiera/inversor-angel-que-es-y-por-que-su-apoyo-es-util-para-los-emprendimientos/",
                 text: "Versión MX"
             }
         }
