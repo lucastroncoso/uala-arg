@@ -151,16 +151,16 @@ export default function RondasDeInversion(props) {
             </Head>
             <Layout nav footer>
                 <Container className="bg-blue-150">
-                    <div className="grid lg:mb-20 lg:mt-24 md:mb-0 mt-20 mb-12 md:grid-cols-2">
+                    <div className="grid  lg:mt-24 md:mb-4 mt-20 mb-12 md:grid-cols-2">
                         <div className="flex flex-wrap content-center mb-12 md:order-none order-2 md:mt-0 mt-8">
                             <div className="w-full">
-                                <h1 className="title-2 md:w-5/6 mt-8">
-                                    <div className="text-black">Ualá recibió inversión de US$350 M de SoftBank y Tencent</div>
+                                <h1 className="title-1 md:w-5/6 mt-8">
+                                    <div className="text-gray-250">Ualá recibió inversión de US$350 M de SoftBank y Tencent</div>
                                 </h1>
                             </div>
                         </div>
                         <div className="flex items-center justify-center md:order-none order-1 " >
-                            <div className="rounded-3xl overflow-hidden flex">
+                            <div className="rounded-3xl overflow-hidden flex w-4/6">
                                 <Image src="/assets/images/rondasdeinversion/ecosistema.png" width={1676} height={1470} />
                             </div>
                         </div>
@@ -169,7 +169,7 @@ export default function RondasDeInversion(props) {
 
                 <Container>
                     <div className="py-8">
-                        <div className="md:w-5/6">
+                        <div className="md:w-5/6 lg:w-1/2 py-8">
                             <p className="text" >La fintech alcanza una valuación de <strong>2.450 millones de dólares.</strong> Representa la ronda de inversión privada más grande que ha recibido una empresa argentina.</p>
                         </div>
                         <div className="w-full">
@@ -210,20 +210,20 @@ export default function RondasDeInversion(props) {
                                 </div>
                             
                         </div>
-                        <div className="flex flex-col items-left md:order-none order-2 " >
+                        <div className="flex flex-col items-left justify-center md:order-none order-2 " >
                             <div className="subtitle-1 w-5/6 mb-3">
                                 <div className=" text-blue-250">Versión Español</div>
                             </div>
                             <div className="text ">
-                                <div className=" ">
+                                <div className="text-sm ">
                                     Pierpaolo Barbieri es Historiador Económico y fundador y CEO de Ualá, la fintech que está revolucionando las finanzas en América Latina a través de una app y una tarjeta. Creció en Buenos Aires, estudió Historia y Economía de grado en Harvard y de posgrado en Cambridge.
                                 </div>
                             </div>
-                            <div className="subtitle-1 w-5/6  mb-3 mt-4">
+                            <div className="subtitle-1 w-5/6  mb-3 mt-8">
                                 <div className=" text-blue-250">English version</div>
                             </div>
                             <div className="text ">
-                                <div className=" ">
+                                <div className="text-sm ">
                                 Pierpaolo Barbieri is the CEO and founder of Ualá, the fintech that is revolutionizing finance in Latin America. He grew up in Buenos Aires, studied History and Economics for his undergraduate degree at Harvard and earned a postgraduate degree at Cambridge.                                </div>
                             </div>
                         </div>
@@ -245,7 +245,7 @@ export default function RondasDeInversion(props) {
                             blogLinks.map(link => (
                                 <div key={link.url.url} className="shadow-md rounded-2xl py-8 px-12 border border-gray-100 flex flex-col bg-white">
                                     <div className=" text-xl font-semibold text-left mb-4 flex-grow">{link.title}</div>
-                                    <div className={` flex flex-row w-full link `}>
+                                    <div className={` flex flex-row w-full text-blue-250 `}>
                                         <a href={link.url.url} target="_blank"><span className="link">{link.url.text}</span> →</a>
                                             
                                         
