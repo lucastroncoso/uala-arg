@@ -91,7 +91,7 @@ export default function Details({ promotion }) {
 
                     <div className="w-8/12">
                         <CardRoundedShadow className="ml-0 mt-0 p-4 lg:p-12 w-1/2 mb-12 lg:mb-20">
-                          <div className="min-h-16 flex flex-row items-center">
+                          <div className="min-h-16 flex flex-row justify-center items-center">
                             { promotion.logo 
                             ? <Image
                                 src={ promotion.logo.url}
@@ -140,7 +140,7 @@ export default function Details({ promotion }) {
                     </div>
 
                     <div className="w-2/3 p ">
-                      <i className="fas fa-map-marker-alt mr-2 text-blue-250"></i>
+                      <i className="fas fa-map-marker-alt mx-2 text-blue-250"></i>
                       {
                         !!promotion && promotion.locationsCollection.items.map(loc => {
                           if (loc.name !== promotion.locationsCollection.items.slice(-1)[0].name ) {
