@@ -23,7 +23,8 @@ export default function Tarjeta(props) {
                 registerButton.classList.add('bg-blue-250')
                 registerButton.innerHTML = '¡Listo!'
                 registerButton.disabled = true
-            }).catch(() => {
+            })
+            .catch(() => {
                 alert('Hay un error en el formulario')
             })
     }
