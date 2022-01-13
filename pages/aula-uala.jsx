@@ -1,34 +1,29 @@
 
 import Layout from "../components/layout";
 import Head from 'next/head';
+import { useState } from "react";
 
 
 export default function Tarjeta(props) {
+    const [ button, setButton ] = useState({ text: "Subscribirme", enabled: false });
 
     const registerUser = async (e) => {
         e.preventDefault()
         const registerButton = document.querySelector('#registerButton')
 
-        const res = await fetch(
-            'https://cms.prod.websites.uala.com.ar:2082/suscription',
-            {
-                body: JSON.stringify({
-                    pais: "Argentina",
-                    mail: e.target.mail.value
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                method: 'POST'
-            }
-        )
+        await fetch(`/api/newsletter`, {
+            method: "PUT",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({ Email: e.target.mail.value, Created: new Date().toLocaleDateString() }),
+          })
             .then(() => {
                 registerButton.classList.remove('bg-gray-300')
                 registerButton.classList.add('bg-blue-250')
                 registerButton.innerHTML = '¡Listo!'
                 registerButton.disabled = true
-            })
-            .catch(() => {
+            }).catch(() => {
                 alert('Hay un error en el formulario')
             })
     }
@@ -171,13 +166,14 @@ export default function Tarjeta(props) {
                                     <form onSubmit={registerUser} className="flex flex-wrap my-6" id="form">
                                         <div className="lg:w-8/12 w-full">
                                             <label className="text-xl block text-blue-250" htmlFor="mail">Mi mail es:</label>
-                                            <input onchange="ValidateEmail(this)" type="email" name="mail" id="mail"
+                                            <input type="email" name="mail" id="mail" onChange={ () => setButton(current => ({...current, enabled: true}))}
                                                 placeholder="ejemplo@email.com"
                                                 className="text-blue-250-3 border-b border-uala-3 w-11/12 leading-8 focus:outline-none "
                                                 id="mailInput" required />
                                         </div>
-                                        <button id="registerButton"
-                                            className="bg-blue-250 text-white rounded-full px-6 py-4 text-lg lg:w-4/12 w-6/12 mt-6 lg:mt-0 mx-auto outline-none">Suscribirme</button>
+                                        <button id="registerButton" disabled={ !button.enabled }
+                                            className={`${ button.enabled ? 'bg-blue-250' : 'bg-gray-300'}  text-white rounded-full px-6 py-4 text-lg lg:w-4/12 w-6/12 mt-6 lg:mt-0 mx-auto outline-none`}>
+                                                { button.text }</button>
                                     </form>
                                 </div>
                             </div>
