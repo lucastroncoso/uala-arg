@@ -16,7 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@mui/material": "^5.2.3",
-    "@svgr/webpack": "^5.5.0",
+    "aws-sdk": "^2.1057.0",
     "axios": "^0.24.0",
     "bbcode-to-react": "^0.2.9",
     "classnames": "^2.3.1",
