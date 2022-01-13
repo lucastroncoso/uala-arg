@@ -201,7 +201,7 @@ export default function Tarjeta(props) {
                         <div>
                             <div className=" my-12 mt-24 md:mt-12  relative flex justify-end ">
                                 <img className=" lg:w-8/12 w-10/12 lg:mr-12 mr-2" src="/assets/images/aula/Group 6 (2).png" alt="" />
-                                <p className="absolute text-lg -top-8 md:-top-6 right-12 text-blue-250">Un <span className="font-semibold">producto</span>
+                                <p className="absolute text-lg -top-8 md:-top-6 right-12 text-blue-250">Un <span className="font-semibold">producto </span>
                                        para manejar <br /> tu plata mucho más fácil
                                     </p>
                                 <p className="absolute text-lg lg:left-16 -left-6 top-2/4 text-red-350">que <span
