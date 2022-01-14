@@ -277,7 +277,13 @@ export default function Promociones(props) {
                     </Slider> */}
                     {!!banners && 
                                 
-                                <div className="w-full">
+                                <div className="w-full" onClick={ () => dataLayer.push(
+                                    { 
+                                    event: 'trackEvent',
+                                    eventCategory: 'Web Arg', 
+                                    eventAction: 'Pagina Promociones', 
+                                    eventLabel: 'Banner Header' 
+                                     }) }>
                                     <div className="hidden md:block">
                                         <Image 
                                             layout="responsive"
