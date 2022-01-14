@@ -75,6 +75,11 @@ module.exports = {
         source: '/faqs',
         destination: '/preguntas-frecuentes',
         permanent: true,
+      },
+      {
+        source: '/creditos',
+        destination: '/prestamos',
+        permanent: true,
       }
     ]
   }
