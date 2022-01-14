@@ -21,12 +21,13 @@ export default function Tarjeta(props) {
             .then(() => {
                 registerButton.classList.remove('bg-gray-300')
                 registerButton.classList.add('bg-blue-250')
-                registerButton.innerHTML = '¡Listo!'
-                registerButton.disabled = true
+                //registerButton.innerHTML = '¡Listo!'
+                setButton( current => ({...current, text: '¡Listo!'}));
             })
             .catch(() => {
                 alert('Hay un error en el formulario')
             })
+        setButton( current => ({...current, enabled: false}));
     }
 
     return <>
