@@ -153,7 +153,13 @@ export default function Details({ promotion }) {
 
                     {
                       promotion.callToAction &&
-                      <div className="w-full">
+                      <div className="w-full" onClick={ () => dataLayer.push(
+                        { 
+                          event: 'trackEvent',
+                          eventCategory: 'Web Arg', 
+                          eventAction: 'Pagina Promociones', 
+                          eventLabel: 'Boton Usar Promo' 
+                         }) }>
                         <OutlinedButton
                           href={promotion.actionUrl}
                           text={promotion.actionText}
