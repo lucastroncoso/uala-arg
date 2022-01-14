@@ -53,7 +53,7 @@ module.exports = {
       },
       {
         source: '/reporte-sostenibilidad',
-        destination: '/assets/legales/Reporte Sostenibilidad FY21.pdf',
+        destination: '/assets/sustentabilidad/ReporteSostenibilidadFY21.pdf',
         permanent: true,
       },
       {
