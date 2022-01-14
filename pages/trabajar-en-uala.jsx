@@ -6,7 +6,7 @@ import Slider from "react-slick";
 export default function Carrers(props) {
 
     const benefits = [
-        { title: "Compensaciones y obra social", list: ["Prestaciones de ley", "Cobertura médica", "Premio por referidos", "Política de ajuste por inflación"] },
+        { title: "Compensaciones y obra social", list: ["Prestaciones de ley", "Cobertura médica", "Premio por referidos", "Política de ajuste por inflación", "Préstamos con tasa diferencial"] },
         { title: "Flexibilidad y descanso", list: ["Política de homeoffice", "15 días de vacaciones", "Día de cumpleaños libre", "Horario flexible"] },
         { title: "Bienestar", list: ["Subsidio para gimnasio", "Pago de servicio de internet", "Pago de Netflix y Spotify"] },
         { title: "Maternidad y paternidad", list: ["Extensión de licencia de maternidad y paternidad", "Apoyo a escolaridad para padres con niños"] },
