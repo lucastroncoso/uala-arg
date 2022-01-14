@@ -203,7 +203,8 @@ const C01Navigation = ({ content }) => {
           }
 
           <DownloadAppButton isStyled customClass={[downloadButtonStyle]}
-            dataLayerInfo={{
+            dataLayer={{
+              event: 'trackEvent',
               eventCategory: 'Web Arg', 
               eventAction: 'Menu', 
               eventLabel: 'Boton Descargar' 
