@@ -6,11 +6,17 @@ import { useState } from "react";
 
 export default function Tarjeta(props) {
     const [ button, setButton ] = useState({ text: "Subscribirme", enabled: false, color: 'bg-gray-300' });
+    const [ mailInputEnabled, setMailInputEnabled ] = useState(true);
+
+    const enableButton = () => {
+        setButton({ text: "Subscribirme", enabled: true, color: 'bg-blue-250' });
+    }
 
     const registerUser = async (e) => {
         e.preventDefault()
 
         setButton({ text: "Espera...", enabled: false, color: 'bg-gray-300'});
+        setMailInputEnabled(false);
 
         await fetch(`/api/newsletter`, {
             method: "PUT",
@@ -21,9 +27,11 @@ export default function Tarjeta(props) {
           })
             .then(() => {
                 setButton({ text: '¡Listo!', enabled: false, color: 'bg-blue-250'});
+                setMailInputEnabled(true);
             })
             .catch(() => {
                 setButton({ text: "Hubo un error", enabled: false, color: 'bg-gray-300'});
+                setMailInputEnabled(true);
             });
     }
 
@@ -165,10 +173,10 @@ export default function Tarjeta(props) {
                                     <form onSubmit={registerUser} className="flex flex-wrap my-6" id="form">
                                         <div className="lg:w-8/12 w-full">
                                             <label className="text-xl block text-blue-250" htmlFor="mail">Mi mail es:</label>
-                                            <input type="email" name="mail" id="mail" onChange={ () => setButton({ text: "Subscribirme", enabled: true, color: 'bg-blue-250' })}
+                                            <input type="email" name="mail" id="mail" onChange={ enableButton }
                                                 placeholder="ejemplo@email.com"
                                                 className="text-blue-250-3 border-b border-uala-3 w-11/12 leading-8 focus:outline-none "
-                                                id="mailInput" required />
+                                                id="mailInput" required disabled={ !mailInputEnabled } />
                                         </div>
                                         <button id="registerButton" disabled={ !button.enabled }
                                             className={`${ button.color }  text-white rounded-full px-6 py-4 text-lg lg:w-4/12 w-6/12 mt-6 lg:mt-0 mx-auto outline-none`}>
