@@ -23,7 +23,7 @@ export default function Tarjeta(props) {
             headers: {
               "Content-type": "application/json",
             },
-            body: JSON.stringify({ Email: e.target.mail.value, Created: new Date().toLocaleDateString() }),
+            body: JSON.stringify({ Email: e.target.mail.value, Created: new Date().toLocaleDateString('en-GB') }),
           })
             .then(() => {
                 setButton({ text: '¡Listo!', enabled: false, color: 'bg-blue-250'});
