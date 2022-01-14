@@ -251,9 +251,7 @@ export default function Prensa(props) {
                         <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
                             <div className="flex items-center">
                                 <div className="flex-grow">
-                                    <Link href="/reporte-sostenibilidad">
-                                        <a className="link">Reporte 2021</a>
-                                    </Link>
+                                    <a href="/reporte-sostenibilidad" target="_blank" className="link" rel="noopener noreferrer">Reporte 2021</a>
                                 </div>
                                 <div>
                                     <span className="text-blue-250"> →</span> 
