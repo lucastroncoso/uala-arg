@@ -240,7 +240,6 @@ export default function Prensa(props) {
                 </div>
             </Container>
 
-            {/* Oculto mientras no esté listo el reporte 2021
             <Container className="mt-12 w-full">
                 <div className="w-full">
                     <h1 className="title-2 md:w-5/6 my-4">
@@ -252,7 +251,7 @@ export default function Prensa(props) {
                         <div className="shadow-md rounded-2xl p-6 border border-gray-100 flex flex-col bg-white">
                             <div className="flex items-center">
                                 <div className="flex-grow">
-                                    <Link href="/prensa/reporte">
+                                    <Link href="/reporte-sostenibilidad">
                                         <a className="link">Reporte 2021</a>
                                     </Link>
                                 </div>
@@ -263,7 +262,7 @@ export default function Prensa(props) {
                         </div>
                     </div>
                 </div>
-            </Container> */}
+            </Container>
             
             <ContactoInstitucional />
 
