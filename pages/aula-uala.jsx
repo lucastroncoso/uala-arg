@@ -5,11 +5,12 @@ import { useState } from "react";
 
 
 export default function Tarjeta(props) {
-    const [ button, setButton ] = useState({ text: "Subscribirme", enabled: false });
+    const [ button, setButton ] = useState({ text: "Subscribirme", enabled: false, color: 'bg-gray-300' });
 
     const registerUser = async (e) => {
         e.preventDefault()
-        const registerButton = document.querySelector('#registerButton')
+
+        setButton({ text: "Espera...", enabled: false, color: 'bg-gray-300'});
 
         await fetch(`/api/newsletter`, {
             method: "PUT",
@@ -19,15 +20,11 @@ export default function Tarjeta(props) {
             body: JSON.stringify({ Email: e.target.mail.value, Created: new Date().toLocaleDateString() }),
           })
             .then(() => {
-                registerButton.classList.remove('bg-gray-300')
-                registerButton.classList.add('bg-blue-250')
-                //registerButton.innerHTML = '¡Listo!'
-                setButton( current => ({...current, text: '¡Listo!'}));
+                setButton({ text: '¡Listo!', enabled: false, color: 'bg-blue-250'});
             })
             .catch(() => {
-                alert('Hay un error en el formulario')
-            })
-        setButton( current => ({...current, enabled: false}));
+                setButton({ text: "Hubo un error", enabled: false, color: 'bg-gray-300'});
+            });
     }
 
     return <>
@@ -168,13 +165,13 @@ export default function Tarjeta(props) {
                                     <form onSubmit={registerUser} className="flex flex-wrap my-6" id="form">
                                         <div className="lg:w-8/12 w-full">
                                             <label className="text-xl block text-blue-250" htmlFor="mail">Mi mail es:</label>
-                                            <input type="email" name="mail" id="mail" onChange={ () => setButton(current => ({...current, enabled: true}))}
+                                            <input type="email" name="mail" id="mail" onChange={ () => setButton({ text: "Subscribirme", enabled: true, color: 'bg-blue-250' })}
                                                 placeholder="ejemplo@email.com"
                                                 className="text-blue-250-3 border-b border-uala-3 w-11/12 leading-8 focus:outline-none "
                                                 id="mailInput" required />
                                         </div>
                                         <button id="registerButton" disabled={ !button.enabled }
-                                            className={`${ button.enabled ? 'bg-blue-250' : 'bg-gray-300'}  text-white rounded-full px-6 py-4 text-lg lg:w-4/12 w-6/12 mt-6 lg:mt-0 mx-auto outline-none`}>
+                                            className={`${ button.color }  text-white rounded-full px-6 py-4 text-lg lg:w-4/12 w-6/12 mt-6 lg:mt-0 mx-auto outline-none`}>
                                                 { button.text }</button>
                                     </form>
                                 </div>
