@@ -16,14 +16,15 @@ const DownloadAppButton = ({ children, isStyled, customClass, refProp, dataLayer
   return (
     <>
       {isMobile ? (
-        <a
-          href="https://uala.onelink.me/gqGz/30b751c4"
-          className={classNames(isStyled && styles.button, customClass && [...customClass])}
-          ref={refProp}
-          onClick={ () => dataLayer.push(dataLayerInfo) }
-        >
-          {children}
-        </a>
+        <div className="" onClick={ () => dataLayer.push(dataLayerInfo) }>
+          <a
+            href="https://uala.onelink.me/gqGz/30b751c4"
+            className={classNames(isStyled && styles.button, customClass && [...customClass])}
+            ref={refProp}
+          >
+            {children}
+          </a>
+        </div>
       ) : (
         <button
           className={classNames(isStyled && styles.button, customClass && [...customClass])}
