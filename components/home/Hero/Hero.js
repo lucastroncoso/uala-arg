@@ -125,7 +125,7 @@ const Hero = ({ content }) => {
         </div>
         <div className="hidden pt-2 md:block">
           <DownloadAppButton
-            dataLayer={{
+            dataLayerInfo={{
               event: 'trackEvent',
               eventCategory: 'Home', 
               eventAction: 'Primera Pantalla', 
