@@ -112,7 +112,7 @@ export default function Tarjeta(props) {
                                          </p>
                                 </div>
                             </a>
-                            <a target="_blank" href="http://www.cursosaula.uala.com.ar/" className="rounded-xl grid grid-cols-12 shadow-2xl border border-gray-100 lg:p-12 p-8 lg:pr-18 px-4 col-span-2 lg:col-span-1 transform hover:scale-105 transition duration-300">
+                            <a target="_blank" href="https://cursosaula.uala.com.ar/" className="rounded-xl grid grid-cols-12 shadow-2xl border border-gray-100 lg:p-12 p-8 lg:pr-18 px-4 col-span-2 lg:col-span-1 transform hover:scale-105 transition duration-300">
                                 <div className="lg:col-span-4 col-span-12 w-full">
                                     <img src="/assets/images/aula/Ilus_Cursos.png" alt=""
                                         className="mx-auto pb-2 lg:pb-0 w-6/12 lg:w-full" />
