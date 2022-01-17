@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { useState } from "react";
 
 
-export default function Tarjeta(props) {
+export default function AulaUala(props) {
     const [ button, setButton ] = useState({ text: "Subscribirme", enabled: false, color: 'bg-gray-300' });
     const [ mailInputEnabled, setMailInputEnabled ] = useState(true);
 
@@ -178,9 +178,12 @@ export default function Tarjeta(props) {
                                                 className="text-blue-250-3 border-b border-uala-3 w-11/12 leading-8 focus:outline-none "
                                                 id="mailInput" required disabled={ !mailInputEnabled } />
                                         </div>
-                                        <button id="registerButton" disabled={ !button.enabled }
-                                            className={`${ button.color }  text-white rounded-full px-6 py-4 text-lg lg:w-4/12 w-6/12 mt-6 lg:mt-0 mx-auto outline-none`}>
-                                                { button.text }</button>
+                                        <button 
+                                            id="registerButton" 
+                                            type="submit"
+                                            disabled={ !button.enabled }
+                                            className={`${ button.color }  text-white rounded-full px-6 py-4 text-lg lg:w-4/12 w-6/12 mt-6 lg:mt-0 mx-auto outline-none`}
+                                            >{ button.text }</button>
                                     </form>
                                 </div>
                             </div>
