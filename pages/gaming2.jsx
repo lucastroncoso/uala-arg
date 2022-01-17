@@ -8,12 +8,13 @@ import Image from 'next/image';
 import ImageItemsSectionGaming from '../components/imageItemsSectionGaming/imageItemsSectionGaming';
 import styles from '../styles/newpampas.module.css';
 import PromotionCard from '../components/promotions/promotionCard';
-import SimpleSlider from '../components/slider/slider';
 
 export default function Gaming2(props) {
   const [gamePrice, setGamePrice] = useState('');
   const [calcStatus, setCalcStatus] = useState(false);
   const [optionValue, setOptionValue] = useState('');
+
+  const lastTwoDecimal = (number) => Math.round(number * 100) / 100;
 
   const options = [
     {
@@ -30,7 +31,6 @@ export default function Gaming2(props) {
     },
   ];
 
-
   return (
     <>
       <Head>
@@ -43,7 +43,8 @@ export default function Gaming2(props) {
               <GamingHero
                 containerStyles="mt-12"
                 section="Gaming"
-                title="Alcanzá el siguiente nivel"
+                title1="Alcanzá el"
+                title2="siguiente nivel"
                 subtitle="Beneficios exclusivos, eventos y hasta una academia para ser parte de un equipo profesional. Pensado 100% para gamers"
                 img={<Image src="/assets/images/gaming/img-hero.jpg" width={1084} height={834} />}
               />
@@ -90,30 +91,30 @@ export default function Gaming2(props) {
             />
           </div>
           <div className="bg-gaming-body relative">
-            <ImageItemsSectionGaming
-              reverse
-              title="Comprá con Ualá y segui jugando"
-              image1="/assets/images/gaming/logo-steam.png"
-              w1="198"
-              h1="112"
-              image2="/assets/images/gaming/logo-compragamer.png"
-              w2="204"
-              h2="56"
-              image3="/assets/images/gaming/logo-divisiongamer.png"
-              w3="228"
-              h3="104"
-              image4="/assets/images/gaming/logo-bangho.png"
-              w4="204"
-              h4="92"
-              subtitle="Recordá calcular el 30% adicional de impuesto PAIS + el 35% de Percepción de Ganancias en tus compras en moneda extranjera."
-              href="/promociones"
-              link="Ver promociones"
-            />
+              <ImageItemsSectionGaming
+                reverse
+                title="Comprá con Ualá y segui jugando"
+                image1="/assets/images/gaming/logo-steam.png"
+                w1="198"
+                h1="112"
+                image2="/assets/images/gaming/logo-compragamer.png"
+                w2="204"
+                h2="56"
+                image3="/assets/images/gaming/logo-divisiongamer.png"
+                w3="228"
+                h3="104"
+                image4="/assets/images/gaming/logo-bangho.png"
+                w4="204"
+                h4="92"
+                subtitle="Recordá calcular el 30% adicional de impuesto PAIS + el 35% de Percepción de Ganancias en tus compras en moneda extranjera."
+                href="/promociones"
+                link="Ver promociones"
+              />
             <div className="absolute hidden md:block top-0 left-6">
               <Image src="/assets/images/gaming/Aro-body.png" width={33} height={33} />
             </div>
             <div className="absolute hidden md:block -top-5 right-0">
-            <Image src="/assets/images/gamingAcademy/Aro-body-m2.png" width={37} height={48} />
+              <Image src="/assets/images/gamingAcademy/Aro-body-m2.png" width={37} height={48} />
             </div>
           </div>
         </div>
@@ -193,12 +194,12 @@ export default function Gaming2(props) {
                   <>
                     {optionValue === 'Vivo en CABA o GBA' && (
                       <span className="font-semibold text-gray-700 text-5xl">
-                        {gamePrice * 1.66}{' '}
+                        {lastTwoDecimal(gamePrice * 1.66)}{' '}
                       </span>
                     )}
                     {optionValue === 'No vivo en CABA o GBA' && (
                       <span className="font-semibold text-gray-700 text-5xl">
-                        {gamePrice * 1.64}
+                        {lastTwoDecimal(gamePrice * 1.64)}
                       </span>
                     )}
                   </>
@@ -206,7 +207,7 @@ export default function Gaming2(props) {
                   <span className="font-semibold text-gray-700 text-5xl">00.00</span>
                 )}
               </div>
-              <p className="text-center text-gray-500">
+              <p className="text-center text-gray-500 mb-6 md:mb-10">
                 El precio final tiene en cuenta el 21% del IVA, el 8% del impuesto PAIS, el 35% de
                 impuesto a las Ganancias y el 2% de Ingresos Brutos en caso de que vivas en la
                 Ciudad de Buenos Aires o en el Gran Buenos Aires

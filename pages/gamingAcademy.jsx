@@ -73,10 +73,11 @@ export default function Gaming2(props) {
         <div className="bg-gray-gaming">
           <div className="bg-gaming-academy pt-20 relative">
             <p className="subtitle-gaming-2 text-white ml-4 md:ml-8">
-              <span>&lt;</span>
-              <Link href="/gaming2">
-                <span className="underline ml-1">Regresar</span>
-              </Link>
+                <Link href="/gaming2">
+                  <a className="underline text-base outline-none">
+                      <i className="fas fa-chevron-left mr-2 md:mr-3"></i>Regresar
+                  </a>
+                </Link>
             </p>
             <div className="ml-8 hidden md:block">
               <Image src="/assets/images/gamingAcademy/Aro-hero.png" width={39} height={39} />
@@ -265,7 +266,7 @@ export default function Gaming2(props) {
                       ) : null}
                 </div>
               </div>
-              <div className="flex flex-wrap flex-col col-span-2 md:col-span-1 w-11/12 mx-auto my-10 md:mx-0 md:flex-nowrap ">
+              <div className="flex flex-wrap flex-col col-span-2 md:col-span-1 w-11/12 mx-auto mt-10 mb-6 md:mx-0 md:flex-nowrap ">
                 <div className="flex mx-auto mb-2 md:mx-0">
                   <input
                     onChange={formik.handleChange}
@@ -291,7 +292,7 @@ export default function Gaming2(props) {
               <div className="flex flex-wrap  col-span-2 grid mb-4 md:mb-12 md:mb-0">
                 <button
                   className={
-                    ' px-4 w-4/6 md:w-2/6 py-1 mx-auto rounded-full lg:mx-0 justify-self-center ' +
+                    'px-24 py-3 md:px-20 md:py-2 mx-auto rounded-full lg:mx-0 justify-self-center ' +
                     styles.formButton
                   }
                   type="submit"
@@ -299,7 +300,7 @@ export default function Gaming2(props) {
                   Enviar
                 </button>
               </div>
-              <div className="flex flex-wrap mt-8 md:mt-16 col-span-2 grid mb-12 md:mb-0">
+              <div className="flex flex-wrap mt-8 md:mt-16 col-span-2 grid mb-12 md:mb-8">
                 <p className="text-gray-600 text-sm md:text-base">
                   El titular de los datos personales tiene la facultad de ejercer el derecho de
                   acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses,

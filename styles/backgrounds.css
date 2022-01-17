@@ -55,7 +55,7 @@ background-color: #1B1D21;
   .bg-gaming-hero{
     background: url(/assets/images/gaming/Curva-hero-desktop.png);
     background-size: 100%;
-    background-position: center;
+    background-position: 50% 60%;
     background-repeat: no-repeat;
   }
 }
