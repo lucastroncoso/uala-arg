@@ -52,11 +52,6 @@ module.exports = {
         permanent: true,
       },
       {
-        source: '/reporte-sostenibilidad',
-        destination: '/assets/sustentabilidad/ReporteSostenibilidadFY21.pdf',
-        permanent: true,
-      },
-      {
         source: '/sumate',
         destination: 'https://www.comeet.com/jobs/Uala/54.00B',
         permanent: true,
