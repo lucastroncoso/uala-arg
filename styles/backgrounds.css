@@ -19,6 +19,10 @@
   background: linear-gradient(259.36deg, rgba(255, 103, 102, 0.3) -17.15%, rgba(142, 168, 255, 0.3) 112.98%);
 }
 
+.bg-gray-gaming {
+background-color: #1B1D21;
+}
+
 /* WAVES */
 @media only screen and (max-width: 600px) {
   .bg-coral-wave {
@@ -34,6 +38,70 @@
     background: url(/assets/images/bg/Compras_curva.png);
     background-position: center 110%;
     background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg-gaming-hero {
+    background: url(/assets/images/gaming/Curva-hero-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 60%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .bg-gaming-hero{
+    background: url(/assets/images/gaming/Curva-hero-desktop.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg-gaming-academy {
+    background: url(/assets/images/gamingAcademy/Curva-hero-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: top 80%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .bg-gaming-academy{
+    background: url(/assets/images/gamingAcademy/Curva-hero-desktop.png);
+    background-size: 100%;
+    background-position: top 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .bg-gaming-a-body{
+    background: url(/assets/images/gamingAcademy/Curva-body-desktop.png);
+    background-size: 100%;
+    background-position: bottom 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg-gaming-body {
+    background: url(/assets/images/gaming/Curva-form-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: bottom left;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .bg-gaming-body{
+    background: url(/assets/images/gaming/Curva-form-desktop.png);
+    background-size: 100%;
+    background-position: bottom 100%;
     background-repeat: no-repeat;
   }
 }
@@ -117,6 +185,7 @@
     background-color: white;
   }
 }
+
 
 .bg-prensa {
   background: linear-gradient(to top, #000000ad, #00000061), url(/assets/images/bg/aboutBg.jpeg);
