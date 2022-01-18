@@ -157,28 +157,30 @@ export default function Gaming2(props) {
               >
                 ¿Dónde vivís?
               </label>
-
-              <select
-                name="zone"
-                required
-                id="zone"
-                style={{ textAlignLast: 'center' }}
-                className="select block w-11/12 py-3 pl-4 mx-auto mb-10 text-xl text-center rounded-full outline-none lg:w-8/12 focus:outline-none bg-white "
-                value={optionValue}
-                onChange={(e) => {
-                  const selectedOption = e.target.value;
-                  setOptionValue(selectedOption);
-                  setCalcStatus(false);
-                }}
-              >
-                <option value={options[0].value}>{options[0].label}</option>
-                <option value={options[1].value}>{options[1].label}</option>
-                <option value={options[2].value}>{options[2].label}</option>
-              </select>
+              <div className="relative mx-auto grid w-11/12 lg:w-8/12">
+                <i className="absolute text-blue-250 right-0 mr-3 md:mr-4 place-self-center fas fa-chevron-down"></i>
+                <select
+                  name="zone"
+                  required
+                  id="zone"
+                  style={{ textAlignLast: 'center' }}
+                  className="appearance-none select block py-3 pl-4  text-xl text-center rounded-full outline-none focus:outline-none bg-white "
+                  value={optionValue}
+                  onChange={(e) => {
+                    const selectedOption = e.target.value;
+                    setOptionValue(selectedOption);
+                    setCalcStatus(false);
+                  }}
+                >
+                  <option value={options[0].value}>{options[0].label}</option>
+                  <option value={options[1].value}>{options[1].label}</option>
+                  <option value={options[2].value}>{options[2].label}</option>
+                </select>
+              </div>
               <button
                 id="exec"
                 className={
-                  'block w-8/12 py-3 mx-auto mb-8 text-xl rounded-full  lg:w-5/12 ' +
+                  'block w-8/12 py-3 mx-auto mb-8 text-xl rounded-full mt-10 lg:w-5/12 ' +
                   styles.formButton
                 }
                 onClick={() => setCalcStatus(true)}

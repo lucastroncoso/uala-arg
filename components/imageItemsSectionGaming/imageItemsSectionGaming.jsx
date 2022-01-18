@@ -1,18 +1,8 @@
 import Container from "../container";
 import Link from 'next/link';
 import Image from "next/image";
-import Slider from "react-slick";
-
 
 export default function ImageItemsSectionGaming(props) {
-
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3.1,
-        slidesToScroll: 1
-    };
 
     return (
         <>
@@ -22,7 +12,7 @@ export default function ImageItemsSectionGaming(props) {
                
                         <div className={props.reverse ? "order-2 rounded-3xl flex relative" : "order-2 lg:order-none rounded-3xl flex relative"}>
                             <div className={(props.reverse && props.img) ? "order-2 rounded-3xl overflow-hidden flex" : "order-2 lg:order-none  overflow-hidden flex"}>
-                                {props.img ? props.img : <div className="items-center grid grid-cols-4 gap-6"><div className="bg-white rounded-2xl w-20 h-20 px-1 flex items-center"><Image src={props.image1} width={props.w1} height={props.h1} className="col-span-1"/></div><div className="bg-white rounded-2xl w-20 h-20 px-1 flex items-center"><Image src={props.image2} width={props.w2} height={props.h2} className="col-span-1 col-start-2"/></div><div className="bg-white rounded-2xl w-20 h-20 px-1 flex items-center"><Image src={props.image3} width={props.w3} height={props.h3} className="col-span-1 col-start-3"/></div><div className="bg-white rounded-2xl w-20 h-20 px-1 flex items-center"><Image src={props.image4} width={props.w4} height={props.h4} className="col-span-1 col-start-4"/></div></div>}
+                                {props.img ? props.img : <div className="overflow-x-auto md:overflow-hidden items-center grid grid-cols-4 gap-6"><div className="bg-white rounded-2xl md:mx-0 w-20 h-20 px-1 flex items-center"><Image src={props.image1} width={props.w1} height={props.h1} className="col-span-1"/></div><div className="bg-white rounded-2xl w-20 h-20 px-1 flex items-center"><Image src={props.image2} width={props.w2} height={props.h2} className="col-span-1 col-start-2"/></div><div className="bg-white rounded-2xl w-20 h-20 px-1 flex items-center"><Image src={props.image3} width={props.w3} height={props.h3} className="col-span-1 col-start-3"/></div><div className="bg-white rounded-2xl w-20 h-20 px-1 flex items-center"><Image src={props.image4} width={props.w4} height={props.h4} className="col-span-1 col-start-4"/></div></div>}
                             </div>
                             {props.pushImg &&
                                 <div>
