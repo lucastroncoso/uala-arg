@@ -243,22 +243,22 @@ export default function Gaming2(props) {
                   </label>
                   <div className="relative grid w-11/12">
                     <i className="absolute text-blue-250 right-0 mr-3 md:mr-4 place-self-center fas fa-chevron-down"></i>
-                  <select
-                    name="game"
-                    required
-                    id="select"
-                    defaultValue="Selecciona un juego"
-                    onChange={formik.handleChange}
-                    className="appearance-none block py-3 pl-4 text-center bg-white rounded-full lg:mx-0 md:text-left focus:outline-none outline-none"
-                    value={formik.values.game}
-                    placeholder="Selecciona un juego"
-                  >
-                    <option disabled>Selecciona un juego</option>
-                    <option>Fifa</option>
-                    <option>League of Legends</option>
-                    <option>Free Fire</option>
-                    <option>CS:GO</option>
-                  </select>
+                    <select
+                      name="game"
+                      required
+                      id="select"
+                      defaultValue="Selecciona un juego"
+                      onChange={formik.handleChange}
+                      className="appearance-none block py-3 pl-4 text-center bg-white rounded-full lg:mx-0 md:text-left focus:outline-none outline-none"
+                      value={formik.values.game}
+                      placeholder="Selecciona un juego"
+                    >
+                      <option disabled>Selecciona un juego</option>
+                      <option>Fifa</option>
+                      <option>League of Legends</option>
+                      <option>Free Fire</option>
+                      <option>CS:GO</option>
+                    </select>
                   </div>
                   {formik.touched.game && formik.errors.game ? (
                     <div className="error">{formik.errors.game}</div>

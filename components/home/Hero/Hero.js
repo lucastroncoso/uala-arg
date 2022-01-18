@@ -89,16 +89,17 @@ const Hero = ({ content }) => {
       <div className={styles.background}>
         <img src={content.background[0].src} className={styles.backgroundImage} />
         <span className={styles.popupNotification}>
-          <img data-animation="popup-1" src={content.notificationsSrc[0]} />
+          <img data-animation="popup-1" src={content.notificationsSrc[0]} className={styles.backgroundNotification}/>
         </span>
         <span className={styles.popupNotification}>
-          <img data-animation="popup-2" src={content.notificationsSrc[1]} />
+          <img data-animation="popup-2" src={content.notificationsSrc[1]} className={styles.backgroundNotification}/>
         </span>
         <span className={styles.backgroundImage}>
           <img
             data-animation="floating-card"
             src={content.background[1].src}
             alt={content.background[1].alt}
+            className={styles.backgroundCard}
           />
         </span>
         <div className={styles.svgBottom}>

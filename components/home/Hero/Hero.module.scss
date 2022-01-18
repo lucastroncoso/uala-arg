@@ -122,22 +122,22 @@
   font-size: 41px;
   font-weight: 700;
   width: 100%;
-  
-    @include respond-to(minWidth768){
-      font-size: 55px;
-      font-weight: 700
+
+  @include respond-to(minWidth768) {
+    font-size: 55px;
+    font-weight: 700;
   }
 }
 
-.titleRight{
+.titleRight {
   font-size: 41px;
-    width: 100%;
-    @include respond-to(minWidth768){
-      font-size: 55px;
-      font-weight: 700
+  width: 100%;
+  @include respond-to(minWidth768) {
+    font-size: 55px;
+    font-weight: 700;
   }
-    @include respond-to(fullWidth){
-      padding-left: 57%;
+  @include respond-to(fullWidth) {
+    padding-left: 57%;
   }
 }
 
@@ -160,13 +160,13 @@ p.paragraph {
 //     width: 100%;
 //     min-width: 180%;
 //     height: 100%;
-    
+
 //     background-size: 120% ;
 //     transform: translateX(-25%);
 //     @include respond-to(minWidth768) {
 //       min-width: initial;
 //       transform: translateX(0);
-      
+
 //     }
 //   }
 // }
@@ -176,16 +176,36 @@ p.paragraph {
     position: absolute;
     top: 0;
     left: 0;
-    background-size: 140% ;
+    background-size: 140%;
 
     transform: translateX(-28%);
     @include respond-to(minWidth768) {
       min-width: initial;
       transform: translateX(0);
-      background-size: 100% ;
+      background-size: 100%;
       width: 100%;
       height: 100%;
       
     }
   }
+}
+
+.backgroundCard {
+  @include respond-to(minWidth768) {
+    padding-left: 15px;
+  }
+  @include respond-to(fullWidth) {
+    padding-left: 300px;
+    padding-top: 80px;
+  }
+}
+
+.backgroundNotification {
+  @include respond-to(minWidth768) {
+    padding-left: 10px;
+  }
+  @include respond-to(fullWidth){
+    padding-left: 300px;
+    padding-top: 210px;
+}
 }
