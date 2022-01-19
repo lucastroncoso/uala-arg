@@ -231,7 +231,7 @@ export default function Gaming2(props) {
 
               <div className="flex flex-col col-span-2 md:col-span-1">
                 <div className="w-full mx-auto md:w-11/12 md:ml-20 ">
-                <CommonInput onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.dni} type="text" required="required" id="dni" name="dni" placeholder="xxxxxxxxx" htmlFor="dni" pattern="[0-9]{8}" children="Dni" />
+                  <CommonInput onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.dni} type="text" required="required" id="dni" name="dni" placeholder="xxxxxxxxx" htmlFor="dni" pattern="[0-9]{8}" children="Dni" />
                   {formik.touched.dni && formik.errors.dni ? (
                     <div className="error">{formik.errors.dni}</div>
                       ) : null}
@@ -241,7 +241,7 @@ export default function Gaming2(props) {
                   >
                     Juego
                   </label>
-                  <div className="relative grid w-11/12">
+                  <div className="mx-auto md:mx-0 relative grid w-11/12">
                     <i className="absolute text-blue-250 right-0 mr-3 md:mr-4 place-self-center fas fa-chevron-down"></i>
                     <select
                       name="game"

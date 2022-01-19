@@ -15,6 +15,13 @@
   background: linear-gradient(360deg, #E2EAFF -128.74%, #3E6BFD 117.3%);
 }
 
+.bg-blue-degrade-trabajar {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: white;
+--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(238, 243, 255, 1));
+--tw-gradient-to: #EEF3FF;
+}
+
 .bg-gradient-misionuala {
   background: linear-gradient(259.36deg, rgba(255, 103, 102, 0.3) -17.15%, rgba(142, 168, 255, 0.3) 112.98%);
 }
@@ -123,6 +130,25 @@ background-color: #1B1D21;
     background-repeat: no-repeat;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .bg-blue-curve-gradient {
+    background: url(/assets/images/trabajar/office/bg-trabajar.png);
+    background-repeat: no-repeat;
+    background-size: 300%;
+    background-position: center 105%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .bg-blue-curve-gradient {
+    background: url(/assets/images/trabajar/office/bg-trabajar.png);
+    background-position: -150px 190px;
+    background-size: 120%;
+    background-repeat: no-repeat;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .bg-coral-wave-2 {
     background: url(/assets/images/tarjeta/compras-curva-mobile.png);

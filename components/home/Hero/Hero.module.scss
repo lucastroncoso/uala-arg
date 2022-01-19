@@ -194,7 +194,7 @@ p.paragraph {
   @include respond-to(minWidth768) {
     padding-left: 15px;
   }
-  @include respond-to(fullWidth) {
+  @include respond-to(fullWidthMax) {
     padding-left: 300px;
     padding-top: 80px;
   }
@@ -204,7 +204,10 @@ p.paragraph {
   @include respond-to(minWidth768) {
     padding-left: 10px;
   }
-  @include respond-to(fullWidth){
+  @include respond-to(minWidth768) {
+    padding-left: 10px;
+  }
+  @include respond-to(fullWidthMax){
     padding-left: 300px;
     padding-top: 210px;
 }
