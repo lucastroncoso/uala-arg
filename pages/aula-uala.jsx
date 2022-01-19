@@ -99,7 +99,7 @@ export default function AulaUala(props) {
                     </div>
                     <div className="col-span-12 grid grid-cols-12 mb-8 lg:px-12">
                         <div className="col-span-10 col-start-2 grid grid-cols-2 gap-8 my-12">
-                            <a target="_blank" href="https://www.youtube.com/playlist?list=PLg1PUEcEHPues3DMXQgZAiesv_osLdKEY&jct=ea2vyU346NXz_SvCyjHtaDHp2U9oXQ" className="rounded-xl grid grid-cols-12 shadow-2xl border border-gray-100 lg:p-12 p-8 lg:pr-18 px-4 col-span-2 lg:col-span-1 transform hover:scale-105 transition duration-300">
+                            <a target="_blank" href="https://www.youtube.com/playlist?list=PLg1PUEcEHPufD4651KuYpGx79ebqte0KI" className="rounded-xl grid grid-cols-12 shadow-2xl border border-gray-100 lg:p-12 p-8 lg:pr-18 px-4 col-span-2 lg:col-span-1 transform hover:scale-105 transition duration-300">
                                 <div className="lg:col-span-4 col-span-12 w-full">
                                     <img src="/assets/images/aula/Ilus_Videos.png" alt=""
                                         className="mx-auto pb-2 lg:pb-0 w-6/12 lg:w-full" />
