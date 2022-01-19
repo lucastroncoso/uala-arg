@@ -153,7 +153,7 @@ export default function Carrers(props) {
                             <div>Porque mientras más seamos, mejor.</div>
                         </div>
                         <div className="mt-4 flex justify-center">
-                            <button className="hover:bg-blue-250 text-blue-250 hover:text-white rounded-full border border-blue-250 text-blue-uala py-3 px-8 text-center bg-blue-100"><a target="_blank" href="/sumate">Ver búsquedas laborales</a></button>
+                            <button className="hover:bg-blue-250 text-blue-250 hover:text-white rounded-full border border-blue-250 text-blue-uala py-3 px-8 text-center bg-blue-trabajar-button"><a target="_blank" href="/sumate">Ver búsquedas laborales</a></button>
                         </div>
                     </div>
                 </Container>
