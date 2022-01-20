@@ -18,7 +18,7 @@ const BenefitsSlider = ({settings}) => {
         <Slider {...settings}>
             {
                 benefits.map((benefit, index) => (
-                        <CardRoundedShadow key={ benefit.title } className={`m-4 ${ index === 0 ? 'ml-4' : '' } `}>
+                        <CardRoundedShadow key={ benefit.title } className={`m-4 ${ index === 0 ? 'ml-16' : '' } `}>
                             <div className="bg-white h-72 md:h-80 p-6 rounded-2xl" >
                                 <div className="text-gray-250 font-bold text-lg">{benefit.title}</div>
                                 <div className="flex flex-col">{
@@ -42,7 +42,7 @@ export default function Carrers(props) {
 
     const settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 300,
         slidesToShow: 3.1,
         slidesToScroll: 1
@@ -85,7 +85,7 @@ export default function Carrers(props) {
             </Container>
           
 
-            <div className="bg-blue-curve-gradient">
+            <div className="bg-blue-curve-gradient mt-12">
                 <Container>
                 {/* Qué te ofrecemos */}
                     <div className="text-3xl font-medium  text-gray-250">Qué te ofrecemos</div>
@@ -101,16 +101,15 @@ export default function Carrers(props) {
                         <BenefitsSlider settings={{...settings}} />
                     </div>
                 </Container>
-            </div>
-
-                <Container className="md:mt-14">
-                    <div className="grid lg:mb-20 lg:mt-8 md:mb-0 md:mt-20 mb-12 md:grid-cols-2">
+          
+                <Container className="md:pt-14">
+                    <div className="grid lg:mb-20 lg:mt-12 md:mb-0 md:mt-20 mb-12 md:grid-cols-2">
                         <div className="flex flex-wrap content-center mb-12 md:order-none order-1 md:mt-0 mt-8">
                             
                             <div className="w-full">
                                 <h1 className=" md:w-5/6 text-3xl font-medium text-gray-250 mt-4">Nuestras oficinas centrales en Argentina</h1>
                             </div>
-                            <div className="w-full mt-4 hidden md:block">
+                            <div className="w-full mt-10 md:mt-6">
                                 <div className="md:w-5/6 text-base md:text-lg leading-8 text-gray-150">
                                 Creamos un espacio de trabajo moderno y abierto sin divisiones entre escritorios donde la interacción, el trabajo en equipo y la transparencia fueran sus principales características.                                        
                                 </div>
@@ -123,8 +122,9 @@ export default function Carrers(props) {
                         </div>
                     </div>
                 </Container>
+            </div>
             <div className="bg-blue-degrade-trabajar">
-                <Container className="md:mt-14">
+                <Container className="md:pt-14">
                     <div className="grid lg:mb-20 lg:mt-0 md:mb-0 mt-20 mb-12 md:grid-cols-2 gap-12">
                         <div className="flex flex-wrap content-center mb-12 md:order-2 order-1 md:mt-12 mt-8 ">
                             <div className="w-20 mb-3">
@@ -146,7 +146,7 @@ export default function Carrers(props) {
                     </div>
                 </Container>
                 <Container>
-                    <div className="mt-8 mb-14 md:mb-28">
+                    <div className="mt-12 mb-14 md:mb-28">
                         <div className="text-center font-medium text-4xl text-gray-250">Oportunidades abiertas</div>
                         <div className="text-center mt-4 text-gray-250">
                             <div>Queremos que te sumes a esta revolución.</div>

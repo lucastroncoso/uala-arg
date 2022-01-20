@@ -59,8 +59,8 @@ export default function Gaming2(props) {
                   imgDesktop={
                     <Image
                       src="/assets/images/gaming/video-thumbnail-desktop.png"
-                      width={1213}
-                      height={795}
+                      width={970}
+                      height={636}
                     />
                   }
                   imgMobile={
