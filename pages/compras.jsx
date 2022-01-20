@@ -71,7 +71,7 @@ export default function Tarjeta(props) {
                     imgMobile={<Image src="/assets/images/tarjeta/thumbnail_cargar_mobile.png" width={661} height={687} />}
                     href="https://www.youtube.com/watch?v=6Bv0IdBFdDc"
                 />
-                
+
                 <ImageItemsSection
                     bg="bg-red-degrade-oposite"
                     title="Llevá tu Ualá de viaje"
