@@ -122,7 +122,6 @@
   font-size: 41px;
   font-weight: 700;
   width: 100%;
-
   @include respond-to(minWidth768) {
     font-size: 55px;
     font-weight: 700;
@@ -191,8 +190,17 @@ p.paragraph {
 }
 
 .backgroundCard {
+  box-sizing: content-box;
   @include respond-to(minWidth768) {
     padding-left: 15px;
+  }
+  @include respond-to(preFullWidth) {
+    padding-left: 80px;
+    box-sizing: border-box; 
+  }
+  @include respond-to(fullWidth) {
+    width: auto;
+    padding-top: 40px;
   }
   @include respond-to(fullWidthMax) {
     padding-left: 300px;
@@ -201,14 +209,19 @@ p.paragraph {
 }
 
 .backgroundNotification {
+  box-sizing: content-box;
   @include respond-to(minWidth768) {
     padding-left: 10px;
   }
   @include respond-to(minWidth768) {
     padding-left: 10px;
   }
-  @include respond-to(fullWidthMax){
+  @include respond-to(fullWidth){
+    width: auto;
+    padding-top: 80px;
+  }
+  @include respond-to(fullWidthMax) {
     padding-left: 300px;
-    padding-top: 210px;
-}
+    padding-top: 80px;
+  }
 }
