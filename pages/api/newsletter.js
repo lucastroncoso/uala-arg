@@ -13,6 +13,7 @@ export default async function (req, res) {
                 console.log('Error', err);
             } else {
                 res.status(400);
+                return;
             }
         });
     }
