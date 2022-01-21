@@ -6,10 +6,6 @@ AWS.config.update({
     region: 'us-east-1'
 });
 
-const db = new AWS.DynamoDB.DocumentClient({
-    httpOptions: {
-      timeout: 5000
-    }
-  });
+const db = new AWS.DynamoDB.DocumentClient({ apiVersion: 'latest' });
 
 export default db;
