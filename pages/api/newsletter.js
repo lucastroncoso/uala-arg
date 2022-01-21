@@ -12,7 +12,7 @@ export default async function (req, res) {
             if (err) {
                 console.log('Error', err);
             } else {
-                console.log('Success, updated.', data);
+                res.status(400);
             }
         });
     }
