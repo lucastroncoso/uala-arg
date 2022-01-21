@@ -31,6 +31,29 @@ body {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .title-gaming-1 {
+    @apply text-white text-4xl font-semibold leading-snug;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .title-gaming-1 {
+    @apply text-white text-5xl font-semibold leading-snug;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .subtitle-gaming-1 {
+    @apply text-xl leading-8 text-white;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .subtitle-gaming-1 {
+    @apply  text-xl leading-8 text-white;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .title-2 {
     @apply  text-4xl font-medium;
@@ -53,9 +76,23 @@ body {
   }
 }
 
+@media only screen and (min-width: 600px) {
+  .title-gaming-2 {
+    @apply  text-4xl font-medium;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .title-gaming-2 {
+    @apply  text-3xl font-medium;
+  }
+}
 
 
 .subtitle-2 {
+  @apply  text-xl font-normal;
+}
+
+.subtitle-gaming-2 {
   @apply  text-xl font-normal;
 }
 

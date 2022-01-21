@@ -7,5 +7,7 @@ $mediaQueries: (
   "minWidth1024": "(min-width: 1024px)",
   "minWidth1280": "(min-width: 1280px)",
   "minWidth1400": "(min-width: 1400px)",
-  "fullWidth": "(min-width: 1920px)",
+  "preFullWidth": "(min-width: 1920px)",
+  "fullWidth": "(min-width: 2010px)",
+  "fullWidthMax": "(min-width: 2550px)",
 );
