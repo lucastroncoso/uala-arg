@@ -75,6 +75,19 @@ export default function Inversiones(props) {
                             img="/assets/images/inversiones/icono-sin-costos.png" />]}
                 />
 
+                <ImageItemsSection
+                    reverse
+                    title="Invertí con objetivos claros"
+                    img={<Image src="/assets/images/inversiones/Metas-de-inversion.jpg" width={1389} height={1134} />}
+                    items={[
+                        <CardItem text="Configurá una Meta de Inversión."
+                            img="/assets/images/inversiones/icono-meta.png" />,
+                        <CardItem text="Ponele un nombre y su valor."
+                            img="/assets/images/inversiones/icono-nombre.png" />,
+                        <CardItem text="Mirá cómo avanza y cuánto te falta para cumplirla."
+                            img="/assets/images/inversiones/icono-seguimiento.png" />]}
+                />
+
                 <Container className="my-12">
                     <div className=" mx-auto shadow-blue md:p-16 p-8 rounded-2xl">
                         <h2 className="title-2">Pasos para invertir</h2>
