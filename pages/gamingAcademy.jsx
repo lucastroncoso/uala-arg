@@ -2,6 +2,7 @@ import { useState } from 'react';
 import GamingHero from '../components/gaming/gamingHero';
 import CardItem from '../components/cardItem';
 import VideoTitleGaming from '../components/VideoTitleGaming/videoTitleGaming';
+import { fetchContent } from '../utils/contentful';
 import Layout from '../components/layout';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -12,8 +13,34 @@ import CommonInput from '../components/commonInput/commonInput';
 import { useFormik } from "formik";
 import axios from "axios";
 
-export default function Gaming2(props) {
+export async function getStaticProps() {
+  const response = await fetchContent(`
+  {
+        gamingAcademy(id:"5Pn6Yz5LEfgEiVQ1LRKeQm") {
+      juegoPrincipal
+      juego1
+      juego2
+      juego3
+      inicioJuego1
+      inicioJuego2
+      inicioJuego3
+      inicioJuegoPrincipal
+      incripcionJuegoPrincipal
+      formularioLinea1
+      formularioLinea2
+    }
+  }
+  `);
 
+  return {
+    props: { response },
+    revalidate: 10
+  }
+}
+
+export default function Gaming2(props) {
+  const data = props.response.gamingAcademy
+  console.log(data)
   const validate = (values) => {
     const errors = {};
 
@@ -73,11 +100,11 @@ export default function Gaming2(props) {
         <div className="bg-gray-gaming">
           <div className="bg-gaming-academy pt-20 relative">
             <p className="subtitle-gaming-2 text-white ml-4 md:ml-8">
-                <Link href="/gaming2">
-                  <a className="underline text-base outline-none">
-                      <i className="fas fa-chevron-left mr-2 md:mr-3"></i>Regresar
+              <Link href="/gaming2">
+                <a className="underline text-base outline-none">
+                  <i className="fas fa-chevron-left mr-2 md:mr-3"></i>Regresar
                   </a>
-                </Link>
+              </Link>
             </p>
             <div className="ml-8 hidden md:block">
               <Image src="/assets/images/gamingAcademy/Aro-hero.png" width={39} height={39} />
@@ -126,9 +153,9 @@ export default function Gaming2(props) {
                 <div className="hidden md:block shadow grid grid-rows-7 bg-white rounded-2xl px-6 py-6 text-base">
                   <div className="row-span-3 grid grid-cols-5 border-b border-blue-250 pb-4">
                     <div className="col-span-3">
-                      <span className="text-blue-250">League of legends</span> <br />
+                      <span className="text-blue-250">{data.juegoPrincipal}</span> <br />
                       <span className="text-gray-700">Inscripción</span> <br />
-                      <span className="text-gray-400">Hasta el 30 de Noviembre</span>
+                      <span className="text-gray-400">data.inscripcion</span>
                     </div>
                     <div className="col-span-2 ml-4">
                       <br />
@@ -151,31 +178,31 @@ export default function Gaming2(props) {
                 </div>
               }
               fullDiv={<div className="block md:hidden shadow grid grid-rows-7 bg-white  px-6 py-6 text-base">
-              <div className="row-span-3 grid grid-cols-5 border-b border-blue-250 pb-4">
-                <div className="col-span-3">
-                  <span className="text-blue-250">League of legends</span> <br />
-                  <span className="text-gray-700">Inscripción</span> <br />
-                  <span className="text-gray-400">Hasta el 30 de Noviembre</span>
+                <div className="row-span-3 grid grid-cols-5 border-b border-blue-250 pb-4">
+                  <div className="col-span-3">
+                    <span className="text-blue-250">League of legends</span> <br />
+                    <span className="text-gray-700">Inscripción</span> <br />
+                    <span className="text-gray-400">Hasta el 30 de Noviembre</span>
+                  </div>
+                  <div className="col-span-2 ml-4">
+                    <br />
+                    <span className="text-gray-700">Inicio</span> <br />
+                    <span className="text-gray-400">Diciembre</span>
+                  </div>
                 </div>
-                <div className="col-span-2 ml-4">
-                  <br />
-                  <span className="text-gray-700">Inicio</span> <br />
-                  <span className="text-gray-400">Diciembre</span>
+                <div className="grid grid-cols-5 row-span-4 row-start-4">
+                  <div className="col-span-3">
+                    <p className="text-blue-250">Fifa</p>
+                    <p className="text-blue-250">Free Fire</p>
+                    <p className="text-blue-250">CS:GO</p>
+                  </div>
+                  <div className="col-span-2 ml-4">
+                    <p className="text-gray-400">Terminada</p>
+                    <p className="text-gray-400">Terminada</p>
+                    <p className="text-gray-400">Terminada</p>
+                  </div>
                 </div>
-              </div>
-              <div className="grid grid-cols-5 row-span-4 row-start-4">
-                <div className="col-span-3">
-                  <p className="text-blue-250">Fifa</p>
-                  <p className="text-blue-250">Free Fire</p>
-                  <p className="text-blue-250">CS:GO</p>
-                </div>
-                <div className="col-span-2 ml-4">
-                  <p className="text-gray-400">Terminada</p>
-                  <p className="text-gray-400">Terminada</p>
-                  <p className="text-gray-400">Terminada</p>
-                </div>
-              </div>
-            </div>}
+              </div>}
               subtitle="Todos los meses hay nuevos grupos para formarse y competir en CS:GO, Free Fire, League of Legends y más."
             />
           </div>
@@ -217,15 +244,15 @@ export default function Gaming2(props) {
                   <CommonInput onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.name} type="text" required="required" id="name" name="name" placeholder="Alejandro" htmlFor="name" children="Nombre" />
                   {formik.touched.name && formik.errors.name ? (
                     <div className="error">{formik.errors.name}</div>
-                      ) : null}
+                  ) : null}
                   <CommonInput onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.lastname} type="text" required="required" id="lastname" name="lastname" placeholder="Rodriguez" htmlFor="lastname" children="Apellido" />
                   {formik.touched.lastname && formik.errors.lastname ? (
                     <div className="error">{formik.errors.lastname}</div>
-                      ) : null}
+                  ) : null}
                   <CommonInput onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.mail} type="text" required="required" id="mail" name="mail" placeholder="arodriguez@uala.com.ar" htmlFor="mail" children="Mail" />
                   {formik.touched.mail && formik.errors.mail ? (
                     <div className="error">{formik.errors.mail}</div>
-                      ) : null}
+                  ) : null}
                 </div>
               </div>
 
@@ -234,7 +261,7 @@ export default function Gaming2(props) {
                   <CommonInput onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.dni} type="text" required="required" id="dni" name="dni" placeholder="xxxxxxxxx" htmlFor="dni" pattern="[0-9]{8}" children="Dni" />
                   {formik.touched.dni && formik.errors.dni ? (
                     <div className="error">{formik.errors.dni}</div>
-                      ) : null}
+                  ) : null}
                   <label
                     htmlFor="game"
                     className="block w-2/4 py-2 pl-0 mx-auto text-center md:mx-0 md:text-left md:pl-4"
@@ -262,11 +289,11 @@ export default function Gaming2(props) {
                   </div>
                   {formik.touched.game && formik.errors.game ? (
                     <div className="error">{formik.errors.game}</div>
-                      ) : null}
+                  ) : null}
                   <CommonInput onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.steamUser} type="text" required="required" id="steamUser" name="steamUser" placeholder="Steam / Garena ID" htmlFor="usuarioSteam" children="Usuario" />
                   {formik.touched.steamUser && formik.errors.steamUser ? (
                     <div className="error">{formik.errors.steamUser}</div>
-                      ) : null}
+                  ) : null}
                 </div>
               </div>
               <div className="flex flex-wrap flex-col col-span-2 md:col-span-1 w-11/12 mx-auto mt-10 mb-6 md:mx-0 md:flex-nowrap ">

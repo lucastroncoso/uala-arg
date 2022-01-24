@@ -59,7 +59,6 @@ export async function getStaticProps() {
 
 export default function Gaming2(props) {
   const data = props.response.gamingArgentinaCollection.items[0]
-  console.log(data)
   const [gamePrice, setGamePrice] = useState('');
   const [calcStatus, setCalcStatus] = useState(false);
   const [optionValue, setOptionValue] = useState('');
