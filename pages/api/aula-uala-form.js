@@ -11,11 +11,9 @@ export default async function (req, res) {
         db.put(params, function (err, data) {
             if (err) {
                 console.log('Error', err);
-                res.status(500).send({ message: 'Error, no se enviaron los datos.' })
-                return;
+                return res.status(err.statusCode).send({ message: 'Error, no se enviaron los datos.' });
             } else {
-                res.status(302).send({ data })
-                return;
+                return res.status(302).send({ data });
             }
         });
     }

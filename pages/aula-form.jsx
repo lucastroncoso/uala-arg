@@ -62,13 +62,14 @@ export default function AulaForm(props) {
                 Created: new Date().toLocaleDateString('en-GB') 
             }),
           })
-            .then(() => {
-                setButton({ text: '¡Listo!', enabled: false, color: 'bg-blue-250'});
-                setInputsEnabled(true);
-            })
-            .catch(() => {
-                setButton({ text: "Hubo un error", enabled: false, color: 'bg-gray-300'});
-                setInputsEnabled(true);
+            .then((response) => {
+                if (response.status == 302) {
+                    setButton({ text: '¡Listo!', enabled: false, color: 'bg-blue-250'});
+                    setInputsEnabled(true);
+                } else {
+                    setButton({ text: "Hubo un error", enabled: false, color: 'bg-gray-300'});
+                    setInputsEnabled(true);
+                }
             });
     }
 

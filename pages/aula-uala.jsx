@@ -25,13 +25,14 @@ export default function AulaUala(props) {
             },
             body: JSON.stringify({ Email: e.target.mail.value, Created: new Date().toLocaleDateString('en-GB') }),
           })
-            .then(() => {
-                setButton({ text: '¡Listo!', enabled: false, color: 'bg-blue-250'});
-                setMailInputEnabled(true);
-            })
-            .catch(() => {
-                setButton({ text: "Hubo un error", enabled: false, color: 'bg-gray-300'});
-                setMailInputEnabled(true);
+            .then((response) => {
+                if (response.status == 302) {
+                    setButton({ text: '¡Listo!', enabled: false, color: 'bg-blue-250'});
+                    setMailInputEnabled(true);
+                } else {
+                    setButton({ text: "Hubo un error", enabled: false, color: 'bg-gray-300'});
+                    setMailInputEnabled(true);
+                }
             });
     }
 
