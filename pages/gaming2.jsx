@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import GamingHero from '../components/gaming/gamingHero';
-import CardItem from '../components/cardItem';
+import { fetchContent } from '../utils/contentful';
 import VideoTitleGaming from '../components/VideoTitleGaming/videoTitleGaming';
 import Layout from '../components/layout';
 import Head from 'next/head';
@@ -9,7 +9,57 @@ import ImageItemsSectionGaming from '../components/imageItemsSectionGaming/image
 import styles from '../styles/newpampas.module.css';
 import PromotionCard from '../components/promotions/promotionCard';
 
+export async function getStaticProps() {
+  const response = await fetchContent(`
+  {
+    gamingArgentinaCollection {
+      items {
+        description
+        desktopImage {
+            url
+            width
+            height
+        }
+        mobileImage {
+            url
+            width
+            height
+        }
+        partner1{
+            url
+            width
+            height
+        }
+         partner2{
+            url
+            width
+            height
+        }
+         partner3{
+            url
+            width
+            height
+        }
+         partner4{
+            url
+            width
+            height
+        }
+        bannerUrl
+      }
+    }
+  }      
+  `);
+
+  return {
+    props: { response },
+    revalidate: 10
+  }
+}
+
 export default function Gaming2(props) {
+  const data = props.response.gamingArgentinaCollection.items[0]
+  console.log(data)
   const [gamePrice, setGamePrice] = useState('');
   const [calcStatus, setCalcStatus] = useState(false);
   const [optionValue, setOptionValue] = useState('');
@@ -91,25 +141,26 @@ export default function Gaming2(props) {
             />
           </div>
           <div className="bg-gaming-body relative">
-              <ImageItemsSectionGaming
-                reverse
-                title="Comprá con Ualá y segui jugando"
-                image1="/assets/images/gaming/logo-steam.png"
-                w1="198"
-                h1="112"
-                image2="/assets/images/gaming/logo-compragamer.png"
-                w2="204"
-                h2="56"
-                image3="/assets/images/gaming/logo-divisiongamer.png"
-                w3="228"
-                h3="104"
-                image4="/assets/images/gaming/logo-bangho.png"
-                w4="204"
-                h4="92"
-                subtitle="Recordá calcular el 30% adicional de impuesto PAIS + el 35% de Percepción de Ganancias en tus compras en moneda extranjera."
-                href="/promociones"
-                link="Ver promociones"
-              />
+            <ImageItemsSectionGaming
+              reverse
+              title="Comprá con Ualá y segui jugando"
+              image1={data.partner1.url}
+              w1={data.partner1.width}
+              h1={data.partner1.height}
+              image2={data.partner2.url}
+              w2={data.partner2.width}
+              h2={data.partner2.height}
+              image3={data.partner3.url}
+              w3={data.partner3.width}
+              h3={data.partner3.height}
+              image4={data.partner4.url}
+              w4={data.partner4.width}
+              h4={data.partner4.height}
+
+              subtitle="Recordá calcular el 30% adicional de impuesto PAIS + el 35% de Percepción de Ganancias en tus compras en moneda extranjera."
+              href="/promociones"
+              link="Ver promociones"
+            />
             <div className="absolute hidden md:block top-0 left-6">
               <Image src="/assets/images/gaming/Aro-body.png" width={33} height={33} />
             </div>
@@ -223,8 +274,8 @@ export default function Gaming2(props) {
             <Image src="/assets/images/gaming/circle-form.png" width={40} height={40} />
           </div>
         </div>
-        <div className="bg-gray-gaming px-10 pt-14 pb-28">
-          <PromotionCard />
+        <div className="bg-gray-gaming px-10 md:pt-28 pt-12 md:pb-40 pb-12">
+          <PromotionCard mobileImage={data.mobileImage} desktopImage={data.desktopImage} bannerUrl={data.bannerUrl} />
         </div>
       </Layout>
     </>
