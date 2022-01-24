@@ -225,10 +225,10 @@ export default function Gaming2(props) {
             <div className="mb-4 md:mb-12 mt-12 md:mt-24 mx-auto w-full">
               <h2 className="text-4xl text-center mb-8 mx-2 md:mx-0">¡Anotate para participar!</h2>
               <p className="text-center text-gray-600  mx-2 md:mx-0">
-                Este mes jugamos: League of Legends
+                {data.formularioLinea1}
               </p>
               <p className="text-center text-gray-600  mx-2 md:mx-0">
-                Inscripciones desde el 01/01 hasta el 30/01.
+                {data.formularioLinea2}
               </p>
             </div>
 
