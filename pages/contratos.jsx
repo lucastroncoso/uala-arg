@@ -14,7 +14,7 @@ export default function Contratos(props) {
         { href: "/assets/legales/Resumen condiciones préstamo (2).pdf", title: "Resumen condiciones: Préstamos" },
         { href: "/assets/legales/Oferta Cuotificaciones (1).pdf", title: "Términos y condiciones: Cuotificaciones" },
         { href: "/assets/legales/Resumen condiciones cuotificaciones (1).pdf", title: "Resumen condiciones: Cuotificaciones" },
-        { href: "/assets/legales/Términos y condiciones_ Cobros.pdf", title: "Términos y condiciones: Cobros" }
+        { href: "/assets/legales/Términos y condiciones_ Cobros.pdf", title: "Términos y condiciones: Ualá Bis" }
     ]
 
     return (
