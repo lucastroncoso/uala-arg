@@ -7,7 +7,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import ImageItemsSectionGaming from '../components/imageItemsSectionGaming/imageItemsSectionGaming';
 import styles from '../styles/newpampas.module.css';
-import PromotionCard from '../components/promotions/promotionCard';
+import PromotionCard from '../components/gaming/promotionCard';
 
 export async function getStaticProps() {
   const response = await fetchContent(`

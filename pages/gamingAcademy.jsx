@@ -155,24 +155,24 @@ export default function Gaming2(props) {
                     <div className="col-span-3">
                       <span className="text-blue-250">{data.juegoPrincipal}</span> <br />
                       <span className="text-gray-700">Inscripción</span> <br />
-                      <span className="text-gray-400">data.inscripcion</span>
+                      <span className="text-gray-400">{data.incripcionJuegoPrincipal}</span>
                     </div>
                     <div className="col-span-2 ml-4">
                       <br />
                       <span className="text-gray-700">Inicio</span> <br />
-                      <span className="text-gray-400">Diciembre</span>
+                      <span className="text-gray-400">{data.inicioJuegoPrincipal}</span>
                     </div>
                   </div>
                   <div className="grid grid-cols-5 row-span-4 row-start-4">
                     <div className="col-span-3">
-                      <p className="text-blue-250">Fifa</p>
-                      <p className="text-blue-250">Free Fire</p>
-                      <p className="text-blue-250">CS:GO</p>
+                      <p className="text-blue-250">{data.juego1}</p>
+                      <p className="text-blue-250">{data.juego2}</p>
+                      <p className="text-blue-250">{data.juego3}</p>
                     </div>
                     <div className="col-span-2 ml-4">
-                      <p className="text-gray-400">Terminada</p>
-                      <p className="text-gray-400">Terminada</p>
-                      <p className="text-gray-400">Terminada</p>
+                      <p className="text-gray-400">{data.inicioJuego1}</p>
+                      <p className="text-gray-400">{data.inicioJuego2}</p>
+                      <p className="text-gray-400">{data.inicioJuego3}</p>
                     </div>
                   </div>
                 </div>
@@ -180,26 +180,26 @@ export default function Gaming2(props) {
               fullDiv={<div className="block md:hidden shadow grid grid-rows-7 bg-white  px-6 py-6 text-base">
                 <div className="row-span-3 grid grid-cols-5 border-b border-blue-250 pb-4">
                   <div className="col-span-3">
-                    <span className="text-blue-250">League of legends</span> <br />
+                    <span className="text-blue-250">{data.juegoPrincipal}</span> <br />
                     <span className="text-gray-700">Inscripción</span> <br />
-                    <span className="text-gray-400">Hasta el 30 de Noviembre</span>
+                    <span className="text-gray-400">{data.incripcionJuegoPrincipal}</span>
                   </div>
                   <div className="col-span-2 ml-4">
                     <br />
                     <span className="text-gray-700">Inicio</span> <br />
-                    <span className="text-gray-400">Diciembre</span>
+                    <span className="text-gray-400">{data.inicioJuegoPrincipal}</span>
                   </div>
                 </div>
                 <div className="grid grid-cols-5 row-span-4 row-start-4">
                   <div className="col-span-3">
-                    <p className="text-blue-250">Fifa</p>
-                    <p className="text-blue-250">Free Fire</p>
-                    <p className="text-blue-250">CS:GO</p>
+                    <p className="text-blue-250">{data.juego1}</p>
+                    <p className="text-blue-250">{data.juego2}</p>
+                    <p className="text-blue-250">{data.juego3}</p>
                   </div>
                   <div className="col-span-2 ml-4">
-                    <p className="text-gray-400">Terminada</p>
-                    <p className="text-gray-400">Terminada</p>
-                    <p className="text-gray-400">Terminada</p>
+                    <p className="text-gray-400">{data.inicioJuego1}</p>
+                    <p className="text-gray-400">{data.inicioJuego2}</p>
+                    <p className="text-gray-400">{data.inicioJuego3}</p>
                   </div>
                 </div>
               </div>}
