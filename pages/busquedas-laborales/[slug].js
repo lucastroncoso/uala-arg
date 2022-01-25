@@ -9,20 +9,13 @@ const axios = require('axios');
 
 export const getStaticPaths = async () => {
     try {
-
-
         var config = {
             method: 'get',
             url: 'https://www.comeet.co/careers-api/2.0/company/54.00B/positions?token=45B15C715C78B6273322D88B6D111A22D11&details=true',
-
-
         };
         const res = await axios(config)
-
         let data = JSON.stringify(res.data)
         data = JSON.parse(data);
-
-
         const paths = data.map(item => {
             return {
                 params: { slug: item.uid }
@@ -31,7 +24,7 @@ export const getStaticPaths = async () => {
 
         return {
             paths,
-            fallback: true
+            fallback: false
         }
     } catch (error) {
         /* add a descriptive error message first,
@@ -50,14 +43,11 @@ export const getStaticPaths = async () => {
 
 export async function getStaticProps({ params }) {
     // add a try / catch loop for nicer error handling
+    // console.log(`Building slug: ${slug}`)
     try {
-
-
         var config = {
             method: 'get',
             url: `https://www.comeet.co/careers-api/2.0/company/54.00B/positions/${params.slug}?token=45B15C715C78B6273322D88B6D111A22D11&details=true`,
-
-
         };
         const res = await axios(config)
 
@@ -86,7 +76,6 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Details({ data }) {
-    console.log(data)
     return (
         <>
             <Head>
