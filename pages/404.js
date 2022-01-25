@@ -25,7 +25,7 @@ export default function Custom404(props) {
                             </div>
                             <div className="mt-8">
                                 <Link href="/">
-                                    <a className="text-white bg-blue-uala p-2 px-12 rounded-full">Visitar la home</a>
+                                    <a className="text-white bg-blue-250 p-2 px-12 rounded-full">Visitar la home</a>
                                 </Link>
                             </div>
                         </div>
@@ -56,7 +56,7 @@ export default function Custom404(props) {
                             </div>
                             <div className="my-8">
                                 <Link href="/">
-                                    <a className="text-white bg-blue-uala p-2 px-12 rounded-full">Visitar la home</a>
+                                    <a className="text-white bg-blue-250 p-2 px-12 rounded-full">Visitar la home</a>
                                 </Link>
                             </div>
                         </div>
