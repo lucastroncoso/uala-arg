@@ -14,7 +14,7 @@ export default function Contratos(props) {
         { href: "/assets/legales/Resumen condiciones préstamo (2).pdf", title: "Resumen condiciones: Préstamos" },
         { href: "/assets/legales/Oferta Cuotificaciones (1).pdf", title: "Términos y condiciones: Cuotificaciones" },
         { href: "/assets/legales/Resumen condiciones cuotificaciones (1).pdf", title: "Resumen condiciones: Cuotificaciones" },
-        { href: "/assets/legales/Términos y condiciones_ Cobros.pdf", title: "Términos y condiciones: Ualá Bis" }
+        { href: "/assets/legales/Términos y condiciones_ Cobros.pdf", title: "Términos y condiciones:", title2: "Ualá Bis" }
     ]
 
     return (
@@ -46,7 +46,7 @@ export default function Contratos(props) {
                                 charges.map(charge => (
 
                                     <div className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-blue justify-between	">
-                                        <div className="text-xl">{charge.title}</div>
+                                        <div className="text-xl">{charge.title} <br /> {charge.title2}</div>
                                         <a href={charge.href} className="link cursor-pointer  text-gray-600 ">Leer</a>
                                     </div>
 
