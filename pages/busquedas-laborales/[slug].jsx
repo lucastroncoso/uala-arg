@@ -2,10 +2,8 @@ import { fetchContent } from '../../utils/contentful';
 import Head from 'next/head';
 import Layout from "../../components/layout";
 import Container from '../../components/container';
-import CardRoundedShadow from "../../components/cardRoundedShadow";
-import Image from "next/image";
-import OutlinedButton from '../../components/outlinedButton';
-import Link from 'next/link';
+import styles from './busquedas.module.css'
+
 const axios = require('axios');
 
 
@@ -121,6 +119,10 @@ export default function Details({ data }) {
                 <Container className="mx-auto lg:w-10/12 mb-72 mt-40">
 
                     <div className="title-1">{data.name}</div>
+                    <div className="title-3 mt-8">Descripción</div>
+                    <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[0].value }}></div>
+                    <div className="title-3 mt-8">Requerimientos</div>
+                    <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[1].value }}></div>
 
                     <script type="comeet-applyform" data-position-uid={data.uid}></script>
 
