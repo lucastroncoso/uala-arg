@@ -21,7 +21,7 @@ export default function ImageItemsSectionGaming(props) {
                                 </div>
                             }
                         </div>
-                    <div className="flex flex-col  order-1 ">
+                    <div className="flex flex-col order-1 ">
                         <div>
                             {props.title && <div className="mb-4 title-gaming-2 text-white">{props.title}</div>}
                             {props.subtitle && <div className="subtitle-gaming-2 text-white">{props.subtitle}</div>}
