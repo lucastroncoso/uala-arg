@@ -55,7 +55,7 @@ export default function AulaUala(props) {
                             <div className="flex justify-center items-center lg:order-none order-1 col-span-2 lg:col-span-1">
                                 <div className="lg:px-24">
                                     <img src="/assets/images/aula/Logo Aula Ualá.png" alt="" className="w-9/12" />
-                                    <p className="text-2xl color-gray font-light">Nuestro espacio de educación
+                                    <p className="text-2xl text-gray-150 ">Nuestro espacio de educación
                                         financiera. ¡Hablamos de finanzas, pero fácil!</p>
                                 </div>
                             </div>
@@ -76,8 +76,8 @@ export default function AulaUala(props) {
                                         className="mx-auto pb-2 lg:pb-0 w-6/12 lg:w-full" />
                                 </div>
                                 <div className="lg:col-span-8 col-span-12 flex items-center flex-wrap lg:pl-8">
-                                    <h2 className="text-xl color-black font-semibold mx-auto lg:mx-0 pb-2 lg:pb-0">Nuestro blog</h2>
-                                    <p className="text-xl color-gray text-center lg:text-left">Escribimos sobre finanzas, emprendedurismo y más. <br />
+                                    <h2 className="text-xl text-gray-250 font-semibold mx-auto lg:mx-0 pb-2 lg:pb-0">Nuestro blog</h2>
+                                    <p className="text-xl text-gray-150 text-center lg:text-left">Escribimos sobre finanzas, emprendedurismo y más. <br />
                                          ¡Leé nuestros artículos!
                                          </p>
                                 </div>
@@ -90,8 +90,8 @@ export default function AulaUala(props) {
                                 </div>
                                 <div target="_blank" href="/aula-form"
                                     className="lg:col-span-8 col-span-12 flex items-center flex-wrap lg:pl-8">
-                                    <h2 className="text-xl color-black font-semibold mx-auto lg:mx-0 pb-2 lg:pb-0">Charlas online</h2>
-                                    <p className="text-xl color-gray text-center lg:text-left">Visitamos virtualmente escuelas de nivel
+                                    <h2 className="text-xl text-gray-250 font-semibold mx-auto lg:mx-0 pb-2 lg:pb-0">Charlas online</h2>
+                                    <p className="text-xl text-gray-150 text-center lg:text-left">Visitamos virtualmente escuelas de nivel
                                          secundario. <br /> ¡Anotá la tuya!
                                          </p>
                                 </div>
@@ -106,8 +106,8 @@ export default function AulaUala(props) {
                                         className="mx-auto pb-2 lg:pb-0 w-6/12 lg:w-full" />
                                 </div>
                                 <div className="lg:col-span-8 col-span-12 flex items-center flex-wrap lg:pl-8">
-                                    <h2 className="text-xl color-black font-semibold mx-auto lg:mx-0 pb-2 lg:pb-0">Videos educativos</h2>
-                                    <p className="text-xl color-gray text-center lg:text-left">Un canal de YouTube con excelentes
+                                    <h2 className="text-xl text-gray-250 font-semibold mx-auto lg:mx-0 pb-2 lg:pb-0">Videos educativos</h2>
+                                    <p className="text-xl text-gray-150 text-center lg:text-left">Un canal de YouTube con excelentes
                                             tutoriales. <br />
                                             ¡Miralos todos!
                                          </p>
@@ -119,10 +119,10 @@ export default function AulaUala(props) {
                                         className="mx-auto pb-2 lg:pb-0 w-6/12 lg:w-full" />
                                 </div>
                                 <div className="lg:col-span-8 col-span-12 flex items-center flex-wrap lg:pl-8">
-                                    <h2 className="text-xl color-black font-semibold mx-auto lg:mx-0 pb-2 lg:pb-0">
+                                    <h2 className="text-xl text-gray-250 font-semibold mx-auto lg:mx-0 pb-2 lg:pb-0">
                                         Cursos gratuitos online
                                         </h2>
-                                    <p className="text-xl color-gray text-center lg:text-left">Una plataforma online con cursos gratuitos
+                                    <p className="text-xl text-gray-150 text-center lg:text-left">Una plataforma online con cursos gratuitos
                                             sobre finanzas.  <br /> ¡Inscribite ahora!
                                         </p>
                                 </div>
@@ -135,11 +135,11 @@ export default function AulaUala(props) {
                         <div className="col-span-10 col-start-2 grid lg:grid-cols-2 grid-cols-1 lg:text-left text-center">
                             <div className="flex justify-center items-center">
                                 <div className="lg:px-12">
-                                    <h2 className="text-3xl font-medium  color-black mb-6">Material descargable</h2>
-                                    <h3 className="text-xl color-gray font-medium pb-2 px-12 lg:px-0">
+                                    <h2 className="text-3xl font-medium  text-gray-250 mb-6">Material descargable</h2>
+                                    <h3 className="text-xl text-gray-150 font-medium pb-2 px-12 lg:px-0">
                                         ¿Querés ser un experto en finanzas personales?
                                         </h3>
-                                    <p className="text-xl color-gray font-light lg:pr-24 pb-8 px-4 lg:px-0">
+                                    <p className="text-xl text-gray-150  lg:pr-24 pb-8 px-4 lg:px-0">
                                         Bajate nuestro programa completo donde encontrarás todo en un mismo documento.</p>
                                     <a target="_blank" href="/assets/images/aula/Aula Ualá - PDF.pdf"
                                         className="border-none text-xl rounded-3xl py-3 lg:px-10 px-8 mt-8 outline-none bg-blue-250 text-white">
@@ -165,10 +165,10 @@ export default function AulaUala(props) {
                             </div>
                             <div className="flex justify-center items-center col-span-2 lg:col-span-1">
                                 <div className="lg:pr-8 lg:pl-12 w-full">
-                                    <h2 className="text-3xl font-medium  color-black mb-6 text-center lg:text-left">¿Querés enterarte de las
+                                    <h2 className="text-3xl font-medium  text-gray-250 mb-6 text-center lg:text-left">¿Querés enterarte de las
                                             <br className="hidden lg:block" /> novedades de Aula Ualá?
                                         </h2>
-                                    <p className="lg:text-2xl text-xl color-gray font-light mb-6 text-center lg:text-left">Suscribite a
+                                    <p className="lg:text-2xl text-xl text-gray-150  mb-6 text-center lg:text-left">Suscribite a
                                             nuestro <br />  newsletter de educación   financiera.
                                         </p>
                                     <form onSubmit={registerUser} className="flex flex-wrap my-6" id="form">
@@ -194,18 +194,18 @@ export default function AulaUala(props) {
                     <div className="col-span-10 col-start-2 grid grid-cols-1 lg:grid-cols-2 lg:my-20 lg:text-left text-center lg:relative lg:py-12 pb-12">
                         <div className="flex justify-center items-center">
                             <div className="lg:pr-8 lg:pl-12 w-full">
-                                <h2 className="text-3xl font-medium  color-black mb-6">
+                                <h2 className="text-3xl font-medium  text-gray-250 mb-6">
                                     ¿Por qué en Ualá apostamos <br /> por la educación financiera?
                                     </h2>
-                                <p className="text-xl color-gray font-light mb-6">Aula Ualá es nuestro espacio de educación financiera.
+                                <p className="text-xl text-gray-150  mb-6">Aula Ualá es nuestro espacio de educación financiera.
                                 Apostamos por la educación porque así generamos un círculo virtuoso que mejora la vida de las
                                 personas.
                                     </p>
-                                <p className="text-xl color-gray font-light mb-6"> En Ualá ofrecemos un producto para manejar tu plata pero
+                                <p className="text-xl text-gray-150  mb-6"> En Ualá ofrecemos un producto para manejar tu plata pero
                                 mucho más fácil, apostando por la
                                 inclusión financiera y educando para que tomes las mejores decisiones.
                                     </p>
-                                <p className="text-xl color-gray font-semibold">Por cualquier consulta, escribinos a <a className="link" href="mailto:aulauala@ua.la">aulauala@ua.la</a></p>
+                                <p className="text-xl text-gray-150 font-semibold">Por cualquier consulta, escribinos a <a className="link" href="mailto:aulauala@ua.la">aulauala@ua.la</a></p>
                             </div>
                         </div>
                         <div>
