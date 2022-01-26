@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Layout from "../../components/layout";
 import Container from '../../components/container';
 import styles from './busquedas.module.css'
+import Script from 'next/script'
+
 
 const axios = require('axios');
 
@@ -80,30 +82,27 @@ export default function Details({ data }) {
         <>
             <Head>
                 <title>Ualá</title>
+
+            </Head>
+            <Layout nav footer banner>
                 <script dangerouslySetInnerHTML={{
                     __html:
 
-                        `window.comeetInit = function() {
-                        COMEET.init({
-                            "token": "45B15C715C78B6273322D88B6D111A22D11",
-                            "company-uid": "54.00B",
-                            "company-name": "uala",
-                            "color": "278fe6",
-                            "font-size": "13px"
-                            "candidate-source-storage": false,
-                            "color":       "278fe6", //optional
-                            //add more parameters here
-                        });
-                    };
-
-                    (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) {return; } js = d.createElement(s); js.id = id;
-                    js.src = "//www.comeet.co/careers-api/api.js"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'comeet-jsapi'));`}}>
+                        ` window.comeetInit = function () {
+                            COMEET.init({
+                                "token": "45B15C715C78B6273322D88B6D111A22D11",
+                                "company-uid": "54.00B",
+                                "company-name": "uala",
+                                "color": "278fe6",
+                                "font-size": "13px"
+                            });
+                        };
+            `}}>
                 </script>
-                <script dangerouslySetInnerHTML={{
+                {/* <script dangerouslySetInnerHTML={{
                     __html: `(function(){var a=function(){window.COMEET.set("candidate-source-storage", !0)};window.COMEET?a():window.comeetUpdate=a})();`
-                }}></script>
-            </Head>
-            <Layout nav footer banner>
+                }}></script> */}
+                <Script strategy="afterInteractive" src="https://www.comeet.co/careers-api/api.js"></Script>
 
                 <Container className="mx-auto lg:w-10/12 mb-72 mt-40">
 
@@ -112,8 +111,9 @@ export default function Details({ data }) {
                     <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[0].value }}></div>
                     <div className="title-3 mt-8">Requerimientos</div>
                     <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[1].value }}></div>
-
                     <script type="comeet-applyform" data-position-uid={data.uid}></script>
+                    <script type="comeet-social"></script>
+
 
 
                 </Container>
