@@ -50,28 +50,26 @@ export default function BusquedasLaborales({ data }) {
     let parseData = []
     data.forEach(element => {
 
-        if (element.location.country != "MX") {
+        if (element.location.country != "") {
 
-        if (!parseData[element.department]) {
-            parseData[element.department] = [];
-        }
+            if (!parseData[element.department]) {
+                parseData[element.department] = [];
+            }
 
-        parseData[element.department]["carrers"] ? parseData[element.department]["carrers"].push(element) : (parseData[element.department]["carrers"] = [element])
-        parseData[element.department]["categoryTitle"] = element.department;
+            parseData[element.department]["carrers"] ? parseData[element.department]["carrers"].push(element) : (parseData[element.department]["carrers"] = [element])
+            parseData[element.department]["categoryTitle"] = element.department;
 
         }
 
     });
+    const cleanData = parseData.filter(department => department)
     /* parseData.forEach(e => console.log(Object.keys(e))) */
     console.log(parseData)
     /* console.log(Object.entries(parseData))
     console.log(Object.keys(parseData[0])) */
 
-    parseData.forEach(department =>
-        console.log(department)
 
-    )
-    console.log(data)
+
     return (
         <>
             <Head>
@@ -82,17 +80,19 @@ export default function BusquedasLaborales({ data }) {
                 <Container className="mt-48">
 
                     {Object.entries(parseData).map((department, index) => {
-                        return <div key={index}>
-                            <h2 className="title-2">{department[0]}</h2>
-                            <div className="grid md:grid-cols-3 py-12">
-                                {department[1].carrers.map(position => {
-                                    return <a href={"/busquedas-laborales/" + position.uid} key={position.uid} className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-blue justify-between	">
-                                        <div className="text-xl">{position.name}</div>
-                                        <div className=" cursor-pointer  text-gray-600 ">{position.location.name ? position.location.name : ""} {position.experience_level ? ` - ${position.experience_level}` : ''}</div>
-                                    </a>
-                                })}
+                        if (department[0] != "null" && department[0] != "-") {
+                            return <div key={index}>
+                                <h2 className="title-2">{department[0]}</h2>
+                                <div className="grid md:grid-cols-3 py-12">
+                                    {department[1].carrers.map(position => {
+                                        return <a href={"/busquedas-laborales/" + position.uid} key={position.uid} className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-blue justify-between	">
+                                            <div className="text-xl">{position.name}</div>
+                                            <div className=" cursor-pointer  text-gray-600 ">{position.location.name ? position.location.name : ""} {position.experience_level ? ` - ${position.experience_level}` : ''}</div>
+                                        </a>
+                                    })}
+                                </div>
                             </div>
-                        </div>
+                        }
                     }
                     )}
                 </Container>
