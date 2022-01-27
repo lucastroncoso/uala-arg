@@ -78,7 +78,7 @@ export default function BusquedasLaborales({ data }) {
                                 <h2 className="title-2">{department[0]}</h2>
                                 <div className="grid md:grid-cols-3 py-12">
                                     {department[1].carrers.map(position => {
-                                        return <a href={"/busquedas-laborales/" + position.uid} key={position.uid} className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-blue justify-between	">
+                                        return <a href={"/sumate/" + position.uid} key={position.uid} className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-blue justify-between	">
                                             <div className="text-xl">{position.name}</div>
                                             <div className=" cursor-pointer  text-gray-600 ">{position.location.name ? position.location.name : ""} {position.experience_level ? ` - ${position.experience_level}` : ''}</div>
                                         </a>
