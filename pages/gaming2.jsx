@@ -198,7 +198,6 @@ export default function Gaming2(props) {
                   setCalcStatus(false);
                   setOptionValue(options[0].value);
                 }}
-                //placeholder="$2.500,00"
                 className="block w-11/12 py-3 pl-4 mx-auto mb-4 text-xl text-center rounded-full appearance-none lg:w-8/12 focus:outline-none"
               />
               <label
