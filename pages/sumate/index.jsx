@@ -62,13 +62,6 @@ export default function BusquedasLaborales({ data }) {
         }
 
     });
-    const cleanData = parseData.filter(department => department)
-    /* parseData.forEach(e => console.log(Object.keys(e))) */
-    console.log(parseData)
-    /* console.log(Object.entries(parseData))
-    console.log(Object.keys(parseData[0])) */
-
-
 
     return (
         <>
