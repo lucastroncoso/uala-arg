@@ -75,6 +75,11 @@ module.exports = {
         source: '/creditos',
         destination: '/prestamos',
         permanent: true,
+      },
+      {
+        source: '/bienvenida',
+        destination: 'https://www.youtube.com/watch?v=dJyRl1bq9eg',
+        permanent: true,
       }
     ]
   }
