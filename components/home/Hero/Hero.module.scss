@@ -195,16 +195,22 @@ p.paragraph {
     padding-left: 15px;
   }
   @include respond-to(preFullWidth) {
-    padding-left: 80px;
+    width: 90%;
+    height: 90%;
+    padding-left: 220px;
     box-sizing: border-box; 
   }
   @include respond-to(fullWidth) {
     width: auto;
+    height: auto;
     padding-top: 40px;
+    padding-right: 220px;
   }
   @include respond-to(fullWidthMax) {
-    padding-left: 300px;
-    padding-top: 80px;
+     width: auto;
+    height: auto;
+    padding-left: 320px;
+    padding-top: 50px;
   }
 }
 
@@ -221,7 +227,9 @@ p.paragraph {
     padding-top: 80px;
   }
   @include respond-to(fullWidthMax) {
-    padding-left: 300px;
-    padding-top: 80px;
+    width: 93%;
+    height: 93%;
+    padding-left: 70px;
+    padding-top: 20px;
   }
 }
