@@ -142,7 +142,7 @@ export default function Gaming2(props) {
           <div className="bg-gaming-body relative">
             <ImageItemsSectionGaming
               reverse
-              title="Comprá con Ualá y segui jugando"
+              title="Comprá con Ualá y seguí jugando"
               image1={data.partner1.url}
               w1={data.partner1.width}
               h1={data.partner1.height}

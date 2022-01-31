@@ -10,8 +10,9 @@
               "url": "/compras"
             },
             {
-              "copy": "Transferencias",
-              "url": "/transferencias"
+              "copy": "Cobros",
+              "url": "https://www.ualabis.com.ar/",
+              "target": "_BLANK"
             },
             {
               "copy": "Créditos",
@@ -26,13 +27,12 @@
               "url": "/inversiones"
             },
             {
-              "copy": "Extracciones",
-              "url": "/extracciones"
+              "copy": "Transferencias",
+              "url": "/transferencias"
             },
             {
-              "copy": "Cobros",
-              "url": "https://www.ualabis.com.ar/",
-              "target": "_BLANK"
+              "copy": "Extracciones",
+              "url": "/extracciones"
             },
             {
               "copy": "Análisis de gastos",
