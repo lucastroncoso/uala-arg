@@ -52,6 +52,16 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/SBS_Ahorro_Pesos%20_V2/SBS_Ahorro_Pesos.html',
+        destination: '/assets/legales/to-sbs-ahorro-pesos-032020.pdf',
+        permanent: true,
+      },
+      {
+        source: '/Inversiones_TyC.html',
+        destination: '/assets/legales/inversiones_TyC.pdf',
+        permanent: true,
+      },
+      {
         source: '/programa-de-beneficios',
         destination: 'https://www.ualamas.com.ar/',
         permanent: true,
