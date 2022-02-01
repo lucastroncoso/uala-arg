@@ -52,8 +52,13 @@ module.exports = {
         permanent: true,
       },
       {
-        source: '/sumate',
-        destination: 'https://www.comeet.com/jobs/Uala/54.00B',
+        source: '/SBS_Ahorro_Pesos%20_V2/SBS_Ahorro_Pesos.html',
+        destination: '/assets/legales/to-sbs-ahorro-pesos-032020.pdf',
+        permanent: true,
+      },
+      {
+        source: '/Inversiones_TyC.html',
+        destination: '/assets/legales/inversiones_TyC.pdf',
         permanent: true,
       },
       {
@@ -74,6 +79,16 @@ module.exports = {
       {
         source: '/faqs',
         destination: '/preguntas-frecuentes',
+        permanent: true,
+      },
+      {
+        source: '/creditos',
+        destination: '/prestamos',
+        permanent: true,
+      },
+      {
+        source: '/bienvenida',
+        destination: 'https://www.youtube.com/watch?v=dJyRl1bq9eg',
         permanent: true,
       }
     ]

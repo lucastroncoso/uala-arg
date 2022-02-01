@@ -87,20 +87,21 @@ const Hero = ({ content }) => {
       ref={sectionRef}
     >
       <div className={styles.background}>
-        <img src={content.background[0].src} className={styles.backgroundImage} />
-        <span className={styles.popupNotification}>
-          <img data-animation="popup-1" src={content.notificationsSrc[0]} />
-        </span>
-        <span className={styles.popupNotification}>
-          <img data-animation="popup-2" src={content.notificationsSrc[1]} />
-        </span>
-        <span className={styles.backgroundImage}>
-          <img
-            data-animation="floating-card"
-            src={content.background[1].src}
-            alt={content.background[1].alt}
-          />
-        </span>
+          <img src={content.background[0].src} className={styles.backgroundImage} />
+          <span className={styles.popupNotification}>
+            <img data-animation="popup-1" src={content.notificationsSrc[0]} className={styles.backgroundNotification}/>
+          </span>
+          <span className={styles.popupNotification}>
+            <img data-animation="popup-2" src={content.notificationsSrc[1]} className={styles.backgroundNotification}/>
+          </span>
+          <span className={styles.backgroundImage}>
+            <img
+              data-animation="floating-card"
+              src={content.background[1].src}
+              alt={content.background[1].alt}
+              className={styles.backgroundCard}
+            />
+          </span>
         <div className={styles.svgBottom}>
           <svg
             version="1.1"
@@ -125,6 +126,12 @@ const Hero = ({ content }) => {
         </div>
         <div className="hidden pt-2 md:block">
           <DownloadAppButton
+            dataLayerInfo={{
+              event: 'trackEvent',
+              eventCategory: 'Home', 
+              eventAction: 'Primera Pantalla', 
+              eventLabel: 'Boton Descargar' 
+            }}
             customClass={["text-blue-250", "rounded-full", "border-blue-250", "border-2", "px-10", "py-2", "text-xl", "hover:text-white", "hover:bg-blue-250", "focus:outline-none"]}>
             {content.buttonCopy}
           </DownloadAppButton>

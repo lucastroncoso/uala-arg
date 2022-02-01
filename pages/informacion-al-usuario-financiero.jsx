@@ -26,11 +26,8 @@ export default function Nosotros(props) {
                     </p>
                     <p>
                         <span className="font-semibold block" >Responsables de Atención al Usuario de Servicios Financieros:</span>
-                        Titular: Mariano Guarchetti
-                        Suplente: Juan Ignacio Barreiro
-                        Dirección: Nicaragua 4677, C1414BVG, Ciudad Autónoma de Buenos Aires, Argentina.
-                        Teléfono: (011) 5263-3563 (De lunes a viernes de 09:00 a 18:00 horas).
-                        Correo electrónico de atención: proteccionusuarios@uala.com.ar.
+                        Titular: Federico José Ardoino Rachetti. Suplente: Juan Ignacio Barreiro.
+                        Dirección: Nicaragua 4677, C1414BVG, Ciudad Autónoma de Buenos Aires, Argentina. Teléfono: (011) 5263-3563 (De lunes a viernes de 09:00 a 18:00 horas). Correo electrónico de atención: proteccionusuarios@uala.com.ar.
                     </p>
                     <p className="break-words">
                         Las quejas y/o reclamos de los usuarios deberán resolverse definitivamente en un plazo máximo de 10 días hábiles. La falta de respuesta o disconformidad en la resolución podrán ser informados al BCRA. Podés contactar a su área de Protección al Usuario de Servicios Financieros ingresando a <a target="_blank" className="link" href="http://www.bcra.gob.ar/BCRAyVos/Usuarios_Financieros.asp">www.bcra.gob.ar/BCRAyVos/Usuarios_Financieros.asp</a>

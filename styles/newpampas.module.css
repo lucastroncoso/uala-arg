@@ -75,6 +75,7 @@
 .formButton:hover {
     box-shadow: none;
     color: white;
+    background-color: rgb(37 99 235);
 }
 
 .formButton:disabled {
@@ -108,24 +109,21 @@
 
 .bgGradient {
     background-image: url(/assets/images/newpampas/gradient-background.svg);
-    background-size: cover;
+    background-size: 100%;
 }
 
 @media only screen and (max-width: 600px) {
     .bgGradient {
-        background-image: url(/assets/images/newpampas/gradient-background-mobile.png);
-        background-size: cover;
+        background-image: url(/assets/images/gaming/background-form-mobile.png);
+        background-size: 130%;
         background-repeat: no-repeat;
     }
 }
 
 .select {
     /* needed */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     /* SVG background image */
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' fill=' rgb(102, 138, 255)'><polygon points='0,0 200,0 100,100'/></svg>") no-repeat;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' fill-blue-250><polygon points='0,0 200,0 100,100/></svg>") no-repeat;
     background-size: 12px;
     background-position: calc(100% - 20px) center;
     background-repeat: no-repeat;

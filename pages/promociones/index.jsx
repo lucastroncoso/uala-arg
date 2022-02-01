@@ -8,6 +8,7 @@ import FeaturedPromotionCard from '../../components/promotions/featuredPromotion
 import PromotionCard from '../../components/promotions/promotionCard';
 import PromotionFilters from '../../components/promotions/promotionFilters';
 import Slider from '../../components/slider/slider';
+import Router, { useRouter } from 'next/router';
 
 export async function getStaticProps() {
     const response_promos = await fetchContent(`
@@ -95,7 +96,17 @@ const isPromotionNew = date => {
     }
 }
 
+const modifyCategoryURL = slug => {
+    Router.push({
+        query: {
+            category: slug
+        }
+    })
+};
+
 export default function Promociones(props) {
+    const router = useRouter();
+
     const [ allPromotions, setAllPromotions ] = useState( props.response_promos.argentinaPromotionCollection.items ); // Lista completa de promociones
     const [ featuredPromotions, setFeaturedPromotions ] = useState(); // Lista de promos destacadas completa
     const [ promotions, setPromotions ] = useState(); // Lista de promociones restantes completa
@@ -107,6 +118,16 @@ export default function Promociones(props) {
     const [ selectedLocation, setSelectedLocation ] = useState({slug: ''}); // Ubicación seleccionada
     const [ showNewest, setShowNewest ] = useState( false ); // Mostrar promociones nuevas
     const [ banners, setBanners ] = useState( props.response_others.promotionBannerArgentinaCollection.items ); // Banners
+
+    useEffect( () => {
+        // Verificar al cargar la pagina si hay una categoria seleccionada desde la url
+        if ( router.isReady && !!router.query.category) {
+            const found = categories.find( cat => cat.slug === router.query.category);
+            if(!!found) {
+                setSelectedCategory({slug: router.query.category});
+            }
+        } 
+    },[router.isReady]);
 
     useEffect( () => {
         // Lista de promociones destacadas - las primeras 2 que tengan la propiedad featured
@@ -185,6 +206,7 @@ export default function Promociones(props) {
             // Cuando se selecciona una categoría
             if ( selectedCategory.slug !== '' ) {
                 if ( selectedCategory.slug !== 'any-category' ) {
+                    modifyCategoryURL( selectedCategory.slug );
                     filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
                         if (promotion.categoriesCollection.items.find(element => element.slug === selectedCategory.slug) !== undefined) {
                             return true;
@@ -277,7 +299,13 @@ export default function Promociones(props) {
                     </Slider> */}
                     {!!banners && 
                                 
-                                <div className="w-full">
+                                <div className="w-full" onClick={ () => dataLayer.push(
+                                    { 
+                                    event: 'trackEvent',
+                                    eventCategory: 'Web Arg', 
+                                    eventAction: 'Pagina Promociones', 
+                                    eventLabel: 'Banner Header' 
+                                     }) }>
                                     <div className="hidden md:block">
                                         <Image 
                                             layout="responsive"

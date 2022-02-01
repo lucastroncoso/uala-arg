@@ -27,7 +27,13 @@ export default function FeaturedPromotionCard(props) {
                         <div className="mt-4 text-sm text-center">{props.date}</div>
                         <div className="mt-4 text-center">
                         <Link href={"/promociones/" + props.slug}>
-                            <a className="link">Ver mas</a>
+                            <a className="link" onClick={ () => dataLayer.push(
+                                { 
+                                event: 'trackEvent',
+                                eventCategory: 'Web Arg', 
+                                eventAction: 'Pagina Promociones', 
+                                eventLabel: 'Boton Ver Mas' 
+                                }) }>Ver mas</a>
                         </Link>
                         </div>
                     </div>
