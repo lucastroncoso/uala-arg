@@ -46,7 +46,7 @@ export default function PreguntasFrecuentes({ response }) {
             <Layout nav footer>
 
                 <Container className="mt-32">
-                    <div className="text-xl w-5/6 ">Preguntas frecuentas</div>
+                    <div className="text-xl w-5/6 ">Preguntas frecuentes</div>
                     <div className="mb-16 title-1 mt-4">
                         ¿Tenés <br /> alguna duda?
                     </div>
