@@ -31,6 +31,11 @@
 background-color: #1B1D21;
 }
 
+.bg-costos {
+  background-color: #EFF4FF;
+  }
+  
+
 .bg-blue-trabajar-button {
 background-color: #EEF3FF;
 }
@@ -114,6 +119,24 @@ background-color: #EEF3FF;
     background: url(/assets/images/gaming/Curva-form-desktop.png);
     background-size: 100%;
     background-position: bottom 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bg-blue-costos {
+    background: url(/assets/images/costos/hero-curva-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-position: 40% 50%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .bg-blue-costos {
+    background: url(/assets/images/costos/hero-curva-desktop.png);
+    background-position: -470px 300px;
+    background-size: 150%;
     background-repeat: no-repeat;
   }
 }
