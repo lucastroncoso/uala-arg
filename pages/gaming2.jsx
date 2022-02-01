@@ -143,25 +143,16 @@ export default function Gaming2(props) {
             <ImageItemsSectionGaming
               reverse
               title="Comprá con Ualá y seguí jugando"
-              image1={data.partner1.url}
-              w1={data.partner1.width}
-              h1={data.partner1.height}
-              image2={data.partner2.url}
-              w2={data.partner2.width}
-              h2={data.partner2.height}
-              image3={data.partner3.url}
-              w3={data.partner3.width}
-              h3={data.partner3.height}
-              image4={data.partner4.url}
-              w4={data.partner4.width}
-              h4={data.partner4.height}
-
+              image1={data.partner1 && (<div className="bg-white rounded-2xl md:mx-0 w-20 h-20 px-1 flex items-center"><Image src={data.partner1.url} width={data.partner1.width} height={data.partner1.height} className="col-span-1"/></div>)}
+              image2={data.partner3 && (<div className="bg-white rounded-2xl w-20 h-20 px-1 flex items-center"><Image src={data.partner2.url} width={data.partner2.width} height={data.partner2.height} className="col-span-1 col-start-2"/></div>)}
+              image3={data.partner3 && (<div className="bg-white rounded-2xl w-20 h-20 px-1 flex items-center"><Image src={data.partner3.url} width={data.partner3.width} height={data.partner3.height} className="col-span-1 col-start-3"/></div>)}
+              image4={data.partner4 && (<div className="bg-white rounded-2xl w-20 h-20 px-1 flex items-center"><Image src={data.partner4.url} width={data.partner4.width} height={data.partner4.height} className="col-span-1 col-start-4"/></div>)}
               subtitle="Recordá calcular el 30% adicional de impuesto PAIS + el 35% de Percepción de Ganancias en tus compras en moneda extranjera."
               href="/promociones"
               link="Ver promociones"
             />
             <div className="absolute hidden md:block top-0 left-6">
-              <Image src="/assets/images/gaming/Aro-body.png" width={33} height={33} />
+              <Image src="/assets/images/gaming/Aro-body.png" width={33} height={33} />  
             </div>
             <div className="absolute hidden md:block -top-5 right-0">
               <Image src="/assets/images/gamingAcademy/Aro-body-m2.png" width={37} height={48} />
@@ -176,7 +167,7 @@ export default function Gaming2(props) {
                 className="mb-8 text-4xl font-semibold text-center text-gray-800"
               >
                 Calculá cuánto sale tu juego
-              </h2>
+              </h2> 
               <p className="mb-8 text-xl text-center text-gray-700">
                 Utilizando esta calculadora podés conocer el precio final del juego{' '}
                 <br className="hidden lg:block" /> para que sepas cuánto saldo cargar en Ualá.

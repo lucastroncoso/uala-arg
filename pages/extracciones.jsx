@@ -53,13 +53,21 @@ export default function Extracciones(props) {
 
                 />
 
-
+                <div className="bg-blue-degrade-trabajar">
                 <VideoTitle title="¿Cómo sacar plata del cajero?"
                     href="https://www.youtube.com/watch?v=08HLUarWD5Q"
                     imgDesktop={<Image src="/assets/images/extracciones/icono_extracciones_destkop.png" width={2453} height={1273} />}
                     imgMobile={<Image src="/assets/images/extracciones/icono_extracciones_mobile.png" width={661} height={687} />}
                 />
+                   <Container className="pb-8">
+                    <h2 className="title-extracciones">Costos</h2>
+                    <div className="grid grid-cols-2 py-8">
+                        <p className="col-span-2 md:col-span-1 text-gray-250"><span className="font-bold">Red Link y Banelco</span><br/>Cada extracción tienen un costo de $105 + IVA.</p>
+                        <p className="col-span-2 md:col-span-1 md:col-start-2 text-gray-250"><span className="font-bold">Rapipago</span><br/>Tenés una extracción gratis por mes. Si hacés más extracciones, tienen un costo de $75 + IVA que se va a cobrar de tu saldo cuando hagas la extracción.</p>
+                    </div>
 
+                </Container>
+                </div>
 
 
 

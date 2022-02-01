@@ -10,7 +10,7 @@
               "url": "/compras"
             },
             {
-              "copy": "Cobros",
+              "copy": "Ualá Bis",
               "url": "https://www.ualabis.com.ar/",
               "target": "_BLANK"
             },
@@ -395,7 +395,7 @@
             "hasTargetBlank": true
           },
           {
-            "copy": "Cobros",
+            "copy": "Ualá Bis",
             "url": "https://www.ualabis.com.ar/",
             "hasTargetBlank": true
           }
