@@ -3,13 +3,13 @@ import CardRoundedShadow from "../cardRoundedShadow";
 
 export const BenefitsSlider = ({settings}) => {
     const benefits = [
-        { title: "Desarrollo profesional", list: ["Subsidio para clases de inglés"] },
-        { title: "Compensaciones y obra social", list: ["Prestaciones de ley.", "Cobertura médica.", "Premio por referidos.", "Política de ajuste por inflación.", "Préstamos con tasa diferencial."] },
-        { title: "Flexibilidad y descanso", list: ["Política de home office.", "15 días de vacaciones.", "Horario Flexible.", "Día de cumpleaños libre."] },
-        { title: "Bienestar", list: ["Subsidio para gimnasio.", "Pago de servicio de internet.", "Pago de Netflix y Spotify."] },
-        { title: "Maternidad y paternidad", list: ["Extensión de licencia de maternidad y paternidad.", "Apoyo a escolaridad para padres con niños."] },
+        { title: "Desarrollo profesional", list: ["Descuentos en Universidades y Code Schools", "Convenio con instituto de Inglés", "Aprendizaje ilimitado en nuestra plataforma interna"] },
+        { title: "Compensaciones y obra social", list: ["Bono por performance", "Prepaga médica OSDE", "Préstamos con tasa diferencial ", "Ajustes por inflación", "Premio por referidos"] },
+        { title: "Flexibilidad y descanso", list: ["Home office", "Semana extra de vacaciones", "Semana libre de fin de año", "Día de cumpleaños libre.", "Horario flexible", "Licencia de estudio extendida"] },
+        { title: "Bienestar", list: ["Descuento en gimnasio", "Pago de servicio de internet.", "Pago de Netflix y Spotify.", "Reintegro por almuerzo", "Programa de Asistencia al empleado"] },
+        { title: "Maternidad y paternidad", list: ["Extensión de licencia de maternidad y paternidad.", "Soft Landing", "Kit escolar", "Reintegro por guardería"] },
     ];
-    
+
     return (
         <Slider {...settings}>
             {
