@@ -9,7 +9,7 @@ export default function Contratos(props) {
     const charges = [
         { href: "/assets/legales/TyC-de-uso-de-la-app.pdf", title: "Términos de Uso de la App" },
         { href: "/assets/legales/Contrato Tarjeta Prepaga.pdf", title: "Contrato Tarjeta Prepaga" },
-        { href: "/assets/legales/Términos y Condiciones Inversiones (2).pdf", title: "Términos y condiciones: Inversiones" },
+        { href: "/assets/legales/inversiones_TyC.pdf", title: "Términos y condiciones: Inversiones" },
         { href: "/assets/legales/Oferta Préstamos (2).pdf", title: "Términos y condiciones: Préstamos" },
         { href: "/assets/legales/Resumen condiciones préstamo (2).pdf", title: "Resumen condiciones: Préstamos" },
         { href: "/assets/legales/Oferta Cuotificaciones (1).pdf", title: "Términos y condiciones: Cuotificaciones" },

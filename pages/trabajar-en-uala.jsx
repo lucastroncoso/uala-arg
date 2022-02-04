@@ -1,148 +1,98 @@
 import Layout from "../components/layout";
 import Container from "../components/container";
 import Image from "next/image";
-import Slider from "react-slick";
+import Head from 'next/head';
+import { BenefitsSlider } from "../components/Carrers/benefitsSlider";
+import CarrersHero from "../components/Carrers/carrersHero";
 
 export default function Carrers(props) {
 
-    const benefits = [
-        { title: "Compensaciones y obra social", list: ["Prestaciones de ley", "Cobertura médica", "Premio por referidos", "Política de ajuste por inflación", "Préstamos con tasa diferencial"] },
-        { title: "Flexibilidad y descanso", list: ["Política de homeoffice", "15 días de vacaciones", "Día de cumpleaños libre", "Horario flexible"] },
-        { title: "Bienestar", list: ["Subsidio para gimnasio", "Pago de servicio de internet", "Pago de Netflix y Spotify"] },
-        { title: "Maternidad y paternidad", list: ["Extensión de licencia de maternidad y paternidad", "Apoyo a escolaridad para padres con niños"] },
-        { title: "Desarrollo profesional", list: ["Subsidio para clases de inglés"] },
-    ];
-
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 300,
-        slidesToShow: 2,
+        slidesToShow: 3.1,
         slidesToScroll: 1
     };
 
     return (
-        <Layout nav footer>
-            <div className="bg-prensa h-96 flex items-center justify-center mt-20">
-                <div className="text-white font-semibold pl-24 text-5xl w-full">Sobre Ualá</div>
-            </div>
-            <Container>
-                <div className="my-24">
-                    <div className="my-16">
-                        {/* Por qué trabajar en Ualá */}
-                        <div className="grid grid-cols-12 mb-12">
-                            <div className="col-span-full mb-4 lg:mb-0 lg:col-span-4">
-                                <div className="text-4xl font-medium text-gray-800">Por qué trabajar en Ualá</div>
-                            </div>
-                            <div className="col-span-full mb-4 lg:mb-0 lg:col-span-8">
-                                <div className="text-gray-500 text-xl leading-8">
-                                    En Ualá somos un equipo de profesionales innovador@s y comprometid@s que viene a revolucionar el sistema financiero, para hacerlo abierto y para tod@s. Y lo mejoramos todos los días con gente como vos. Trabajamos en un ambiente dinámico en pleno crecimiento donde tod@s podemos intercambiar, proponer e impulsar ideas para que sucedan.
-                                </div>
-                                <div className="mt-4 text-gray-500 text-xl">Por eso, #SomosUalá</div>
+        <>
+            <Head>
+                <title>Ualá</title>
+            </Head>
+            <Layout nav footer>
+            <Container >
+                <div className="grid lg:mb-8 lg:mt-24 md:mb-0 mt-20 mb-12 md:grid-cols-2 md:mt-40">
+                    <div className="flex flex-wrap md:col-span-1 content-center mb-12 md:order-none order-1 md:mt-0 mt-8">
+                        <div className="w-full">
+                            <p className="text-xl w-5/6 ">
+                                <div className="text-gray-150">Trabajar en Ualá</div>
+                            </p>
+                        </div>
+                        <div className="w-full">
+                            <h1 className="title-2 mt-4 md:mt-8">
+                                <div className="text-gray-250">¿Por qué trabajar <br/>en Ualá?</div>
+                            </h1>
+                        </div>
+                        <div className="w-full mt-4 md:mt-6">
+                            <div className="md:w-6/6 md:mr-6 text-base md:text-lg leading-8 text-gray-150">
+                            En Ualá somos un equipo de profesionales innovadores y comprometidos que viene a revolucionar el sistema financiero, para hacerlo abierto y para tod@s. Y lo mejoramos todos los días con gente como vos. Trabajamos en un ambiente dinámico en pleno crecimiento donde todos podemos intercambiar, proponer e impulsar ideas para que sucedan. Por eso, #SomosUalá
                             </div>
                         </div>
-
-
-
-                        {/* Qué te ofrecemos */}
-                        <div className="my-16">
-                            <div className="text-4xl font-medium text-gray-800">Qué te ofrecemos</div>
-                            <div className="text-gray-600 mt-6 text-lg">
-                                <p>Estos son algunos de los beneficios:</p>
-                            </div>
-                            <div className="grid lg:grid-cols-3 gap-5">
-                                {
-
-                                    benefits.map(benefit => (
-                                        <div className="shadow-md rounded-md p-6 border border-gray-100">
-                                            <div className="text-gray-700 font-medium mb-4">{benefit.title}</div>
-                                            <ul className="list-dot">{
-                                                benefit.list.map(option => <li className="text-gray-600 mt-4">{option}</li>)
-                                            }</ul>
-                                        </div>
-                                    ))
-
-                                }
-                            </div>
+                    </div>
+                    <div className="flex items-center md:col-span-1 justify-center md:order-none order-2 " >
+                        <div className="md:ml-6 rounded-3xl overflow-hidden flex md:w-6/6">
+                            <Image src="/assets/images/trabajar/office/busquedas_laborales_hero.jpg" width={1389} height={1134} />
                         </div>
-
-                        <div className="my-16">
-                            <div className="text-4xl font-medium text-gray-800">Nuestras oficinas centrales en Argentina</div>
-                            <div className="text-gray-600 mt-6 text-lg">
-                                <p>Creamos un espacio de trabajo moderno y abierto sin divisiones entre escritorios donde la interacción, el trabajo en equipo y la transparencia fueran sus principales características.</p>
-                            </div>
-                            <div className="mt-8">
-                                <Slider {...settings}>
-                                    <div>
-                                        <img className="rounded-md" src="/assets/images/trabajar/office/1.jpeg" width={516} height={346} />
-                                    </div>
-                                    <div>
-                                        <img className="rounded-md" src="/assets/images/trabajar/office/2.jpeg" width={516} height={346} />
-                                    </div>
-                                    <div>
-                                        <img className="rounded-md" src="/assets/images/trabajar/office/3.jpeg" width={516} height={346} />
-                                    </div>
-                                    <div>
-                                        <img className="rounded-md" src="/assets/images/trabajar/office/4.jpeg" width={516} height={346} />
-                                    </div>
-                                </Slider>
-                            </div>
-                        </div>
-
-                        <div className="py-12">
-                            <div className="grid lg:grid-cols-2">
-                                <div>
-                                    <div>
-                                        <Image src="/assets/images/trabajar/logo-gptw.svg" width={68} height={68} />
-                                    </div>
-                                    <div className="text-4xl mt-8">Great Place to Work</div>
-                                    <div className="w-5/6"><p className="text">En 2019 logramos un lugar en el ranking de los mejores 20 lugares para trabajar en Argentina y en el 2020 fuimos reconocidos como una de las mejores empresas para trabajar para las mujeres y para los Millennials.</p></div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <img className="rounded-md" src="/assets/images/trabajar/office/9.jpeg" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="py-12">
-                            <div className="text-4xl font-medium text-gray-800">Esto pasa en Ualá</div>
-                            <div className="mt-8">
-                                <Slider {...settings}>
-                                    {/* <div>
-                                        <img className="rounded-md" src="/assets/images/office/5.jpeg" width={516} height={346} />
-                                    </div> */}
-                                    <div>
-                                        <img className="rounded-md" src="/assets/images/trabajar/office/6.jpeg" width={516} height={346} />
-                                    </div>
-                                    <div>
-                                        <img className="rounded-md" src="/assets/images/trabajar/office/7.jpeg" width={516} height={346} />
-                                    </div>
-                                    <div>
-                                        <img className="rounded-md" src="/assets/images/trabajar/office/8.jpeg" width={516} height={346} />
-                                    </div>
-                                </Slider>
-                            </div>
-                        </div>
-
-                        <div className="py-12">
-
-                            <div className="text-center font-medium text-4xl">Oportunidades abiertas</div>
-                            <div className="text-center mt-4 text-gray-600">
-                                <div>Queremos que te sumes a esta revolución.</div>
-                                <div>Porque mientras más seamos, mejor.</div>
-                            </div>
-                            <div className="mt-4 flex justify-center">
-                                <div className="rounded-full border border-blue-600 text-blue-600 py-3 px-8 text-center"><a target="_blank" href="/sumate" className="link">Consultá las oportunidades aquí</a></div>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
             </Container>
-        </Layout>
+            <div className="bg-blue-curve-gradient mt-12">
+                <Container>
+                {/* Qué te ofrecemos */}
+                    <div className="text-3xl font-medium  text-gray-250">Qué te ofrecemos</div>
+                    <div className="text-gray-250 mt-6 text-lg">
+                        <p>Estos son algunos de los beneficios:</p>
+                    </div>
+                    <div className="block lg:hidden">
+                        <BenefitsSlider settings={{...settings, slidesToShow:1.1}} />
+                    </div>
+                    <div className="hidden lg:block">
+                        <BenefitsSlider settings={{...settings}} />
+                    </div>
+                </Container>
+                <CarrersHero
+                reverse
+                title="Nuestras oficinas centrales en Argentina"
+                subtitleFull="Creamos un espacio de trabajo moderno y abierto sin divisiones entre escritorios donde la interacción, el trabajo en equipo y la transparencia fueran sus principales características."
+                src2="/assets/images/trabajar/office/busquedas_laborales_oficinas.jpg"
+                w2="1389"
+                h2="1134"
+              />
+            </div>
+            <div className="bg-blue-degrade-trabajar">
+                <CarrersHero
+                title="Great Place to Work"
+                subtitleFull="En 2019 logramos un lugar en el ranking de los mejores 20 lugares para trabajar en Argentina y en el 2020 fuimos reconocidos como una de las mejores empresas para trabajar para las mujeres, para los Millennials y de Servicios Financieros y Seguros."
+                image1={<Image src="/assets/images/trabajar/logo-gptw.svg" width={80} height={80} />}
+                src2="/assets/images/trabajar/office/busquedas_laborales_GPTW.jpg"
+                w2="1389"
+                h2="1134"
+              />
+                <Container>
+                    <div className="mt-12 md:mt-20 mb-14 md:mb-28">
+                        <div className="text-center font-medium text-4xl text-gray-250">Oportunidades abiertas</div>
+                        <div className="text-center mt-4 text-gray-250">
+                            <div>Queremos que te sumes a esta revolución.</div>
+                            <div>Porque mientras más seamos, mejor.</div>
+                        </div>
+                        <div className="mt-4 flex justify-center">
+                            <button className="hover:bg-blue-250 text-blue-250 hover:text-white rounded-full border border-blue-250 text-blue-uala py-3 px-8 text-center bg-blue-trabajar-button"><a target="_blank" href="/sumate">Ver búsquedas laborales</a></button>
+                        </div>
+                    </div>
+                </Container>
+             </div>  
+            </Layout>
+        </>
     )
-
 }
