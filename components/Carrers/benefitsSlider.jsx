@@ -5,16 +5,16 @@ export const BenefitsSlider = ({settings}) => {
     const benefits = [
         { title: "Desarrollo profesional", list: ["Descuentos en Universidades y Code Schools", "Convenio con instituto de Inglés", "Aprendizaje ilimitado en nuestra plataforma interna"] },
         { title: "Compensaciones y obra social", list: ["Bono por performance", "Prepaga médica OSDE", "Préstamos con tasa diferencial ", "Ajustes por inflación", "Premio por referidos"] },
-        { title: "Flexibilidad y descanso", list: ["Home office", "Semana extra de vacaciones", "Semana libre de fin de año", "Día de cumpleaños libre.", "Horario flexible", "Licencia de estudio extendida"] },
-        { title: "Bienestar", list: ["Descuento en gimnasio", "Pago de servicio de internet.", "Pago de Netflix y Spotify.", "Reintegro por almuerzo", "Programa de Asistencia al empleado"] },
-        { title: "Maternidad y paternidad", list: ["Extensión de licencia de maternidad y paternidad.", "Soft Landing", "Kit escolar", "Reintegro por guardería"] },
+        { title: "Flexibilidad y descanso", list: ["Home office", "Semana extra de vacaciones", "Semana libre de fin de año", "Día de cumpleaños libre", "Horario flexible", "Licencia de estudio extendida"] },
+        { title: "Bienestar", list: ["Descuento en gimnasio", "Pago de servicio de internet", "Pago de Netflix y Spotify", "Reintegro por almuerzo", "Programa de Asistencia al empleado"] },
+        { title: "Maternidad y paternidad", list: ["Extensión de licencia de maternidad y paternidad", "Soft Landing", "Kit escolar", "Reintegro por guardería"] },
     ];
 
     return (
         <Slider {...settings}>
             {
                 benefits.map((benefit, index) => (
-                        <CardRoundedShadow key={ benefit.title } className={`m-4 ${ index === 0 ? 'ml-16' : '' } `}>
+                        <CardRoundedShadow key={ benefit.title } className="m-4">
                             <div className="bg-white h-72 md:h-80 p-6 rounded-2xl" >
                                 <div className="text-gray-250 font-bold text-lg">{benefit.title}</div>
                                 <div className="flex flex-col">{
