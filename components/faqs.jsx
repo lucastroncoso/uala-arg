@@ -25,7 +25,7 @@ export default function Faqs(props) {
                                     <div className="mt-4 pb-4 border-b border-gray-200">
                                         <div className="text-base lg:text-xl font-medium text-gray-500 cursor-pointer flex " onClick={() => setSelected({ ...selected, faq: selected.faq == faq.faqsid ? 0 : faq.faqsid })}><div className="flex-grow">{faq.question}</div><div className="flex items-center text-gray-400"><i class={`fas ${selected.faq == faq.faqsid ? 'fa-chevron-up' : 'fa-chevron-right'}`}></i></div></div>
                                         {
-                                            selected.faq == faq.faqsid && <div className=" lg:mx-8 text-gray-500 mt-4 whitespace-pre-line">{parser.toReact(faq.answer)}</div>
+                                            selected.faq == faq.faqsid && <div className=" lg:mx-8 text-gray-500 mt-4 whitespace-pre-line reactMarkdown">{parser.toReact(faq.answer)}</div>
                                         }
                                     </div>
                                 )

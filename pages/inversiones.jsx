@@ -24,7 +24,7 @@ export default function Inversiones(props) {
             "faqsid": 2,
             "category": 1,
             "question": "¿Dónde se invierte tu plata?",
-            "answer": "Cuando invertís a través de Ualá, con tu plata suscribís cuotapartes del fondo SBS Ahorro Pesos FCI, administrado por SBS Asset Management S.A.S.G.F.C.I. Podés conocer más sobre la composición del FCI acá. De acuerdo con la Ley 24.083 los fondos comunes de inversión están regulados por la CNV (Comisión Nacional de Valores), y como no son depósitos, no cuentan con garantía del BCRA (Banco Central de la República Argentina). * La suscripción al Fondo Común de Inversión no asegura ni garantiza el resultado de la inversión."
+            "answer": 'Cuando invertís a través de Ualá, con tu plata suscribís cuotapartes del fondo SBS Ahorro Pesos FCI, administrado por SBS Asset Management S.A.S.G.F.C.I. Podés conocer más sobre la composición del FCI [link link="https://www.sbsfondos.com/fondos/sbs-ahorro-pesos-fci/"]acá[/link]. De acuerdo con la Ley 24.083 los fondos comunes de inversión están regulados por la CNV (Comisión Nacional de Valores), y como no son depósitos, no cuentan con garantía del BCRA (Banco Central de la República Argentina). * La suscripción al Fondo Común de Inversión no asegura ni garantiza el resultado de la inversión.'
         }]
 
 
@@ -73,6 +73,19 @@ export default function Inversiones(props) {
                             img="/assets/images/inversiones/icono-liberar-plata.png" />,
                         <CardItem text="Sin costos ocultos."
                             img="/assets/images/inversiones/icono-sin-costos.png" />]}
+                />
+
+                <ImageItemsSection
+                    reverse
+                    title="Invertí con objetivos claros"
+                    img={<Image src="/assets/images/inversiones/Metas-de-inversion.jpg" width={1389} height={1134} />}
+                    items={[
+                        <CardItem text="Configurá una Meta de Inversión."
+                            img="/assets/images/inversiones/icono-meta.png" />,
+                        <CardItem text="Ponele un nombre y su valor."
+                            img="/assets/images/inversiones/icono-nombre.png" />,
+                        <CardItem text="Mirá cómo avanza y cuánto te falta para cumplirla."
+                            img="/assets/images/inversiones/icono-seguimiento.png" />]}
                 />
 
                 <Container className="my-12">
