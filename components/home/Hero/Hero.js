@@ -142,7 +142,15 @@ const Hero = ({ content }) => {
           <h1 data-animation="cycle-container2" className={styles.title + " title-1"}></h1>
 
           <p className={styles.paragraph}>{content.paragraph} </p>
-          <DownloadAppButton isStyled>{content.buttonCopy}</DownloadAppButton>
+          <DownloadAppButton 
+            isStyled
+            dataLayerInfo={{
+              event: 'trackEvent',
+              eventCategory: 'Home', 
+              eventAction: 'Primera Pantalla', 
+              eventLabel: 'Boton Descargar' 
+            }}
+          >{content.buttonCopy}</DownloadAppButton>
         </div>
 
       </BlockWrapper>
