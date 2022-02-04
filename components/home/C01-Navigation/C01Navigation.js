@@ -203,13 +203,12 @@ const C01Navigation = ({ content }) => {
           }
 
           <DownloadAppButton isStyled customClass={[downloadButtonStyle]}
-          fireDataLayer={ () => dataLayer.push(
-            { 
+            dataLayerInfo={{
               event: 'trackEvent',
               eventCategory: 'Web Arg', 
               eventAction: 'Menu', 
-              eventLabel: 'Boton Descargar'
-            }) }
+              eventLabel: 'Boton Descargar' 
+            }}
           >
             {content.downloadAppButtonCopy}
           </DownloadAppButton>

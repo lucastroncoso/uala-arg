@@ -126,13 +126,12 @@ const Hero = ({ content }) => {
         </div>
         <div className="hidden pt-2 md:block">
           <DownloadAppButton
-            fireDataLayer={ () => dataLayer.push(
-              { 
-                event: 'trackEvent',
-                eventCategory: 'Home', 
-                eventAction: 'Primera Pantalla', 
-                eventLabel: 'Boton Descargar' 
-              }) }
+            dataLayerInfo={{
+              event: 'trackEvent',
+              eventCategory: 'Home', 
+              eventAction: 'Primera Pantalla', 
+              eventLabel: 'Boton Descargar' 
+            }}
             customClass={["text-blue-250", "rounded-full", "border-blue-250", "border-2", "px-10", "py-2", "text-xl", "hover:text-white", "hover:bg-blue-250", "focus:outline-none"]}>
             {content.buttonCopy}
           </DownloadAppButton>
