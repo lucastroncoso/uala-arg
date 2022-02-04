@@ -74,7 +74,7 @@ export default function Tarjeta(props) {
 
                 <ImageItemsSection
                     bg="bg-red-degrade-oposite"
-                    title="Llevá tu Ualá de viaje"
+                    title="Llevá tu tarjeta Ualá de viaje"
                     subtitle="Viajá y usa tu tarjeta Ualá en cualquier parte del mundo. Si aceptan Mastercard, aceptan Ualá. No es necesario dar aviso de viaje."
                     img={<Image src="/assets/images/tarjeta/uala-de-viaje.jpg" width={1389} height={1134} />}
 
