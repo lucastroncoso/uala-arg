@@ -18,6 +18,7 @@ const DownloadAppButton = ({ children, isStyled, customClass, refProp, fireDataL
       {isMobile ? (
         <div className="">
           <a onClick={ fireDataLayer }
+            href="https://uala.onelink.me/gqGz/30b751c4"
             className={classNames(isStyled && styles.button, customClass && [...customClass])}
             ref={refProp}
           >
