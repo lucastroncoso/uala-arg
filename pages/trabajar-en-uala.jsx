@@ -73,7 +73,7 @@ export default function Carrers(props) {
             <div className="bg-blue-degrade-trabajar">
                 <CarrersHero
                 title="Great Place to Work"
-                subtitleFull="En 2019 logramos un lugar en el ranking de los mejores 20 lugares para trabajar en Argentina y en el 2020 fuimos reconocidos como una de las mejores empresas para trabajar para las mujeres, para los Millennials y de Servicios Financieros y Seguros."
+                subtitleFull="En 2021 obtuvimos la certificación de Great Place to Work® por ser uno de los mejores lugares para trabajar en Argentina. En 2020 fuimos reconocidos como una de las mejores empresas para trabajar para las mujeres y para los Millennials."
                 image1={<Image src="/assets/images/trabajar/logo-gptw.svg" width={80} height={80} />}
                 src2="/assets/images/trabajar/office/busquedas_laborales_GPTW.jpg"
                 w2="1389"
