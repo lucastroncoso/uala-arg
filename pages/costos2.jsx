@@ -36,7 +36,7 @@ export default function Costos2(props) {
                   <div className="col-span-1 row-span-3 hidden md:block text-9xl text-blue-250 text-right font-bold mr-10">$0</div>
                 </div>
                 <div className="col-span-2 col-start-2 grid grid-rows-3 hidden md:block">
-                  <div className="my-12 row-start-2 text-xl md:text-3xl text-blue-250 font-bold">Transferencias entre usuarios Ualá</div>
+                  <div className="my-12 row-start-2 text-xl md:text-2xl text-blue-250">Transferencias entre usuarios Ualá</div>
                 </div>
                 <div className="text-center md:text-left md:col-span-2 md:col-start-2 col-span-3">
                     <p className="text-xl md:text-2xl text-blue-250 block md:hidden">Transferencias entre usuarios Ualá</p>
@@ -53,20 +53,20 @@ export default function Costos2(props) {
         <Container>
               <div className="py-8 md:py-16 grid md:grid-cols-3">
                 <CardRoundedShadow className="m-4 md:col-span-1">
-                  <div className="bg-white h-60 md:h-72 p-6 rounded-2xl" >
+                  <div className="bg-white h-60 md:h-64 p-6 rounded-2xl" >
                     <div className="text-gray-250 font-bold text-lg">Retiros por cajero automático en la República Argentina</div>
                     <div className="flex flex-col mt-2">$105 + IVA por extracción.</div>
                   </div>
                 </CardRoundedShadow>
                 <CardRoundedShadow className="m-4 md:col-span-1 md:col-start-2">
-                  <div className="bg-white h-60 md:h-72 p-6 rounded-2xl" >
+                  <div className="bg-white h-60 md:h-64 p-6 rounded-2xl" >
                     <div className="text-gray-250 font-bold text-lg">Retiros por cajero automático en el exterior</div>
                     <div className="flex flex-col mt-2">US$6 + IVA cada una. <br/>Puede tener costo adicional del cajero.</div>
                     <div className="flex flex-col mt-2 text-xs text-red-350">Por el momento esta opción se encuentra inhabilitada</div>
                   </div>
                 </CardRoundedShadow>  
                 <CardRoundedShadow className="m-4 md:col-span-1 md:col-start-3">
-                  <div className="bg-white h-60 md:h-72 p-6 rounded-2xl" >
+                  <div className="bg-white h-60 md:h-64 p-6 rounded-2xl" >
                     <div className="text-gray-250 font-bold">Retiros por canales alternativos (Rapipago)</div>
                     <div className="flex flex-col mt-2">1 gratis por mes y $75 + IVA a partir de la segunda.</div>
                   </div>
