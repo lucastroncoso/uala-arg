@@ -24,9 +24,9 @@ export async function getStaticProps() {
 
         return {
             props: {
-                data,
-                revalidate: 10
-            }
+                data
+            },
+            revalidate: 10
         };
     } catch (error) {
         /* add a descriptive error message first,
