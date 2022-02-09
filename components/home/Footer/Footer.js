@@ -117,9 +117,10 @@ const Footer = ({ content, banner }) => {
             <ul className={styles.list}>
               <li className={styles.listTitle}>{content.about.title}</li>
               {content.about.submenu.map((link) => (
-                <li key={link.copy}>
+                <li key={link.copy} className={link.isNew ? styles.new : null}>
                   <a className={styles.link} href={link.url}>
                     {link.copy}
+                    {link.isNew && <span>{link.isNew}</span>}
                   </a>
                 </li>
               ))}

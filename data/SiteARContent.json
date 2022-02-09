@@ -336,7 +336,13 @@
         },
         {
           "name": "tiktok",
-          "url": "https://www.tiktok.com/@uala_ar"
+          "url": "https://www.tiktok.com/@uala_ar",
+          "target": "_BLANK"
+        },
+        {
+          "name": "linkedin",
+          "url": "https://www.linkedin.com/company/ual%C3%A1/",
+          "target": "_BLANK"
         }
       ],
       "contractsLegals": [
@@ -423,6 +429,11 @@
           {
             "copy": "Gaming",
             "url": "/gaming"
+          },
+          {
+            "copy": "Aula Ualá",
+            "url": "/aula-uala",
+            "isNew": "NUEVO"
           }
         ]
       },
