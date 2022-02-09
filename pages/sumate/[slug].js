@@ -107,13 +107,17 @@ export default function Details({ data }) {
 
                 <Container className="mx-auto lg:w-10/12 mb-72 mt-40">
 
-                    {data && <div className="title-1">{data.name}</div>}
-                    <div className="title-3 mt-8">Descripción</div>
-                    <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[0].value }}></div>
-                    <div className="title-3 mt-8">Requerimientos</div>
-                    <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[1].value }}></div>
-                    <script type="comeet-applyform" data-position-uid={data.uid}></script>
-                    <script type="comeet-social"></script>
+                    {data &&
+                        <div>
+                            <div className="title-1">{data.name}</div>
+                            <div className="title-3 mt-8">Descripción</div>
+                            <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[0].value }}></div>
+                            <div className="title-3 mt-8">Requerimientos</div>
+                            <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[1].value }}></div>
+                            <script type="comeet-applyform" data-position-uid={data.uid}></script>
+                            <script type="comeet-social"></script>
+                        </div>}
+
 
 
 
