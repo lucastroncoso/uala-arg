@@ -8,7 +8,7 @@ export default function Hero(props) {
     return (
         <Container className={props.containerStyles || "bg-coral-wave md:min-h-screen"}>
             <div className="grid lg:mb-20 lg:mt-24 md:mb-0 mt-20 mb-12 md:grid-cols-2">
-                <div className="flex flex-wrap content-center mb-12 md:order-none order-2 md:mt-0 mt-8">
+                <div className="flex flex-wrap content-center mb-12 md:order-none order-1 md:mt-0 mt-8">
                     <div className="w-full">
                         <p className="text-xl w-5/6 ">
                             <div className="">{props.section}</div>
@@ -26,7 +26,7 @@ export default function Hero(props) {
 
                     </div>
                 </div>
-                <div className="flex items-center justify-center md:order-none order-1 " >
+                <div className="flex items-center justify-center md:order-none order-2 " >
                     <div className="rounded-3xl overflow-hidden flex">
                         {props.img}
                     </div>

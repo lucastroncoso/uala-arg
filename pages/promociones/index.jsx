@@ -9,6 +9,7 @@ import PromotionCard from '../../components/promotions/promotionCard';
 import PromotionFilters from '../../components/promotions/promotionFilters';
 import Slider from '../../components/slider/slider';
 import Router, { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export async function getStaticProps() {
     const response_promos = await fetchContent(`
@@ -329,7 +330,7 @@ export default function Promociones(props) {
                         }
                 </div>
 
-                <Container className="mx-auto lg:w-10/12 mb-72">
+                <Container className="mx-auto lg:w-10/12 mb-32 lg:mb-72">
             
                 <div className="">
                     <div className="my-16 text-3xl font-medium text-center text-blue-600">No te pierdas estas súper promociones</div>
@@ -361,6 +362,32 @@ export default function Promociones(props) {
                             ? <div className="text-center col-span-full">Parece que no se encontraron promociones...</div> 
                             : displayablePromotions.map(promotion => <PromotionCard key={ promotion.slug } {...promotion} />) 
                         }
+                    </div>
+
+                    <div className="w-full p-4">
+                        <Link href="/seguros">
+                            <a>
+                                <div className="hidden md:block rounded-2xl overflow-hidden">
+                                    <Image 
+                                        layout="responsive"
+                                        src="/assets/images/promociones/Banners Seguros_Desktop.jpg"
+                                        width={2880}
+                                        height={720}
+                                        alt="Seguros"
+                                    />
+                                </div>
+
+                                <div className="block md:hidden rounded-2xl overflow-hidden">
+                                    <Image 
+                                        layout="responsive"
+                                        src="/assets/images/promociones/Banners-Seguros_Mobile.jpg"
+                                        width={700}
+                                        height={800}
+                                        alt="Seguros"
+                                    />
+                                </div>
+                            </a>
+                        </Link>
                     </div>
                 </div>
                 </Container>

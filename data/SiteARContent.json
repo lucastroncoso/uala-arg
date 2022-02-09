@@ -10,8 +10,9 @@
               "url": "/compras"
             },
             {
-              "copy": "Transferencias",
-              "url": "/transferencias"
+              "copy": "Ualá Bis",
+              "url": "https://www.ualabis.com.ar/",
+              "target": "_BLANK"
             },
             {
               "copy": "Créditos",
@@ -26,13 +27,12 @@
               "url": "/inversiones"
             },
             {
-              "copy": "Extracciones",
-              "url": "/extracciones"
+              "copy": "Transferencias",
+              "url": "/transferencias"
             },
             {
-              "copy": "Cobros",
-              "url": "https://www.ualabis.com.ar/",
-              "target": "_BLANK"
+              "copy": "Extracciones",
+              "url": "/extracciones"
             },
             {
               "copy": "Análisis de gastos",
@@ -85,6 +85,10 @@
               "copy": "El blog de Ualá",
               "url": "https://blog.uala.com.ar/",
               "target": "_BLANK"
+            },
+            {
+              "copy": "Aula Ualá",
+              "url": "aula-uala"
             },
             {
               "copy": "Gaming",
@@ -395,7 +399,7 @@
             "hasTargetBlank": true
           },
           {
-            "copy": "Cobros",
+            "copy": "Ualá Bis",
             "url": "https://www.ualabis.com.ar/",
             "hasTargetBlank": true
           }
