@@ -13,11 +13,9 @@ export async function getStaticProps() {
     // add a try / catch loop for nicer error handling
     try {
 
-
         var config = {
             method: 'get',
             url: 'https://www.comeet.co/careers-api/2.0/company/54.00B/positions?token=45B15C715C78B6273322D88B6D111A22D11&details=true',
-
 
         };
         const res = await axios(config)
@@ -27,7 +25,8 @@ export async function getStaticProps() {
         return {
             props: {
                 data
-            }
+            },
+            revalidate: 10
         };
     } catch (error) {
         /* add a descriptive error message first,
@@ -48,9 +47,10 @@ export async function getStaticProps() {
 export default function BusquedasLaborales({ data }) {
     data = JSON.parse(data);
     let parseData = []
+    console.log(data)
     data.forEach(element => {
 
-        if (element.location.country != "") {
+        if (element.categories[1].value == "Argentina" && element.categories[1].name == "Web") {
 
             if (!parseData[element.department]) {
                 parseData[element.department] = [];

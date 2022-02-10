@@ -127,8 +127,8 @@ background-color: #EEF3FF;
   .bg-blue-costos {
     background: url(/assets/images/costos/hero-curva-desktop.png);
     background-repeat: no-repeat;
-    background-size: 160%;
-    background-position: 40% 55%;
+    background-size: 200%;
+    background-position: 80% 50%;
   }
 }
 
@@ -136,6 +136,15 @@ background-color: #EEF3FF;
   .bg-blue-costos {
     background: url(/assets/images/costos/hero-curva-desktop.png);
     background-position: -470px 300px;
+    background-size: 150%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (min-width: 2559px) {
+  .bg-blue-costos {
+    background: url(/assets/images/costos/hero-curva-desktop.png);
+    background-position: -620px 300px;
     background-size: 150%;
     background-repeat: no-repeat;
   }
