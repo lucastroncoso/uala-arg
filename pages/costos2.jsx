@@ -59,11 +59,11 @@ export default function Costos2(props) {
                 <div className="col-span-1 grid grid-cols-3 hidden md:block">
                   <div className="col-span-1 row-span-3 hidden md:block text-9xl text-blue-250 text-right font-bold mr-10">$0</div>
                 </div>
-                <div className="col-span-2 col-start-2 grid grid-rows-3 hidden md:block">
+                <div className="col-span-2 col-start-2 grid grid-rows-3 hidden">
                   <div className="my-12 row-start-2 text-xl md:text-2xl text-blue-250">Transferencias entre usuarios Ualá</div>
                 </div>
                 <div className="text-center md:text-left md:col-span-2 md:col-start-2 col-span-3">
-                    <p className="text-xl md:text-2xl text-blue-250 block md:hidden">Transferencias entre usuarios Ualá</p>
+                    <p className="text-xl md:text-2xl text-blue-250">Transferencias entre usuarios Ualá</p>
                     <p className="text-xl md:text-2xl text-blue-250 md:-mt-1">Costo de envío</p>
                     <p className="text-xl md:text-2xl text-blue-250">Costo de renovación</p>
                     <p className="text-xl md:text-2xl text-blue-250">Cargas en efectivo*</p>
