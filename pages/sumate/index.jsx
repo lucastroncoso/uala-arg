@@ -50,7 +50,7 @@ export default function BusquedasLaborales({ data }) {
     console.log(data)
     data.forEach(element => {
 
-        if (element.categories[1].value == "Argentina" && element.categories[1].name == "Web") {
+        if (element.categories[1].value == "Argentina" || element.categories[1].value == "México" && element.categories[1].name == "Web") {
 
             if (!parseData[element.department]) {
                 parseData[element.department] = [];
@@ -62,7 +62,7 @@ export default function BusquedasLaborales({ data }) {
         }
 
     });
-
+    console.log(parseData)
     return (
         <>
             <Head>
