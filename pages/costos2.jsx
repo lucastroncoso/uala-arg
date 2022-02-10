@@ -79,7 +79,7 @@ export default function Costos2(props) {
                 {
                   data.length == 0 
                     ? <></> 
-                    : data.map(dat => <CostosCard key={ data.title } title={dat.title} subtitle={dat.description} message={dat.message} />) 
+                    : data.map(dat => <CostosCard key={ dat.title } title={dat.title} subtitle={dat.description} message={dat.message} />) 
                 }
               </div>
               <div className="text-base text-gray-250 mb-20">*La primera reposición es gratuita. A partir de la segunda el valor es de 200ARS + IVA.</div>
