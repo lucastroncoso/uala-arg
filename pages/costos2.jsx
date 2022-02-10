@@ -1,13 +1,37 @@
+import { useState } from 'react';
 import Layout from '../components/layout';
 import Container from '../components/container';
 import Head from 'next/head';
 import Image from 'next/image';
 import Hero from '../components/hero';
 import CardRoundedShadow from '../components/cardRoundedShadow';
+import { fetchContent } from '../utils/contentful';
+import CostosCard from '../components/costosCard';
+
+
+export async function getStaticProps() {
+  const response = await fetchContent(`
+  {
+    argentinaCostosCardsCollection (order: [order_ASC]) {
+      items {
+        order,
+        title,
+        description,
+        message
+      }
+    }
+  }     
+  `);
+
+  return {
+    props: { response },
+    revalidate: 10
+  }
+}
 
 
 export default function Costos2(props) {
-
+  const [data, setData] = useState(props.response.argentinaCostosCardsCollection.items);
 
   return (
     <>
@@ -52,25 +76,11 @@ export default function Costos2(props) {
         </div>
         <Container>
               <div className="py-8 md:py-16 grid md:grid-cols-3">
-                <CardRoundedShadow className="m-4 md:col-span-1">
-                  <div className="bg-white h-60 md:h-64 p-6 rounded-2xl" >
-                    <div className="text-gray-250 font-bold text-lg">Retiros por cajero automático en la República Argentina</div>
-                    <div className="flex flex-col mt-2">$105 + IVA por extracción.</div>
-                  </div>
-                </CardRoundedShadow>
-                <CardRoundedShadow className="m-4 md:col-span-1 md:col-start-2">
-                  <div className="bg-white h-60 md:h-64 p-6 rounded-2xl" >
-                    <div className="text-gray-250 font-bold text-lg">Retiros por cajero automático en el exterior</div>
-                    <div className="flex flex-col mt-2">US$6 + IVA cada una. <br/>Puede tener costo adicional del cajero.</div>
-                    <div className="flex flex-col mt-2 text-xs text-red-350">Por el momento esta opción se encuentra inhabilitada</div>
-                  </div>
-                </CardRoundedShadow>  
-                <CardRoundedShadow className="m-4 md:col-span-1 md:col-start-3">
-                  <div className="bg-white h-60 md:h-64 p-6 rounded-2xl" >
-                    <div className="text-gray-250 font-bold">Retiros por canales alternativos (Rapipago)</div>
-                    <div className="flex flex-col mt-2">1 gratis por mes y $75 + IVA a partir de la segunda.</div>
-                  </div>
-                </CardRoundedShadow>
+                {
+                  data.length == 0 
+                    ? <></> 
+                    : data.map(dat => <CostosCard key={ data.title } title={dat.title} subtitle={dat.description} message={dat.message} />) 
+                }
               </div>
               <div className="text-base text-gray-250 mb-20">*La primera reposición es gratuita. A partir de la segunda el valor es de 200ARS + IVA.</div>
         </Container>
