@@ -9,5 +9,9 @@ const Template = args => <CardRoundedShadow {...args} />
 
 export const Default = Template.bind({});
 Default.args = {
-    children: <p>test</p>
+    children: (
+        <div className="p-8">
+            <p>Test</p>
+        </div>
+    )
 }

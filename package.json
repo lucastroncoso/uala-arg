@@ -48,6 +48,7 @@
     "@storybook/addon-actions": "^6.4.14",
     "@storybook/addon-essentials": "^6.4.14",
     "@storybook/addon-links": "^6.4.14",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/builder-webpack5": "^6.4.14",
     "@storybook/manager-webpack5": "^6.4.14",
     "@storybook/react": "^6.4.14",
@@ -55,5 +56,8 @@
     "babel-loader": "^8.2.3",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.16"
+  },
+  "resolutions": {
+    "webpack": "^5"
   }
 }
