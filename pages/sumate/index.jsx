@@ -47,7 +47,7 @@ export async function getStaticProps() {
 export default function BusquedasLaborales({ data }) {
     data = JSON.parse(data);
     let parseData = []
-    console.log(data)
+    
     data.forEach(element => {
 
         if (element.categories[1].value == "Argentina" || element.categories[1].value == "México" && element.categories[1].name == "Web") {
@@ -62,7 +62,7 @@ export default function BusquedasLaborales({ data }) {
         }
 
     });
-    console.log(parseData)
+
     return (
         <>
             <Head>
