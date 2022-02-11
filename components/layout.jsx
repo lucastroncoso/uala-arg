@@ -4,7 +4,7 @@ import Footer from './home/Footer/Footer';
 import { useAppContext } from '../store/context';
 import pageContent from '../data/SiteARContent.json';
 import Head from "next/head"
-
+import DownloadAppModal from './home/Modal/DownloadAppModal/DownloadAppModal';
 
 export default function Container(props) {
   const { locale, setRegion } = useAppContext();
@@ -26,6 +26,7 @@ export default function Container(props) {
           ? <Footer content={pageContent[locale].footer} banner />
           : <Footer content={pageContent[locale].footer} />
         )}
+        {props.nav && <DownloadAppModal content={pageContent[locale].downloadApp} />}
       </div>
     </>
   );
