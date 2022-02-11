@@ -9,6 +9,7 @@ import Legal from "../components/legal";
 import Layout from "../components/layout";
 import Head from 'next/head';
 import Image from "next/image";
+import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
 
 
 
@@ -56,14 +57,24 @@ export default function Prestamos(props) {
                             img="/assets/images/prestamos/icono-depositar-plata.png" />,
                         <CardItem text="Hacé la simulación en tiempo real."
                             img="/assets/images/prestamos/icono-tiemporeal.png" />]}
-                />
-
-                <VideoTitle title="¿Cómo pedir un préstamo?"
-                    href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s"
-                    imgDesktop={<Image src="/assets/images/prestamos/thumbnail_prestamos_destkop 1.png" width={2453} height={1273} />}
-                    imgMobile={<Image src="/assets/images/prestamos/thumbnail_prestamos_mobile 1.png" width={661} height={687} />}
-                />
-
+                />                    
+                <Container className="md:my-12 my-6">
+                    <h2 className="title-2 text-center mb-12">¿Cómo pedir un préstamo?</h2>
+                    <a className="hidden md:block" href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="s54IFlhp87Y&t"
+                            previewVideoSrc="/assets/video/thumbnail-prestamos-desktop.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                    <a className="block md:hidden" href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="s54IFlhp87Y&t"
+                            previewVideoSrc="/assets/video/thumbnail-prestamos-317x329px.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                </Container>
                 <ImageItemsSection
                     title="Podés tener el control de los pagos"
                     img={<Image src="/assets/images/prestamos/Mask Group (24).png" width={1389} height={1134} />}

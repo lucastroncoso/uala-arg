@@ -9,6 +9,7 @@ import Legal from "../components/legal";
 import Layout from "../components/layout";
 import Head from 'next/head';
 import Image from "next/image";
+import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
 
 
 
@@ -55,13 +56,23 @@ export default function Cuotas(props) {
                         <CardItem text="La plata se deposita en el momento."
                             img="/assets/images/prestamos/icono-depositar-plata.png" />]}
                 />
-
-                <VideoTitle title="¿Cómo pasar a cuotas?"
-                    href="https://www.youtube.com/watch?v=cZJ9ki4-ZmU"
-                    imgDesktop={<Image src="/assets/images/cuotas/thumbnail_prestamos_destkop 1 (1).png" width={2453} height={1273} />}
-                    imgMobile={<Image src="/assets/images/cuotas/thumbnail_prestamos_mobile 2.png" width={661} height={687} />}
-                />
-
+                <Container className="md:my-12 my-12">
+                    <h2 className="title-2 text-center mb-6">¿Cómo pasar a cuotas?</h2>
+                    <a className="hidden md:block" href="https://www.youtube.com/watch?v=cZJ9ki4-ZmU" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="cZJ9ki4-ZmU"
+                            previewVideoSrc="/assets/video/thumbnail-cuotas-desktop.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                    <a className="block md:hidden" href="https://www.youtube.com/watch?v=cZJ9ki4-ZmU" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="cZJ9ki4-ZmU"
+                            previewVideoSrc="/assets/video/thumbnail-cuotas-317x329px.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                </Container>
                 <ImageItemsSection
                     reverse
                     title="Servicios en cuotas"

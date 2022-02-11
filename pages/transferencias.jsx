@@ -8,6 +8,7 @@ import Layout from "../components/layout";
 import VideoTitle from "../components/videoTitle";
 import Head from 'next/head';
 import Image from "next/image";
+import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
 
 
 export default function Pagos(props) {
@@ -39,13 +40,23 @@ export default function Pagos(props) {
                         text="Para hacer transferencias desde la app de Ualá necesitás la clave de 6 dígitos o clave de seguridad que creaste cuando validamos tu usuario. Si te la olvidaste podés recuperarla haciendo click en “Olvidé mi clave” antes de confirmar la transferencia o movimiento de plata." />
 
                 </CardSection>
-
-
-                <VideoTitle title="¿Cómo hacer transferencias?"
-                    href="https://www.youtube.com/watch?v=YaH4MZUAlXA"
-                    imgDesktop={<Image src="/assets/images/transferencias/thumbnail_transferencias_destkop.png" width={2453} height={1273} />}
-                    imgMobile={<Image src="/assets/images/transferencias/thumbnail_transferencias_mobile.png" width={661} height={687} />}
-                />
+                <Container className="md:my-12 my-12">
+                    <h2 className="title-2 text-center mb-6">¿Cómo hacer transferencias?</h2>
+                    <a className="hidden md:block" href="https://www.youtube.com/watch?v=YaH4MZUAlXA" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="YaH4MZUAlXA"
+                            previewVideoSrc="/assets/video/thumbnail-transferencias-desktop.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                    <a className="block md:hidden" href="https://www.youtube.com/watch?v=YaH4MZUAlXA" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="YaH4MZUAlXA"
+                            previewVideoSrc="/assets/video/thumbnail-transferencias-317x329px.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                </Container>
 
             </Layout>
         </>

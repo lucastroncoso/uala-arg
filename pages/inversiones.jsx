@@ -8,6 +8,8 @@ import Layout from "../components/layout";
 import Head from 'next/head';
 import Image from "next/image";
 import Faqs from "../components/faqs";
+import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
+
 
 
 
@@ -58,13 +60,23 @@ export default function Inversiones(props) {
                         <CardItem text="Conocé los resultados de tu inversión todos los días desde la app."
                             img="/assets/images/inversiones/icono-resultados.png" />]}
                 />
-
-                <VideoTitle title="¿Cómo invertir a través de Ualá?"
-                    href="https://www.youtube.com/watch?v=12gi-FVZ97o"
-                    imgDesktop={<Image src="/assets/images/inversiones/thumbnail_inversiones_destkop.png" width={2453} height={1273} />}
-                    imgMobile={<Image src="/assets/images/inversiones/thumbnail_prestamos_mobile 2 (1).png" width={661} height={687} />}
-                />
-
+                 <Container className="md:my-12 my-12">
+                    <h2 className="title-2 text-center mb-6">¿Cómo invertir a través de Ualá?</h2>
+                    <a className="hidden md:block" href="https://www.youtube.com/watch?v=12gi-FVZ97o" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="12gi-FVZ97o"
+                            previewVideoSrc="/assets/video/thumbnail-inversiones-desktop.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                    <a className="block md:hidden" href="https://www.youtube.com/watch?v=12gi-FVZ97o" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="12gi-FVZ97o"
+                            previewVideoSrc="/assets/video/thumbnail-inversiones-317x329px.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                </Container>
                 <ImageItemsSection
                     title="Tené el control de tu plata"
                     img={<Image src="/assets/images/inversiones/inversiones-liberar 1.png" width={1389} height={1134} />}

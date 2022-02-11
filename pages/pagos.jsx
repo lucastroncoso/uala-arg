@@ -5,7 +5,8 @@ import Layout from "../components/layout";
 import VideoTitle from "../components/videoTitle";
 import Head from 'next/head';
 import Image from "next/image";
-
+import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
+import Container from "../components/container";
 
 export default function Pagos(props) {
 
@@ -39,18 +40,23 @@ export default function Pagos(props) {
                         text="No te quedes sin saldo en la SUBE. Cargala desde la app y acreditá el monto en una terminal automática SUBE o dispositivo de conexión móvil." />
 
                 </CardSection>
-
-
-                <VideoTitle title="¿Cómo pagar tus factuas?"
-                    href="https://www.youtube.com/watch?v=CAd2AnOTsBU"
-                    imgDesktop={<Image src="/assets/images/pagos/thumbnail_pagos_desktop.png" width={2453} height={1273} />}
-                    imgMobile={<Image src="/assets/images/pagos/thumbnail_pagos_mobile.png" width={661} height={687} />}
-                />
-
-
-
-
-
+                <Container className="md:my-12 my-12">
+                    <h2 className="title-2 text-center mb-6">¿Cómo pagar tus factuas?</h2>
+                    <a className="hidden md:block" href="https://www.youtube.com/watch?v=CAd2AnOTsBU" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="CAd2AnOTsBU"
+                            previewVideoSrc="/assets/video/thumbnail-pagos-desktop.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                    <a className="block md:hidden" href="https://www.youtube.com/watch?v=CAd2AnOTsBU" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="CAd2AnOTsBU"
+                            previewVideoSrc="/assets/video/thumbnail-pagos-317x329px.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                </Container>
             </Layout>
         </>
     )

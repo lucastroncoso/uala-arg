@@ -8,6 +8,7 @@ import Layout from "../components/layout";
 import VideoTitle from "../components/videoTitle";
 import Head from 'next/head';
 import Image from "next/image";
+import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
 
 
 export default function Extracciones(props) {
@@ -54,11 +55,23 @@ export default function Extracciones(props) {
                 />
 
                 <div className="bg-blue-degrade-trabajar">
-                <VideoTitle title="¿Cómo sacar plata del cajero?"
-                    href="https://www.youtube.com/watch?v=08HLUarWD5Q"
-                    imgDesktop={<Image src="/assets/images/extracciones/icono_extracciones_destkop.png" width={2453} height={1273} />}
-                    imgMobile={<Image src="/assets/images/extracciones/icono_extracciones_mobile.png" width={661} height={687} />}
-                />
+                    <Container className="md:my-12 my-12">
+                        <h2 className="title-2 text-center mb-6">¿Cómo sacar plata del cajero?</h2>
+                        <a className="hidden md:block" href="https://www.youtube.com/watch?v=08HLUarWD5Q" target="_blank">
+                            <PlayVideoButton
+                                youtubeId="08HLUarWD5Q"
+                                previewVideoSrc="/assets/video/thumbnail-extracciones-desktop.mp4"
+                                isPreviewVideoScaled={false}
+                            />
+                        </a>
+                        <a className="block md:hidden" href="https://www.youtube.com/watch?v=08HLUarWD5Q" target="_blank">
+                            <PlayVideoButton
+                                youtubeId="08HLUarWD5Q"
+                                previewVideoSrc="/assets/video/thumbnail-extracciones-317x329px.mp4"
+                                isPreviewVideoScaled={false}
+                            />
+                        </a>
+                    </Container>
                    <Container className="pb-8">
                     <h2 className="title-extracciones">Costos</h2>
                     <div className="grid grid-cols-2 py-8">
