@@ -1,10 +1,9 @@
 import Head from 'next/head';
 import { useEffect, useState } from "react";
-import { fetchContent } from '../../utils/contentful';
 import Layout from "../../components/layout";
 import Container from '../../components/container';
 import Image from "next/image";
-import { parse } from 'postcss';
+import SumateFilters from '../../components/sumate/sumateFilters'
 const axios = require('axios');
 
 
@@ -46,22 +45,34 @@ export async function getStaticProps() {
 
 export default function BusquedasLaborales({ data }) {
     data = JSON.parse(data);
-    let parseData = []
-    
+    let parseData = []//Array de de obajetos con los jobs divididos por departamento filtrando los de las webs necesarias
     data.forEach(element => {
-
         if (element.categories[1].value == "Argentina" || element.categories[1].value == "México" && element.categories[1].name == "Web") {
-
             if (!parseData[element.department]) {
                 parseData[element.department] = [];
             }
-
             parseData[element.department]["carrers"] ? parseData[element.department]["carrers"].push(element) : (parseData[element.department]["carrers"] = [element])
             parseData[element.department]["categoryTitle"] = element.department;
-
         }
 
     });
+    const [jobsToShow, setjobsToShow] = useState(parseData)
+    // const departments = Object.keys(parseData)
+    const [selectedDepartment, setSelectedDepartment] = useState("All departments")
+    const departments = Object.keys(parseData)
+
+    useEffect(() => {
+        if (selectedDepartment !== "All departments") {
+            setjobsToShow(Object.entries(parseData).filter((department) => {
+                return department[0] == selectedDepartment
+                console.log(department[0])
+                console.log(selectedDepartment)
+            }))
+        }
+
+    }, [selectedDepartment])
+    console.log(data)
+
 
     return (
         <>
@@ -71,9 +82,15 @@ export default function BusquedasLaborales({ data }) {
             <Layout nav footer banner>
 
                 <Container className="mt-48">
+                    <div className="mb-12">
+                        <SumateFilters
+                            selectedValue={selectedDepartment}
+                            categories={departments}
+                            setSelectedDepartment={setSelectedDepartment} />
+                    </div>
 
-                    {Object.entries(parseData).map((department, index) => {
-                        if (department[0] != "null" && department[0] != "-") {
+                    {Object.entries(jobsToShow).map((department, index) => {
+                        if (department[0] != "null" && department[1] != undefined) {
                             return <div key={index}>
                                 <h2 className="title-2">{department[0]}</h2>
                                 <div className="grid md:grid-cols-3 py-12">
