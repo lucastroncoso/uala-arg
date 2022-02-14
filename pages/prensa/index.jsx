@@ -254,7 +254,7 @@ export default function Prensa(props) {
                                     <a href="/reporte-sostenibilidad" target="_blank" className="link" rel="noopener noreferrer">Reporte 2021</a>
                                 </div>
                                 <div>
-                                    <span className="text-blue-250"> →</span> 
+                                    <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
                                 </div>
                             </div>
                         </div>
