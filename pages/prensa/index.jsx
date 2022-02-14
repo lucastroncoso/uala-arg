@@ -240,7 +240,7 @@ export default function Prensa(props) {
                 </div>
             </Container>
 
-            {/* <Container className="mt-12 w-full">
+            <Container className="mt-12 w-full">
                 <div className="w-full">
                     <h1 className="title-2 md:w-5/6 my-4">
                         <div className="text-gray-250">Mirá nuestro reporte de sustentabilidad</div>
@@ -260,7 +260,7 @@ export default function Prensa(props) {
                         </div>
                     </div>
                 </div>
-            </Container> */}
+            </Container>
             
             <ContactoInstitucional />
 
