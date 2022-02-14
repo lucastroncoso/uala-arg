@@ -240,7 +240,7 @@ export default function Prensa(props) {
                 </div>
             </Container>
 
-            {/* <Container className="mt-12 w-full">
+            <Container className="mt-12 w-full">
                 <div className="w-full">
                     <h1 className="title-2 md:w-5/6 my-4">
                         <div className="text-gray-250">Mirá nuestro reporte de sustentabilidad</div>
@@ -254,13 +254,13 @@ export default function Prensa(props) {
                                     <a href="/reporte-sostenibilidad" target="_blank" className="link" rel="noopener noreferrer">Reporte 2021</a>
                                 </div>
                                 <div>
-                                    <span className="text-blue-250"> →</span> 
+                                    <Image src="/assets/images/icono-descarga.png" width={26} height={22} />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </Container> */}
+            </Container>
             
             <ContactoInstitucional />
 

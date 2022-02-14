@@ -90,6 +90,11 @@ module.exports = {
         source: '/bienvenida',
         destination: 'https://www.youtube.com/watch?v=dJyRl1bq9eg',
         permanent: true,
+      },
+      {
+        source: '/reporte-sostenibilidad',
+        destination: '/assets/legales/reporte-sostenibilidad.pdf',
+        permanent: true,
       }
     ]
   }
