@@ -3,10 +3,10 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SumateDropdown(props) {
+export default function Dropdown(props) {
 
   const handleChange = (event) => {
-    props.setSelectedValue({ slug: event.target.value });
+    props.setSelectedValue(event.target.value);
   };
 
   return (
@@ -16,14 +16,14 @@ export default function SumateDropdown(props) {
         <Select
           labelId={`${props.slug}-label`}
           id={props.slug}
-          value={props.selectedValue.slug}
+          value={props.selectedValue}
           onChange={handleChange}
           label={props.name}
           disableUnderline
         >
           {
             props.items.map(item => (
-              <MenuItem key={item.slug} value={item.slug}>{item.name}</MenuItem>
+              <MenuItem key={item} value={item}>{item}</MenuItem>
             ))
           }
         </Select>
