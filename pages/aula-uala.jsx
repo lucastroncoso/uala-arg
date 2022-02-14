@@ -199,7 +199,7 @@ export default function AulaUala(props) {
                     </p>
                     <a
                       target="_blank"
-                      href="/assets/legales/Aula Ualá - PDF.pdf"
+                      href="/assets/images/aula/Aula Ualá - PDF.pdf"
                       className="border-none text-xl rounded-3xl py-3 lg:px-10 px-8 mt-8 outline-none bg-blue-250 text-white"
                     >
                       Descargar programa
