@@ -100,7 +100,7 @@ export default function Gaming2(props) {
         <div className="bg-gray-gaming">
           <div className="bg-gaming-academy pt-20 relative">
             <p className="subtitle-gaming-2 text-white ml-4 md:ml-8">
-              <Link href="/gaming2">
+              <Link href="/gaming">
                 <a className="underline text-base outline-none">
                   <i className="fas fa-chevron-left mr-2 md:mr-3"></i>Regresar
                   </a>
