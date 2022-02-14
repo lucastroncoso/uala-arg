@@ -91,7 +91,14 @@ export default function Carrers(props) {
                         </div>
                     </div>
                 </Container>
-             </div>  
+            </div>  
+            <a 
+                href="https://www.linkedin.com/company/ual%C3%A1" 
+                target="_blank" rel="noopener noreferrer"
+                className="bg-blue-450 p-8 text-white w-full block text-center text-2xl md:text-3xl"
+            >
+                Conocé más sobre nuestra cultura en <span className="underline">LinkedIn</span>
+            </a>
             </Layout>
         </>
     )
