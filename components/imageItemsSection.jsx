@@ -43,7 +43,7 @@ ImageItemsSection.propTypes = {
      */
      href: PropTypes.string,
     /**
-     * Name of the page
+     * Name of the section
      */
      title: PropTypes.string,
     /**
