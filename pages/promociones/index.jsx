@@ -14,7 +14,7 @@ import Link from 'next/link';
 export async function getStaticProps() {
     const response_promos = await fetchContent(`
     {
-        argentinaPromotionCollection (limit: 50) {
+        argentinaPromotionCollection (order: [position_ASC], limit: 50) {
             items {
               name,
               slug, 
