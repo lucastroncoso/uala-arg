@@ -23,6 +23,7 @@ export default function SumateFilters({
                     setSelectedValue={setSelectedDepartment}
                 />
             </div>
+            {/* DESCOMENTAR PARA AGREGAR FILTROS POR SENIORITY
             <div className="rounded-xl shadow-lightblue p-2 pl-4 pb-4">
                 <Dropdown
                     key="Seniority"
@@ -32,7 +33,7 @@ export default function SumateFilters({
                     selectedValue={selectedSeniority}
                     setSelectedValue={setSelectedSeniority}
                 />
-            </div>
+            </div> */}
             {/* Se oculta temporalmente para first deploy
             <div className="rounded-xl shadow-lightblue p-2 flex flex-col justify-center">
                 <CheckboxSelector
