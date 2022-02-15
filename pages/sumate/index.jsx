@@ -45,33 +45,25 @@ export async function getStaticProps() {
 
 export default function BusquedasLaborales({ data }) {
     data = JSON.parse(data);
-    let parseData = []//Array de de obajetos con los jobs divididos por departamento filtrando los de las webs necesarias
+
+    const departments = ["Todos"]
+    const seniority = ["Todos"]
     data.forEach(element => {
         if (element.categories[1].value == "Argentina" || element.categories[1].value == "México" && element.categories[1].name == "Web") {
-            if (!parseData[element.department]) {
-                parseData[element.department] = [];
+            if (!departments.includes(element.department)) {
+                departments.push(element.department)
             }
-            parseData[element.department]["carrers"] ? parseData[element.department]["carrers"].push(element) : (parseData[element.department]["carrers"] = [element])
-            parseData[element.department]["categoryTitle"] = element.department;
+            if (!seniority.includes(element.experience_level) && element.experience_level) {
+                seniority.push(element.experience_level)
+            }
         }
-
     });
-    const [jobsToShow, setjobsToShow] = useState(parseData)
-    // const departments = Object.keys(parseData)
-    const [selectedDepartment, setSelectedDepartment] = useState("All departments")
-    const departments = Object.keys(parseData)
+    console.log(seniority)
+    const [selectedDepartment, setSelectedDepartment] = useState("Todos")
+    const [selectedSeniority, setSelectedSeniority] = useState("Todos")
 
-    useEffect(() => {
-        if (selectedDepartment !== "All departments") {
-            setjobsToShow(Object.entries(parseData).filter((department) => {
-                return department[0] == selectedDepartment
-                console.log(department[0])
-                console.log(selectedDepartment)
-            }))
-        }
 
-    }, [selectedDepartment])
-    console.log(data)
+
 
 
     return (
@@ -81,30 +73,49 @@ export default function BusquedasLaborales({ data }) {
             </Head>
             <Layout nav footer banner>
 
-                <Container className="mt-48">
+                <Container className="my-48">
                     <div className="mb-12">
                         <SumateFilters
-                            selectedValue={selectedDepartment}
+                            selectedDepartment={selectedDepartment}
                             categories={departments}
-                            setSelectedDepartment={setSelectedDepartment} />
+                            setSelectedDepartment={setSelectedDepartment}
+                            selectedSeniority={selectedSeniority}
+                            seniority={seniority}
+                            setSelectedSeniority={setSelectedSeniority} />
                     </div>
 
-                    {Object.entries(jobsToShow).map((department, index) => {
-                        if (department[0] != "null" && department[1] != undefined) {
+                    {departments.map((department, index) => {
+                        if (selectedDepartment === "Todos")
                             return <div key={index}>
-                                <h2 className="title-2">{department[0]}</h2>
+                                {department !== "Todos" && <h2 className="title-2">{department}</h2>}
                                 <div className="grid md:grid-cols-3 py-12">
-                                    {department[1].carrers.map(position => {
-                                        return <a href={"/sumate/" + position.uid} key={position.uid} className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-lightblue justify-between	">
-                                            <div className="text-xl">{position.name}</div>
-                                            <div className=" cursor-pointer  text-gray-600 ">{position.location.name ? position.location.name : ""} {position.experience_level ? ` - ${position.experience_level}` : ''}</div>
-                                        </a>
+                                    {data.map(position => {
+                                        if (position.department === department && (position.experience_level === selectedSeniority || selectedSeniority === "Todos"))
+                                            return <a href={"/sumate/" + position.uid} key={position.uid} className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-lightblue justify-between	">
+                                                <div className="text-xl">{position.name}</div>
+                                                <div className=" cursor-pointer  text-gray-600 ">{position.location.name ? position.location.name : ""} {position.experience_level ? ` - ${position.experience_level}` : ''}</div>
+                                            </a>
+                                    })}
+                                </div>
+                            </div>
+                        if (selectedDepartment === department) {
+                            return <div key={index}>
+                                {department !== "Todos" && <h2 className="title-2">{selectedDepartment}</h2>}
+                                <div className="grid md:grid-cols-3 py-12">
+                                    {data.map(position => {
+                                        if (position.department === selectedDepartment && (position.experience_level === selectedSeniority || selectedSeniority === "Todos"))
+                                            return <a href={"/sumate/" + position.uid} key={position.uid} className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-lightblue justify-between	">
+                                                <div className="text-xl">{position.name}</div>
+                                                <div className=" cursor-pointer  text-gray-600 ">{position.location.name ? position.location.name : ""} {position.experience_level ? ` - ${position.experience_level}` : ''}</div>
+                                            </a>
                                     })}
                                 </div>
                             </div>
                         }
+
                     }
-                    )}
+                    )
+                    }
                 </Container>
 
             </Layout>

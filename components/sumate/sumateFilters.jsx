@@ -2,13 +2,12 @@ import Dropdown from './sumateDropdown';
 
 export default function SumateFilters({
     categories,
-    selectedCategory,
+    selectedDepartment,
     setSelectedDepartment,
-    locations,
-    selectedLocation,
-    setSelectedLocation,
-    showNewest,
-    setShowNewest
+    selectedSeniority,
+    setSelectedSeniority,
+    seniority
+
 }) {
 
 
@@ -20,18 +19,19 @@ export default function SumateFilters({
                     slug="departamento"
                     name="Seleccionar departamento"
                     items={categories}
-                    selectedValue={selectedCategory}
+                    selectedValue={selectedDepartment}
                     setSelectedValue={setSelectedDepartment}
                 />
             </div>
-            {/* <div className="rounded-xl shadow-lightblue p-2 pl-4 pb-4">
+            {/* DESCOMENTAR PARA AGREGAR FILTROS POR SENIORITY
+            <div className="rounded-xl shadow-lightblue p-2 pl-4 pb-4">
                 <Dropdown
-                    key="ubicaciones"
-                    slug="ubicaciones"
-                    name="Seleccionar ubicación"
-                    items={locations}
-                    selectedValue={selectedLocation}
-                    setSelectedValue={setSelectedLocation}
+                    key="Seniority"
+                    slug="Seniority"
+                    name="Seleccionar seniority"
+                    items={seniority}
+                    selectedValue={selectedSeniority}
+                    setSelectedValue={setSelectedSeniority}
                 />
             </div> */}
             {/* Se oculta temporalmente para first deploy
