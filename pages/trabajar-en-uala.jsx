@@ -18,7 +18,7 @@ export default function Carrers(props) {
     return (
         <>
             <Head>
-                <title>Ualá - Inversiones: invertí fácil y despertá tu plata</title>
+                <title>Ualá - Beneficios de trabajar en Ualá</title>
             </Head>
             <Layout nav footer>
             <Container >
