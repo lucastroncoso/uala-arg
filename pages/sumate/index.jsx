@@ -69,7 +69,7 @@ export default function BusquedasLaborales({ data }) {
     return (
         <>
             <Head>
-                <title>Ualá</title>
+                <title>Ualá - Trabajá con nosotros: Búsquedas laborales</title>
             </Head>
             <Layout nav footer banner>
 

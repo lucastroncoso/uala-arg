@@ -13,7 +13,8 @@ export default function Pagos(props) {
     return (
         <>
             <Head>
-                <title>Ualá</title>
+                <title>Ualá - Pagos y recargas de servicios online</title>
+                <meta name="description" content="Con la App de Ualá podés pagar todos los servicios online en Argentina: recargá tu celular, SUBE o TV y pagá tus facturas de forma online." />
             </Head>
             <Layout nav footer>
                 <Hero

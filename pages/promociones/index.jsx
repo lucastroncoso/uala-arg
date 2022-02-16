@@ -264,7 +264,7 @@ export default function Promociones(props) {
     return (
         <>
             <Head>
-                <title>Ualá</title>
+                <title>Ualá - Promociones: beneficios inigualables para vos</title>
             </Head>
             <Layout nav footer banner>
 

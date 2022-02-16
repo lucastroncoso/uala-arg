@@ -23,7 +23,9 @@ export default function MainPageAr() {
 
   return (
     <>
-
+      <Head>
+        <title>Ualá - El Lado Bueno de tu Plata</title>
+      </Head>
       <main>
         <C01Navigation content={pageContent[locale].navbar} />
         <Hero content={pageContent[locale].hero} />

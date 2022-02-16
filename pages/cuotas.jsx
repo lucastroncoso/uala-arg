@@ -18,7 +18,7 @@ export default function Cuotas(props) {
     return (
         <>
             <Head>
-                <title>Ualá</title>
+                <title>Ualá - Cuotas: créditos pensados para vos</title>
             </Head>
             <Layout nav footer>
                 <Hero
