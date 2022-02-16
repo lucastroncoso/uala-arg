@@ -9,16 +9,26 @@ const DownloadAppButton = ({ children, isStyled, customClass, refProp, dataLayer
   const { setDownloadModalActiveState } = useAppContext();
   const isMobile = useIsMobile(768);
 
-  const onDownloadButtonClick = useCallback(() => {
-    setDownloadModalActiveState(true);
-  }, [setDownloadModalActiveState]);
+  const onDownloadButtonClick = useCallback(
+    (location) => {
+      console.log(location);
+      setDownloadModalActiveState({ src: location, state: true });
+    },
+    [setDownloadModalActiveState],
+  );
 
   return (
     <>
       {isMobile ? (
-        <div className="" onClick={ () => dataLayer.push(dataLayerInfo) }>
+        <div className="" onClick={() => dataLayer.push(dataLayerInfo)}>
           <a
-            href="https://uala.onelink.me/gqGz/30b751c4"
+            href={
+              dataLayerInfo?.eventAction === 'Menu'
+                ? 'https://uala.onelink.me/tTSW/debd1ee8'
+                : dataLayerInfo?.eventAction === 'Primera Pantalla'
+                ? 'https://uala.onelink.me/tTSW/7470090a'
+                : 'https://uala.onelink.me/gqGz/30b751c4'
+            }
             className={classNames(isStyled && styles.button, customClass && [...customClass])}
             ref={refProp}
           >
@@ -28,10 +38,10 @@ const DownloadAppButton = ({ children, isStyled, customClass, refProp, dataLayer
       ) : (
         <button
           className={classNames(isStyled && styles.button, customClass && [...customClass])}
-          onClick={ () => {
+          onClick={() => {
             dataLayer.push(dataLayerInfo);
-            onDownloadButtonClick();
-            } }
+            onDownloadButtonClick(dataLayerInfo?.eventAction);
+          }}
           ref={refProp}
         >
           {children}

@@ -10,17 +10,28 @@ const DownloadAppModal = ({ content }) => {
   const popupRef = useRef(null);
 
   const handleModalCloseClick = useCallback(() => {
-    downloadModalActiveState && setDownloadModalActiveState(false);
+    downloadModalActiveState && setDownloadModalActiveState({ src: '', state: false });
   }, [downloadModalActiveState, setDownloadModalActiveState]);
 
   return (
     <Modal
-      open={downloadModalActiveState}
+      open={downloadModalActiveState.state}
       onClickOutside={handleModalCloseClick}
       popupRef={popupRef}
     >
       <div className={styles.modalContentWrapper}>
-        <Image src={QR_IMAGE} width={150} height={150} className={styles.qr} />
+        <Image
+          src={
+            downloadModalActiveState.src === 'Menu'
+              ? '/public/assets/images/qr_ar_menu.svg'
+              : downloadModalActiveState.src === 'Primera Pantalla'
+              ? '/public/assets/images/qr_ar_hero.svg'
+              : QR_IMAGE
+          }
+          width={150}
+          height={150}
+          className={styles.qr}
+        />
         <div className={`test, ${styles.copyWrapper}`}>
           <p className={styles.title}>{content.title}</p>
           <p className={styles.paragraph}>{content.paragraph}</p>

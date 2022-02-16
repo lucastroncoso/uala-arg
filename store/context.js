@@ -6,7 +6,10 @@ export const AppContextProvider = ({ children }) => {
   const [locale, setLocale] = useState('es');
   const [region, setRegion] = useState('mx');
   const [youtubeModalVideoId, setYoutubeModalVideoId] = useState('');
-  const [downloadModalActiveState, setDownloadModalActiveState] = useState(false);
+  const [downloadModalActiveState, setDownloadModalActiveState] = useState({
+    src: '',
+    state: false,
+  });
 
   const values = useMemo(
     () => ({

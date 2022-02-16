@@ -37,10 +37,10 @@ const C01Navigation = ({ content }) => {
   };
 
   const onLogoClick = () => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   };
@@ -94,13 +94,18 @@ const C01Navigation = ({ content }) => {
     <nav className={styles.C01Navigation} onMouseLeave={closeSubMenu}>
       <BlockWrapper customClass={[styles.blockWrapper]}>
         <div className={styles.brandWrapper}>
-        <Link href="/">
+          <Link href="/">
             <a className="h-full w-auto flex items-center">
               <img
                 src={LOGO_TEXT.src}
-                className={classNames(styles.logo, { [styles.isHidden]: isScrolled }, styles.logoText, {
-                  [styles.isVisible]: !isScrolled,
-                })}
+                className={classNames(
+                  styles.logo,
+                  { [styles.isHidden]: isScrolled },
+                  styles.logoText,
+                  {
+                    [styles.isVisible]: !isScrolled,
+                  },
+                )}
                 alt="logo-text"
               />
 
@@ -148,26 +153,26 @@ const C01Navigation = ({ content }) => {
                     {...(hasSubMenu
                       ? isMobile
                         ? {
-                          onClick: () => {
-                            setIsSubMenuOpen((isSubMenuOpen) => !isSubMenuOpen);
-                            if (isSubMenuOpen && isCurrentItemActive) {
-                              setActiveSubMenu(-1);
-                            } else {
-                              setActiveSubMenu(itemIndex);
-                            }
-                          },
-                        }
+                            onClick: () => {
+                              setIsSubMenuOpen((isSubMenuOpen) => !isSubMenuOpen);
+                              if (isSubMenuOpen && isCurrentItemActive) {
+                                setActiveSubMenu(-1);
+                              } else {
+                                setActiveSubMenu(itemIndex);
+                              }
+                            },
+                          }
                         : {
-                          onMouseEnter: () => {
-                            setIsSubMenuOpen(true);
-                            setActiveSubMenu(itemIndex);
-                            setSelectedItem(itemIndex);
-                          },
-                        }
+                            onMouseEnter: () => {
+                              setIsSubMenuOpen(true);
+                              setActiveSubMenu(itemIndex);
+                              setSelectedItem(itemIndex);
+                            },
+                          }
                       : {
-                        href: item.url,
-                        onMouseEnter: closeSubMenu,
-                      })}
+                          href: item.url,
+                          onMouseEnter: closeSubMenu,
+                        })}
                   >
                     {item.title}
                     {isMobile && hasSubMenu && <ArrowIcon className={iconStyle} />}
@@ -184,7 +189,7 @@ const C01Navigation = ({ content }) => {
               This is going to be unused until multilanguage support is added.
               Remove comments to enable language selector
             */
-            /*content.languageButton &&
+          /*content.languageButton &&
             <div className={languageSelectorStyle}>
               <span onClick={onLanguageButtonClick}>
                 {content.languageButton[0]}
@@ -193,21 +198,22 @@ const C01Navigation = ({ content }) => {
               <span onClick={onLanguageButtonClick}>
                 {content.languageButton[1]}
               </span>
-            </div>*/
-          }
+            </div>*/}
 
-          {content.loginButton &&
+          {content.loginButton && (
             <a className={loginButtonStyle} href={content.loginButton.url}>
               {content.loginButton.copy}
             </a>
-          }
+          )}
 
-          <DownloadAppButton isStyled customClass={[downloadButtonStyle]}
+          <DownloadAppButton
+            isStyled
+            customClass={[downloadButtonStyle]}
             dataLayerInfo={{
               event: 'trackEvent',
-              eventCategory: 'Web Arg', 
-              eventAction: 'Menu', 
-              eventLabel: 'Boton Descargar' 
+              eventCategory: 'Web Arg',
+              eventAction: 'Menu',
+              eventLabel: 'Boton Descargar',
             }}
           >
             {content.downloadAppButtonCopy}
