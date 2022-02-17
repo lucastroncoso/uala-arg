@@ -209,7 +209,7 @@ const C01Navigation = ({ content }) => {
           <DownloadAppButton
             isStyled
             mobileLink="https://uala.onelink.me/tTSW/debd1ee8"
-            qr="/public/assets/images/qr_ar_menu.svg"
+            qr="/assets/images/qr_ar_menu.svg"
             customClass={[downloadButtonStyle]}
             dataLayerInfo={{
               event: 'trackEvent',
