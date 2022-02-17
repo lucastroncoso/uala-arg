@@ -5,14 +5,23 @@ import { useAppContext } from '../../../store/context';
 import PropTypes from 'prop-types';
 import useIsMobile from '../utils/hooks/useIsMobile';
 
-const DownloadAppButton = ({ children, isStyled, customClass, refProp, dataLayerInfo }) => {
-  const { setDownloadModalActiveState } = useAppContext();
+const DownloadAppButton = ({
+  qr,
+  mobileLink,
+  children,
+  isStyled,
+  customClass,
+  refProp,
+  dataLayerInfo,
+}) => {
+  const { downloadModalActivestate, setDownloadModalActiveState } = useAppContext();
   const isMobile = useIsMobile(768);
 
   const onDownloadButtonClick = useCallback(
-    (location) => {
-      console.log(location);
-      setDownloadModalActiveState({ src: location, state: true });
+    (src) => {
+      src
+        ? setDownloadModalActiveState({ qr: src, state: true })
+        : setDownloadModalActiveState({ ...downloadModalActivestate, state: true });
     },
     [setDownloadModalActiveState],
   );
@@ -22,13 +31,7 @@ const DownloadAppButton = ({ children, isStyled, customClass, refProp, dataLayer
       {isMobile ? (
         <div className="" onClick={() => dataLayer.push(dataLayerInfo)}>
           <a
-            href={
-              dataLayerInfo?.eventAction === 'Menu'
-                ? 'https://uala.onelink.me/tTSW/debd1ee8'
-                : dataLayerInfo?.eventAction === 'Primera Pantalla'
-                ? 'https://uala.onelink.me/tTSW/7470090a'
-                : 'https://uala.onelink.me/gqGz/30b751c4'
-            }
+            href={mobileLink ? mobileLink : 'https://uala.onelink.me/gqGz/30b751c4'}
             className={classNames(isStyled && styles.button, customClass && [...customClass])}
             ref={refProp}
           >
@@ -40,7 +43,7 @@ const DownloadAppButton = ({ children, isStyled, customClass, refProp, dataLayer
           className={classNames(isStyled && styles.button, customClass && [...customClass])}
           onClick={() => {
             dataLayer.push(dataLayerInfo);
-            onDownloadButtonClick(dataLayerInfo?.eventAction);
+            onDownloadButtonClick(qr);
           }}
           ref={refProp}
         >

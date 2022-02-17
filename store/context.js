@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useContext, createContext } from 'react';
+import QR_IMAGE from '/public/assets/images/qr_mx.png';
 
 export const AppContext = createContext(null);
 
@@ -7,7 +8,7 @@ export const AppContextProvider = ({ children }) => {
   const [region, setRegion] = useState('mx');
   const [youtubeModalVideoId, setYoutubeModalVideoId] = useState('');
   const [downloadModalActiveState, setDownloadModalActiveState] = useState({
-    src: '',
+    qr: QR_IMAGE,
     state: false,
   });
 

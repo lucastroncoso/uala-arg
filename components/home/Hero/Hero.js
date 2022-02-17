@@ -134,6 +134,8 @@ const Hero = ({ content }) => {
         </div>
         <div className="hidden pt-2 md:block">
           <DownloadAppButton
+            mobileLink="https://uala.onelink.me/tTSW/7470090a"
+            qr="/public/assets/images/qr_ar_hero.svg"
             dataLayerInfo={{
               event: 'trackEvent',
               eventCategory: 'Home',
@@ -163,6 +165,8 @@ const Hero = ({ content }) => {
 
           <p className={styles.paragraph}>{content.paragraph} </p>
           <DownloadAppButton
+            mobileLink="https://uala.onelink.me/tTSW/7470090a"
+            qr="/public/assets/images/qr_ar_hero.svg"
             isStyled
             dataLayerInfo={{
               event: 'trackEvent',
