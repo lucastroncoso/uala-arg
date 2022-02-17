@@ -10,7 +10,7 @@ const DownloadAppModal = ({ content }) => {
   const popupRef = useRef(null);
 
   const handleModalCloseClick = useCallback(() => {
-    downloadModalActiveState && setDownloadModalActiveState({ qr: QR_IMAGE, state: false });
+    downloadModalActiveState && setDownloadModalActiveState(original => ({ ...original, state: false }));
   }, [downloadModalActiveState, setDownloadModalActiveState]);
 
   return (
