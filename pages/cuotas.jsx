@@ -12,7 +12,6 @@ import Image from "next/image";
 import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
 
 
-
 export default function Cuotas(props) {
 
     return (
@@ -51,13 +50,14 @@ export default function Cuotas(props) {
                     subtitle="Pasá a cuotas un pago que ya hiciste y te devolvemos la plata en el momento."
                     img={<Image src="/assets/images/cuotas/cuotas-otorgadas 1.png" width={1389} height={1134} />}
                     items={[
-                        <CardItem text="Podés pasar compras, recargas o pagos de facturas."
+                        <CardItem text="Podés pasar a cuotas compras, recargas o pagos de facturas"
                             img="/assets/images/prestamos/icono_prestamos.png" />,
                         <CardItem text="La plata se deposita en el momento."
                             img="/assets/images/prestamos/icono-depositar-plata.png" />]}
                 />
                 <Container className="md:my-12 my-12">
-                    <h2 className="title-2 text-center mb-6">¿Cómo pasar a cuotas?</h2>
+                    <h2 className="title-2 text-center mb-6">¿Cómo pasar un consumo a cuotas?</h2>
+                    <p className="text-center text-xl md:text-2xl mx-8 md:mx-20">Buscá los consumos que tengan un círculo verde en la home y seleccioná el que quieras pasar a cuotas. Conocé más en el siguiente video.</p>
                     <a className="hidden md:block" href="https://www.youtube.com/watch?v=cZJ9ki4-ZmU" target="_blank">
                         <PlayVideoButton
                             youtubeId="cZJ9ki4-ZmU"
@@ -95,7 +95,7 @@ export default function Cuotas(props) {
 
                 <Container className="my-12">
                     <div className=" mx-auto shadow-blue md:p-16 p-8 rounded-2xl">
-                        <h2 className="title-2">Requisitos para pedir un préstamo</h2>
+                        <h2 className="title-2">¿Cuáles son los requisitos para cuotificar con ualá?</h2>
                         <div className="grid md:grid-cols-2">
                             <ol>
                                 <li className="pt-4">1. Ser ciudadano argentino o residente en el país. </li>
@@ -105,7 +105,6 @@ export default function Cuotas(props) {
                         </div>
                     </div>
                 </Container>
-
                 <Legal main="La funcionalidad Cuotificación está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante. TNA: Mínima: 30,00% - Máxima 95,00%. TEA: Mínima: 34,99% - Máxima 149,50%. El otorgamiento del crédito está sujeto a evaluación crediticia."
                     secondary="Costo Financiero Total: Mínimo:  95,50% - Máximo 279,70%."
                 />

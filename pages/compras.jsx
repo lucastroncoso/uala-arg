@@ -10,7 +10,9 @@ import Image from "next/image";
 import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
 
 
+
 export default function Tarjeta(props) {
+
 
     return (
         <>
@@ -104,11 +106,7 @@ export default function Tarjeta(props) {
                             <a className="text underline text-blue-700" target="_blank" href="https://www.youtube.com/watch?v=xD7xz3jyZ2A">Mira el tutorial acá</a>
                         </ImageTextItem>
                     </div>
-
                 </Container>
-
-
-
             </Layout>
         </>
     )

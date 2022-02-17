@@ -20,7 +20,7 @@ export default function Pagos(props) {
                 <Hero
                     containerStyles="mt-12 bg-coral-wave"
                     section="Pagos y recargas"
-                    title="Todos tus pagos en un solo lugar"
+                    title="Todos tus pagos en un mismo lugar"
                     subtitle="Recargá tus servicios prepagos, pagá tus facturas o cargá la SUBE gratis y sin moverte de tu casa."
                     img={<Image src="/assets/images/pagos/hero-pagosyrecargas.jpg" width={1084} height={834} />}
                 />
@@ -30,19 +30,20 @@ export default function Pagos(props) {
                     <Card img="/assets/images/pagos/icono-recarga-celular.png"
                         title="Recargá tu celular o TV"
                         text="Usá tus servicios prepagos sin límites.
-                            Recargá saldo en tu celular o TV prepaga desde la app y se acredita en el acto."/>
+                        Recargá saldo en tu celular o TV prepaga de manera online desde la app y se acredita en el acto."/>
                     <Card img="/assets/images/pagos/icono-pago-facturas.png"
-                        title="Pagá tus facturas"
+                        title="Pagá tus facturas online"
                         text="Hay más de 4.000 servicios disponibles
                         cuando quieras. Podés escanear la
                         factura o buscar por rubro o empresa."/>
                     <Card img="/assets/images/pagos/icono-recarga-SUBE.png"
                         title="Cargá tu SUBE"
-                        text="No te quedes sin saldo en la SUBE. Cargala desde la app y acreditá el monto en una terminal automática SUBE o dispositivo de conexión móvil." />
+                        text="No te quedes sin saldo en la SUBE. Cargala online desde la app y acreditá el monto en una terminal automática SUBE o dispositivo de conexión móvil." />
 
                 </CardSection>
                 <Container className="md:my-12 my-12">
                     <h2 className="title-2 text-center mb-6">¿Cómo pagar tus factuas?</h2>
+                    <p className="text-center text-xl md:text-2xl mx-8 md:mx-20">Ingresá a la app y desde la sección "Pagos" vas a poder elegir entre más de 6 mil servicios diponibles. Mirá qué fácil es en el siguiente tutorial.</p>
                     <a className="hidden md:block" href="https://www.youtube.com/watch?v=CAd2AnOTsBU" target="_blank">
                         <PlayVideoButton
                             youtubeId="CAd2AnOTsBU"
