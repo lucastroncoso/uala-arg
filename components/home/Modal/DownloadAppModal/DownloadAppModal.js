@@ -3,14 +3,14 @@ import styles from './DownloadAppModal.module.scss';
 import Modal from '../Modal';
 import Image from 'next/image';
 import { useAppContext } from '../../../../store/context';
+import QR_IMAGE from '/public/assets/images/qr_mx.png';
 
 const DownloadAppModal = ({ content }) => {
   const { downloadModalActiveState, setDownloadModalActiveState } = useAppContext();
   const popupRef = useRef(null);
 
   const handleModalCloseClick = useCallback(() => {
-    downloadModalActiveState &&
-      setDownloadModalActiveState({ qr: '/public/assets/images/qr_ar_hero.svg', state: false });
+    downloadModalActiveState && setDownloadModalActiveState({ qr: QR_IMAGE, state: false });
   }, [downloadModalActiveState, setDownloadModalActiveState]);
 
   return (
