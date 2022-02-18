@@ -172,3 +172,7 @@ p {
   box-shadow: none !important;
 }
 
+.faq-list div:last-child {
+  border: 0;
+  padding-bottom: 0;
+}

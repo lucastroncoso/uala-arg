@@ -7,9 +7,36 @@ import Head from 'next/head';
 import Image from "next/image";
 import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
 import Container from "../components/container";
+import FaqsInSections from "../components/faqs/faqsInSections";
+import { fetchContent } from '../utils/contentful'
+
+export async function getStaticProps() {
+    const response = await fetchContent(`
+    {
+        argentinaFaqCollection(order: [id_ASC], limit: 500) {
+            items{
+                categoryId {
+                    faqCategoryId
+                },
+                id,
+                question,
+                answer
+              section
+            }
+        }
+    }    
+    `);
+  
+    return {
+      props: { response },
+      revalidate: 10
+    }
+  }
+
 
 export default function Pagos(props) {
 
+    
     return (
         <>
             <Head>
@@ -59,6 +86,7 @@ export default function Pagos(props) {
                         />
                     </a>
                 </Container>
+                <FaqsInSections section="pagos" title="Preguntas frecuentes sobre los pagos onlines" response={props.response}/>
             </Layout>
         </>
     )

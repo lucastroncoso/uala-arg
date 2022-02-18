@@ -10,6 +10,31 @@ import Layout from "../components/layout";
 import Head from 'next/head';
 import Image from "next/image";
 import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
+import FaqsInSections from "../components/faqs/faqsInSections";
+import { fetchContent } from '../utils/contentful'
+
+export async function getStaticProps() {
+    const response = await fetchContent(`
+    {
+        argentinaFaqCollection(order: [id_ASC], limit: 500) {
+            items{
+                categoryId {
+                    faqCategoryId
+                },
+                id,
+                question,
+                answer
+              section
+            }
+        }
+    }    
+    `);
+  
+    return {
+      props: { response },
+      revalidate: 10
+    }
+  }
 
 
 export default function Cuotas(props) {
@@ -105,6 +130,7 @@ export default function Cuotas(props) {
                         </div>
                     </div>
                 </Container>
+                <FaqsInSections section="cuotas" title="Preguntas frecuentes sobre los consumos en cuotas" response={props.response}/>
                 <Legal main="La funcionalidad Cuotificación está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante. TNA: Mínima: 30,00% - Máxima 95,00%. TEA: Mínima: 34,99% - Máxima 149,50%. El otorgamiento del crédito está sujeto a evaluación crediticia."
                     secondary="Costo Financiero Total: Mínimo:  95,50% - Máximo 279,70%."
                 />

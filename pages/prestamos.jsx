@@ -10,7 +10,31 @@ import Layout from "../components/layout";
 import Head from 'next/head';
 import Image from "next/image";
 import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
+import FaqsInSections from "../components/faqs/faqsInSections";
+import { fetchContent } from '../utils/contentful'
 
+export async function getStaticProps() {
+    const response = await fetchContent(`
+    {
+        argentinaFaqCollection(order: [id_ASC], limit: 500) {
+            items{
+                categoryId {
+                    faqCategoryId
+                },
+                id,
+                question,
+                answer
+              section
+            }
+        }
+    }    
+    `);
+  
+    return {
+      props: { response },
+      revalidate: 10
+    }
+  }
 
 
 export default function Prestamos(props) {
@@ -106,21 +130,12 @@ export default function Prestamos(props) {
                 </Container>
 
                 <Calculator bg="bg-blue-degrade-calculator" />
-
-                
+                <FaqsInSections section="prestamos" title="Preguntas frecuentes sobre los préstamos" response={props.response}/>
                 <Legal main=" La funcionalidad de Créditos está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo
                     Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos, la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante.
                     Tasa Nominal Anual (TNA): Mínima: 50,00% - Máxima 85,00%. Tasa Efectiva Anual (TEA): Mínima: 63,21% - Máxima 127,33%."
                     secondary="Costo Financiero Total: Mínimo: 95,86% - Máximo 247,91%"
                 />
-
-
-
-
-
-
-
-
             </Layout>
         </>
     )

@@ -8,6 +8,31 @@ import Layout from "../components/layout";
 import Head from 'next/head';
 import Image from "next/image";
 import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
+import FaqsInSections from "../components/faqs/faqsInSections";
+import { fetchContent } from '../utils/contentful'
+
+export async function getStaticProps() {
+    const response = await fetchContent(`
+    {
+        argentinaFaqCollection(order: [id_ASC], limit: 500) {
+            items{
+                categoryId {
+                    faqCategoryId
+                },
+                id,
+                question,
+                answer
+              section
+            }
+        }
+    }    
+    `);
+  
+    return {
+      props: { response },
+      revalidate: 10
+    }
+  }
 
 
 
@@ -107,6 +132,7 @@ export default function Tarjeta(props) {
                         </ImageTextItem>
                     </div>
                 </Container>
+                <FaqsInSections section="compras" title="Preguntas frecuentes sobre la tarjeta prepaga Mastercard" response={props.response}/>
             </Layout>
         </>
     )
