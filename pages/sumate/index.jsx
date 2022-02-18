@@ -58,7 +58,7 @@ export default function BusquedasLaborales({ data }) {
             }
         }
     });
-    console.log(seniority)
+    console.log(data)
     const [selectedDepartment, setSelectedDepartment] = useState("Todos")
     const [selectedSeniority, setSelectedSeniority] = useState("Todos")
 
@@ -90,7 +90,7 @@ export default function BusquedasLaborales({ data }) {
                                 {department !== "Todos" && <h2 className="title-2">{department}</h2>}
                                 <div className="grid md:grid-cols-3 py-12">
                                     {data.map(position => {
-                                        if (position.department === department && (position.experience_level === selectedSeniority || selectedSeniority === "Todos"))
+                                        if (position.department === department && (position.experience_level === selectedSeniority || selectedSeniority === "Todos") && (position.categories[1].value == "Argentina" || position.categories[1].value == "México"))
                                             return <a href={"/sumate/" + position.uid} key={position.uid} className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-lightblue justify-between	">
                                                 <div className="text-xl">{position.name}</div>
                                                 <div className=" cursor-pointer  text-gray-600 ">{position.location.name ? position.location.name : ""} {position.experience_level ? ` - ${position.experience_level}` : ''}</div>
@@ -103,7 +103,7 @@ export default function BusquedasLaborales({ data }) {
                                 {department !== "Todos" && <h2 className="title-2">{selectedDepartment}</h2>}
                                 <div className="grid md:grid-cols-3 py-12">
                                     {data.map(position => {
-                                        if (position.department === selectedDepartment && (position.experience_level === selectedSeniority || selectedSeniority === "Todos"))
+                                        if (position.department === selectedDepartment && (position.experience_level === selectedSeniority || selectedSeniority === "Todos") && (position.categories[1].value == "Argentina" || position.categories[1].value == "México"))
                                             return <a href={"/sumate/" + position.uid} key={position.uid} className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-lightblue justify-between	">
                                                 <div className="text-xl">{position.name}</div>
                                                 <div className=" cursor-pointer  text-gray-600 ">{position.location.name ? position.location.name : ""} {position.experience_level ? ` - ${position.experience_level}` : ''}</div>
