@@ -5,7 +5,6 @@ import Container from "../container"
 
 export default function FaqsInSections(props) {
 
-    console.log(props);
     const [selected, setSelected] = useState({
         category: 1,
         faq: null
@@ -18,7 +17,7 @@ export default function FaqsInSections(props) {
         <>
         <Container>
         <div className="rounded-2xl shadow-lg mb-32 py-6 pb-2 px-4 lg:px-12 faq-list">
-        <h3 className="title-3 mt-6 mb-6 md:mb-10">{props.title}</h3>
+        <h3 className="title-3 mt-3 mb-6 md:mb-10">{props.title}</h3>
         {
             <div className="text-gray-800 border-b border-gray-300 mb-6 pb-4">
                 <div className="">
