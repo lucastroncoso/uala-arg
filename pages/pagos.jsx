@@ -70,7 +70,7 @@ export default function Pagos(props) {
                 </CardSection>
                 <Container className="md:my-12 my-12">
                     <h2 className="title-2 text-center mb-6">¿Cómo pagar tus factuas?</h2>
-                    <p className="text-center text-xl md:text-2xl mx-8 md:mx-20">Ingresá a la app y desde la sección "Pagos" vas a poder elegir entre más de 6 mil servicios diponibles. Mirá qué fácil es en el siguiente tutorial.</p>
+                    <p className="text-center subtitle-2 mx-8 md:mx-20">Ingresá a la app y desde la sección "Pagos" vas a poder elegir entre más de 6 mil servicios diponibles. Mirá qué fácil es en el siguiente tutorial.</p>
                     <a className="hidden md:block" href="https://www.youtube.com/watch?v=CAd2AnOTsBU" target="_blank">
                         <PlayVideoButton
                             youtubeId="CAd2AnOTsBU"

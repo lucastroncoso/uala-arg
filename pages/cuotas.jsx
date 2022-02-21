@@ -82,7 +82,7 @@ export default function Cuotas(props) {
                 />
                 <Container className="md:my-12 my-12">
                     <h2 className="title-2 text-center mb-6">¿Cómo pasar un consumo a cuotas?</h2>
-                    <p className="text-center text-xl md:text-2xl mx-8 md:mx-20">Buscá los consumos que tengan un círculo verde en la home y seleccioná el que quieras pasar a cuotas. Conocé más en el siguiente video.</p>
+                    <p className="text-center subtitle-2 mx-8 md:mx-20">Buscá los consumos que tengan un círculo verde en la home y seleccioná el que quieras pasar a cuotas. Conocé más en el siguiente video.</p>
                     <a className="hidden md:block" href="https://www.youtube.com/watch?v=cZJ9ki4-ZmU" target="_blank">
                         <PlayVideoButton
                             youtubeId="cZJ9ki4-ZmU"
@@ -118,7 +118,7 @@ export default function Cuotas(props) {
                             img="/assets/images/prestamos/icono_cancelar.png" />]}
                 />
 
-                <Container className="my-12">
+                <Container className="mt-12">
                     <div className=" mx-auto shadow-blue md:p-16 p-8 rounded-2xl">
                         <h2 className="title-2">¿Cuáles son los requisitos para cuotificar con ualá?</h2>
                         <div className="grid md:grid-cols-2">
