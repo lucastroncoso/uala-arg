@@ -161,3 +161,35 @@ p {
   box-shadow: none !important;
 }
 
+.faq-list div:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+
+/* Sliders with arrows */
+.sliderWithArrows {
+  position: relative;
+}
+.sliderWithArrows .slick-prev, .sliderWithArrows .slick-next {
+  position: absolute;
+  top: 50%;
+}
+.sliderWithArrows .slick-prev {
+  left: 3% !important;
+  z-index: 100;
+}
+.sliderWithArrows .slick-next {
+  right: 3% !important;
+  z-index: 100;
+}
+.sliderWithArrows .slick-dots {
+  z-index: 100;
+  position: absolute;
+  bottom: 10px;
+}
+/* .slick-prev::before, .slick-next::before {
+  color: black !important;
+} */
+.sliderWithArrows .slick-dots li button:before {
+  color: white !important;
+}
