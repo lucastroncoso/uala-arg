@@ -120,7 +120,7 @@ export default function Cuotas(props) {
 
                 <Container className="mt-12">
                     <div className=" mx-auto shadow-blue md:p-16 p-8 rounded-2xl">
-                        <h2 className="title-2">¿Cuáles son los requisitos para cuotificar con ualá?</h2>
+                        <h2 className="title-2">¿Cuáles son los requisitos para cuotificar con Ualá?</h2>
                         <div className="grid md:grid-cols-2">
                             <ol>
                                 <li className="pt-4">1. Ser ciudadano argentino o residente en el país. </li>

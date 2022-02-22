@@ -86,7 +86,7 @@ export default function Pagos(props) {
                         />
                     </a>
                 </Container>
-                <FaqsInSections section="pagos" title="Preguntas frecuentes sobre los pagos onlines" response={props.response}/>
+                <FaqsInSections section="pagos" title="Preguntas frecuentes sobre los pagos online" response={props.response}/>
             </Layout>
         </>
     )
