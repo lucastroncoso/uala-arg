@@ -114,7 +114,7 @@ export default function Prestamos(props) {
 
                 <Container className="my-12">
                     <div className=" mx-auto shadow-blue md:p-16 p-8 rounded-2xl">
-                        <h2 className="title-2">¿Cuáles son los requisitos para pedir un préstamo en Ualá?</h2>
+                        <h2 className="title-3">¿Cuáles son los requisitos para pedir un préstamo en Ualá?</h2>
                         <div className="grid md:grid-cols-2">
                             <ol>
                                 <li className="pt-4">1. Ser ciudadano argentino o residente en el país. </li>

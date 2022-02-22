@@ -25,6 +25,7 @@ export default function MainPageAr() {
     <>
       <Head>
         <title>Ualá - El Lado Bueno de tu Plata</title>
+        <meta name="description" content="El Lado Bueno de tu Plata" />
       </Head>
       <main>
         <C01Navigation content={pageContent[locale].navbar} />
