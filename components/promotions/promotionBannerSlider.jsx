@@ -1,36 +1,61 @@
 import Slider from '../slider/slider';
 import Image from "next/image";
 
+const BannerSlide = ({banner}) => (
+    <>
+        <div className="hidden md:block">
+            <Image 
+                layout="responsive"
+                src={ banner.desktopImage.url }
+                width={ banner.desktopImage.width }
+                height={ banner.desktopImage.height }
+                alt={ banner.description }
+            />
+        </div>
+
+        <div className="block md:hidden">
+            <Image 
+                layout="responsive"
+                src={ banner.mobileImage.url }
+                width={ banner.mobileImage.width }
+                height={ banner.mobileImage.height }
+                alt={ banner.description }
+            />
+        </div>
+    </>
+);
+
 export default function PromotionBannerSlider({banners}) {
-    //const slides = [banners[0],banners[0],banners[0]]; // test for when there is only one banner
+    const clickBanner = () => {
+        dataLayer.push(
+            { 
+                event: 'trackEvent',
+                eventCategory: 'Web Arg', 
+                eventAction: 'Pagina Promociones', 
+                eventLabel: 'Banner Header' 
+            }
+        );
+    }
+
     if (!!banners && (banners.length > 1)) {
         return (
-            <div className="sliderWithArrows">
+            <div className="SliderPromotionBanner">
                 <Slider autoplaySpeed={5000} slidesToShow={1} infinite autoplay pauseOnHover arrows dots>
                     {
-                        !!banners && banners.map( banner => (
-                            <div key={ banner.description } className="w-full">
-                                <div className="hidden md:block">
-                                    <Image 
-                                        layout="responsive"
-                                        src={ banner.desktopImage.url }
-                                        width={ banner.desktopImage.width }
-                                        height={ banner.desktopImage.height }
-                                        alt={ banner.description }
-                                    />
-                                </div>
-
-                                <div className="block md:hidden">
-                                    <Image 
-                                        layout="responsive"
-                                        src={ banner.mobileImage.url }
-                                        width={ banner.mobileImage.width }
-                                        height={ banner.mobileImage.height }
-                                        alt={ banner.description }
-                                    />
-                                </div>
-                            </div> 
-                        ))
+                        !!banners && banners.map( banner => {
+                            if (!!banner.url) {
+                                return (
+                                    <a href={ banner.url } key={ banner.url } onClick={clickBanner} className="w-full" target="_blank" rel="noopener noreferrer">
+                                        <BannerSlide banner={banner}/>
+                                    </a> 
+                                );
+                            }
+                            return (
+                                <div key={ banner.description } className="w-full" onClick={clickBanner}>
+                                    <BannerSlide banner={banner}/>
+                                </div> 
+                            );
+                        })
                     }
                 </Slider>
             </div>
@@ -38,36 +63,17 @@ export default function PromotionBannerSlider({banners}) {
     }
 
     if (!!banners && (banners.length == 1)) {
+        if (!!banners[0].url) {
+            return (
+                <a href={ banners[0].url } onClick={clickBanner} className="w-full" target="_blank" rel="noopener noreferrer">
+                    <BannerSlide banner={banners[0]}/>
+                </a> 
+            );
+        }
         return (
-            <> 
-                <div className="w-full" onClick={ () => dataLayer.push(
-                    { 
-                    event: 'trackEvent',
-                    eventCategory: 'Web Arg', 
-                    eventAction: 'Pagina Promociones', 
-                    eventLabel: 'Banner Header' 
-                        }) }>
-                    <div className="hidden md:block">
-                        <Image 
-                            layout="responsive"
-                            src={ banners[0].desktopImage.url }
-                            width={ banners[0].desktopImage.width }
-                            height={ banners[0].desktopImage.height }
-                            alt={ banners[0].description }
-                        />
-                    </div>
-
-                    <div className="block md:hidden">
-                        <Image 
-                            layout="responsive"
-                            src={ banners[0].mobileImage.url }
-                            width={ banners[0].mobileImage.width }
-                            height={ banners[0].mobileImage.height }
-                            alt={ banners[0].description }
-                        />
-                    </div>
-                </div> 
-            </>
+            <div className="w-full" onClick={clickBanner}>
+                <BannerSlide banner={banners[0]}/>
+            </div> 
         );
     }
 

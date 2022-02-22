@@ -166,30 +166,27 @@ p {
   padding-bottom: 0;
 }
 
-/* Sliders with arrows */
-.sliderWithArrows {
+/* SliderPromotionBanner */
+.SliderPromotionBanner {
   position: relative;
 }
-.sliderWithArrows .slick-prev, .sliderWithArrows .slick-next {
+.SliderPromotionBanner .slick-prev, .SliderPromotionBanner .slick-next {
   position: absolute;
   top: 50%;
 }
-.sliderWithArrows .slick-prev {
+.SliderPromotionBanner .slick-prev {
   left: 3% !important;
   z-index: 100;
 }
-.sliderWithArrows .slick-next {
+.SliderPromotionBanner .slick-next {
   right: 3% !important;
   z-index: 100;
 }
-.sliderWithArrows .slick-dots {
+.SliderPromotionBanner .slick-dots {
   z-index: 100;
   position: absolute;
   bottom: 10px;
 }
-/* .slick-prev::before, .slick-next::before {
-  color: black !important;
-} */
-.sliderWithArrows .slick-dots li button:before {
+.SliderPromotionBanner .slick-dots li button:before {
   color: white !important;
 }
