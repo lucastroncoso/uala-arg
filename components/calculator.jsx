@@ -27,7 +27,7 @@ export default function Calculator(props) {
 
 
     return (
-        <Container className={props.bg + " my-24"}>
+        <Container className={props.bg + " mt-24"}>
             <div className="md:w-6/12 mx-auto text-white text-center py-24">
                 <h2 className="title-2 mb-8">Simulá tu préstamo</h2>
                 <h3 className="subtitle-2 mb-8">Completá la simulación y podrás conocer cuánto podés pedir para tu préstamo.</h3>

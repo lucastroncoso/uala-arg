@@ -16,13 +16,13 @@ export default function Hero(props) {
                     </div>
                     <div className="w-full">
                         <h1 className="title-1 md:w-5/6 mt-4">
-                            <div className="">{props.title}</div>
+                            {props.title}
                         </h1>
                     </div>
                     <div className="w-full mt-4">
-                        <div className="md:w-5/6 subtitle-1 ">
+                        <h2 className="md:w-5/6 subtitle-1 ">
                             {parser.toReact(props.subtitle)}
-                        </div>
+                        </h2>
 
                     </div>
                 </div>

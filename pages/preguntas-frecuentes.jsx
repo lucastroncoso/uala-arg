@@ -41,7 +41,7 @@ export default function PreguntasFrecuentes({ response }) {
     return (
         <>
             <Head>
-                <title>Ualá</title>
+                <title>Ualá - Preguntas frecuentes y respuestas</title>
             </Head>
             <Layout nav footer>
 

@@ -7,7 +7,7 @@ export default function Legales(props) {
     return (
         <>
             <Head>
-                <title>Ualá</title>
+                <title>Ualá - Legales: información regulatoria</title>
             </Head>
             
             <Layout nav footer>

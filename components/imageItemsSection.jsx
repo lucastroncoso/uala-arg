@@ -20,7 +20,7 @@ export default function ImageItemsSection(props) {
                     </div>
                     <div className="flex flex-col  order-1 ">
                         <div>
-                            {props.title && <div className="mb-4 title-2">{props.title}</div>}
+                            {props.title && <h2 className="mb-4 title-2">{props.title}</h2>}
                             {props.subtitle && <div className="subtitle-2">{props.subtitle}</div>}
                         </div>
                         <div className="flex flex-col justify-around h-full lg:mr-12">
