@@ -16,7 +16,7 @@ export default function Extracciones(props) {
     return (
         <>
             <Head>
-                <title>Ualá</title>
+                <title>Ualá - Extracciones: Sacá plata en todo el país</title>
             </Head>
             <Layout nav footer>
                 <Hero

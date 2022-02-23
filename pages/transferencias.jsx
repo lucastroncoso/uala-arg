@@ -16,7 +16,7 @@ export default function Pagos(props) {
     return (
         <>
             <Head>
-                <title>Ualá</title>
+                <title>Ualá - Transferencias: enviá y recibí plata gratis</title>
             </Head>
             <Layout nav footer>
                 <Hero

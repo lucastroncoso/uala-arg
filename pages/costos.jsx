@@ -34,7 +34,7 @@ export default function Costos2(props) {
   return (
     <>
       <Head>
-        <title>Ualá</title>
+        <title>Ualá - Costos: Sin letra chica ni costos ocultos</title>
       </Head>
       <Layout nav footer>
         <div className="md:mt-12 bg-blue-costos">

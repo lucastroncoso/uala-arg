@@ -33,7 +33,7 @@ export default function Inversiones(props) {
     return (
         <>
             <Head>
-                <title>Ualá</title>
+                <title>Ualá - Inversiones: invertí fácil y despertá tu plata</title>
             </Head>
             <Layout nav footer>
                 <Hero

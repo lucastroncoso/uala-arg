@@ -10,7 +10,31 @@ import Layout from "../components/layout";
 import Head from 'next/head';
 import Image from "next/image";
 import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
+import FaqsInSections from "../components/faqs/faqsInSections";
+import { fetchContent } from '../utils/contentful'
 
+export async function getStaticProps() {
+    const response = await fetchContent(`
+    {
+        argentinaFaqCollection(order: [id_ASC], limit: 500) {
+            items{
+                categoryId {
+                    faqCategoryId
+                },
+                id,
+                question,
+                answer
+              section
+            }
+        }
+    }    
+    `);
+  
+    return {
+      props: { response },
+      revalidate: 10
+    }
+  }
 
 
 export default function Prestamos(props) {
@@ -18,13 +42,14 @@ export default function Prestamos(props) {
     return (
         <>
             <Head>
-                <title>Ualá</title>
+                <title>Ualá - Préstamos online para vos</title>
+                <meta name="description" content="Pedí tu préstamo online con Ualá: podés pasar tus consumos a cuotas o pedir un préstamo online desde nuestra app." />
             </Head>
             <Layout nav footer>
                 <Hero
                     containerStyles="bg-blue-wave mt-12"
                     section="Créditos"
-                    title="Créditos pensados para vos"
+                    title="Créditos online pensados para vos"
                     subtitle="Te ofrecemos más crédito para lo que necesites de la forma más fácil, rápida y transparente."
                     img={<Image src="/assets/images/prestamos/hero-creditos.jpg" width={1389} height={1184} />}
                 />
@@ -48,7 +73,7 @@ export default function Prestamos(props) {
                     bg="bg-blue-degrade"
                     pushImg="/assets/images/prestamos/push.png"
                     title="Podés usarlo como quieras"
-                    subtitle="Pedilo desde la app y usalo para tu emprendimiento, un viaje, tu hogar o para comprar lo que quieras."
+                    subtitle="Pedí tu préstamo online desde la app y usalo para tu emprendimiento, un viaje, tu hogar o para lo que quieras."
                     img={<Image src="/assets/images/prestamos/Mask Group (25).png" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Pedí hasta [b]$500.000[/b] en 24 cuotas fijas."
@@ -89,7 +114,7 @@ export default function Prestamos(props) {
 
                 <Container className="my-12">
                     <div className=" mx-auto shadow-blue md:p-16 p-8 rounded-2xl">
-                        <h2 className="title-2">Requisitos para pedir un préstamo</h2>
+                        <h2 className="title-3">¿Cuáles son los requisitos para pedir un préstamo en Ualá?</h2>
                         <div className="grid md:grid-cols-2">
                             <ol>
                                 <li className="pt-4">1. Ser ciudadano argentino o residente en el país. </li>
@@ -105,21 +130,12 @@ export default function Prestamos(props) {
                 </Container>
 
                 <Calculator bg="bg-blue-degrade-calculator" />
-
-
+                <FaqsInSections section="prestamos" title="Preguntas frecuentes sobre los préstamos" response={props.response}/>
                 <Legal main=" La funcionalidad de Créditos está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo
                     Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos, la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante.
                     Tasa Nominal Anual (TNA): Mínima: 50,00% - Máxima 85,00%. Tasa Efectiva Anual (TEA): Mínima: 63,21% - Máxima 127,33%."
                     secondary="Costo Financiero Total: Mínimo: 95,86% - Máximo 247,91%"
                 />
-
-
-
-
-
-
-
-
             </Layout>
         </>
     )
