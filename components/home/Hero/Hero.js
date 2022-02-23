@@ -10,7 +10,6 @@ import { useAppContext } from '../../../store/context';
 import { TextPlugin } from 'gsap/dist/TextPlugin';
 import useIsMobile from '../utils/hooks/useIsMobile';
 
-
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(TextPlugin);
 }
@@ -20,7 +19,6 @@ const Hero = ({ content }) => {
   const { region } = useAppContext();
   const regionAr = region === 'ar';
   const isMobile = useIsMobile(768);
-
 
   useEffect(() => {
     const tl = gsap.timeline({ repeat: -1, repeatDelay: 2, yoyo: true });
@@ -55,12 +53,10 @@ const Hero = ({ content }) => {
       '+=0',
     );
 
-
-    let tl2 = gsap.timeline({ repeat: 0, yoyo: false, repeatDelay: 2 })
-    tl2.to(cycleContainer, { duration: 1, text: "El lado bueno", ease: 'slow (0.7, 0.4, false)' }).to(
-      cycleContainer2, { duration: 1, text: "de tu plata", ease: 'slow (0.7, 0.4, false)' }
-    )
-
+    let tl2 = gsap.timeline({ repeat: 0, yoyo: false, repeatDelay: 2 });
+    tl2
+      .to(cycleContainer, { duration: 1, text: 'El lado bueno', ease: 'slow (0.7, 0.4, false)' })
+      .to(cycleContainer2, { duration: 1, text: 'de tu plata', ease: 'slow (0.7, 0.4, false)' });
 
     const CardFloatTl = gsap.timeline({
       repeat: -1,
@@ -87,21 +83,29 @@ const Hero = ({ content }) => {
       ref={sectionRef}
     >
       <div className={styles.background}>
-          <img src={content.background[0].src} className={styles.backgroundImage} />
-          <span className={styles.popupNotification}>
-            <img data-animation="popup-1" src={content.notificationsSrc[0]} className={styles.backgroundNotification}/>
-          </span>
-          <span className={styles.popupNotification}>
-            <img data-animation="popup-2" src={content.notificationsSrc[1]} className={styles.backgroundNotification}/>
-          </span>
-          <span className={styles.backgroundImage}>
-            <img
-              data-animation="floating-card"
-              src={content.background[1].src}
-              alt={content.background[1].alt}
-              className={styles.backgroundCard}
-            />
-          </span>
+        <img src={content.background[0].src} className={styles.backgroundImage} />
+        <span className={styles.popupNotification}>
+          <img
+            data-animation="popup-1"
+            src={content.notificationsSrc[0]}
+            className={styles.backgroundNotification}
+          />
+        </span>
+        <span className={styles.popupNotification}>
+          <img
+            data-animation="popup-2"
+            src={content.notificationsSrc[1]}
+            className={styles.backgroundNotification}
+          />
+        </span>
+        <span className={styles.backgroundImage}>
+          <img
+            data-animation="floating-card"
+            src={content.background[1].src}
+            alt={content.background[1].alt}
+            className={styles.backgroundCard}
+          />
+        </span>
         <div className={styles.svgBottom}>
           <svg
             version="1.1"
@@ -119,40 +123,61 @@ const Hero = ({ content }) => {
       </div>
       <BlockWrapper customClass={[styles.heroContent]}>
         <div className="hidden w-full grid-cols-12 md:grid mt-36 justify-items-between">
-          <h1 data-animation="cycle-container" className={styles.title + " col-span-6 title-1"}>
-
-          </h1>
-          <h1 data-animation="cycle-container2" className={styles.titleRight + " col-span-6 title-1 xl:pl-72 lg:pl-56"}></h1>
+          <h1
+            data-animation="cycle-container"
+            className={styles.title + ' col-span-6 title-1'}
+          ></h1>
+          <h1
+            data-animation="cycle-container2"
+            className={styles.titleRight + ' col-span-6 title-1 xl:pl-72 lg:pl-56'}
+          ></h1>
         </div>
         <div className="hidden pt-2 md:block">
           <DownloadAppButton
+            mobileLink="https://uala.onelink.me/tTSW/7470090a"
+            qr="/assets/images/qr_ar_hero.svg"
             dataLayerInfo={{
               event: 'trackEvent',
-              eventCategory: 'Home', 
-              eventAction: 'Primera Pantalla', 
-              eventLabel: 'Boton Descargar' 
+              eventCategory: 'Home',
+              eventAction: 'Primera Pantalla',
+              eventLabel: 'Boton Descargar',
             }}
-            customClass={["text-blue-250", "rounded-full", "border-blue-250", "border-2", "px-10", "py-2", "text-xl", "hover:text-white", "hover:bg-blue-250", "focus:outline-none"]}>
+            customClass={[
+              'text-blue-250',
+              'rounded-full',
+              'border-blue-250',
+              'border-2',
+              'px-10',
+              'py-2',
+              'text-xl',
+              'hover:text-white',
+              'hover:bg-blue-250',
+              'focus:outline-none',
+            ]}
+          >
             {content.buttonCopy}
           </DownloadAppButton>
         </div>
 
         <div className="w-10/12 mx-auto md:hidden ">
-          <h1 data-animation="cycle-container" className={styles.title + " title-1"}></h1>
-          <h1 data-animation="cycle-container2" className={styles.title + " title-1"}></h1>
+          <h1 data-animation="cycle-container" className={styles.title + ' title-1'}></h1>
+          <h1 data-animation="cycle-container2" className={styles.title + ' title-1'}></h1>
 
           <p className={styles.paragraph}>{content.paragraph} </p>
-          <DownloadAppButton 
+          <DownloadAppButton
+            mobileLink="https://uala.onelink.me/tTSW/7470090a"
+            qr="/assets/images/qr_ar_hero.svg"
             isStyled
             dataLayerInfo={{
               event: 'trackEvent',
-              eventCategory: 'Home', 
-              eventAction: 'Primera Pantalla', 
-              eventLabel: 'Boton Descargar' 
+              eventCategory: 'Home',
+              eventAction: 'Primera Pantalla',
+              eventLabel: 'Boton Descargar',
             }}
-          >{content.buttonCopy}</DownloadAppButton>
+          >
+            {content.buttonCopy}
+          </DownloadAppButton>
         </div>
-
       </BlockWrapper>
     </section>
   );

@@ -176,3 +176,29 @@ p {
   border: 0;
   padding-bottom: 0;
 }
+
+/* SliderPromotionBanner */
+.SliderPromotionBanner {
+  position: relative;
+}
+.SliderPromotionBanner .slick-prev, .SliderPromotionBanner .slick-next {
+  position: absolute;
+  top: 50%;
+}
+.SliderPromotionBanner .slick-prev {
+  left: 3% !important;
+  z-index: 100;
+}
+.SliderPromotionBanner .slick-next {
+  right: 3% !important;
+  z-index: 100;
+}
+.SliderPromotionBanner .slick-dots {
+  z-index: 100;
+  position: absolute;
+  bottom: 10px;
+}
+.SliderPromotionBanner .slick-dots li button:before {
+  color: white !important;
+}
+

@@ -7,9 +7,9 @@ import Image from "next/image";
 import FeaturedPromotionCard from '../../components/promotions/featuredPromotionCard';
 import PromotionCard from '../../components/promotions/promotionCard';
 import PromotionFilters from '../../components/promotions/promotionFilters';
-import Slider from '../../components/slider/slider';
 import Router, { useRouter } from 'next/router';
 import Link from 'next/link';
+import PromotionBannerSlider from '../../components/promotions/promotionBannerSlider';
 
 export async function getStaticProps() {
     const response_promos = await fetchContent(`
@@ -52,6 +52,7 @@ export async function getStaticProps() {
         promotionBannerArgentinaCollection {
           items {
             description
+            url
             desktopImage {
                 url
                 width
@@ -269,65 +270,8 @@ export default function Promociones(props) {
             <Layout nav footer banner>
 
                 <div className="mt-16 md:mt-22 md:pt-2 lg:pt-4 w-full gap-x-4 overflow-hidden">
-                    {/* Se oculta temporalmente para first deploy
-                    <Slider autoplaySpeed={5000} slidesToShow={1} infinite autoplay pauseOnHover>
-                        {
-                            !!banners && banners.map( banner => (
-                                
-                                <div key={ banner.description } className="w-full">
-                                    <div className="hidden md:block">
-                                        <Image 
-                                            layout="responsive"
-                                            src={ banner.desktopImage.url }
-                                            width={ banner.desktopImage.width }
-                                            height={ banner.desktopImage.height }
-                                            alt={ banner.description }
-                                        />
-                                    </div>
-
-                                    <div className="block md:hidden">
-                                        <Image 
-                                            layout="responsive"
-                                            src={ banner.mobileImage.url }
-                                            width={ banner.mobileImage.width }
-                                            height={ banner.mobileImage.height }
-                                            alt={ banner.description }
-                                        />
-                                    </div>
-                                </div> 
-                            ))
-                        }
-                    </Slider> */}
-                    {!!banners && 
-                                
-                                <div className="w-full" onClick={ () => dataLayer.push(
-                                    { 
-                                    event: 'trackEvent',
-                                    eventCategory: 'Web Arg', 
-                                    eventAction: 'Pagina Promociones', 
-                                    eventLabel: 'Banner Header' 
-                                     }) }>
-                                    <div className="hidden md:block">
-                                        <Image 
-                                            layout="responsive"
-                                            src={ banners[0].desktopImage.url }
-                                            width={ banners[0].desktopImage.width }
-                                            height={ banners[0].desktopImage.height }
-                                            alt={ banners[0].description }
-                                        />
-                                    </div>
-
-                                    <div className="block md:hidden">
-                                        <Image 
-                                            layout="responsive"
-                                            src={ banners[0].mobileImage.url }
-                                            width={ banners[0].mobileImage.width }
-                                            height={ banners[0].mobileImage.height }
-                                            alt={ banners[0].description }
-                                        />
-                                    </div>
-                                </div> 
-                        }
+                    <PromotionBannerSlider banners={banners} />
+                    
                 </div>
 
                 <Container className="mx-auto lg:w-10/12 mb-32 lg:mb-72">

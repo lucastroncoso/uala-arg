@@ -5,20 +5,33 @@ import { useAppContext } from '../../../store/context';
 import PropTypes from 'prop-types';
 import useIsMobile from '../utils/hooks/useIsMobile';
 
-const DownloadAppButton = ({ children, isStyled, customClass, refProp, dataLayerInfo }) => {
-  const { setDownloadModalActiveState } = useAppContext();
+const DownloadAppButton = ({
+  qr,
+  mobileLink,
+  children,
+  isStyled,
+  customClass,
+  refProp,
+  dataLayerInfo,
+}) => {
+  const { downloadModalActivestate, setDownloadModalActiveState } = useAppContext();
   const isMobile = useIsMobile(768);
 
-  const onDownloadButtonClick = useCallback(() => {
-    setDownloadModalActiveState(true);
-  }, [setDownloadModalActiveState]);
+  const onDownloadButtonClick = useCallback(
+    (src) => {
+      src
+        ? setDownloadModalActiveState({ qr: src, state: true })
+        : setDownloadModalActiveState({ ...downloadModalActivestate, state: true });
+    },
+    [setDownloadModalActiveState],
+  );
 
   return (
     <>
       {isMobile ? (
-        <div className="" onClick={ () => dataLayer.push(dataLayerInfo) }>
+        <div className="" onClick={() => dataLayer.push(dataLayerInfo)}>
           <a
-            href="https://uala.onelink.me/gqGz/30b751c4"
+            href={mobileLink ? mobileLink : 'https://uala.onelink.me/gqGz/30b751c4'}
             className={classNames(isStyled && styles.button, customClass && [...customClass])}
             ref={refProp}
           >
@@ -28,10 +41,10 @@ const DownloadAppButton = ({ children, isStyled, customClass, refProp, dataLayer
       ) : (
         <button
           className={classNames(isStyled && styles.button, customClass && [...customClass])}
-          onClick={ () => {
+          onClick={() => {
             dataLayer.push(dataLayerInfo);
-            onDownloadButtonClick();
-            } }
+            onDownloadButtonClick(qr);
+          }}
           ref={refProp}
         >
           {children}
