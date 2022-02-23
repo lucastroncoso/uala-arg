@@ -49,7 +49,7 @@ export default function Tarjeta(props) {
                 <Hero
                     section="Compras"
                     title="Una tarjeta para tod@s y para todo"
-                    subtitle="Aprovecha tu tarjeta prepaga Ualá y comprá en cualquier comercio o página web del mundo que acepte Mastercard."
+                    subtitle="Aprovechá tu tarjeta prepaga Ualá y comprá en cualquier comercio o página web del mundo que acepte Mastercard."
                     img={<Image src="/assets/images/tarjeta/tarjeta-3D 1.png" width={2132} height={2304} />}
                 />
 
@@ -116,7 +116,7 @@ export default function Tarjeta(props) {
                         CBU hacia CVU."
                             img="/assets/images/tarjeta/Icono transferencia.png" />]}
                 />
-                <Container className="md:my-12 my-12">
+                <Container className="md:mt-12 mt-10 md:-mb-4">
                      <h2 className="title-2 text-center mb-6">¿Cómo cargar tu Ualá?</h2>
                     <a className="hidden md:block" href="https://www.youtube.com/watch?v=6Bv0IdBFdDc" target="_blank">
                         <PlayVideoButton

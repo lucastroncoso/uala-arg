@@ -75,12 +75,12 @@ export default function Cuotas(props) {
                     subtitle="Pasá a cuotas un pago que ya hiciste y te devolvemos la plata en el momento."
                     img={<Image src="/assets/images/cuotas/cuotas-otorgadas 1.png" width={1389} height={1134} />}
                     items={[
-                        <CardItem text="Podés pasar a cuotas compras, recargas o pagos de facturas"
+                        <CardItem text="Podés pasar a cuotas compras, recargas o pagos de facturas."
                             img="/assets/images/prestamos/icono_prestamos.png" />,
                         <CardItem text="La plata se deposita en el momento."
                             img="/assets/images/prestamos/icono-depositar-plata.png" />]}
                 />
-                <Container className="md:my-12 my-12">
+                <Container className="md:mt-12 mt-10">
                     <h2 className="title-2 text-center mb-6">¿Cómo pasar un consumo a cuotas?</h2>
                     <p className="text-center subtitle-2 mx-8 md:mx-20">Buscá los consumos que tengan un círculo verde en la home y seleccioná el que quieras pasar a cuotas. Conocé más en el siguiente video.</p>
                     <a className="hidden md:block" href="https://www.youtube.com/watch?v=cZJ9ki4-ZmU" target="_blank">
@@ -98,14 +98,15 @@ export default function Cuotas(props) {
                         />
                     </a>
                 </Container>
-                <ImageItemsSection
-                    reverse
-                    title="Servicios en cuotas"
-                    subtitle="Podés pagar un servicio habilitado en cuotas con tu línea de crédito sin necesidad de tener plata en la cuenta de Ualá."
-                    img={<Image src="/assets/images/cuotas/cuotas-servicios 1.png" width={1389} height={1134} />}
+                <div className="md:-mt-10">
+                    <ImageItemsSection
+                        reverse
+                        title="Servicios en cuotas"
+                        subtitle="Podés pagar un servicio habilitado en cuotas con tu línea de crédito sin necesidad de tener plata en la cuenta de Ualá."
+                        img={<Image src="/assets/images/cuotas/cuotas-servicios 1.png" width={1389} height={1134} />}
 
-                />
-
+                    />
+                </div>
                 <ImageItemsSection
                     title="Podés tener el control de los pagos"
                     img={<Image src="/assets/images/prestamos/Mask Group (24).png" width={1389} height={1134} />}
@@ -120,7 +121,7 @@ export default function Cuotas(props) {
 
                 <Container className="mt-12">
                     <div className=" mx-auto shadow-blue md:p-16 p-8 rounded-2xl">
-                        <h2 className="title-2">¿Cuáles son los requisitos para cuotificar con Ualá?</h2>
+                        <h2 className="title-3">¿Cuáles son los requisitos para cuotificar con Ualá?</h2>
                         <div className="grid md:grid-cols-2">
                             <ol>
                                 <li className="pt-4">1. Ser ciudadano argentino o residente en el país. </li>

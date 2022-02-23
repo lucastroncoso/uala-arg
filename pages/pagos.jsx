@@ -68,7 +68,7 @@ export default function Pagos(props) {
                         text="No te quedes sin saldo en la SUBE. Cargala online desde la app y acreditá el monto en una terminal automática SUBE o dispositivo de conexión móvil." />
 
                 </CardSection>
-                <Container className="md:my-12 my-12">
+                <Container className="md:mt-12 mt-10">
                     <h2 className="title-2 text-center mb-6">¿Cómo pagar tus factuas?</h2>
                     <p className="text-center subtitle-2 mx-8 md:mx-20">Ingresá a la app y desde la sección "Pagos" vas a poder elegir entre más de 6 mil servicios diponibles. Mirá qué fácil es en el siguiente tutorial.</p>
                     <a className="hidden md:block" href="https://www.youtube.com/watch?v=CAd2AnOTsBU" target="_blank">
@@ -86,7 +86,9 @@ export default function Pagos(props) {
                         />
                     </a>
                 </Container>
-                <FaqsInSections section="pagos" title="Preguntas frecuentes sobre los pagos online" response={props.response}/>
+                <div className="md:-mt-32 -mt-20">
+                    <FaqsInSections section="pagos" title="Preguntas frecuentes sobre los pagos online" response={props.response}/>
+                </div>
             </Layout>
         </>
     )
