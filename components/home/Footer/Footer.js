@@ -17,7 +17,11 @@ const Footer = ({ content, banner }) => {
       showConfirmButton: true,
       confirmButtonText: 'Aceptar',
       confirmButtonColor: '#3E6BFD',
-      customClass: { popup: 'rounded-2xl', closeButton: 'focus:shadow-none', confirmButton: 'confirm-btn-popup' },
+      customClass: {
+        popup: 'rounded-2xl',
+        closeButton: 'focus:shadow-none',
+        confirmButton: 'confirm-btn-popup',
+      },
       html: `
                 <div class='p-5 rounded-2xl' >
                     <p class='text-left text-sm text-gray-500 mb-8'>
@@ -30,8 +34,7 @@ const Footer = ({ content, banner }) => {
                       <a class="link" target="_blank" href='https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario'>Si te encontrás en otro lugar del país, podés consultar aquí</a>
                     </p>
                 </div>
-             `
-      ,
+             `,
     });
   };
 
@@ -67,30 +70,33 @@ const Footer = ({ content, banner }) => {
             {content.contractsLegals.map((item, index) => {
               return (
                 <div key={index} className={styles.link}>
-                  {
-                    item.url == "/defensa-consumidor"
-                      ? <a
-                        onClick={handlePopUp}
-                        className="cursor-pointer" >
-                        <span>{item.copy}</span>
-                      </a>
-                      : <a
-                        {...item.hasTargetBlank ? { target: "_blank" } : null}
-                        href={item.url}>
-                        {item.copy}
-                      </a>
-                  }
+                  {item.url == '/defensa-consumidor' ? (
+                    <a onClick={handlePopUp} className="cursor-pointer">
+                      <span>{item.copy}</span>
+                    </a>
+                  ) : (
+                    <a
+                      dangerouslySetInnerHTML={{
+                        __html: item.copy,
+                      }}
+                      {...(item.hasTargetBlank ? { target: '_blank' } : null)}
+                      href={item.url}
+                    ></a>
+                  )}
                 </div>
-              )
+              );
             })}
-
           </div>
           <div>
             <ul className={styles.list}>
               <li className={styles.listTitle}>{content.functionabilities.title}</li>
               {content.functionabilities.submenu.map((link) => (
                 <li key={link.copy} className={link.isNew ? styles.new : null}>
-                  <a className={styles.link} href={link.url} {...link.hasTargetBlank ? { target: "_blank" } : null} >
+                  <a
+                    className={styles.link}
+                    href={link.url}
+                    {...(link.hasTargetBlank ? { target: '_blank' } : null)}
+                  >
                     {link.copy}
                   </a>
                   {link.isNew && <span>{link.isNew}</span>}
@@ -98,7 +104,7 @@ const Footer = ({ content, banner }) => {
               ))}
             </ul>
 
-            {content.legalLinks &&
+            {content.legalLinks && (
               <div className={styles.legalWrapper}>
                 <a className={styles.listTitle} href={content.legalLinks.costs.url}>
                   {content.legalLinks.costs.copy}
@@ -110,8 +116,7 @@ const Footer = ({ content, banner }) => {
                   {content.legalLinks.terms.copy}
                 </a>
               </div>
-            }
-
+            )}
           </div>
           <div>
             <ul className={styles.list}>
@@ -137,28 +142,24 @@ const Footer = ({ content, banner }) => {
             </ul>
           </div>
 
-          {content.partnerLogo &&
-            <img className={styles.partnerLogo} src={content.partnerLogo} />
-          }
+          {content.partnerLogo && <img className={styles.partnerLogo} src={content.partnerLogo} />}
 
-          {content.disclaimer &&
+          {content.disclaimer && (
             <p
               className={styles.disclaimer}
               dangerouslySetInnerHTML={{ __html: content.disclaimer }}
             />
-          }
+          )}
 
-          {content.footerEnd &&
+          {content.footerEnd && (
             <div className={styles.footerEnd}>
-              <p
-                dangerouslySetInnerHTML={{ __html: content.footerEnd.ualaInfo }}
-              />
+              <p dangerouslySetInnerHTML={{ __html: content.footerEnd.ualaInfo }} />
               <div className={styles.logoWithText}>
                 <img src={content.footerEnd.logo} />
                 <p>{content.footerEnd.ualaAddress}</p>
               </div>
             </div>
-          }
+          )}
         </BlockWrapper>
       </footer>
     </>
