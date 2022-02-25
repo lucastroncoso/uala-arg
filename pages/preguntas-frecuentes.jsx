@@ -41,6 +41,10 @@ export default function PreguntasFrecuentes({ response }) {
     return (
         <>
             <Head>
+                <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/preguntas-frecuentes" />
+                <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/faqs" />
+                <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/faqs" />
+                <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/preguntas-frecuentes" />
                 <title>Ualá - Preguntas frecuentes y respuestas</title>
             </Head>
             <Layout nav footer>

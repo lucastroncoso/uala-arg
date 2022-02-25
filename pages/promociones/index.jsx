@@ -90,8 +90,8 @@ const isPromotionNew = date => {
     const today = new Date();
     const promotionCreationDate = new Date(date);
     const differenceTime = today.getTime() - promotionCreationDate.getTime();
-    const differenceDays = differenceTime / ( 1000 * 3600 * 24 );
-    if ( differenceDays >= 0 && differenceDays <= 15 ) {
+    const differenceDays = differenceTime / (1000 * 3600 * 24);
+    if (differenceDays >= 0 && differenceDays <= 15) {
         return true;
     } else {
         return false;
@@ -109,34 +109,34 @@ const modifyCategoryURL = slug => {
 export default function Promociones(props) {
     const router = useRouter();
 
-    const [ allPromotions, setAllPromotions ] = useState( props.response_promos.argentinaPromotionCollection.items ); // Lista completa de promociones
-    const [ featuredPromotions, setFeaturedPromotions ] = useState(); // Lista de promos destacadas completa
-    const [ promotions, setPromotions ] = useState(); // Lista de promociones restantes completa
-    const [ displayableFeaturedPromotions, setDisplayableFeaturedPromotions ] = useState([]); // Lista de promos destacadas visibles ( filtradas )
-    const [ displayablePromotions, setDisplayablePromotions ] = useState([]); // Lista de promociones restantes visibles ( filtradas )
-    const [ categories, setCategories ] = useState( props.response_others.argentinaPromotionCategoryCollection.items ); // Lista de categorias - filtro
-    const [ locations, setLocations ] = useState( props.response_others.argentinaPromotionLocationCollection.items ); // Lista de ubicaciones - filtro
-    const [ selectedCategory, setSelectedCategory ] = useState({slug: ''}); // Categoría seleccionada
-    const [ selectedLocation, setSelectedLocation ] = useState({slug: ''}); // Ubicación seleccionada
-    const [ showNewest, setShowNewest ] = useState( false ); // Mostrar promociones nuevas
-    const [ banners, setBanners ] = useState( props.response_others.promotionBannerArgentinaCollection.items ); // Banners
+    const [allPromotions, setAllPromotions] = useState(props.response_promos.argentinaPromotionCollection.items); // Lista completa de promociones
+    const [featuredPromotions, setFeaturedPromotions] = useState(); // Lista de promos destacadas completa
+    const [promotions, setPromotions] = useState(); // Lista de promociones restantes completa
+    const [displayableFeaturedPromotions, setDisplayableFeaturedPromotions] = useState([]); // Lista de promos destacadas visibles ( filtradas )
+    const [displayablePromotions, setDisplayablePromotions] = useState([]); // Lista de promociones restantes visibles ( filtradas )
+    const [categories, setCategories] = useState(props.response_others.argentinaPromotionCategoryCollection.items); // Lista de categorias - filtro
+    const [locations, setLocations] = useState(props.response_others.argentinaPromotionLocationCollection.items); // Lista de ubicaciones - filtro
+    const [selectedCategory, setSelectedCategory] = useState({ slug: '' }); // Categoría seleccionada
+    const [selectedLocation, setSelectedLocation] = useState({ slug: '' }); // Ubicación seleccionada
+    const [showNewest, setShowNewest] = useState(false); // Mostrar promociones nuevas
+    const [banners, setBanners] = useState(props.response_others.promotionBannerArgentinaCollection.items); // Banners
 
-    useEffect( () => {
+    useEffect(() => {
         // Verificar al cargar la pagina si hay una categoria seleccionada desde la url
-        if ( router.isReady && !!router.query.category) {
-            const found = categories.find( cat => cat.slug === router.query.category);
-            if(!!found) {
-                setSelectedCategory({slug: router.query.category});
+        if (router.isReady && !!router.query.category) {
+            const found = categories.find(cat => cat.slug === router.query.category);
+            if (!!found) {
+                setSelectedCategory({ slug: router.query.category });
             }
-        } 
-    },[router.isReady]);
+        }
+    }, [router.isReady]);
 
-    useEffect( () => {
+    useEffect(() => {
         // Lista de promociones destacadas - las primeras 2 que tengan la propiedad featured
-        const featured = allPromotions.filter( promo => promo.featured === true );
-        if ( featured.length > 0 ) {
-            setFeaturedPromotions( featured.slice( 0, 2 ) );
-            setDisplayableFeaturedPromotions( featured.slice( 0, 2 ) );
+        const featured = allPromotions.filter(promo => promo.featured === true);
+        if (featured.length > 0) {
+            setFeaturedPromotions(featured.slice(0, 2));
+            setDisplayableFeaturedPromotions(featured.slice(0, 2));
         }
 
         // Lista de categorías para el filtro - solo aquellas que tengan alguna promoción activa
@@ -148,14 +148,14 @@ export default function Promociones(props) {
                 categoriesInUse.push(element.slug);
             });
         });
-        const selectableCategoriesSlugs = [ ...new Set(categoriesInUse)];
-        
+        const selectableCategoriesSlugs = [...new Set(categoriesInUse)];
+
         allCategories.forEach(category => {
-            if ( selectableCategoriesSlugs.find(element => element === category.slug) !== undefined ) {
-                selectableCategories.push( category );
+            if (selectableCategoriesSlugs.find(element => element === category.slug) !== undefined) {
+                selectableCategories.push(category);
             }
         });
-        selectableCategories.unshift({slug: 'any-category', name: 'Todas las categorías'});
+        selectableCategories.unshift({ slug: 'any-category', name: 'Todas las categorías' });
         setCategories(selectableCategories);
 
         // Lista de ubicaciones para el filtro - solo aquellas que tengan alguna promoción activa
@@ -167,48 +167,48 @@ export default function Promociones(props) {
                 locationsInUse.push(element.slug);
             });
         });
-        const selectableLocationsSlugs = [ ...new Set(locationsInUse)];
+        const selectableLocationsSlugs = [...new Set(locationsInUse)];
 
         allLocations.forEach(location => {
-            if ( selectableLocationsSlugs.find(element => element === location.slug) !== undefined ) {
-                selectableLocations.push( location );
+            if (selectableLocationsSlugs.find(element => element === location.slug) !== undefined) {
+                selectableLocations.push(location);
             }
         });
-        selectableLocations.unshift({slug: 'any-place', name: 'Todas las ubicaciones'});
+        selectableLocations.unshift({ slug: 'any-place', name: 'Todas las ubicaciones' });
         setLocations(selectableLocations);
 
-    }, [ allPromotions ] );
+    }, [allPromotions]);
 
-    useEffect( () => {
+    useEffect(() => {
         // Listado de todas las promociones que no están destacadas
-        if ( !!featuredPromotions ) {
-            const otherPromotions = allPromotions.filter( promo => {
-                if ( featuredPromotions.length === 1 ) {
+        if (!!featuredPromotions) {
+            const otherPromotions = allPromotions.filter(promo => {
+                if (featuredPromotions.length === 1) {
                     return promo.slug !== featuredPromotions[0].slug;
-                } 
-                if ( featuredPromotions.length === 2 ) {
+                }
+                if (featuredPromotions.length === 2) {
                     return ((promo.slug !== featuredPromotions[0].slug) && (promo.slug !== featuredPromotions[1].slug));
-                } 
-            } );
-            setPromotions( otherPromotions );
-            setDisplayablePromotions( otherPromotions );
+                }
+            });
+            setPromotions(otherPromotions);
+            setDisplayablePromotions(otherPromotions);
         } else {
-            setPromotions( allPromotions );
-            setDisplayablePromotions( allPromotions );
+            setPromotions(allPromotions);
+            setDisplayablePromotions(allPromotions);
         }
-    }, [ featuredPromotions, allPromotions ] );
+    }, [featuredPromotions, allPromotions]);
 
-    useEffect( () => {
+    useEffect(() => {
         // Modificar las listas de promociones visibles cuando se selecciona un filtro
-        if ( !!promotions && !!featuredPromotions ) {
+        if (!!promotions && !!featuredPromotions) {
 
             let filteredFeaturedPromotions = featuredPromotions;
             let filteredPromotions = promotions;
 
             // Cuando se selecciona una categoría
-            if ( selectedCategory.slug !== '' ) {
-                if ( selectedCategory.slug !== 'any-category' ) {
-                    modifyCategoryURL( selectedCategory.slug );
+            if (selectedCategory.slug !== '') {
+                if (selectedCategory.slug !== 'any-category') {
+                    modifyCategoryURL(selectedCategory.slug);
                     filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
                         if (promotion.categoriesCollection.items.find(element => element.slug === selectedCategory.slug) !== undefined) {
                             return true;
@@ -227,17 +227,17 @@ export default function Promociones(props) {
             }
 
             // Cuando se selecciona una ubicacion
-            if ( selectedLocation.slug !== '' ) {
-                if ( selectedLocation.slug !== 'any-place' ) {
+            if (selectedLocation.slug !== '') {
+                if (selectedLocation.slug !== 'any-place') {
                     filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
-                        if (promotion.locationsCollection.items.find(element => ( element.slug === selectedLocation.slug || element.slug === 'todo-el-pais' )) !== undefined) {
+                        if (promotion.locationsCollection.items.find(element => (element.slug === selectedLocation.slug || element.slug === 'todo-el-pais')) !== undefined) {
                             return true;
                         } else {
                             return false;
                         }
                     });
                     filteredPromotions = filteredPromotions.filter(promotion => {
-                        if (promotion.locationsCollection.items.find(element => ( element.slug === selectedLocation.slug || element.slug === 'todo-el-pais' )) !== undefined) {
+                        if (promotion.locationsCollection.items.find(element => (element.slug === selectedLocation.slug || element.slug === 'todo-el-pais')) !== undefined) {
                             return true;
                         } else {
                             return false;
@@ -247,93 +247,97 @@ export default function Promociones(props) {
             }
 
             // Al seleccionar la opción de promociones recientes 
-            if ( showNewest ) {
+            if (showNewest) {
                 filteredFeaturedPromotions = filteredFeaturedPromotions.filter(promotion => {
-                    return ( isPromotionNew( promotion.sys.publishedAt ) );
+                    return (isPromotionNew(promotion.sys.publishedAt));
                 });
 
                 filteredPromotions = filteredPromotions.filter(promotion => {
-                    return ( isPromotionNew( promotion.sys.publishedAt ) );
+                    return (isPromotionNew(promotion.sys.publishedAt));
                 });
             }
-            
-            setDisplayableFeaturedPromotions( filteredFeaturedPromotions );
-            setDisplayablePromotions( filteredPromotions ); 
+
+            setDisplayableFeaturedPromotions(filteredFeaturedPromotions);
+            setDisplayablePromotions(filteredPromotions);
         }
-    }, [ selectedCategory, selectedLocation, showNewest, featuredPromotions, promotions ] ); 
+    }, [selectedCategory, selectedLocation, showNewest, featuredPromotions, promotions]);
 
     return (
         <>
             <Head>
+                <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/promociones" />
+                <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/promociones" />
+                <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/promociones" />
+                <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/promociones" />
                 <title>Ualá - Promociones: beneficios inigualables para vos</title>
             </Head>
             <Layout nav footer banner>
 
                 <div className="mt-16 md:mt-22 md:pt-2 lg:pt-4 w-full gap-x-4 overflow-hidden">
                     <PromotionBannerSlider banners={banners} />
-                    
+
                 </div>
 
                 <Container className="mx-auto lg:w-10/12 mb-32 lg:mb-72">
-            
-                <div className="">
-                    <div className="my-16 text-3xl font-medium text-center text-blue-600">No te pierdas estas súper promociones</div>
-                    
-                    <PromotionFilters
-                        categories={ categories }
-                        selectedCategory={ selectedCategory }
-                        setSelectedCategory={ setSelectedCategory }
-                        locations={ locations }
-                        selectedLocation={ selectedLocation }
-                        setSelectedLocation={ setSelectedLocation }
-                        showNewest={ showNewest }
-                        setShowNewest={ setShowNewest }
-                    />
 
-                    {
-                        displayableFeaturedPromotions.length > 0 && 
+                    <div className="">
+                        <div className="my-16 text-3xl font-medium text-center text-blue-600">No te pierdas estas súper promociones</div>
+
+                        <PromotionFilters
+                            categories={categories}
+                            selectedCategory={selectedCategory}
+                            setSelectedCategory={setSelectedCategory}
+                            locations={locations}
+                            selectedLocation={selectedLocation}
+                            setSelectedLocation={setSelectedLocation}
+                            showNewest={showNewest}
+                            setShowNewest={setShowNewest}
+                        />
+
+                        {
+                            displayableFeaturedPromotions.length > 0 &&
                             <div className="grid my-16 lg:grid-cols-2">
                                 {
-                                    displayableFeaturedPromotions.map(promotion => <FeaturedPromotionCard key={ promotion.slug } {...promotion} />)
+                                    displayableFeaturedPromotions.map(promotion => <FeaturedPromotionCard key={promotion.slug} {...promotion} />)
                                 }
                             </div>
-                    }
-                    
-                    
-                    <div className="grid my-16 lg:grid-cols-3">
-                        {
-                            displayablePromotions.length == 0 
-                            ? <div className="text-center col-span-full">Parece que no se encontraron promociones...</div> 
-                            : displayablePromotions.map(promotion => <PromotionCard key={ promotion.slug } {...promotion} />) 
                         }
-                    </div>
 
-                    <div className="w-full p-4">
-                        <Link href="/seguros">
-                            <a>
-                                <div className="hidden md:block rounded-2xl overflow-hidden">
-                                    <Image 
-                                        layout="responsive"
-                                        src="/assets/images/promociones/Banners Seguros_Desktop.jpg"
-                                        width={2880}
-                                        height={720}
-                                        alt="Seguros"
-                                    />
-                                </div>
 
-                                <div className="block md:hidden rounded-2xl overflow-hidden">
-                                    <Image 
-                                        layout="responsive"
-                                        src="/assets/images/promociones/Banners-Seguros_Mobile.jpg"
-                                        width={700}
-                                        height={800}
-                                        alt="Seguros"
-                                    />
-                                </div>
-                            </a>
-                        </Link>
+                        <div className="grid my-16 lg:grid-cols-3">
+                            {
+                                displayablePromotions.length == 0
+                                    ? <div className="text-center col-span-full">Parece que no se encontraron promociones...</div>
+                                    : displayablePromotions.map(promotion => <PromotionCard key={promotion.slug} {...promotion} />)
+                            }
+                        </div>
+
+                        <div className="w-full p-4">
+                            <Link href="/seguros">
+                                <a>
+                                    <div className="hidden md:block rounded-2xl overflow-hidden">
+                                        <Image
+                                            layout="responsive"
+                                            src="/assets/images/promociones/Banners Seguros_Desktop.jpg"
+                                            width={2880}
+                                            height={720}
+                                            alt="Seguros"
+                                        />
+                                    </div>
+
+                                    <div className="block md:hidden rounded-2xl overflow-hidden">
+                                        <Image
+                                            layout="responsive"
+                                            src="/assets/images/promociones/Banners-Seguros_Mobile.jpg"
+                                            width={700}
+                                            height={800}
+                                            alt="Seguros"
+                                        />
+                                    </div>
+                                </a>
+                            </Link>
+                        </div>
                     </div>
-                </div>
                 </Container>
 
 

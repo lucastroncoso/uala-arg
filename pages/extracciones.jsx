@@ -16,6 +16,10 @@ export default function Extracciones(props) {
     return (
         <>
             <Head>
+                <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/extracciones" />
+                <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/extracciones" />
+                <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/retiros" />
+                <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/extracciones" />
                 <title>Ualá - Extracciones: Sacá plata en todo el país</title>
             </Head>
             <Layout nav footer>
@@ -72,14 +76,14 @@ export default function Extracciones(props) {
                             />
                         </a>
                     </Container>
-                   <Container className="pb-8">
-                    <h2 className="title-extracciones">Costos</h2>
-                    <div className="grid grid-cols-2 py-8">
-                        <p className="col-span-2 md:col-span-1 text-gray-250"><span className="font-bold">Red Link y Banelco</span><br/>Cada extracción tienen un costo de $105 + IVA.</p>
-                        <p className="col-span-2 md:col-span-1 md:col-start-2 text-gray-250"><span className="font-bold">Rapipago</span><br/>Tenés una extracción gratis por mes. Si hacés más extracciones, tienen un costo de $75 + IVA que se va a cobrar de tu saldo cuando hagas la extracción.</p>
-                    </div>
+                    <Container className="pb-8">
+                        <h2 className="title-extracciones">Costos</h2>
+                        <div className="grid grid-cols-2 py-8">
+                            <p className="col-span-2 md:col-span-1 text-gray-250"><span className="font-bold">Red Link y Banelco</span><br />Cada extracción tienen un costo de $105 + IVA.</p>
+                            <p className="col-span-2 md:col-span-1 md:col-start-2 text-gray-250"><span className="font-bold">Rapipago</span><br />Tenés una extracción gratis por mes. Si hacés más extracciones, tienen un costo de $75 + IVA que se va a cobrar de tu saldo cuando hagas la extracción.</p>
+                        </div>
 
-                </Container>
+                    </Container>
                 </div>
 
 
