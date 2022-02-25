@@ -16,6 +16,10 @@ export default function Seguridad(props) {
     return (
         <>
             <Head>
+                <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/contacto" />
+                <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/contacto" />
+                <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/contacto" />
+                <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/contacto" />
                 <title>Ualá - Canales de contacto</title>
             </Head>
             <Layout nav footer>

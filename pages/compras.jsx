@@ -27,12 +27,12 @@ export async function getStaticProps() {
         }
     }    
     `);
-  
+
     return {
-      props: { response },
-      revalidate: 10
+        props: { response },
+        revalidate: 10
     }
-  }
+}
 
 
 
@@ -42,6 +42,9 @@ export default function Tarjeta(props) {
     return (
         <>
             <Head>
+                <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/compras" />
+                <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/tarjeta" />
+                <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/compras" />
                 <title>Ualá - Tarjeta prepaga gratis: pedí tu tarjeta</title>
                 <meta name="description" content="Tarjeta Prepaga Ualá Mastercard: Una tarjeta gratis para tod@s y para todo. Comprá en cualquier parte del mundo." />
             </Head>
@@ -68,26 +71,26 @@ export default function Tarjeta(props) {
                             img="/assets/images/tarjeta/Icono contactless.png" />]}
                 />
                 <Container className={props.bg}>
-                        <div className="grid md:my-24 my-12 lg:grid-cols-2 items-center gap-16 justify-items-center relative">
-                            <div className="order-2 rounded-3xl flex relative hidden md:block">
-                                <div className="order-2 rounded-3xl overflow-hidden flex">
-                                    <Image src="/assets/images/compras/beneficios-tarjeta.jpg" width={1389} height={1134} />
-                                </div>
+                    <div className="grid md:my-24 my-12 lg:grid-cols-2 items-center gap-16 justify-items-center relative">
+                        <div className="order-2 rounded-3xl flex relative hidden md:block">
+                            <div className="order-2 rounded-3xl overflow-hidden flex">
+                                <Image src="/assets/images/compras/beneficios-tarjeta.jpg" width={1389} height={1134} />
                             </div>
-                            <div className="flex flex-col  order-1 ">
+                        </div>
+                        <div className="flex flex-col  order-1 ">
                             <div>
-                               <h2 className="mb-4 title-2">Beneficios de la tarjeta prepaga Mastercard</h2>
+                                <h2 className="mb-4 title-2">Beneficios de la tarjeta prepaga Mastercard</h2>
                             </div>
-                                <div className="flex flex-col justify-around h-full lg:mr-12">
+                            <div className="flex flex-col justify-around h-full lg:mr-12">
                                 <CardItem text="Pedís tu tarjeta y te la llevamos gratis a tu casa."
                                     img="/assets/images/compras/icono-envio.png" />
                                 <CardItem text="Si la perdés la podés congelar desde la app para que nadie la pueda usar."
                                     img="/assets/images/compras/icono-congelar-tarjeta.png" />
                                 <CardItem text="Podés seguir los consumos en vivo desde la app."
                                     img="/assets/images/compras/Icono-consumos.png" />
-                                </div>
                             </div>
                         </div>
+                    </div>
 
                 </Container>
                 <ImageItemsSection
@@ -117,7 +120,7 @@ export default function Tarjeta(props) {
                             img="/assets/images/tarjeta/Icono transferencia.png" />]}
                 />
                 <Container className="md:mt-12 mt-10 md:-mb-4">
-                     <h2 className="title-2 text-center mb-6">¿Cómo cargar tu Ualá?</h2>
+                    <h2 className="title-2 text-center mb-6">¿Cómo cargar tu Ualá?</h2>
                     <a className="hidden md:block" href="https://www.youtube.com/watch?v=6Bv0IdBFdDc" target="_blank">
                         <PlayVideoButton
                             youtubeId="6Bv0IdBFdDc"
@@ -154,7 +157,7 @@ export default function Tarjeta(props) {
                         </ImageTextItem>
                     </div>
                 </Container>
-                <FaqsInSections section="compras" title="Preguntas frecuentes sobre la tarjeta prepaga Mastercard" response={props.response}/>
+                <FaqsInSections section="compras" title="Preguntas frecuentes sobre la tarjeta prepaga Mastercard" response={props.response} />
             </Layout>
         </>
     )

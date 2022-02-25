@@ -34,6 +34,10 @@ export default function Costos2(props) {
   return (
     <>
       <Head>
+        <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/costos" />
+        <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/costos" />
+        <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/costos" />
+        <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/costos" />
         <title>Ualá - Costos: Sin letra chica ni costos ocultos</title>
       </Head>
       <Layout nav footer>
