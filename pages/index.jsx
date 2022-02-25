@@ -26,6 +26,10 @@ export default function MainPageAr() {
       <Head>
         <title>Ualá - El Lado Bueno de tu Plata</title>
         <meta name="description" content="El Lado Bueno de tu Plata" />
+        <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/" />
+        <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/" />
+        <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/" />
+        <link rel="alternate" hreflang="x-default" href=" https://www.uala.com.ar/" />
       </Head>
       <main>
         <C01Navigation content={pageContent[locale].navbar} />
