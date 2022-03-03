@@ -35,7 +35,7 @@ export default function Contratos(props) {
       title2: 'Ualá+',
     },
     {
-      href: '/assets/legales/Términos y condiciones de Uso de la Aplicación - Persona Jurídica..pdf',
+      href: '/assets/legales/Términos y condiciones de Uso de la Aplicación - Persona Jurídica.pdf',
       title: 'Términos y condiciones:',
       title2: 'Persona Jurídica',
     },
