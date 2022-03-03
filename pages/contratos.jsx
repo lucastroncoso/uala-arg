@@ -66,7 +66,7 @@ export default function Contratos(props) {
           <Container>
             <div className="py-20 grid md:grid-cols-3 md:-mt-44">
               {charges.map((charge) => (
-                <div className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-lightblue justify-between	">
+                <div className="bg-white px-8 py-4 m-3 flex flex-col border-gray-5' rounded-2xl shadow-lightblue  justify-between	">
                   <div className="text-xl">
                     {charge.title} <br /> {charge.title2}
                   </div>
