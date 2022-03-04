@@ -92,6 +92,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/privacidad.html',
+        destination: '/privacidad',
+        permanent: true,
+      },
+      {
         source: '/reporte-sostenibilidad',
         destination: '/assets/legales/reporte-sostenibilidad.pdf',
         permanent: true,
