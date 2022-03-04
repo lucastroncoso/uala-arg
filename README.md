@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
- 
-## Getting Started
+## Documentación
 
-First, run the development server:
+Proyecto desarrollado en Next, deployeado en Vercel (en el team de Marketing y de Infraestructura)
+
+Repositorio: https://github.com/lucastroncoso/uala-arg Online: https://www.uala.com.ar/ Pruebas:
+https://uala-arg-infra-uala.vercel.app/ Storybook: https://uala-arg-storybook.vercel.app/
+
+Ramas/Branches:
+
+- main: version online de produccion en deploy en Vercel
+- develop: rama principal, en deploy en Vercel en sitio de pruebas
+- storybook: rama creada para hacer pruebas de integración y deploy con storybook
+- feature/faqsInSections: creada por Agus, a confirmar si fue mergeada.
+- fix/gamingPath: creada por Agus, a confirmar si fue mergeada.
+- feature/filterSumate: creada por Agus, a confirmar si fue mergeada.
+
+## Para comenzar
+
+1. Configurar las variables agregando un archivo `.env.local`. en la raiz del proyecto con las
+   siguientes variables: CONTENTFUL_SPACE_ID y CONTENTFUL_ACCESS_TOKEN.
+
+2. correr en la terminal sobre el proyecto:
+
+```bash
+npm install
+```
+
+luego para arrancar:
 
 ```bash
 npm run dev
-# or not or or yes
+# o
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Mas info
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+El contenido de cada seccion puede editarse desde `data/SiteARContent.json`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Los estilos customizados pueden verse desde `tailwind.config.js`
 
-## Learn More
+[Rutas de la API](https://nextjs.org/docs/api-routes/introduction) pueden verse desde
+[http://localhost:3000/api/hello](http://localhost:3000/api/hello). Este endpoint puede editarse en
+`pages/api/hello.js`.
 
-To learn more about Next.js, take a look at the following resources:
+Para aprender mas de Next.js, estan los siguientes recursos:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Documentacion de Next.js ](https://nextjs.org/docs) - caracteristicas de Next js y su API.
+- [Aprende Next.js](https://nextjs.org/learn) - tutorial interactivo de Next js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Podes mirar el repositorio de Next js
+[the Next.js GitHub repository](https://github.com/vercel/next.js/).
 
-## Deploy on Vercel
+## Deploy en Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+La manera mas sencilla para deployar la app de Next js.
+[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+de los creadores de Next js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-Deploy number for Vercel: 11
+Deploy: 11
