@@ -153,26 +153,26 @@ const C01Navigation = ({ content }) => {
                     {...(hasSubMenu
                       ? isMobile
                         ? {
-                            onClick: () => {
-                              setIsSubMenuOpen((isSubMenuOpen) => !isSubMenuOpen);
-                              if (isSubMenuOpen && isCurrentItemActive) {
-                                setActiveSubMenu(-1);
-                              } else {
-                                setActiveSubMenu(itemIndex);
-                              }
-                            },
-                          }
-                        : {
-                            onMouseEnter: () => {
-                              setIsSubMenuOpen(true);
+                          onClick: () => {
+                            setIsSubMenuOpen((isSubMenuOpen) => !isSubMenuOpen);
+                            if (isSubMenuOpen && isCurrentItemActive) {
+                              setActiveSubMenu(-1);
+                            } else {
                               setActiveSubMenu(itemIndex);
-                              setSelectedItem(itemIndex);
-                            },
-                          }
+                            }
+                          },
+                        }
+                        : {
+                          onMouseEnter: () => {
+                            setIsSubMenuOpen(true);
+                            setActiveSubMenu(itemIndex);
+                            setSelectedItem(itemIndex);
+                          },
+                        }
                       : {
-                          href: item.url,
-                          onMouseEnter: closeSubMenu,
-                        })}
+                        href: item.url,
+                        onMouseEnter: closeSubMenu,
+                      })}
                   >
                     {item.title}
                     {isMobile && hasSubMenu && <ArrowIcon className={iconStyle} />}
@@ -200,11 +200,11 @@ const C01Navigation = ({ content }) => {
               </span>
             </div>*/}
 
-          {content.loginButton && (
+          {/* {content.loginButton && (
             <a className={loginButtonStyle} href={content.loginButton.url}>
               {content.loginButton.copy}
             </a>
-          )}
+          )} */}
 
           <DownloadAppButton
             isStyled
