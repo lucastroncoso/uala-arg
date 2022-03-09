@@ -1,32 +1,40 @@
 import CardRoundedShadow from '../components/cardRoundedShadow';
 
 export default {
-    component: CardRoundedShadow,
-    title: 'CardRoundedShadow',
+  component: CardRoundedShadow,
+  title: 'CardRoundedShadow',
 };
 
-const Template = args => <CardRoundedShadow {...args} />
+const Template = (args) => <CardRoundedShadow {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    shadowColor: 'lightblue',
-    roundXl: true,
-    className: 'p-6',
-    children: (
-        <div>
-            <p>Card muy redondeada con sombra celeste</p>
-        </div>
-    )
-}
+  shadowColor: 'lightblue',
+  roundXl: true,
+  className: 'p-6',
+  children: (
+    <div>
+      <p>Card muy redondeada con sombra celeste</p>
+    </div>
+  ),
+};
 
 export const SmallBlue = Template.bind({});
 SmallBlue.args = {
-    shadowColor: 'blue',
-    roundXl: false,
-    className: 'p-4',
-    children: (
-        <div>
-            <p>Card redondeada con sombra azul</p>
-        </div>
-    )
-}
+  shadowColor: 'blue',
+  roundXl: false,
+  className: 'p-4',
+  children: (
+    <div>
+      <p>Card redondeada con sombra azul</p>
+    </div>
+  ),
+};
+
+export const ThreeCol = Template.bind({});
+ThreeCol.args = {
+  shadowColor: 'blue',
+  roundXl: false,
+  className: 'p-4',
+  children: <div className="grid grid-rows-3"></div>,
+};
