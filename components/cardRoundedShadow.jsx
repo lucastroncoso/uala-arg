@@ -8,6 +8,8 @@ import Link from 'next/link';
 export default function CardRoundedShadow({
   titleText,
   text,
+  hasTitle,
+  hasText,
   linkText,
   link,
   showImage,
@@ -15,30 +17,41 @@ export default function CardRoundedShadow({
   image,
   shadowColor,
   roundXl,
+  flexColumns,
   className,
   ...props
 }) {
   return (
     <div
-      className={`flex flex-col m-4 border border-gray-100 shadow-${shadowColor} ${
+      className={`flex ${
+        flexColumns ? 'flex-col w-80' : ' items-center  w-1/2		'
+      }  m-4 border border-gray-100 shadow-${shadowColor} ${
         roundXl ? 'rounded-3xl' : 'rounded-xl'
-      } ${className} w-80	`}
+      } ${className} 	`}
     >
       {showImage && (
         <div>
-          <Image src={image} alt="image" width={100} height={100} />
+          <Image
+            src={image}
+            alt="image"
+            width={flexColumns ? 100 : 80}
+            height={flexColumns ? 100 : 80}
+          />
         </div>
       )}
-      <div className="grid grid-rows-3">
-        <p className="text-2xl">{titleText}</p>
-        <p>{text}</p>
-        <div>
-          {hasLink && (
+
+      <div className="">
+        {hasTitle && (
+          <p className={` text-2xl    ${flexColumns ? '' : 'ml-5 bold'} `}>{titleText}</p>
+        )}
+        {hasText && <p className="text-sm">{text}</p>}
+        {hasLink && (
+          <div>
             <Link href={link}>
-              <a className="inline   underline text-blue-50">{linkText}</a>
+              <a className="inline   underline text-blue-50 text-sm">{linkText}</a>
             </Link>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
       {props.children}
@@ -47,6 +60,9 @@ export default function CardRoundedShadow({
 }
 
 CardRoundedShadow.propTypes = {
+  flexColumns: PropTypes.bool,
+  hasTitle: PropTypes.bool,
+  hasText: PropTypes.bool,
   titleText: PropTypes.string,
   text: PropTypes.string,
   linkText: PropTypes.string,
@@ -69,9 +85,12 @@ CardRoundedShadow.propTypes = {
 };
 
 CardRoundedShadow.defaultProps = {
+  flexColumns: true,
+  hasTitle: false,
+  hasText: false,
   hasLink: false,
-  titleText: 'Titulo del texto',
-  text: 'Texto',
+  titleText: 'Titular',
+  text: 'Bajada en texto. Puede contener hasta 5 línas de texto. Bajada en texto. Puede contener hasta 5 línas de texto.',
   linkText: 'Texto del link',
   showImage: true,
   shadowColor: 'lightblue',

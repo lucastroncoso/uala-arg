@@ -12,6 +12,7 @@ Default.args = {
   shadowColor: 'lightblue',
   roundXl: true,
   className: 'p-6',
+  showImage: false,
   children: (
     <div>
       <p>Card muy redondeada con sombra celeste</p>
@@ -24,6 +25,7 @@ SmallBlue.args = {
   shadowColor: 'blue',
   roundXl: false,
   className: 'p-4',
+  showImage: false,
   children: (
     <div>
       <p>Card redondeada con sombra azul</p>
@@ -31,10 +33,45 @@ SmallBlue.args = {
   ),
 };
 
-export const ThreeCol = Template.bind({});
-ThreeCol.args = {
-  shadowColor: 'blue',
-  roundXl: false,
+export const ThreeRow = Template.bind({});
+ThreeRow.args = {
+  hasTitle: true,
+  hasText: true,
+  shadowColor: 'lightblue',
+  roundXl: true,
   className: 'p-4',
-  children: <div className="grid grid-rows-3"></div>,
+};
+
+export const ThreeRowLink = Template.bind({});
+ThreeRowLink.args = {
+  hasTitle: true,
+  hasText: true,
+  hasLink: true,
+  shadowColor: 'blue',
+  roundXl: true,
+  className: 'p-4',
+};
+
+export const OneRow = Template.bind({});
+OneRow.args = {
+  titleText: 'Esto es un titular de 1 línea',
+  flexColumns: false,
+  hasTitle: true,
+  hasText: false,
+  hasLink: false,
+  shadowColor: 'lightblue',
+  roundXl: true,
+  className: 'p-6',
+};
+
+export const OneRowTwoLines = Template.bind({});
+OneRowTwoLines.args = {
+  titleText: 'Esto es un titular que ocupa 2 líneas de texto',
+  flexColumns: false,
+  hasTitle: true,
+  hasText: false,
+  hasLink: false,
+  shadowColor: 'lightblue',
+  roundXl: true,
+  className: 'p-6',
 };
