@@ -6,7 +6,8 @@ const svgContext = require.context('../../../public/assets/svg/?inline', false, 
 const ACardIcon = ({ iconName, className }) => {
   return (
     <span className={className}>
-      {React.createElement(svgContext(`./${iconName}.svg`).default)}
+      {/*React.createElement(svgContext(`./${iconName}.svg`).default)*/}
+      <img src={`/assets/svg/${iconName}.svg`} />
     </span>
   );
 };
