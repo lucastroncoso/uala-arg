@@ -2,31 +2,17 @@ import React, { useRef, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import PropTypes from 'prop-types';
 import BlockWrapper from '../BlockWrapper/BlockWrapper';
-import ACardIcon from '../A-CardIcon/ACardIcon';
 import styles from './StepsSection.module.scss';
 import useIsMobile from '../utils/hooks/useIsMobile';
 import useScrollTrigger from '../utils/hooks/useScrollTrigger';
 import gsap from 'gsap';
+import StepsCard from './StepsCard';
 
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
-const StepsCard = ({ content }) => {
-  return (
-    <>
-      <li className={styles.stepsCard}>
-        <span className={styles.cardDot} />
-        <div className={styles.cardWrapper} data-animation="list-item">
-          <ACardIcon iconName={content.icon} className={styles.icon} />
-          <h5 className={styles.number}>0{content.index + 1}.</h5>
-          <p>{content.copy}</p>
-        </div>
-      </li>
-    </>
-  );
-};
 
 const StepsSection = ({ content }) => {
   const isMobile = useIsMobile(768);
