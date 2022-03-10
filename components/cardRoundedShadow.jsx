@@ -61,14 +61,14 @@ export default function CardRoundedShadow({
 
 CardRoundedShadow.propTypes = {
   flexColumns: PropTypes.bool,
-  hasTitle: PropTypes.bool,
-  hasText: PropTypes.bool,
-  titleText: PropTypes.string,
-  text: PropTypes.string,
-  linkText: PropTypes.string,
   showImage: PropTypes.bool,
   image: PropTypes.string,
+  hasTitle: PropTypes.bool,
+  titleText: PropTypes.string,
+  hasText: PropTypes.bool,
+  text: PropTypes.string,
   hasLink: PropTypes.bool,
+  linkText: PropTypes.string,
   link: PropTypes.string,
   /**
    * What classes to use
@@ -86,15 +86,15 @@ CardRoundedShadow.propTypes = {
 
 CardRoundedShadow.defaultProps = {
   flexColumns: true,
-  hasTitle: false,
-  hasText: false,
-  hasLink: false,
-  titleText: 'Titular',
-  text: 'Bajada en texto. Puede contener hasta 5 línas de texto. Bajada en texto. Puede contener hasta 5 línas de texto.',
-  linkText: 'Texto del link',
   showImage: true,
+  image: '/assets/images/storybook/iconExample.png',
+  hasTitle: false,
+  titleText: 'Titular',
+  hasText: false,
+  text: 'Bajada en texto. Puede contener hasta 5 línas de texto. Bajada en texto. Puede contener hasta 5 línas de texto.',
+  hasLink: false,
+  linkText: 'Texto del link',
+  link: '/',
   shadowColor: 'lightblue',
   roundXl: false,
-  image: '/assets/images/storybook/iconExample.png',
-  link: '/',
 };
