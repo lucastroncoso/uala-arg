@@ -38,6 +38,7 @@
     "react-slick": "^0.28.1",
     "s": "^1.0.0",
     "sass": "^1.41.1",
+    "sass-loader": "^12.6.0",
     "sharp": "^0.29.1",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.3.0",
@@ -55,6 +56,7 @@
     "autoprefixer": "^10.3.4",
     "babel-loader": "^8.2.3",
     "postcss": "^8.3.6",
+    "storybook-addon-next": "^1.6.1",
     "tailwindcss": "^2.2.16"
   },
   "resolutions": {
