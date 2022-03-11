@@ -1,14 +1,15 @@
-import CardRoundedShadow from '../components/cardRoundedShadow';
+import CardRoundedShadowStory from '../components/cardRoundedShadowStory';
 
 export default {
-  component: CardRoundedShadow,
-  title: 'CardRoundedShadow',
+  component: CardRoundedShadowStory,
+  title: 'CardRoundedShadowStory',
 };
 
-const Template = (args) => <CardRoundedShadow {...args} />;
+const Template = (args) => <CardRoundedShadowStory {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  width: '80',
   shadowColor: 'lightblue',
   roundXl: true,
   className: 'p-6',
@@ -22,6 +23,7 @@ Default.args = {
 
 export const SmallBlue = Template.bind({});
 SmallBlue.args = {
+  width: '80',
   shadowColor: 'blue',
   roundXl: false,
   className: 'p-4',
@@ -33,27 +35,10 @@ SmallBlue.args = {
   ),
 };
 
-export const ThreeRow = Template.bind({});
-ThreeRow.args = {
-  hasTitle: true,
-  hasText: true,
-  shadowColor: 'lightblue',
-  roundXl: true,
-  className: 'p-4',
-};
-
-export const ThreeRowLink = Template.bind({});
-ThreeRowLink.args = {
-  hasTitle: true,
-  hasText: true,
-  hasLink: true,
-  shadowColor: 'blue',
-  roundXl: true,
-  className: 'p-4',
-};
-
 export const OneRow = Template.bind({});
 OneRow.args = {
+  width: '1/2',
+  showImage: true,
   titleText: 'Esto es un titular de 1 línea',
   flexColumns: false,
   hasTitle: true,
@@ -66,6 +51,8 @@ OneRow.args = {
 
 export const OneRowTwoLines = Template.bind({});
 OneRowTwoLines.args = {
+  width: '1/2',
+  showImage: true,
   titleText: 'Esto es un titular que ocupa 2 líneas de texto',
   flexColumns: false,
   hasTitle: true,
