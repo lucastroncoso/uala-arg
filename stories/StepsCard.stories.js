@@ -2,7 +2,7 @@ import StepsCard from '../components/home/StepsSection/StepsCard';
 
 export default {
     component: StepsCard,
-    title: 'StepsCard',
+    title: 'Cards/StepsCard',
 };
 
 const Template = args => <ul><StepsCard {...args} /></ul>

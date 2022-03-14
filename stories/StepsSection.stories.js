@@ -2,7 +2,7 @@ import StepsSection from '../components/home/StepsSection/StepsSection';
 
 export default {
     component: StepsSection,
-    title: 'StepsSection',
+    title: 'Cards/StepsSection',
 };
 
 const Template = args => <div className="w-full"><StepsSection {...args} /></div>
