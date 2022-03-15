@@ -8,4 +8,8 @@ export default {
 const Template = (args) => <MCtaCard {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  content: '',
+  key: '1',
+  customClass: { marginLeft: '1px' },
+};
