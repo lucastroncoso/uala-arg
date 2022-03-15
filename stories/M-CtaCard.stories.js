@@ -2,14 +2,19 @@ import MCtaCard from '../components/home/M-CtaCard/MCtaCard.js';
 
 export default {
   component: MCtaCard,
-  title: 'MCtaCard',
+  title: 'Card3ColConLink',
 };
 
 const Template = (args) => <MCtaCard {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  content: '',
-  key: '1',
-  customClass: { marginLeft: '1px' },
+  width: true,
+  content: {
+    icon: 'iconExample',
+    title: 'Titular',
+    copy: 'Bajada en texto. Puede contener hasta 5 línas de texto. Bajada en texto. Puede contener hasta 5 línas de texto.',
+    ctaCopy: 'Cta con enlace',
+    url: '/transferencias',
+  },
 };
