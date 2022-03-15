@@ -101,7 +101,7 @@ export default function Gaming2(props) {
                 <Image src="/assets/images/gaming/Aro-body.png" width={68} height={68} />
               </div>
             </div>
-            <ImageItemsSectionGaming
+            {/*<ImageItemsSectionGaming
               title="Ualá Pampas sin límites"
               img={
                 <VideoTitleGaming
@@ -123,8 +123,8 @@ export default function Gaming2(props) {
                 />
               }
               subtitle="Ualá y Pampas se unieron para que cada vez mas gamers tengan mejores oportunidades y conozcan #ElLadoBuenoDeTuPlata"
-            />
-            <ImageItemsSectionGaming
+            />*/}
+            {/*<ImageItemsSectionGaming
               reverse
               title="Sumate a la Gaming Academy"
               img={
@@ -137,7 +137,7 @@ export default function Gaming2(props) {
               subtitle="¡La oportunidad de jugar en un equipo profesional! Desde donde estés, 100% online."
               href="/gamingAcademy"
               link="Conocé más"
-            />
+            />*/}
           </div>
           <div className="bg-gaming-body relative">
             <ImageItemsSectionGaming
