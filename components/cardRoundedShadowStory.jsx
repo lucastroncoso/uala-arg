@@ -20,6 +20,7 @@ export default function CardRoundedShadowStory({
   shadowColor,
   roundXl,
   flexColumns,
+
   className,
   ...props
 }) {
@@ -32,7 +33,7 @@ export default function CardRoundedShadowStory({
     >
       <div className={`flex ${flexColumns ? 'flex-col' : ' items-center'}  m-4 	`}>
         {showImage && (
-          <div>
+          <div className="flex justify-start items-center">
             <Image
               src={image}
               alt="image"
@@ -46,11 +47,15 @@ export default function CardRoundedShadowStory({
           {hasTitle && (
             <p className={` text-2xl    ${flexColumns ? '' : 'ml-5 bold'} `}>{titleText}</p>
           )}
-          {hasText && <p className="text-sm ml-5">{text}</p>}
+          {hasText && <p className={`${!flexColumns && 'ml-5'}  text-sm `}>{text}</p>}
           {hasLink && (
             <div>
               <Link href={link}>
-                <a className="inline   underline text-blue-50 text-sm ml-5">{linkText}</a>
+                <a
+                  className={`inline   underline text-blue-50 text-sm  ${!flexColumns && 'ml-5'}  `}
+                >
+                  {linkText}
+                </a>
               </Link>
             </div>
           )}
@@ -63,7 +68,7 @@ export default function CardRoundedShadowStory({
 }
 
 CardRoundedShadowStory.propTypes = {
-  width: PropTypes.oneOf(['80', '1/2', 'auto']),
+  width: PropTypes.oneOf(['64', '80', '1/2', 'auto']),
   flexColumns: PropTypes.bool,
   showImage: PropTypes.bool,
   image: PropTypes.string,
