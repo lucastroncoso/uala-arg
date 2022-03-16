@@ -46,11 +46,11 @@ export default function CardRoundedShadowStory({
           {hasTitle && (
             <p className={` text-2xl    ${flexColumns ? '' : 'ml-5 bold'} `}>{titleText}</p>
           )}
-          {hasText && <p className="text-sm">{text}</p>}
+          {hasText && <p className="text-sm ml-5">{text}</p>}
           {hasLink && (
             <div>
               <Link href={link}>
-                <a className="inline   underline text-blue-50 text-sm">{linkText}</a>
+                <a className="inline   underline text-blue-50 text-sm ml-5">{linkText}</a>
               </Link>
             </div>
           )}
