@@ -97,7 +97,8 @@ export default function Details({ data }) {
                                 "company-uid": "54.00B",
                                 "company-name": "uala",
                                 "color": "278fe6",
-                                "font-size": "13px"
+                                "font-size": "13px",
+                                "social-whatsapp": false,
                             });
                         };
             `}}>
