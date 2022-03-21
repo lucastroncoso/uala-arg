@@ -97,7 +97,8 @@ export default function Details({ data }) {
                                 "company-uid": "54.00B",
                                 "company-name": "uala",
                                 "color": "278fe6",
-                                "font-size": "13px"
+                                "font-size": "13px",
+                                "social-whatsapp": false,
                             });
                         };
             `}}>
@@ -117,7 +118,7 @@ export default function Details({ data }) {
                             <div className="title-3 mt-8">Requerimientos</div>
                             <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[1].value }}></div>
                             <script type="comeet-applyform" data-position-uid={data.uid}></script>
-                            {/* <script type="comeet-social"></script> */}
+                            <script type="comeet-social"></script>
                         </div>}
 
 
