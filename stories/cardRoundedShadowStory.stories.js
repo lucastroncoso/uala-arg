@@ -2,7 +2,7 @@ import CardRoundedShadowStory from '../components/cardRoundedShadowStory';
 
 export default {
   component: CardRoundedShadowStory,
-  title: 'CardRoundedShadowStory',
+  title: 'Cards/CardRoundedShadowStory',
 };
 
 const Template = (args) => <CardRoundedShadowStory {...args} />;

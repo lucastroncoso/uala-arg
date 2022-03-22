@@ -2,7 +2,7 @@ import MCtaCard from '../components/home/M-CtaCard/MCtaCard.js';
 
 export default {
   component: MCtaCard,
-  title: 'Card3ColConLink',
+  title: 'Cards/Card3ColConLink',
 };
 
 const Template = (args) => <MCtaCard {...args} />;
