@@ -17,27 +17,25 @@ export default function Nosotros(props) {
           <p>Pedi tu préstamo desde la App de Ualá.</p>
           <p>
             <span className="font-semibold block">Canales de atención de quejas y/o reclamos:</span>
-            Chat online disponible en la aplicación para teléfonos móviles Ualá de lunes a viernes
-            de 09:00 a 21:00 horas y sábados de 09:00 a 18:00hs. Correo electrónico a
-            hola@uala.com.ar
+            Chat online disponible en la aplicación para teléfonos móviles Ualá de lunes a viernes de 09:00 a 21:00 horas y sábados de 09:00 a 18:00hs.
+            <br/>Correo electrónico a hola@uala.com.ar
           </p>
           <p>
             <span className="font-semibold block">
-              Responsables de Atención al Usuario de Servicios Financieros:
+            Responsables de Atención al Usuario de Servicios Financieros:
             </span>
-            Titular: Rodrigo Fernando Morales. Suplente: Juan Ignacio Barreiro. Dirección: Nicaragua
-            4677, C1414BVG, Ciudad Autónoma de Buenos Aires, Argentina. Teléfono: (011) 5263-3563
-            (De lunes a viernes de 09:00 a 18:00 horas). Correo electrónico de atención:{' '}
+            Titular: Rodrigo Fernando Morales
+            <br/>Suplente: Cynthia Alejandra Aiello
+            <br/>Dirección: Nicaragua 4677, C1414BVG, Ciudad Autónoma de Buenos Aires, Argentina. 
+            <br/>Teléfono: (011) 5263-3563 (De lunes a viernes de 09:00 a 18:00 horas). 
+            <br/>Correo electrónico de atención: 
             <a target="_blank" className="link" href="mailto:proteccionusuarios@uala.com.ar">
               proteccionusuarios@uala.com.ar
             </a>
             .
           </p>
           <p className="break-words">
-            Las quejas y/o reclamos de los usuarios deberán resolverse definitivamente en un plazo
-            máximo de 10 días hábiles. La falta de respuesta o disconformidad en la resolución
-            podrán ser informados al BCRA. Podés contactar a su área de Protección al Usuario de
-            Servicios Financieros ingresando a{' '}
+          Las quejas y/o reclamos de los usuarios deberán resolverse definitivamente en un plazo máximo de 10 días hábiles. La falta de respuesta o disconformidad en la resolución podrán ser informados al BCRA. Podés contactar a su área de Protección al Usuario de Servicios Financieros ingresando a 
             <a
               target="_blank"
               className="link"
