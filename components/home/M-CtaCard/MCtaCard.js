@@ -4,11 +4,15 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import ACardIcon from '../A-CardIcon/ACardIcon';
 
-const MCtaCard = ({ content, customClass }) => {
+const MCtaCard = ({ content, customClass, width }) => {
   return (
     <a
       data-animation="cta-cards"
-      className={classNames(styles.card, customClass && [...customClass])}
+      className={` ${classNames(
+        styles.card,
+        { 'w-80': width },
+        customClass && [...customClass],
+      )}  `}
       href={content.url}
     >
       <div className={styles.iconWrapper}>
