@@ -21,6 +21,7 @@ export default function Pagos(props) {
                 <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/transferencias" />
                 <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/transferencias" />
                 <title>Ualá - Transferencias: enviá y recibí plata gratis</title>
+                <meta name="description" content="Transferí y recibí plata de tod@s desde cualquier cuenta bancaria y/o virtual, gratis y en el acto." />
             </Head>
             <Layout nav footer>
                 <Hero

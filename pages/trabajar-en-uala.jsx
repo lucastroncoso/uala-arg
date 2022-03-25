@@ -18,6 +18,7 @@ export default function Carrers(props) {
     <>
       <Head>
         <title>Ualá - Beneficios de trabajar en Ualá</title>
+        <meta name="description" content="¿Querés trabajar en Ualá? Conocé todos los beneficios que ofrecemos, y las razones que nos hacen un gran lugar para trabajar." />
       </Head>
       <Layout nav footer>
         <Container>
@@ -43,6 +44,7 @@ export default function Carrers(props) {
                   mejoramos todos los días con gente como vos. Trabajamos en un ambiente dinámico en
                   pleno crecimiento donde todos podemos intercambiar, proponer e impulsar ideas para
                   que sucedan. Por eso, #SomosUalá
+
                 </div>
               </div>
             </div>
