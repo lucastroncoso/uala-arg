@@ -44,12 +44,14 @@ const CardsWithVideoSection = ({ content }) => {
       0,
     );
 
-    gsap.timeline({ scrollTrigger: { trigger: ctaCards, start: '0% 80%' } }).fromTo(
-      ctaCards,
-      { y: 100, transformOrigin: '50% 20%', opacity: 0 },
-      { duration: 0.55, y: 0, stagger: 0.2, ease: 'power4.inOut', opacity: 1 },
-      '-=0.5',
-    );
+    gsap
+      .timeline({ scrollTrigger: { trigger: ctaCards, start: '0% 80%' } })
+      .fromTo(
+        ctaCards,
+        { y: 100, transformOrigin: '50% 20%', opacity: 0 },
+        { duration: 0.55, y: 0, stagger: 0.2, ease: 'power4.inOut', opacity: 1 },
+        '-=0.5',
+      );
 
     backgroundCards.forEach((card, index) => {
       gsap
@@ -59,7 +61,7 @@ const CardsWithVideoSection = ({ content }) => {
           { x: index % 2 ? 150 : -150, transformOrigin: '50% 20%', opacity: 0 },
           { duration: 0.65, x: 0, ease: 'Power4.InOut', opacity: 1 },
         );
-    })
+    });
   }, []);
 
   return (
@@ -75,20 +77,24 @@ const CardsWithVideoSection = ({ content }) => {
           dangerouslySetInnerHTML={{ __html: content.title }}
         />
 
-        {content.cardsGrid &&
+        {content.cardsGrid && (
           <div className={styles.cardsGrid}>
             {content.cardsGrid.map((card, cardIndex) => {
-              return <a className={styles.card} href={card.url}
-                key={`card-${cardIndex}`} data-animation="background-card"
-              >
-                <img src={card.image.src}
-                  alt={card.image.alt} className={styles.backgroundImg} />
-                <h3 className={styles.title}>{card.title}</h3>
-                <span className={styles.ctaCopy}>{card.ctaCopy}</span>
-              </a>
+              return (
+                <a
+                  className={styles.card}
+                  href={card.url}
+                  key={`card-${cardIndex}`}
+                  data-animation="background-card"
+                >
+                  <img src={card.image.src} alt={card.image.alt} className={styles.backgroundImg} />
+                  <h3 className={styles.title}>{card.title}</h3>
+                  <span className={styles.ctaCopy}>{card.ctaCopy}</span>
+                </a>
+              );
             })}
           </div>
-        }
+        )}
 
         {isMobile ? (
           <MEmblaCarousel

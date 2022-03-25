@@ -1,8 +1,63 @@
 import Layout from '../components/layout';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import useScrollTrigger from '../components/home/utils/hooks/useScrollTrigger';
+import gsap from 'gsap';
 
 export default function AulaUala(props) {
+  const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
+
+  useEffect(() => {
+    if (!sectionRef || !sectionRef.current) return;
+
+    const videoButton = childrenSelector('[data-animation="video-button"]');
+    const videoElement = childrenSelector('[data-animation="video-element"]');
+    const ctaCards = childrenSelector('[data-animation="cta-cards"]');
+    const backgroundCards = childrenSelector('[data-animation="background-card"]');
+    const title = childrenSelector('[data-animation="title"]');
+    const titleTl = gsap.timeline({ paused: true });
+
+    const tl = createTL({
+      scrub: 1,
+      onEnter: () => titleTl.play(),
+      start: '0% 70%',
+    });
+
+    tl.fromTo(videoElement, { scale: 1 }, { scale: 1.2 }, 0).fromTo(
+      videoButton,
+      { scale: 0.8 },
+      { scale: 1 },
+      0,
+    );
+
+    titleTl.fromTo(
+      title,
+      { scaleY: 0, transformOrigin: '0% 100%' },
+      { scaleY: 1, duration: 0.3, ease: 'power4.out' },
+      0,
+    );
+
+    gsap
+      .timeline({ scrollTrigger: { trigger: ctaCards, start: '0% 80%' } })
+      .fromTo(
+        ctaCards,
+        { y: 100, transformOrigin: '50% 20%', opacity: 0 },
+        { duration: 0.55, y: 0, stagger: 0.2, ease: 'power4.inOut', opacity: 1 },
+        '-=0.5',
+      );
+    console.log(backgroundCards);
+
+    backgroundCards.forEach((card, index) => {
+      gsap
+        .timeline({ scrollTrigger: { trigger: card, start: '0% 100%' } })
+        .fromTo(
+          card,
+          { x: index % 2 ? 150 : -150, transformOrigin: '50% 20%', opacity: 0 },
+          { duration: 0.65, x: 0, ease: 'Power4.InOut', opacity: 1 },
+        );
+    });
+  }, []);
+
   const [button, setButton] = useState({
     text: 'Subscribirme',
     enabled: false,
@@ -46,7 +101,7 @@ export default function AulaUala(props) {
         <title>Ualá</title>
       </Head>
       <Layout nav footer>
-        <div>
+        <div ref={sectionRef}>
           <div className="grid grid-cols-12 w-screen overflow-hidden relative z-0 md:mt-12">
             {/* <!-- HEADER --> */}
             <div
@@ -75,7 +130,7 @@ export default function AulaUala(props) {
             </div>
 
             {/* <!-- CARDS --> */}
-            <div className="col-span-12 grid grid-cols-12 mt-8 lg:px-12">
+            <div className="col-span-12 grid grid-cols-12 mt-8 lg:px-12 mt-60">
               <div className="col-span-10 col-start-2 mt-12 title-2 text-center">
                 El lado fácil de tus finanzas
               </div>
@@ -84,7 +139,8 @@ export default function AulaUala(props) {
                 <a
                   target="_blank"
                   href="https://blog.uala.com.ar/"
-                  className="rounded-xl grid grid-cols-12 shadow-2xl border border-gray-100 lg:p-12 p-8 lg:pr-18 px-4 col-span-2 lg:col-span-1 transform hover:scale-105 transition duration-300 "
+                  className="rounded-xl grid grid-cols-12 shadow-2xl border border-gray-100 lg:p-12 p-8 lg:pr-18 px-4 col-span-2 lg:col-span-1 transform transition duration-300 "
+                  data-animation="background-card"
                 >
                   <div className="lg:col-span-4 col-span-12 w-full">
                     <img
