@@ -46,7 +46,7 @@ export default function Tarjeta(props) {
                 <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/tarjeta" />
                 <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/compras" />
                 <title>Ualá - Tarjeta prepaga gratis: pedí tu tarjeta</title>
-                <meta name="description" content="Tarjeta Prepaga Ualá Mastercard: Una tarjeta gratis para tod@s y para todo. Comprá en cualquier parte del mundo." />
+                <meta name="description" content="Accedé a una Tarjeta Prepaga Ualá Mastercard: Una tarjeta gratis para tod@s y para todo. Comprá en cualquier parte del mundo." />
             </Head>
             <Layout nav footer>
                 <Hero

@@ -25,7 +25,7 @@ export default function MainPageAr() {
     <>
       <Head>
         <title>Ualá - El Lado Bueno de tu Plata</title>
-        <meta name="description" content="El Lado Bueno de tu Plata" />
+        <meta name="description" content="Una App y una Tarjeta Prepaga Mastercard Internacional para vos. Podés comprar, vender, invertir, pagar servicios, acceder a créditos y Mucho Más." />
         <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/" />
         <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/" />
         <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/" />

@@ -70,6 +70,7 @@ export default function BusquedasLaborales({ data }) {
         <>
             <Head>
                 <title>Ualá - Trabajá con nosotros: Búsquedas laborales</title>
+                <meta name="description" content="¿Querés trabajar en Ualá? Entrá y enterate de todas las búsquedas laborales que se encuentran abiertas en este momento." />
             </Head>
             <Layout nav footer banner>
 

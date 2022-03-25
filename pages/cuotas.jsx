@@ -43,6 +43,7 @@ export default function Cuotas(props) {
         <>
             <Head>
                 <title>Ualá - Cuotas: créditos pensados para vos</title>
+                <meta name="description" content="¡Recuperá la plata de tus consumos! Pasá a cuotas un consumo que ya hiciste, y te devolvemos la plata en el momento para que sigas disfrutando." />
             </Head>
             <Layout nav footer>
                 <Hero
