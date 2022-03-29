@@ -99,6 +99,8 @@ export default function Details({ data }) {
                                 "color": "278fe6",
                                 "font-size": "13px",
                                 "social-whatsapp": false,
+                                "css-url": "https://www.uala.com.ar/assets/css/comeet.css",
+                                "css-cache": false
                             });
                         };
             `}}>
