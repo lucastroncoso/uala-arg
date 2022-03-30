@@ -37,7 +37,7 @@ export default function ApplePay(props) {
     title: '¿Cómo pagar con Apple Pay?',
     stepsItems: [
       {
-        copy: 'Al momento de pagar, hace click dos veces en el botón lateral de tu iPhone. ',
+        copy: 'Al momento de pagar, hacé click dos veces en el botón lateral de tu iPhone. ',
         icon: 'pasos-applepay-1',
       },
       {
@@ -118,7 +118,12 @@ export default function ApplePay(props) {
             />
           </a>
         </Container>
-        <StepsSection applePay content={stepsSection} />
+        <div className="container mx-auto grid grid-cols-12">
+          <div className="col-span-10 col-start-2 -mx-9">
+            <StepsSection applePay content={stepsSection} />
+          </div>
+        </div>
+
         <FaqsInSections
           section="applepay"
           title="Preguntas frecuentes sobre Apple Pay"
