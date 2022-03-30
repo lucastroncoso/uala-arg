@@ -120,7 +120,7 @@ export default function ApplePay(props) {
         </Container>
         <StepsSection applePay content={stepsSection} />
         <FaqsInSections
-          section="prestamos"
+          section="applepay"
           title="Preguntas frecuentes sobre Apple Pay"
           response={props.response}
         />
