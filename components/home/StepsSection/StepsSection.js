@@ -13,13 +13,16 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
-const StepsCard = ({ content }) => {
+const StepsCard = ({ content, applePay }) => {
   return (
     <>
       <li className={styles.stepsCard}>
         <span className={styles.cardDot} />
         <div className={styles.cardWrapper} data-animation="list-item">
-          <ACardIcon iconName={content.icon} className={styles.icon} />
+          <ACardIcon
+            iconName={content.icon}
+            className={applePay ? styles.applePayIcon : styles.icon}
+          />
           <h5 className={styles.number}>0{content.index + 1}.</h5>
           <p>{content.copy}</p>
         </div>
@@ -28,7 +31,7 @@ const StepsCard = ({ content }) => {
   );
 };
 
-const StepsSection = ({ content }) => {
+const StepsSection = ({ content, applePay }) => {
   const isMobile = useIsMobile(768);
   const [emblaRef] = useEmblaCarousel();
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
@@ -75,7 +78,11 @@ const StepsSection = ({ content }) => {
         <div className={styles.carouselContainer} ref={isMobile ? emblaRef : null}>
           <ol className={styles.listWrapper}>
             {content.stepsItems.map((item, index) => (
-              <StepsCard content={{ ...item, index }} key={`step-card-${index}`} />
+              <StepsCard
+                applePay={applePay}
+                content={{ ...item, index }}
+                key={`step-card-${index}`}
+              />
             ))}
           </ol>
           <span data-animation="progress-line" className={styles.progress} />
