@@ -9,10 +9,33 @@ import VideoTitle from '../components/videoTitle';
 import Head from 'next/head';
 import Image from 'next/image';
 import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
+import useScrollTrigger from '../components/home/utils/hooks/useScrollTrigger';
+import { useEffect } from 'react';
 
 export default function Extracciones(props) {
+  const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
+
+  useEffect(() => {
+    if (!sectionRef || !sectionRef.current) return;
+
+    const videoButton = childrenSelector('[data-animation="video-button"]');
+    const videoElement = childrenSelector('[data-animation="video-element"]');
+
+    const tl = createTL({
+      scrub: 1,
+      start: '0% 70%',
+    });
+
+    tl.fromTo(videoElement, { scale: 1 }, { scale: 1.2 }, 0).fromTo(
+      videoButton,
+      { scale: 0.8 },
+      { scale: 1 },
+      0,
+    );
+  }, []);
+
   return (
-    <>
+    <div ref={sectionRef}>
       <Head>
         <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/extracciones" />
         <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/extracciones" />
@@ -114,6 +137,6 @@ export default function Extracciones(props) {
           </Container>
         </div>
       </Layout>
-    </>
+    </div>
   );
 }
