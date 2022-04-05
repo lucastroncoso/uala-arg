@@ -11,6 +11,7 @@ import Image from 'next/image';
 import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
 import useScrollTrigger from '../components/home/utils/hooks/useScrollTrigger';
 import { useEffect } from 'react';
+import gsap from 'gsap';
 
 export default function Pagos(props) {
   const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
@@ -20,6 +21,7 @@ export default function Pagos(props) {
 
     const videoButton = childrenSelector('[data-animation="video-button"]');
     const videoElement = childrenSelector('[data-animation="video-element"]');
+    const ctaCards = childrenSelector('[data-animation="cta-cards"]');
 
     const tl = createTL({
       scrub: 1,
@@ -32,6 +34,15 @@ export default function Pagos(props) {
       { scale: 1 },
       0,
     );
+
+    gsap
+      .timeline({ scrollTrigger: { trigger: ctaCards, start: '0% 80%' } })
+      .fromTo(
+        ctaCards,
+        { y: 100, transformOrigin: '50% 20%', opacity: 0 },
+        { duration: 0.55, y: 0, stagger: 0.2, ease: 'power4.inOut', opacity: 1 },
+        '-=0.5',
+      );
   }, []);
 
   return (
