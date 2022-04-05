@@ -109,7 +109,7 @@ export default function Pagos(props) {
           />
         </CardSection>
         <Container className="md:mt-12 mt-10">
-          <h2 className="title-2 text-center mb-6">¿Cómo pagar tus factuas?</h2>
+          <h2 className="title-2 text-center mb-6">¿Cómo pagar tus facturas?</h2>
           <p className="text-center subtitle-2 mx-8 md:mx-20">
             Ingresá a la app y desde la sección "Pagos" vas a poder elegir entre más de 6 mil
             servicios diponibles. Mirá qué fácil es en el siguiente tutorial.

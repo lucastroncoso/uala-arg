@@ -53,6 +53,7 @@ export default function Extracciones(props) {
         <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/retiros" />
         <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/extracciones" />
         <title>Ualá - Extracciones: Sacá plata en todo el país</title>
+        <meta name="description" content="Extraé plata desde cualquier lugar del país. Podés extraer efectivo en cualquier sucursal de Rapipago o en cajeros de la red Link o Banelco." />
       </Head>
       <Layout nav footer>
         <Hero

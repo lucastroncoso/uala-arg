@@ -64,15 +64,17 @@ export default function AulaUala(props) {
         Email: e.target.mail.value,
         Created: new Date().toLocaleDateString('en-GB'),
       }),
-    }).then((response) => {
-      if (response.status == 302) {
-        setButton({ text: '¡Listo!', enabled: false, color: 'bg-blue-250' });
-        setMailInputEnabled(true);
-      } else {
-        setButton({ text: 'Hubo un error', enabled: false, color: 'bg-gray-300' });
-        setMailInputEnabled(true);
-      }
-    });
+    })
+      .then((response) => {
+        if (response.status == 302) {
+          setButton({ text: '¡Listo!', enabled: false, color: 'bg-blue-250' });
+          setMailInputEnabled(true);
+        } else {
+          setButton({ text: 'Hubo un error', enabled: false, color: 'bg-gray-300' });
+          setMailInputEnabled(true);
+        }
+      })
+      .catch((err) => console.log('err:', err));
   };
 
   return (
@@ -273,7 +275,7 @@ export default function AulaUala(props) {
                     />
                   </div>
                 </div>
-                <div className="flex justify-center items-center col-span-2 lg:col-span-1">
+                <div className="flex justify-center items-center col-span-2 lg:col-span-1 z-10">
                   <div className="lg:pr-8 lg:pl-12 w-full">
                     <h2 className="text-3xl font-medium  text-gray-250 mb-6 text-center lg:text-left">
                       ¿Querés enterarte de las
@@ -361,7 +363,7 @@ export default function AulaUala(props) {
               <img
                 src="/assets/images/aula/BG1.png"
                 alt=""
-                className="absolute hidden md:flex -bottom-20 -right-80 w-9/12"
+                className="absolute z-0  hidden md:flex -bottom-20 -right-80 w-9/12"
               />
               <img
                 src="/assets/images/bg/Background-arrows.png"

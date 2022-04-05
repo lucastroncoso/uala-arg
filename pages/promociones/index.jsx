@@ -314,6 +314,10 @@ export default function Promociones(props) {
         <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/promociones" />
         <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/promociones" />
         <title>Ualá - Promociones: beneficios inigualables para vos</title>
+        <meta
+          name="description"
+          content="¡Sumate vos también! Con Ualá, podés acceder a increíbles promociones y beneficios todas las semanas."
+        />
       </Head>
       <Layout nav footer banner>
         <div className="mt-16 md:mt-22 md:pt-2 lg:pt-4 w-full gap-x-4 overflow-hidden">

@@ -66,7 +66,7 @@ export default function Prestamos(props) {
         <title>Ualá - Préstamos online para vos</title>
         <meta
           name="description"
-          content="Pedí tu préstamo online con Ualá: podés pasar tus consumos a cuotas o pedir un préstamo online desde nuestra app."
+          content="¡Pedí un préstamo online desde la app! Fácil, rápido y 100% online. Lo devolvés en cuotas fijas en pesos."
         />
       </Head>
       <Layout nav footer>

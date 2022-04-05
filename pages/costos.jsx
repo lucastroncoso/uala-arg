@@ -39,6 +39,7 @@ export default function Costos2(props) {
         <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/costos" />
         <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/costos" />
         <title>Ualá - Costos: Sin letra chica ni costos ocultos</title>
+        <meta name="description" content="Disfrutá de tu plata sin costos ocultos y sin letra chica. Entrá y enterate de cuales son las operaciones que tienen costos y cuales no." />
       </Head>
       <Layout nav footer>
         <div className="md:mt-12 bg-blue-costos">

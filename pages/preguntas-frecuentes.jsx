@@ -46,6 +46,7 @@ export default function PreguntasFrecuentes({ response }) {
                 <link rel="alternate" hreflang="es-co" href="https://www.uala.com.co/faqs" />
                 <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/preguntas-frecuentes" />
                 <title>Ualá - Preguntas frecuentes y respuestas</title>
+                <meta name="description" content="¿Tenés alguna duda? Sobre Ualá. Usuario y cuenta. La tarjeta. Cargar y retirar plata. Créditos. Inversiones. Pagos y Recargas. Transferencias." />
             </Head>
             <Layout nav footer>
 

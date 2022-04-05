@@ -55,6 +55,10 @@ export default function Inversiones(props) {
     <div ref={sectionRef}>
       <Head>
         <title>Ualá - Inversiones: invertí fácil y despertá tu plata</title>
+        <meta
+          name="description"
+          content="Invertí tu plata desde la app Ualá, y liberala cuando quieras. Desde $1 y sin límite de inversión. Conocé los resultados de tu inversión todos los dias"
+        />
       </Head>
       <Layout nav footer>
         <Hero

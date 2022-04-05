@@ -68,7 +68,7 @@ export default function Tarjeta(props) {
           <title>Ualá - Tarjeta prepaga gratis: pedí tu tarjeta</title>
           <meta
             name="description"
-            content="Tarjeta Prepaga Ualá Mastercard: Una tarjeta gratis para tod@s y para todo. Comprá en cualquier parte del mundo."
+            content="Accedé a una Tarjeta Prepaga Ualá Mastercard: Una tarjeta gratis para tod@s y para todo. Comprá en cualquier parte del mundo."
           />
         </Head>
         <Layout nav footer>

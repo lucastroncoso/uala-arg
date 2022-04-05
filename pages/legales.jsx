@@ -8,6 +8,7 @@ export default function Legales(props) {
         <>
             <Head>
                 <title>Ualá - Legales: información regulatoria</title>
+                <meta name="description" content="Más información acerca de nuestros legales e información regulatoria" />
             </Head>
             
             <Layout nav footer>
