@@ -100,7 +100,12 @@ module.exports = {
         source: '/reporte-sostenibilidad',
         destination: '/assets/legales/reporte-sostenibilidad.pdf',
         permanent: true,
-      }
-    ]
-  }
+      },
+      {
+        source: '/BasesConcursoUalaGamergy',
+        destination: '/assets/legales/Uala_Gamergy_terminos-y-condiciones.pdf',
+        permanent: true,
+      },
+    ];
+  },
 };
