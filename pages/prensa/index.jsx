@@ -42,11 +42,21 @@ export default function Prensa(props) {
     if (!sectionRef || !sectionRef.current) return;
 
     const ctaCards = childrenSelector('[data-animation="cta-cards"]');
+    const ctaCards2 = childrenSelector('[data-animation="cta-cards2"]');
 
     gsap
       .timeline({ scrollTrigger: { trigger: ctaCards, start: '0% 80%' } })
       .fromTo(
         ctaCards,
+        { y: 100, transformOrigin: '50% 20%', opacity: 0 },
+        { duration: 0.55, y: 0, stagger: 0.2, ease: 'power4.inOut', opacity: 1 },
+        '-=0.5',
+      );
+
+    gsap
+      .timeline({ scrollTrigger: { trigger: ctaCards2, start: '0% 80%' } })
+      .fromTo(
+        ctaCards2,
         { y: 100, transformOrigin: '50% 20%', opacity: 0 },
         { duration: 0.55, y: 0, stagger: 0.2, ease: 'power4.inOut', opacity: 1 },
         '-=0.5',
@@ -248,7 +258,7 @@ export default function Prensa(props) {
             <div className="grid lg:grid-cols-3 gap-5 mt-8">
               {stories.map((story) => (
                 <div
-                  data-animation="cta-cards"
+                  data-animation="cta-cards2"
                   key={story.link}
                   className="shadow-md rounded-xl p-6 border border-gray-100 flex flex-col"
                 >
