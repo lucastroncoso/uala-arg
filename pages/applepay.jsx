@@ -83,11 +83,11 @@ export default function ApplePay(props) {
           title="Pagá acercando tu iPhone o Apple Watch"
           subtitle="Vas a poder usar Apple Pay en locales con el símbolo de contactless o en sitios web con el logo de Apple Pay."
           img={
-            <Image
-              src="/assets/images/applePay/Imágenes/image_applepay.jpg"
-              width={1389}
-              height={1134}
-            />
+     <Image 
+              src="/assets/images/applePay/Imágenes/image_applepay.png"
+              width={462}
+              height={377.18}
+            />    
           }
         />
 
@@ -97,22 +97,22 @@ export default function ApplePay(props) {
           </h2>
           <a
             className="hidden md:block"
-            href="https://www.youtube.com/watch?v=6Bv0IdBFdDc"
+            href="https://youtu.be/gCPKdcMxmZI"
             target="_blank"
           >
             <PlayVideoButton
-              youtubeId="6Bv0IdBFdDc"
+              youtubeId="gCPKdcMxmZI"
               previewVideoSrc="/assets/video/thumbnail-applepay-desktop.mp4"
               isPreviewVideoScaled={false}
             />
           </a>
           <a
             className="block md:hidden"
-            href="https://www.youtube.com/watch?v=6Bv0IdBFdDc"
+            href="https://youtu.be/gCPKdcMxmZI"
             target="_blank"
           >
             <PlayVideoButton
-              youtubeId="6Bv0IdBFdDc"
+              youtubeId="gCPKdcMxmZI"
               previewVideoSrc="/assets/video/thumbnail-applepay-mobile.mp4"
               isPreviewVideoScaled={false}
             />
