@@ -57,6 +57,17 @@ h3.title {
   }
 }
 
+.applePayIcon {
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  @include respond-to(minWidth768) {
+    margin-left: 40px;
+  }
+}
+
 .carouselContainer {
   position: relative;
 }
