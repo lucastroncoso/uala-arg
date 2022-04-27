@@ -29,7 +29,7 @@ export default function Seguridad(props) {
                     section="Contacto"
                     title="¿Necesitás ponerte en contacto con nosotr@s?"
                     subtitle="Te mostramos nuestros medios de contacto"
-                    img={<Image src="/assets/images/contacto/contacto.png" width={1626} height={1251} />}
+                    img={<Image src="/assets/images/contacto/contacto.webp" width={1626} height={1251} />}
                 />
                 <Container className="my-24">
                     <div className="col-span-10 col-start-2 ">

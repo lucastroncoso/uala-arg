@@ -40,7 +40,7 @@ export default function Nosotros(props) {
                     title="Así empezó todo"
                     subtitle="En 2015 empezamos a pensar en cómo revolucionar el sistema financiero. Conocé nuestra historia."
                     href="https://www.youtube.com/watch?v=_noKYrhsb3I"
-                    imgDesktop={<Image src="/assets/images/nosotros/thumbnail_acerca_Uala.png" width={2448} height={1250} />}
+                    imgDesktop={<Image src="/assets/images/nosotros/thumbnail_acerca_Uala.webp" width={2448} height={1250} />}
                 />
 
                 <Container className="py-12 md:bg-none  bg-gradient-to-b  from-blue-350 to-white">
