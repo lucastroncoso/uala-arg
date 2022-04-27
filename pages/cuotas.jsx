@@ -74,7 +74,7 @@ export default function Cuotas(props) {
                     bg="bg-blue-degrade"
                     title="Podés tener tu plata de vuelta"
                     subtitle="Pasá a cuotas un pago que ya hiciste y te devolvemos la plata en el momento."
-                    img={<Image src="/assets/images/cuotas/cuotas-otorgadas 1.png" width={1389} height={1134} />}
+                    img={<Image src="/assets/images/cuotas/cuotas-otorgadas 1.webp" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Podés pasar a cuotas compras, recargas o pagos de facturas."
                             img="/assets/images/prestamos/icono_prestamos.png" />,
@@ -104,13 +104,13 @@ export default function Cuotas(props) {
                         reverse
                         title="Servicios en cuotas"
                         subtitle="Podés pagar un servicio habilitado en cuotas con tu línea de crédito sin necesidad de tener plata en la cuenta de Ualá."
-                        img={<Image src="/assets/images/cuotas/cuotas-servicios 1.png" width={1389} height={1134} />}
+                        img={<Image src="/assets/images/cuotas/cuotas-servicios 1.webp" width={1389} height={1134} />}
 
                     />
                 </div>
                 <ImageItemsSection
                     title="Podés tener el control de los pagos"
-                    img={<Image src="/assets/images/prestamos/Mask Group (24).png" width={1389} height={1134} />}
+                    img={<Image src="/assets/images/prestamos/Mask Group (24).webp" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Elegí en cuántas cuotas querés pagarlo."
                             img="/assets/images/prestamos/icono-cuotas.png" />,

@@ -74,7 +74,7 @@ export default function Prestamos(props) {
                     pushImg="/assets/images/prestamos/push.png"
                     title="Podés usarlo como quieras"
                     subtitle="Pedí tu préstamo online desde la app y usalo para tu emprendimiento, un viaje, tu hogar o para lo que quieras."
-                    img={<Image src="/assets/images/prestamos/Mask Group (25).png" width={1389} height={1134} />}
+                    img={<Image src="/assets/images/prestamos/Mask Group (25).webp" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Pedí hasta [b]$500.000[/b] en 24 cuotas fijas."
                             img="/assets/images/prestamos/icono_prestamos.png" />,
@@ -102,7 +102,7 @@ export default function Prestamos(props) {
                 </Container>
                 <ImageItemsSection
                     title="Podés tener el control de los pagos"
-                    img={<Image src="/assets/images/prestamos/Mask Group (24).png" width={1389} height={1134} />}
+                    img={<Image src="/assets/images/prestamos/Mask Group (24).webp" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Elegí en cuántas cuotas querés pagarlo."
                             img="/assets/images/prestamos/icono-cuotas.png" />,
