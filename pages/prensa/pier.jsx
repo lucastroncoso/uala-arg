@@ -41,7 +41,7 @@ export default function PrensaPier(props) {
                         </div>
                         <div className="w-5/12 flex flex-col items-end justify-center">
                             <div className="w-full h-auto rounded-2xl overflow-hidden">
-                            <Image src="/assets/images/prensa/imagen_pierpaolo_barbieri.png" width={926} height={756} layout="responsive" />
+                            <Image src="/assets/images/prensa/imagen_pierpaolo_barbieri.webp" width={926} height={756} layout="responsive" />
                             </div>
                         </div>
                     </div>

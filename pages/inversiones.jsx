@@ -51,7 +51,7 @@ export default function Inversiones(props) {
                     bg="bg-blue-degrade"
 
                     pushImg="/assets/images/inversiones/push.png"
-                    img={<Image src="/assets/images/inversiones/inversiones-invertir 1.png" width={1389} height={1134} />}
+                    img={<Image src="/assets/images/inversiones/inversiones-invertir 1.webp" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Invertí y liberá tu plata al instante
                         con un solo click."
@@ -80,7 +80,7 @@ export default function Inversiones(props) {
                 </Container>
                 <ImageItemsSection
                     title="Tené el control de tu plata"
-                    img={<Image src="/assets/images/inversiones/inversiones-liberar 1.png" width={1389} height={1134} />}
+                    img={<Image src="/assets/images/inversiones/inversiones-liberar 1.webp" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Podés liberar tu plata en el acto. A cualquier hora y en cualquier lugar."
                             img="/assets/images/inversiones/icono-liberar-plata.png" />,
