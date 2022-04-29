@@ -16,7 +16,7 @@ export default function CarrersHero(props) {
                         <div className="md:w-5/6 text-base md:text-lg leading-8 text-gray-150">{props.subtitle}</div>
                     </div>
                     <div className="w-full mt-4">
-                        <div className="md:w-6/6 text-base md:text-lg leading-8 text-gray-150">{props.subtitleFull}</div>
+                        <div   dangerouslySetInnerHTML={{ __html: props.subtitleFull }}className="md:w-6/6 text-base md:text-lg leading-8 text-gray-150"></div>
                     </div>
                 </div>
                 <div className={props.reverse ? "flex items-center justify-center md:order-2 order-2" : "flex items-center justify-center md:order-none order-2"} >
