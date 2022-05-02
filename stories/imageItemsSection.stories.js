@@ -1,64 +1,6 @@
 import ImageItemsSection from '../components/imageItemsSection';
 import CardItem from '../components/cardItem';
-import { fetchContent } from '../utils/contentful';
 
-
-export async function getStaticProps() {
-  const response = await fetchContent(`
-  {hero(id:"5heqceHl93l4CyAQBi4soT"){
-      title,
-        image{
-          url
-        },
-        subtitle,
-        sectionText
-    },
-navbar(id:"54t2hNBpg49j62QEf8zNa7"){
-      content
-    },
-    footer(id:"5Sc89LH5uef92QnulVQTBc"){
-      content
-    },
-      moduloCollection(where:{
-      section:{name:"HomeUalabisMx"}}, 
-      order:sys_publishedAt_ASC){
-      items{
-        title,
-        subtitle,
-        image{
-          url,
-          height,
-          width
-        },
-        image2{
-          url,
-          height,
-          width
-        },
-        cta
-      }
-      },
-      cardCollection(where:{
-      section:{name:"Nosotr@sCorp"}}, 
-      order:sys_publishedAt_ASC){
-        items{
-        title,
-        subtitle,
-        image{
-          url,
-          height,
-          width
-        }
-      }
-      }
-  }
-  `);
-
-  return {
-    props: { response },
-    revalidate: 10
-  }
-}
 
 export default {
     component: ImageItemsSection,
