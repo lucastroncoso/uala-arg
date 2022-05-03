@@ -116,6 +116,11 @@ module.exports = {
         destination: '/assets/legales/Preguntas Frecuentes Gaming Pass.pdf',
         permanent: true,
       },
+      {
+        source: '/TyCConcursoEmpretienda',
+        destination: '/assets/legales/Terminos-y-Condiciones-Concurso-Membresia-empretienda.pdf',
+        permanent: true,
+      },
     ];
   },
 };
