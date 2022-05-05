@@ -9,8 +9,8 @@ import Link from 'next/link';
 
 export const getStaticPaths = async () => {
   const response = await fetchContent(`
-    {
-      argentinaPromotionCollection(limit: 100) {
+   {
+      argentinaPromotionCollection(where: {gamingpass: false}limit: 100) {
           items {
             slug
           }
