@@ -18,11 +18,13 @@ import Slider from "../../components/slider/slider"
 export async function getStaticProps() {
     const response_promos = await fetchContent(`
  {
-        argentinaPromotionCollection (order: [position_ASC], limit: 50) {
+        argentinaPromotionCollection (where:{gamingpass: true} ,order: [position_ASC], limit: 50) {
             items {
               name,
               slug, 
               previewTitle,
+                previewTitle2,
+              previewSubtitleReintegro,
               date,
               logo {
                 url
@@ -73,9 +75,6 @@ export async function getStaticProps() {
 
 export default function Gamingpass(props) {
     const router = useRouter();
-
-    console.log(props.response_promos)
-
     const [allPromotions, setAllPromotions] = useState(props.response_promos.argentinaPromotionCollection.items); // Lista completa de promociones
     
 
