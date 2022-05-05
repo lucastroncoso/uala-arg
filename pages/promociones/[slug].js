@@ -10,7 +10,7 @@ import Link from 'next/link';
 export const getStaticPaths = async () => {
   const response = await fetchContent(`
    {
-      argentinaPromotionCollection(where: {gamingpass: false}limit: 100) {
+      argentinaPromotionCollection(where: {gamingpass: false} limit: 100) {
           items {
             slug
           }
@@ -33,7 +33,7 @@ export const getStaticProps = async ({ params }) => {
   const response = await fetchContent(`
   {
     argentinaPromotionCollection (
-      where: { slug:"${params.slug}" }
+      where: { gamingpass:false, slug:"${params.slug}" }
       limit: 1
       )  {
       items {
