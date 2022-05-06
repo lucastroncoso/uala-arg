@@ -127,7 +127,7 @@ return "col-start-2 "
                             {
                                 allPromotions.length == 0
                                     ? <div className="text-center col-span-full">Parece que no se encontraron promociones...</div>
-                                    : allPromotions.map(promotion => <PromotionCard key={promotion.slug} {...promotion} />)
+                                    : allPromotions.map(promotion => <PromotionCard className="p-4 bg-white cursor-pointer  h-64 flex flex-col justify-center" key={promotion.slug} {...promotion} />)
                             }
                         </Slider></div>
               
