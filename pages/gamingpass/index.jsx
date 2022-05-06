@@ -51,7 +51,7 @@ export async function getStaticProps() {
             }
           }
 
-             argentinaFaqCollection(order: [id_ASC], limit: 200) {
+             argentinaFaqCollection(order: [id_ASC], limit: 300) {
             items{
                 categoryId {
                     faqCategoryId
@@ -68,7 +68,7 @@ export async function getStaticProps() {
 
     return {
         props: { response_promos },
-        revalidate: 100
+        revalidate: 10
     }
 }
 
