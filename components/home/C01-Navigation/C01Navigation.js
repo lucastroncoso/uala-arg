@@ -200,11 +200,11 @@ const C01Navigation = ({ content }) => {
               </span>
             </div>*/}
 
-          {/* {content.loginButton && (
+           {content.loginButton && (
             <a className={loginButtonStyle} href={content.loginButton.url}>
               {content.loginButton.copy}
             </a>
-          )} */}
+          )} 
 
           <DownloadAppButton
             isStyled
