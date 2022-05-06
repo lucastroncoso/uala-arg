@@ -78,7 +78,7 @@ export default function Details({ promotion }) {
           <div className="cursor-pointer flex flex-row items-center mb-12 lg:mb-20">
             <Link href="/gamingpass">
               <a className="link outline-none">
-                <i className="fas fa-chevron-left mr-4"></i>Regresar a Gamingpass
+                <i className="fas fa-chevron-left mr-4"></i>Regresar a Gaming Pass
               </a>
             </Link>
           </div>
