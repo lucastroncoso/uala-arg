@@ -139,7 +139,7 @@ export default function Gamingpass(props) {
                              <div className=" -pt-20 bg-white rounded-2xl shadow-blue  lg:mt-32  mt-20 -mb-20 py-6 px-4 lg:px-12 text-gray-150 lg:text-center">
                           ¡No tan rápido! Antes de que vayas corriendo a contarle a todos tus amig@s, te contamos que sólo algunas personas recibieron la invitación a suscribirse. Pronto tod@s l@s usuari@s de Ualá podrán suscribirse a Gaming Pass 😉
                         </div>
-                </Container>     <FaqsInSections section="prestamos" title="Preguntas frecuentes sobre los pagos onlines" response={props.response_promos}/> 
+                </Container>     <FaqsInSections section="gamingpass" title="Preguntas frecuentes sobre los pagos onlines" response={props.response_promos}/> 
                 <div  className=" lg:mx-auto mx-5  text-white text-xl	text-center  text-blue-250 underline  -mt-20 lg:pb-40 pb-20"> <Link href="/">Consultá los términos y condiciones de Gaming Pass acá </Link></div>
          </div>
        
