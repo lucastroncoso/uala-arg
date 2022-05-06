@@ -6,8 +6,8 @@ import Head from 'next/head';
 
 export async function getStaticProps() {
     const response = await fetchContent(`
-    {
-        argentinaFaqCategoryCollection (order: [faqCategoryId_ASC]) {
+   {
+        argentinaFaqCategoryCollection (where: {faqCategoryId_not: 68},order: [faqCategoryId_ASC]) {
             items{
                 faqCategoryId,
                 name,
@@ -15,7 +15,7 @@ export async function getStaticProps() {
             }
         }
 
-        argentinaFaqCollection(order: [id_ASC], limit: 500) {
+        argentinaFaqCollection(where: {categoryId: {faqCategoryId_not:68} },order: [id_ASC], limit: 500) {
             items{
                 categoryId {
                     faqCategoryId
