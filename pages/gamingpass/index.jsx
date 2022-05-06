@@ -88,6 +88,18 @@ export default function Gamingpass(props) {
         }
     }, [router.isReady]);
 
+
+    const lastColOdd = (total,index) => {
+   if (total % 3 !==0 && total===4 || total ===7 || total ===10 || total===13) {
+return "col-start-3 "
+     } else  if (total % 3 !==0 && index ===total) {
+return "col-start-4 "
+    }   else if (total % 3 !==0 && index ===total-1) {
+return "col-start-2 "
+    } 
+    else return
+    }
+
     return (
         <div className="bg-gray-gaming ">
             <Layout nav footer banner>
@@ -104,11 +116,11 @@ export default function Gamingpass(props) {
                           La suscripción a Gaming Pass incluye estas tremendas promos
                         </h2>
                             <Container className="mx-auto lg:w-10/12  ">
-                        <div className=" mb-12 mt-2 lg:grid-cols-3 hidden md:grid">
+                        <div className=" mb-12 mt-2 md:grid-cols-6 hidden md:grid">
                             {
                                 allPromotions.length == 0
                                     ? <div className="text-center col-span-full">Parece que no se encontraron promociones...</div>
-                                    : allPromotions.map(promotion => <PromotionCard key={promotion.slug} {...promotion} />)
+                                    : allPromotions.map((promotion,index) => <PromotionCard  className={`p-4 bg-white cursor-pointer  h-64 flex flex-col justify-center col-span-2 ${lastColOdd(allPromotions.length,index+1)} `}    key={promotion.slug} {...promotion} />)
                             }
                         </div>
                         <div  className=" md:hidden block">                <Slider>
@@ -140,7 +152,7 @@ export default function Gamingpass(props) {
                           ¡No tan rápido! Antes de que vayas corriendo a contarle a todos tus amig@s, te contamos que sólo algunas personas recibieron la invitación a suscribirse. Pronto tod@s l@s usuari@s de Ualá podrán suscribirse a Gaming Pass 😉
                         </div>
                 </Container>     <FaqsInSections section="gamingpass" title="Preguntas frecuentes sobre los pagos onlines" response={props.response_promos}/> 
-                <div  className=" lg:mx-auto mx-5  text-white text-xl	text-center  text-blue-250 underline  -mt-20 lg:pb-40 pb-20"> <Link href="/">Consultá los términos y condiciones de Gaming Pass acá </Link></div>
+                <div  className=" lg:mx-auto mx-5  text-white text-xl	text-center  text-blue-250 underline  -mt-20 lg:pb-40 pb-20"> <Link href="/gaming-pass-tyc">Consultá los términos y condiciones de Gaming Pass acá </Link></div>
          </div>
        
             </Layout>

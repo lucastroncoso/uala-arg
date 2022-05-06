@@ -2,10 +2,10 @@ import CardRoundedShadow from "../cardRoundedShadow";
 import Link from 'next/link';
 
 export default function PromotionCard(props) {
-console.log(props)
+
     return (
            
-        <CardRoundedShadow className="p-4 bg-white cursor-pointer  h-64 flex flex-col justify-center" roundXl>
+        <CardRoundedShadow className={props.className} roundXl>
 
                <Link href={"/gamingpass/" + props.slug}>
                  <div>  <div className="flex justify-center ">
