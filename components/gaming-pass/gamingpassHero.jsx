@@ -1,6 +1,6 @@
 import Container from "../container";
 import parser from 'bbcode-to-react';
-import styles from "../../pages/gamingpass/gamingpass.module.css"
+import styles from "../../pages/gaming-pass/gaming-pass.module.css"
 
 
 export default function GamingpassHero(props) {

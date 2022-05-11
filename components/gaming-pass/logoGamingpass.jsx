@@ -1,7 +1,7 @@
 import Container from "../container";
 import parser from 'bbcode-to-react';
 import Image from "next/image";
-import styles from "../../pages/gamingpass/gamingpass.module.css"
+import styles from "../../pages/gaming-pass/gaming-pass.module.css"
 
 
 

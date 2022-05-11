@@ -7,7 +7,7 @@ export default function PromotionCard(props) {
            
         <CardRoundedShadow className={props.className} roundXl>
 
-               <Link href={"/gamingpass/" + props.slug}>
+               <Link href={"/gaming-pass/" + props.slug}>
                  <div>  <div className="flex justify-center ">
                 <div>
                     <img className="max-h-20" src={props.logo ? props.logo.url : ''} alt="" />

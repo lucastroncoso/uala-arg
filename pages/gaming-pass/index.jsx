@@ -4,13 +4,13 @@ import { fetchContent } from '../../utils/contentful';
 import Layout from "../../components/layout";
 import Container from '../../components/container';
 import Image from "next/image";
-import PromotionCard from '../../components/gamingpass/promotionCard';
-import GamingpassHero from '../../components/gamingpass/gamingpassHero';
-import LogoGamingpass from '../../components/gamingpass/logoGamingpass';
+import PromotionCard from '../../components/gaming-pass/promotionCard';
+import GamingpassHero from '../../components/gaming-pass/gamingpassHero';
+import LogoGamingpass from '../../components/gaming-pass/logoGamingpass';
 import Router, { useRouter } from 'next/router';
 import Link from 'next/link';
 import FaqsInSections from "../../components/faqs/faqsInSections";
-import styles from "./gamingpass.module.css"
+import styles from "./gaming-pass.module.css"
 import Slider from "../../components/slider/slider"
 
 

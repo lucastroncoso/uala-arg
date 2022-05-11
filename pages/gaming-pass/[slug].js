@@ -76,7 +76,7 @@ export default function Details({ promotion }) {
       <Layout nav footer banner>
         <Container className="mx-auto lg:w-10/12 mb-72 mt-40">
           <div className="cursor-pointer flex flex-row items-center mb-12 lg:mb-20">
-            <Link href="/gamingpass">
+            <Link href="/gaming-pass">
               <a className="link outline-none">
                 <i className="fas fa-chevron-left mr-4"></i>Regresar a Gaming Pass
               </a>
