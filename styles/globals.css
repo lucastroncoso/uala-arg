@@ -139,6 +139,10 @@ body {
   @apply list-decimal ml-6;
 }
 
+.reactMarkdown.child-image-centered img {
+  margin: auto;
+}
+
 p {
   @apply my-4;
 }
