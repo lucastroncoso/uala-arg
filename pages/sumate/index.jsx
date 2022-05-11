@@ -49,7 +49,7 @@ export default function BusquedasLaborales({ data }) {
     const departments = ["Todos"]
     const seniority = ["Todos"]
     data.forEach(element => {
-        if (element.categories[1].value == "Argentina" || element.categories[1].value == "México" && element.categories[1].name == "Web") {
+        if (element.categories[1].value == "Argentina" && element.categories[1].name == "Web") {
             if (!departments.includes(element.department)) {
                 departments.push(element.department)
             }
@@ -58,7 +58,9 @@ export default function BusquedasLaborales({ data }) {
             }
         }
     });
-    console.log(data)
+
+    departments.push(departments.splice(departments.indexOf(departments.find(element => element === 'Trabaja con nosotros')), 1)[0])
+
     const [selectedDepartment, setSelectedDepartment] = useState("Todos")
     const [selectedSeniority, setSelectedSeniority] = useState("Todos")
 

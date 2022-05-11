@@ -74,7 +74,7 @@ export default function Cuotas(props) {
                     bg="bg-blue-degrade"
                     title="Podés tener tu plata de vuelta"
                     subtitle="Pasá a cuotas un pago que ya hiciste y te devolvemos la plata en el momento."
-                    img={<Image src="/assets/images/cuotas/cuotas-otorgadas 1.png" width={1389} height={1134} />}
+                    img={<Image src="/assets/images/cuotas/cuotas-otorgadas 1.webp" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Podés pasar a cuotas compras, recargas o pagos de facturas."
                             img="/assets/images/prestamos/icono_prestamos.png" />,
@@ -104,13 +104,13 @@ export default function Cuotas(props) {
                         reverse
                         title="Servicios en cuotas"
                         subtitle="Podés pagar un servicio habilitado en cuotas con tu línea de crédito sin necesidad de tener plata en la cuenta de Ualá."
-                        img={<Image src="/assets/images/cuotas/cuotas-servicios 1.png" width={1389} height={1134} />}
+                        img={<Image src="/assets/images/cuotas/cuotas-servicios 1.webp" width={1389} height={1134} />}
 
                     />
                 </div>
                 <ImageItemsSection
                     title="Podés tener el control de los pagos"
-                    img={<Image src="/assets/images/prestamos/Mask Group (24).png" width={1389} height={1134} />}
+                    img={<Image src="/assets/images/prestamos/Mask Group (24).webp" width={1389} height={1134} />}
                     items={[
                         <CardItem text="Elegí en cuántas cuotas querés pagarlo."
                             img="/assets/images/prestamos/icono-cuotas.png" />,
@@ -133,8 +133,8 @@ export default function Cuotas(props) {
                     </div>
                 </Container>
                 <FaqsInSections section="cuotas" title="Preguntas frecuentes sobre los consumos en cuotas" response={props.response}/>
-                <Legal main="La funcionalidad Cuotificación está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante. TNA: Mínima: 30,00% - Máxima 95,00%. TEA: Mínima: 34,99% - Máxima 149,50%. El otorgamiento del crédito está sujeto a evaluación crediticia."
-                    secondary="Costo Financiero Total: Mínimo:  95,50% - Máximo 279,70%."
+                <Legal main="La funcionalidad Cuotificación está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante. TNA: Mínima: 30,00% - Máxima 95,00%. TEA: Mínima: 34,99% - Máxima 149,50%. El otorgamiento del crédito y la cantidad de cuotas disponibles para cada usuario están sujetos a evaluación crediticia."
+                    secondary="Costo Financiero Total: Mínimo: 95,50% - Máximo 279,70%."
                 />
 
 

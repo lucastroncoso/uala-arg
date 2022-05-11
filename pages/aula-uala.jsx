@@ -95,7 +95,7 @@ export default function AulaUala(props) {
                   <div className=" my-12">
                     <img
                       className="rounded-xl w-full"
-                      src="/assets/images/aula/Aula Ualá_1.png"
+                      src="/assets/images/aula/Aula Ualá_1.webp"
                       alt=""
                     />
                   </div>

@@ -101,75 +101,49 @@ export default function Prestamos(props) {
           </div>
         </Container>
 
-        <ImageItemsSection
-          reverse
-          bg="bg-blue-degrade"
-          pushImg="/assets/images/prestamos/push.png"
-          title="Podés usarlo como quieras"
-          subtitle="Pedí tu préstamo online desde la app y usalo para tu emprendimiento, un viaje, tu hogar o para lo que quieras."
-          img={
-            <Image src="/assets/images/prestamos/Mask Group (25).png" width={1389} height={1134} />
-          }
-          items={[
-            <CardItem
-              text="Pedí hasta [b]$500.000[/b] en 24 cuotas fijas."
-              img="/assets/images/prestamos/icono_prestamos.png"
-            />,
-            <CardItem
-              text="La plata se deposita en tu cuenta de Ualá."
-              img="/assets/images/prestamos/icono-depositar-plata.png"
-            />,
-            <CardItem
-              text="Hacé la simulación en tiempo real."
-              img="/assets/images/prestamos/icono-tiemporeal.png"
-            />,
-          ]}
-        />
-        <Container className="md:my-12 my-6">
-          <h2 className="title-2 text-center mb-12">¿Cómo pedir un préstamo?</h2>
-          <a
-            className="hidden md:block"
-            href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s"
-            target="_blank"
-          >
-            <PlayVideoButton
-              youtubeId="s54IFlhp87Y&t"
-              previewVideoSrc="/assets/video/thumbnail-prestamos-desktop.mp4"
-              isPreviewVideoScaled={false}
-            />
-          </a>
-          <a
-            className="block md:hidden"
-            href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s"
-            target="_blank"
-          >
-            <PlayVideoButton
-              youtubeId="s54IFlhp87Y&t"
-              previewVideoSrc="/assets/video/thumbnail-prestamos-317x329px.mp4"
-              isPreviewVideoScaled={false}
-            />
-          </a>
-        </Container>
-        <ImageItemsSection
-          title="Podés tener el control de los pagos"
-          img={
-            <Image src="/assets/images/prestamos/Mask Group (24).png" width={1389} height={1134} />
-          }
-          items={[
-            <CardItem
-              text="Elegí en cuántas cuotas querés pagarlo."
-              img="/assets/images/prestamos/icono-cuotas.png"
-            />,
-            <CardItem
-              text="Decidí qué día del mes hacer los pagos."
-              img="/assets/images/prestamos/icono_diadepago.png"
-            />,
-            <CardItem
-              text="Cancelá la deuda cuando quieras."
-              img="/assets/images/prestamos/icono_cancelar.png"
-            />,
-          ]}
-        />
+           <ImageItemsSection
+                    reverse
+                    bg="bg-blue-degrade"
+                    pushImg="/assets/images/prestamos/push.png"
+                    title="Podés usarlo como quieras"
+                    subtitle="Pedí tu préstamo online desde la app y usalo para tu emprendimiento, un viaje, tu hogar o para lo que quieras."
+                    img={<Image src="/assets/images/prestamos/Mask Group (25).webp" width={1389} height={1134} />}
+                    items={[
+                        <CardItem text="Pedí hasta [b]$500.000[/b] en 24 cuotas fijas."
+                            img="/assets/images/prestamos/icono_prestamos.png" />,
+                        <CardItem text="La plata se deposita en tu cuenta de Ualá."
+                            img="/assets/images/prestamos/icono-depositar-plata.png" />,
+                        <CardItem text="Hacé la simulación en tiempo real."
+                            img="/assets/images/prestamos/icono-tiemporeal.png" />]}
+                />                    
+                <Container className="md:my-12 my-6">
+                    <h2 className="title-2 text-center mb-12">¿Cómo pedir un préstamo?</h2>
+                    <a className="hidden md:block" href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="s54IFlhp87Y&t"
+                            previewVideoSrc="/assets/video/thumbnail-prestamos-desktop.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                    <a className="block md:hidden" href="https://www.youtube.com/watch?v=s54IFlhp87Y&t=4s" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="s54IFlhp87Y&t"
+                            previewVideoSrc="/assets/video/thumbnail-prestamos-317x329px.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                </Container>
+                <ImageItemsSection
+                    title="Podés tener el control de los pagos"
+                    img={<Image src="/assets/images/prestamos/Mask Group (24).webp" width={1389} height={1134} />}
+                    items={[
+                        <CardItem text="Elegí en cuántas cuotas querés pagarlo."
+                            img="/assets/images/prestamos/icono-cuotas.png" />,
+                        <CardItem text="Decidí qué día del mes hacer los pagos."
+                            img="/assets/images/prestamos/icono_diadepago.png" />,
+                        <CardItem text="Cancelá la deuda cuando quieras."
+                            img="/assets/images/prestamos/icono_cancelar.png" />]}
+                />
 
         <Container className="my-12">
           <div className=" mx-auto shadow-blue md:p-16 p-8 rounded-2xl">

@@ -106,6 +106,21 @@ module.exports = {
         destination: '/assets/legales/Uala_Gamergy_terminos-y-condiciones.pdf',
         permanent: true,
       },
+      {
+        source: '/gaming-pass-tyc',
+        destination: '/assets/legales/Terminos y Condiciones del Programa Gaming Pass.pdf',
+        permanent: true,
+      },
+      {
+        source: '/gaming-pass-faqs',
+        destination: '/assets/legales/Preguntas Frecuentes Gaming Pass.pdf',
+        permanent: true,
+      },
+      {
+        source: '/TyCConcursoEmpretienda',
+        destination: '/assets/legales/Terminos-y-Condiciones-Concurso-Membresia-empretienda.pdf',
+        permanent: true,
+      },
     ];
   },
 };

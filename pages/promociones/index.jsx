@@ -16,8 +16,9 @@ import gsap from 'gsap';
 export async function getStaticProps() {
   const response_promos = await fetchContent(`
     {
-        argentinaPromotionCollection (order: [position_ASC], limit: 50) {
+        argentinaPromotionCollection (where: {gamingpass: false} order: [position_ASC], limit: 50) {
             items {
+              gamingpass,
               name,
               slug, 
               previewTitle,

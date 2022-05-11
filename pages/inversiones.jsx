@@ -50,8 +50,8 @@ export default function Inversiones(props) {
       0,
     );
   }, []);
-
-  return (
+  
+   return (
     <div ref={sectionRef}>
       <Head>
         <title>Ualá - Inversiones: invertí fácil y despertá tu plata</title>
@@ -78,75 +78,43 @@ export default function Inversiones(props) {
         <ImageItemsSection
           reverse
           bg="bg-blue-degrade"
-          pushImg="/assets/images/inversiones/push.png"
-          img={
-            <Image
-              src="/assets/images/inversiones/inversiones-invertir 1.png"
-              width={1389}
-              height={1134}
-            />
-          }
-          items={[
-            <CardItem
-              text="Invertí y liberá tu plata al instante
+                    pushImg="/assets/images/inversiones/push.png"
+                    img={<Image src="/assets/images/inversiones/inversiones-invertir 1.webp" width={1389} height={1134} />}
+                    items={[
+                        <CardItem text="Invertí y liberá tu plata al instante
                         con un solo click."
-              img="/assets/images/inversiones/icono-inversiones.png"
-            />,
-            <CardItem
-              text="Desde $1 y sin límites de inversión."
-              img="/assets/images/inversiones/icono-plata.png"
-            />,
-            <CardItem
-              text="Conocé los resultados de tu inversión todos los días desde la app."
-              img="/assets/images/inversiones/icono-resultados.png"
-            />,
-          ]}
-        />
-        <Container className="md:my-12 my-12">
-          <h2 className="title-2 text-center mb-6">¿Cómo invertir a través de Ualá?</h2>
-          <a
-            className="hidden md:block"
-            href="https://www.youtube.com/watch?v=12gi-FVZ97o"
-            target="_blank"
-          >
-            <PlayVideoButton
-              youtubeId="12gi-FVZ97o"
-              previewVideoSrc="/assets/video/thumbnail-inversiones-desktop.mp4"
-              isPreviewVideoScaled={false}
-            />
-          </a>
-          <a
-            className="block md:hidden"
-            href="https://www.youtube.com/watch?v=12gi-FVZ97o"
-            target="_blank"
-          >
-            <PlayVideoButton
-              youtubeId="12gi-FVZ97o"
-              previewVideoSrc="/assets/video/thumbnail-inversiones-317x329px.mp4"
-              isPreviewVideoScaled={false}
-            />
-          </a>
-        </Container>
-        <ImageItemsSection
-          title="Tené el control de tu plata"
-          img={
-            <Image
-              src="/assets/images/inversiones/inversiones-liberar 1.png"
-              width={1389}
-              height={1134}
-            />
-          }
-          items={[
-            <CardItem
-              text="Podés liberar tu plata en el acto. A cualquier hora y en cualquier lugar."
-              img="/assets/images/inversiones/icono-liberar-plata.png"
-            />,
-            <CardItem
-              text="Sin costos ocultos."
-              img="/assets/images/inversiones/icono-sin-costos.png"
-            />,
-          ]}
-        />
+                            img="/assets/images/inversiones/icono-inversiones.png" />,
+                        <CardItem text="Desde $1 y sin límites de inversión."
+                            img="/assets/images/inversiones/icono-plata.png" />,
+                        <CardItem text="Conocé los resultados de tu inversión todos los días desde la app."
+                            img="/assets/images/inversiones/icono-resultados.png" />]}
+                />
+                 <Container className="md:my-12 my-12">
+                    <h2 className="title-2 text-center mb-6">¿Cómo invertir a través de Ualá?</h2>
+                    <a className="hidden md:block" href="https://www.youtube.com/watch?v=12gi-FVZ97o" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="12gi-FVZ97o"
+                            previewVideoSrc="/assets/video/thumbnail-inversiones-desktop.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                    <a className="block md:hidden" href="https://www.youtube.com/watch?v=12gi-FVZ97o" target="_blank">
+                        <PlayVideoButton
+                            youtubeId="12gi-FVZ97o"
+                            previewVideoSrc="/assets/video/thumbnail-inversiones-317x329px.mp4"
+                            isPreviewVideoScaled={false}
+                        />
+                    </a>
+                </Container>
+                <ImageItemsSection
+                    title="Tené el control de tu plata"
+                    img={<Image src="/assets/images/inversiones/inversiones-liberar 1.webp" width={1389} height={1134} />}
+                    items={[
+                        <CardItem text="Podés liberar tu plata en el acto. A cualquier hora y en cualquier lugar."
+                            img="/assets/images/inversiones/icono-liberar-plata.png" />,
+                        <CardItem text="Sin costos ocultos."
+                            img="/assets/images/inversiones/icono-sin-costos.png" />]}
+                />
 
         <ImageItemsSection
           reverse

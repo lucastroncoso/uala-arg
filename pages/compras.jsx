@@ -61,23 +61,20 @@ export default function Tarjeta(props) {
   return (
     <div ref={sectionRef}>
       <>
-        <Head>
-          <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/compras" />
-          <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/tarjeta" />
-          <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/compras" />
-          <title>Ualá - Tarjeta prepaga gratis: pedí tu tarjeta</title>
-          <meta
-            name="description"
-            content="Accedé a una Tarjeta Prepaga Ualá Mastercard: Una tarjeta gratis para tod@s y para todo. Comprá en cualquier parte del mundo."
-          />
-        </Head>
+     <Head>
+                <link rel="alternate" hreflang="es-ar" href="https://www.uala.com.ar/compras" />
+                <link rel="alternate" hreflang="es-mx" href="https://www.uala-abc.com.mx/tarjeta" />
+                <link rel="alternate" hreflang="x-default" href="https://www.uala.com.ar/compras" />
+                <title>Ualá - Tarjeta prepaga gratis: pedí tu tarjeta</title>
+                <meta name="description" content="Accedé a una Tarjeta Prepaga Ualá Mastercard: Una tarjeta gratis para tod@s y para todo. Comprá en cualquier parte del mundo." />
+            </Head>
         <Layout nav footer>
-          <Hero
-            section="Compras"
-            title="Una tarjeta para tod@s y para todo"
-            subtitle="Aprovechá tu tarjeta prepaga Ualá y comprá en cualquier comercio o página web del mundo que acepte Mastercard."
-            img={<Image src="/assets/images/tarjeta/tarjeta-3D 1.png" width={2132} height={2304} />}
-          />
+         <Hero
+                    section="Compras"
+                    title="Una tarjeta para tod@s y para todo"
+                    subtitle="Aprovechá tu tarjeta prepaga Ualá y comprá en cualquier comercio o página web del mundo que acepte Mastercard."
+                    img={<Image src="/assets/images/tarjeta/tarjeta-3D 1.webp" width={2132} height={2304} />}
+                />
 
           {/* La tarjeta */}
           <ImageItemsSection

@@ -48,7 +48,7 @@ export default function Nosotros(props) {
           }
         />
 
-        <ImageItemsSection
+     <ImageItemsSection
           bg="bg-blue-wave-nosotros md:pt-20"
           subtitle="El emprendedor argentino Pierpaolo Barbieri creó y lanzó Ualá en octubre de 2017 con el objetivo de mejorar la inclusión financiera en Argentina ofreciendo una experiencia innovadora, integrada, sin sucursales y de bajo costo. Hoy, Ualá es la solución financiera de millones de personas de todo el país."
           img={
@@ -56,19 +56,13 @@ export default function Nosotros(props) {
           }
         />
 
-        <VideoTitleNosotros
-          className="bg-blue-350 md:bg-white"
-          title="Así empezó todo"
-          subtitle="En 2015 empezamos a pensar en cómo revolucionar el sistema financiero. Conocé nuestra historia."
-          href="https://www.youtube.com/watch?v=_noKYrhsb3I"
-          imgDesktop={
-            <Image
-              src="/assets/images/nosotros/thumbnail_acerca_Uala.png"
-              width={2448}
-              height={1250}
-            />
-          }
-        />
+                <VideoTitleNosotros
+                    className="bg-blue-350 md:bg-white"
+                    title="Así empezó todo"
+                    subtitle="En 2015 empezamos a pensar en cómo revolucionar el sistema financiero. Conocé nuestra historia."
+                    href="https://www.youtube.com/watch?v=_noKYrhsb3I"
+                    imgDesktop={<Image src="/assets/images/nosotros/thumbnail_acerca_Uala.webp" width={2448} height={1250} />}
+                />
 
         <Container className="py-12 md:bg-none  bg-gradient-to-b  from-blue-350 to-white">
           <h2 className="title-2 text-center mb-12">¿Por qué lo hacemos?</h2>
