@@ -52,8 +52,8 @@ export default function PreguntasFrecuentes({ response }) {
 
                 <Container className="mt-32">
                     <div className="text-xl w-5/6 ">Preguntas frecuentes</div>
-                    <div className="mb-16 title-1 mt-4">
-                        ¿Tenés <br /> alguna duda?
+                    <div className="mb-16 text-blue-250 text-3xl  md:text-5xl font-semibold leading-snug mt-4">
+                        ¿Tenés alguna duda?
                     </div>
                 </Container>
                 <FaqsCategories categories={categories} faqs={faqs} />
