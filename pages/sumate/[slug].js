@@ -115,6 +115,7 @@ export default function Details({ data }) {
                     {data &&
                         <div>
                             <div className="title-1">{data.name}</div>
+                            <div className="text-gray-600 ">{data.location.name ? data.location.name : ""} {data.department ? ` - ${data.department}` : ""}</div>
                             <div className="title-3 mt-8">Descripción</div>
                             <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[0].value }}></div>
                             <div className="title-3 mt-8">Requerimientos</div>
