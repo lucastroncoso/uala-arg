@@ -1,0 +1,29 @@
+#gradientFaqs{
+background: linear-gradient(3.76deg, #FFFFFF 13.74%, #668AFF 51.19%, #1B1D21 97.35%);}
+
+#curveGaming{
+background:  url("../../public//assets/images/gamingpass/Imagenes/curva-gaming.png") ;
+
+background-size: 100%;
+    background-repeat: no-repeat;
+        background-position: 0% 23%;
+
+}
+
+#gridBack{
+background:  url("../../public//assets/images/gamingpass/Imagenes/grid.webp") ;
+ background-repeat: no-repeat;
+ background-size: 100%;
+    background-position: 0% 83px;
+}
+
+@media (max-width: 600px) {
+#gridBack{
+    background-size: 320%;
+    background-position: -395px 40px;
+}
+#curveGaming{
+background-size: 300%;
+background-position: 0% 1%;
+}
+}
