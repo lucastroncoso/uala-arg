@@ -121,6 +121,11 @@ module.exports = {
         destination: '/assets/legales/Terminos-y-Condiciones-Concurso-Membresia-empretienda.pdf',
         permanent: true,
       },
+      {
+        source: '/tyc-cashback-applepay',
+        destination: '/assets/legales/TYC_ApplePayCashback.pdf',
+        permanent: true,
+      },
     ];
   },
 };
