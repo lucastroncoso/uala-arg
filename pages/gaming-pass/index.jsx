@@ -141,7 +141,7 @@ return "col-start-2 "
                 containerStyles="mt-12"
                
                 title1="Una única suscripción,"
-                    title2=" todo incluído"
+                    title2=" todo incluido"
                 subtitle="La suscripción se debitará de tu cuenta Ualá todos los meses ¡Recordá cargar saldo!"
                 title3="$500 por mes (incluye IVA)"
                 img={<Image src="/assets/images/gamingpass/Imagenes/image-suscripcion-2.webp" width={1084} height={834} />}
