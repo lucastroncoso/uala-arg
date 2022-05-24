@@ -2,16 +2,19 @@ import Container from './container';
 import useScrollTrigger from "../components/home/utils/hooks/useScrollTrigger"
 import gsap from 'gsap';
 import { useEffect } from 'react';
+import useIsMobile from './home/utils/hooks/useIsMobile';
+
 
 
 export default function ImageItemsSection(props) {
     const [sectionRef, childrenSelector, createTL] = useScrollTrigger();
+    const isMobile = useIsMobile(480) 
 
 
     useEffect(() => {
     if (!sectionRef || !sectionRef.current) return;
 
-    const backgroundCards = childrenSelector('[data-animation="background-card"]');
+    const animateItems = childrenSelector('[data-animation="animate-item"]');
     const title = childrenSelector('[data-animation="title"]');
     const titleTl = gsap.timeline({ paused: true });
 
@@ -29,15 +32,16 @@ export default function ImageItemsSection(props) {
     );
 
     const direction =  (index) => {
+      let number = isMobile?30:150
+      
       if (props.reverse) {
- return   index % 2 ? -150 : 150
+ return   index % 2 ? -number : number
       } else {
-         return   index % 2 ? 150 : -150
-      }
-     
+         return   index % 2 ? number : -number
+      }    
     }
 
-    backgroundCards.forEach((card, index) => {
+    animateItems.forEach((card, index) => {
       gsap
         .timeline({ scrollTrigger: { trigger: card, start: '0% 100%' } })
         .fromTo(
@@ -46,7 +50,7 @@ export default function ImageItemsSection(props) {
           { duration: 0.65, x: 0, ease: 'Power4.InOut', opacity: 1 },
         );
     });
-  }, []);
+  }, [isMobile]);
 
   return (
      <div ref={sectionRef}>
@@ -55,8 +59,7 @@ export default function ImageItemsSection(props) {
         
         <div className="grid md:my-24 my-12 lg:grid-cols-2 items-center gap-16 justify-items-center relative">
           <div 
-                            data-animation="background-card"
-
+data-animation="animate-item"
             className={
               props.reverse
                 ? 'order-2 rounded-3xl flex relative'
@@ -89,7 +92,7 @@ export default function ImageItemsSection(props) {
               </div>
             )}
           </div>
-          <div                   data-animation="background-card"
+          <div                   data-animation="animate-item"
  className="flex flex-col  order-1 ">
             <div>
               {props.title && <h2 className="mb-4 title-2">{props.title}</h2>}
