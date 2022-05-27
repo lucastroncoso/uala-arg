@@ -21,6 +21,14 @@ export default function ImageItemsSection(props) {
             >
               {props.img}
             </div>
+            {props.imgHidden && (
+              <div className={props.reverse
+              ? 'order-2 rounded-3xl overflow-hidden flex hidden md:block'
+              : 'order-2 lg:order-none rounded-3xl overflow-hidden flex hidden md:block'
+              }>
+                {props.imgHidden}
+              </div>
+            )}
             {props.pushImg && (
               <div>
                 <img

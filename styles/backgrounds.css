@@ -1,5 +1,9 @@
 
 /* GRADIENTS */
+.bg-invitar-gradient {
+  background: linear-gradient(180deg, #E2EAFF, white);
+}
+
 .bg-red-degrade {
   background: linear-gradient(180deg, #FFEBEB 0%, rgba(239, 244, 255, 0) 100%);
 }
@@ -50,10 +54,29 @@ background-color: #EEF3FF;
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .gradient-invitar {
+    background: linear-gradient(white, #E2EAFF, #E2EAFF);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 200%;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .bg-coral-wave{
     background: url(/assets/images/bg/Compras_curva.png);
     background-position: center 110%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .bg-wave-invitar{
+    background: url(/assets/images/invitar-a-uala/curva-invita-desktop.png);
+    background-position: center 120%;
     background-size: contain;
     background-repeat: no-repeat;
   }

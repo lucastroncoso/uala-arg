@@ -10,6 +10,10 @@
               "url": "/compras"
             },
             {
+              "copy": "Invitar a Ualá",
+              "url": "/invitar-a-uala"
+            },
+            {
               "copy": "Ualá Bis",
               "url": "https://www.ualabis.com.ar/",
               "target": "_BLANK"
@@ -350,6 +354,10 @@
           {
             "copy": "Compras",
             "url": "/compras"
+          },
+          {
+            "copy": "Invitar a Ualá",
+            "url": "/invitar-a-uala"
           },
           {
             "copy": "Créditos",
