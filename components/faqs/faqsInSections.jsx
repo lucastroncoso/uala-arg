@@ -16,7 +16,7 @@ export default function FaqsInSections(props) {
     return (
         <>
         <Container>
-        <div className="rounded-2xl shadow-blue my-32 py-6 pb-2 px-4 lg:px-12 faq-list">
+        <div className=" bg-white rounded-2xl shadow-blue my-32 py-6 pb-2 px-4 lg:px-12 faq-list">
         <h2 className="title-3 mt-3 mb-6 md:mb-10">{props.title}</h2>
         {
             <div className="text-gray-800 border-b border-gray-300 mb-6 pb-4">
