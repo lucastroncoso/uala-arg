@@ -99,38 +99,25 @@ export default function Tarjeta(props) {
               />,
             ]}
           />
-          <Container className={props.bg}>
-            <div className="grid md:my-24 my-12 lg:grid-cols-2 items-center gap-16 justify-items-center relative">
-              <div className="order-2 rounded-3xl flex relative hidden md:block">
-                <div className="order-2 rounded-3xl overflow-hidden flex">
-                  <Image
-                    src="/assets/images/compras/beneficios-tarjeta.jpg"
-                    width={1389}
-                    height={1134}
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col  order-1 ">
-                <div>
-                  <h2 className="mb-4 title-2">Beneficios de la tarjeta prepaga Mastercard</h2>
-                </div>
-                <div className="flex flex-col justify-around h-full lg:mr-12">
-                  <CardItem
+              <ImageItemsSection
+            title="Beneficios de la tarjeta prepaga Mastercard"
+          reverse
+            img={<div className="hidden md:block"><Image  src="/assets/images/compras/beneficios-tarjeta.jpg" width={1389} height={1134} /></div>}
+            items={[
+              <CardItem
                     text="Pedís tu tarjeta y te la llevamos gratis a tu casa."
                     img="/assets/images/compras/icono-envio.png"
-                  />
+                  />,
                   <CardItem
                     text="Si la perdés la podés congelar desde la app para que nadie la pueda usar."
                     img="/assets/images/compras/icono-congelar-tarjeta.png"
-                  />
+                  />,
                   <CardItem
                     text="Podés seguir los consumos en vivo desde la app."
                     img="/assets/images/compras/Icono-consumos.png"
                   />
-                </div>
-              </div>
-            </div>
-          </Container>
+            ]}
+          />
           <ImageItemsSection
             title="Pagá con QR donde quieras"
             subtitle="En cualquier comercio que tenga QR, escaneá con Ualá y pagá con la plata que tengas en la cuenta."
