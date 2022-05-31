@@ -6,7 +6,6 @@ import Legal from "../components/legal";
 import Layout from "../components/layout";
 import Head from 'next/head';
 import Image from "next/image";
-import PlayVideoButton from '../components/home/PlayVideoButton/PlayVideoButton';
 import FaqsInSections from "../components/faqs/faqsInSectionsNew";
 import { fetchContent } from '../utils/contentful'
 import Card from '../components/card';
@@ -122,6 +121,16 @@ export default function Cuotas(props) {
                         </div>
                     </div>
                </Container>
+               <ImageItemsSection
+                        reverse
+                        title="¡Invitá a Ualá y aprovechá el beneficio!"
+                        subtitle="¡Invitar a Ualá trae recompensas!
+                        Por cada amig@ que se sume, les regalamos $300 a cada uno para que puedan usarlo en lo que quieran."
+                        img={<Image src="/assets/images/invitar-a-uala/imagen-app-mgm.webp" width={1046} height={1186} />}
+                        button="Empezá a invitar"
+                        secondHref="https://uala.onelink.me/tTSW/yyhk155r"
+
+                    />
                <FaqsInSections section="Invitar Ualá AR" title="Preguntas frecuentes sobre los consumos en cuotas" response={props.response}/>
             </Layout>
         </>

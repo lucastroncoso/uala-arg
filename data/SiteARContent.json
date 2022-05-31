@@ -380,10 +380,6 @@
             "url": "/gastos"
           },
           {
-            "copy": "Invitar a Ualá",
-            "url": "/invitar-a-uala"
-          },
-          {
             "copy": "Promociones",
             "url": "/promociones"
           },
@@ -397,6 +393,10 @@
             "copy": "Ualá Bis",
             "url": "https://www.ualabis.com.ar/",
             "hasTargetBlank": true
+          },
+          {
+            "copy": "Invitar a Ualá",
+            "url": "/invitar-a-uala"
           }
         ]
       },
