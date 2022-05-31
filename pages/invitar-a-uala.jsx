@@ -53,7 +53,7 @@ export default function Cuotas(props) {
                 <div className="gradient-invitar bg-wave-invitar">
                     <Hero
                         containerStyles="mt-12"
-                        section="Invitá a Ualá"
+                        section="Invitar a Ualá"
                         title="Compartí el lado bueno de tu plata"
                         subtitle="Por cada amig@ que se sume a Ualá, ambos ganan $300"
                         img={<Image src="/assets/images/invitar-a-uala/hero-mgm-argentina.webp" width={1626} height={1251} />}
@@ -93,24 +93,18 @@ export default function Cuotas(props) {
                             />
                     </div>
                     <div className="grid grid-cols-2">
-                        <div className="col-span-1 pr-4 hidden md:block">
+                        <div className="col-span-1 pr-4 hidden md:block relative">
                             <CardInvite 
                                 className="bg-white rounded-3xl flex flex-wrap py-4 pl-10 pr-6 shadow-lightblue my-4 grid grid-cols-12"
                                 number="1"
                                 title="¿Qué tenés que hacer?"
                                 text="Invitar a tu amig@"
-                                style={{ minHeight:  "300px",
-                            maxHeight: "302px"
-                            }}
                             />
                             <CardInvite 
-                                className="bg-white rounded-3xl flex flex-wrap py-4 pl-10 pr-6 shadow-lightblue my-4 grid grid-cols-12"
+                                className="bg-white rounded-3xl flex flex-wrap py-4 pl-10 pr-6 shadow-lightblue my-4 grid grid-cols-12 absolute inset-x-0 bottom-0"
                                 number="2"
                                 title="¿Qué tiene que hacer tu amig@?"
                                 text=" Una compra de $300 o más con su tarjeta Ualá "
-                                style={{ minHeight:  "300px",
-                                maxHeight: "302px"
-                                }}
                             />
                         </div>
                         <div className="col-span-1 pl-4 hidden md:block">
@@ -122,8 +116,7 @@ export default function Cuotas(props) {
                                 width="270"
                                 height="174"
                                 className="bg-white rounded-3xl flex flex-wrap pt-4 pl-10 pr-6 shadow-lightblue my-4 grid grid-cols-12"
-                                style={{ minHeight:  "600px",
-                                maxHeight: "604px"
+                                style={{ height:  "100%",
                                 }}
                             />
                         </div>

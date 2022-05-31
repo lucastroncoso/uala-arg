@@ -76,7 +76,7 @@ background-color: #EEF3FF;
 @media only screen and (min-width: 600px) {
   .bg-wave-invitar{
     background: url(/assets/images/invitar-a-uala/curva-invita-desktop.png);
-    background-position: center 120%;
+    background-position: center 115%;
     background-size: contain;
     background-repeat: no-repeat;
   }

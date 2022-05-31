@@ -10,10 +10,6 @@
               "url": "/compras"
             },
             {
-              "copy": "Invitar a Ualá",
-              "url": "/invitar-a-uala"
-            },
-            {
               "copy": "Ualá Bis",
               "url": "https://www.ualabis.com.ar/",
               "target": "_BLANK"
@@ -41,6 +37,10 @@
             {
               "copy": "Análisis de gastos",
               "url": "/gastos"
+            },
+            {
+              "copy": "Invitar a Ualá",
+              "url": "/invitar-a-uala"
             }
           ]
         },
@@ -356,10 +356,6 @@
             "url": "/compras"
           },
           {
-            "copy": "Invitar a Ualá",
-            "url": "/invitar-a-uala"
-          },
-          {
             "copy": "Créditos",
             "url": "/prestamos"
           },
@@ -382,6 +378,10 @@
           {
             "copy": "Análisis de gastos",
             "url": "/gastos"
+          },
+          {
+            "copy": "Invitar a Ualá",
+            "url": "/invitar-a-uala"
           },
           {
             "copy": "Promociones",
@@ -421,8 +421,7 @@
           },
           {
             "copy": "Aula Ualá",
-            "url": "/aula-uala",
-            "isNew": "NUEVO"
+            "url": "/aula-uala"
           }
         ]
       },
