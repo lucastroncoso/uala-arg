@@ -61,4 +61,4 @@ La manera mas sencilla para deployar la app de Next js.
 [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 de los creadores de Next js.
 
-Deploy: 13
+Deploy: 14
