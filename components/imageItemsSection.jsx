@@ -64,7 +64,7 @@ export default function ImageItemsSection(props) {
                   })}
                 </div>
               )}
-              {props.button && <button className="block md:hidden outline-none px-12 py-4 mt-6 text-2xl bg-blue-250 rounded-full text-white mx-auto"><a href={props.secondHref}>{props.button}</a></button>}
+              {props.button && <button className="block md:hidden outline-none px-12 py-4 mt-6 text-2xl bg-blue-250 rounded-full text-white"><a href={props.secondHref}>{props.button}</a></button>}
             </div>
             <div className="flex flex-col justify-around h-full lg:mr-12">
               {props.items && props.items.map((i) => i)}
