@@ -171,10 +171,8 @@ export default function Prestamos(props) {
           response={props.response}
         />
         <Legal
-          main=" La funcionalidad de Créditos está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo
-                    Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos, la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante.
-                    Tasa Nominal Anual (TNA): Mínima: 50,00% - Máxima 85,00%. Tasa Efectiva Anual (TEA): Mínima: 63,21% - Máxima 127,33%."
-          secondary="Costo Financiero Total: Mínimo: 95,86% - Máximo 247,91%"
+          main="La funcionalidad de Créditos está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos, la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante. Tasa Nominal Anual (TNA): Mínima: 61,80% - Máxima 107,00%. Tasa Efectiva Anual (TEA): Mínima: 82,69% - Máxima 178,70%."
+          secondary="Costo Financiero Total: Mínimo: 108,65% - Máximo 247,84%"
         />
       </Layout>
     </div>
