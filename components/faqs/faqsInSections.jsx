@@ -12,7 +12,6 @@ export default function FaqsInSections(props) {
     const data = props.response.argentinaFaqCollection.items;
     const faqs = data;
 
-
     return (
         <>
         <Container>

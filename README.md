@@ -8,6 +8,7 @@ https://uala-arg-infra-uala.vercel.app/ Storybook: https://uala-arg-storybook.ve
 Ramas/Branches:
 
 
+
 - main: version online de produccion en deploy en Vercel
 - develop: rama principal, en deploy en Vercel en sitio de pruebas
 - storybook: rama creada para hacer pruebas de integración y deploy con storybook
@@ -60,4 +61,4 @@ La manera mas sencilla para deployar la app de Next js.
 [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 de los creadores de Next js.
 
-Deploy: 11
+Deploy: 14
