@@ -37,6 +37,10 @@
             {
               "copy": "Análisis de gastos",
               "url": "/gastos"
+            },
+            {
+              "copy": "Invitar a Ualá",
+              "url": "/invitar-a-uala"
             }
           ]
         },
@@ -389,6 +393,10 @@
             "copy": "Ualá Bis",
             "url": "https://www.ualabis.com.ar/",
             "hasTargetBlank": true
+          },
+          {
+            "copy": "Invitar a Ualá",
+            "url": "/invitar-a-uala"
           }
         ]
       },
@@ -413,8 +421,7 @@
           },
           {
             "copy": "Aula Ualá",
-            "url": "/aula-uala",
-            "isNew": "NUEVO"
+            "url": "/aula-uala"
           }
         ]
       },

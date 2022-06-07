@@ -57,6 +57,14 @@ data-animation="animate-item"
             >
               {props.img}
             </div>
+            {props.imgHidden && (
+              <div className={props.reverse
+              ? 'order-2 rounded-3xl overflow-hidden flex hidden md:block'
+              : 'order-2 lg:order-none rounded-3xl overflow-hidden flex hidden md:block'
+              }>
+                {props.imgHidden}
+              </div>
+            )}
             {props.pushImg && (
               <div>
                 <img
@@ -93,6 +101,7 @@ data-animation="animate-item"
                   })}
                 </div>
               )}
+              {props.button && <button className="block md:hidden outline-none px-12 py-4 mt-6 text-2xl bg-blue-250 rounded-full text-white"><a href={props.secondHref}>{props.button}</a></button>}
             </div>
             <div className="flex flex-col justify-around h-full lg:mr-12">
               {props.items && props.items.map((i) => i)}
