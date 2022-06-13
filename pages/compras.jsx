@@ -73,6 +73,10 @@ export default function Tarjeta(props) {
                     section="Compras"
                     title="Una tarjeta para tod@s y para todo"
                     subtitle="Aprovechá tu tarjeta prepaga Ualá y comprá en cualquier comercio o página web del mundo que acepte Mastercard."
+                    button
+                    buttonCopy="Pedí tu tarjeta"
+                    mobileLink="https://uala.onelink.me/tTSW/6lj77u5q"
+                    qr="/assets/images/sectionsQr/AR-Compras.jpg"
                     img={<Image src="/assets/images/tarjeta/tarjeta-3D 1.webp" width={2132} height={2304} />}
                 />
 

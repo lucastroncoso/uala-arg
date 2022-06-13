@@ -83,6 +83,10 @@ export default function Pagos(props) {
           section="Pagos y recargas"
           title="Todos tus pagos en un mismo lugar"
           subtitle="Recargá tus servicios prepagos, pagá tus facturas o cargá la SUBE gratis y sin moverte de tu casa."
+          button
+          buttonCopy="Descargar la app"
+          mobileLink="https://uala.onelink.me/tTSW/uwlij3xe"
+          qr="/assets/images/sectionsQr/AR-Pagos.jpg"
           img={
             <Image src="/assets/images/pagos/hero-pagosyrecargas.jpg" width={1084} height={834} />
           }

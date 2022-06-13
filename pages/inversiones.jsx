@@ -66,6 +66,10 @@ export default function Inversiones(props) {
           section="Inversiones"
           title="Hacemos que invertir sea fácil"
           subtitle="Despertá tu plata a través de Ualá y mirá los resultados todos los días."
+          button
+          buttonCopy="Descargar la app"
+          mobileLink="https://uala.onelink.me/tTSW/ixxdq28i"
+          qr="/images/sectionsQr/AR-Inversiones.jpg"
           img={
             <Image
               src="/assets/images/inversiones/hero-inversiones.jpg"

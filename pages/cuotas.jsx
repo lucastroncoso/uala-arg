@@ -51,6 +51,10 @@ export default function Cuotas(props) {
                     section="Cuotas"
                     title="Créditos pensados para vos"
                     subtitle="Te ofrecemos más crédito para lo que necesites de la forma más fácil, rápida y transparente."
+                    button
+                    buttonCopy="Descargar la app"
+                    mobileLink="https://uala.onelink.me/tTSW/wb7qvehk"
+                    qr="/assets/images/sectionsQr/AR-Cuotas.jpg"
                     img={<Image src="/assets/images/prestamos/hero-creditos.jpg" width={1389} height={1184} />}
                 />
 

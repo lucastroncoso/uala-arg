@@ -75,6 +75,10 @@ export default function Prestamos(props) {
           section="Créditos"
           title="Créditos online pensados para vos"
           subtitle="Te ofrecemos más crédito para lo que necesites de la forma más fácil, rápida y transparente."
+          button
+          buttonCopy="Descargar la app"
+          mobileLink="https://uala.onelink.me/tTSW/7q91tjax"
+          qr="/assets/images/sectionsQr/AR-Prestamos.jpg"
           img={
             <Image src="/assets/images/prestamos/hero-creditos.jpg" width={1389} height={1184} />
           }
