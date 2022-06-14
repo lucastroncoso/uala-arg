@@ -1,13 +1,9 @@
-import { fetchContent } from '../../utils/contentful';
 import Head from 'next/head';
 import Layout from "../../components/layout";
 import Container from '../../components/container';
 import styles from './busquedas.module.css'
 import Script from 'next/script'
-
-
 const axios = require('axios');
-
 
 export const getStaticPaths = async () => {
     try {
@@ -55,7 +51,6 @@ export async function getStaticProps({ params }) {
 
         let data = JSON.stringify(res.data)
         data = JSON.parse(data);
-
 
         return {
             props: {
@@ -111,11 +106,10 @@ export default function Details({ data }) {
                 <Script strategy="afterInteractive" src="https://www.comeet.co/careers-api/api.js"></Script>
 
                 <Container className="mx-auto lg:w-10/12 mb-72 mt-40">
-
                     {data &&
                         <div>
                             <div className="title-1">{data.name}</div>
-                            <div className="text-gray-600 ">{data.location.name ? data.location.name : ""} {data.department ? ` - ${data.department}` : ""}</div>
+                            <div className="text-gray-600 ">{data.location.name ? data.location.name : ""} {data.department ? ` - ${data.department}` : ""}{((data.categories[2].name === "Búsqueda Interna") && (data.categories[2].value === "Si")) && <i className="fas fa-star text-blue-50 ml-2"></i>}</div>
                             <div className="title-3 mt-8">Descripción</div>
                             <div className="text carrerUniqueDescription" id={styles.carrerUniqueDescription} dangerouslySetInnerHTML={{ __html: data.details[0].value }}></div>
                             <div className="title-3 mt-8">Requerimientos</div>
@@ -123,15 +117,8 @@ export default function Details({ data }) {
                             <script type="comeet-applyform" data-position-uid={data.uid}></script>
                             <script type="comeet-social"></script>
                         </div>}
-
-
-
-
                 </Container>
-
-
             </Layout>
         </>
     )
-
 }

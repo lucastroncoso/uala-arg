@@ -55,6 +55,7 @@ Para aprender mas de Next.js, estan los siguientes recursos:
 Podes mirar el repositorio de Next js
 [the Next.js GitHub repository](https://github.com/vercel/next.js/).
 
+
 ## Deploy en Vercel
 
 La manera mas sencilla para deployar la app de Next js.
