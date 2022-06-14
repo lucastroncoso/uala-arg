@@ -133,8 +133,8 @@ export default function Cuotas(props) {
                     </div>
                 </Container>
                 <FaqsInSections section="cuotas" title="Preguntas frecuentes sobre los consumos en cuotas" response={props.response}/>
-                <Legal main="La funcionalidad Cuotificación está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante. TNA: Mínima: 89,00% - Máxima 114,00%. TEA: Mínima: 135,97% - Máxima 197,15%. El otorgamiento del crédito y la cantidad de cuotas disponibles para cada usuario están sujetos a evaluación crediticia."
-                    secondary="Costo Financiero Total: Mínimo: 185,07% - Máximo 276,44%."
+                <Legal main="La funcionalidad Cuotificación está disponible únicamente para usuarios seleccionados. La Tasa Nominal Anual (TNA), la Tasa Efectiva Anual (TEA) y el Costo Financiero Total (CFT) varían según el perfil crediticio del solicitante del préstamo y plazo elegido. Todos los préstamos son a tasa fija, en pesos y otorgados bajo el sistema de amortización francés con cuotas mensuales y consecutivas. En todos los casos la TNA, TEA y el CFT aplicable serán informados antes de la aceptación de la oferta de préstamo por parte del solicitante. TNA: Mínima: 89,17% - Máxima 114,16%. TEA: Mínima: 136,35% - Máxima 197,57%. El otorgamiento del crédito y la cantidad de cuotas disponibles para cada usuario están sujetos a evaluación crediticia."
+                    secondary="Costo Financiero Total: Mínimo: 185,07% - Máximo 279,70%."
                 />
 
 
