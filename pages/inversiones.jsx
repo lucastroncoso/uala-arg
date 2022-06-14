@@ -69,7 +69,7 @@ export default function Inversiones(props) {
           button
           buttonCopy="Descargar la app"
           mobileLink="https://uala.onelink.me/tTSW/ixxdq28i"
-          qr="/images/sectionsQr/AR-Inversiones.jpg"
+          qr="/assets/images/sectionsQr/AR-Inversiones.jpg"
           img={
             <Image
               src="/assets/images/inversiones/hero-inversiones.jpg"
