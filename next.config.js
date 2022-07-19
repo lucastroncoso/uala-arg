@@ -112,6 +112,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/tyc_sorteo_manu',
+        destination: '/assets/legales/Términos y Condiciones - Concurso Manu Ginóbili.pdf',
+        permanent: true,
+      },
+      {
         source: '/gaming-pass-faqs',
         destination: '/assets/legales/Preguntas Frecuentes Gaming Pass.pdf',
         permanent: true,
